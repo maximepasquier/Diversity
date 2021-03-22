@@ -37,7 +37,7 @@ using namespace std;
  */
 
 //* Paramètres globaux
-#define TAILLE_SYSTEME 20   // largeur de le grille
+#define TAILLE_SYSTEME 20   // largeur de la grille
 #define NOMBRE_PERSONNES 50 // nombre de personnes initialement = densité
 
 int main(int argc, char const *argv[])
@@ -141,6 +141,12 @@ int main(int argc, char const *argv[])
             x = Liste_H[index_H].GetXH();
             y = Liste_H[index_H].GetYH();
             // H_array[x][y] pointe sur cet humain
+            vector<pair<int, int>> coordonnees; // vecteur de paire de int
+            //* Push les coordonnées des 4 voisins
+            coordonnees.push_back(make_pair(x, (y - 1 + TAILLE_SYSTEME) % TAILLE_SYSTEME));
+            coordonnees.push_back(make_pair(x, (y + 1) % TAILLE_SYSTEME));
+            coordonnees.push_back(make_pair((x - 1 + TAILLE_SYSTEME) % TAILLE_SYSTEME, y));
+            coordonnees.push_back(make_pair((x + 1) % TAILLE_SYSTEME, y));
 
             //* Déterminer les cas
             if (Liste_H[index_H].Getcontamine()) //* contaminé
@@ -171,155 +177,41 @@ int main(int argc, char const *argv[])
                     }
                 }
                 //* Analyse du voisinage
-                if (y > 0)
+                for (int i = 0; i < coordonnees.size(); i++)
                 {
-                    if (H_array[x][y - 1] != NULL) // un humain occupe cette case voisine
+                    if (H_array[coordonnees.at(i).first][coordonnees.at(i).second] != NULL) // un humain occupe cette case voisine
                     {
-                        if (H_array[x][y - 1]->Getcontamine()) // ce voisin est contaminé
+                        if (H_array[coordonnees.at(i).first][coordonnees.at(i).second]->Getcontamine()) // ce voisin est contaminé
                         {
-                            if (Genome_Match(Liste_H[index_H].GetgenomeH(), H_array[x][y - 1]->GetgenomeAP()))
+                            if (Genome_Match(Liste_H[index_H].GetgenomeH(), H_array[coordonnees.at(i).first][coordonnees.at(i).second]->GetgenomeAP()))
                             {
                                 // Notre humain a été infecté par ce voisin
                                 Liste_H[index_H].Setcontamine(true);
-                                Liste_H[index_H].SetgenomeAP(H_array[x][y - 1]->GetgenomeAP());
+                                Liste_H[index_H].SetgenomeAP(H_array[coordonnees.at(i).first][coordonnees.at(i).second]->GetgenomeAP());
                             }
-                        }
-                    }
-                }
-                else
-                {
-                    if (H_array[x][TAILLE_SYSTEME - 1] != NULL)
-                    {
-                        if (H_array[x][TAILLE_SYSTEME - 1]->Getcontamine()) // ce voisin est contaminé
-                        {
-                            if (Genome_Match(Liste_H[index_H].GetgenomeH(), H_array[x][TAILLE_SYSTEME - 1]->GetgenomeAP()))
-                            {
-                                // Notre humain a été infecté par ce voisin
-                                Liste_H[index_H].Setcontamine(true);
-                                Liste_H[index_H].SetgenomeAP(H_array[x][TAILLE_SYSTEME - 1]->GetgenomeAP());
-                            }
-                        }
-                    }
-                }
-                if (H_array[x][(y + 1) % TAILLE_SYSTEME] != NULL)
-                {
-                    if (H_array[x][(y + 1) % TAILLE_SYSTEME]->Getcontamine()) // ce voisin est contaminé
-                    {
-                        if (Genome_Match(Liste_H[index_H].GetgenomeH(), H_array[x][(y + 1) % TAILLE_SYSTEME]->GetgenomeAP()))
-                        {
-                            // Notre humain a été infecté par ce voisin
-                            Liste_H[index_H].Setcontamine(true);
-                            Liste_H[index_H].SetgenomeAP(H_array[x][(y + 1) % TAILLE_SYSTEME]->GetgenomeAP());
-                        }
-                    }
-                }
-                if (x > 0)
-                {
-                    if (H_array[x - 1][y] != NULL)
-                    {
-                        if (H_array[x - 1][y]->Getcontamine()) // ce voisin est contaminé
-                        {
-                            if (Genome_Match(Liste_H[index_H].GetgenomeH(), H_array[x - 1][y]->GetgenomeAP()))
-                            {
-                                // Notre humain a été infecté par ce voisin
-                                Liste_H[index_H].Setcontamine(true);
-                                Liste_H[index_H].SetgenomeAP(H_array[x - 1][y]->GetgenomeAP());
-                            }
-                        }
-                    }
-                }
-                else
-                {
-                    if (H_array[TAILLE_SYSTEME - 1][y] != NULL)
-                    {
-                        if (H_array[TAILLE_SYSTEME - 1][y]->Getcontamine()) // ce voisin est contaminé
-                        {
-                            if (Genome_Match(Liste_H[index_H].GetgenomeH(), H_array[TAILLE_SYSTEME - 1][y]->GetgenomeAP()))
-                            {
-                                // Notre humain a été infecté par ce voisin
-                                Liste_H[index_H].Setcontamine(true);
-                                Liste_H[index_H].SetgenomeAP(H_array[TAILLE_SYSTEME - 1][y]->GetgenomeAP());
-                            }
-                        }
-                    }
-                }
-                if (H_array[(x + 1) % TAILLE_SYSTEME][y] != NULL)
-                {
-                    if (H_array[(x + 1) % TAILLE_SYSTEME][y]->Getcontamine()) // ce voisin est contaminé
-                    {
-                        if (Genome_Match(Liste_H[index_H].GetgenomeH(), H_array[(x + 1) % TAILLE_SYSTEME][y]->GetgenomeAP()))
-                        {
-                            // Notre humain a été infecté par ce voisin
-                            Liste_H[index_H].Setcontamine(true);
-                            Liste_H[index_H].SetgenomeAP(H_array[(x + 1) % TAILLE_SYSTEME][y]->GetgenomeAP());
                         }
                     }
                 }
             }
 
             //* Mouvements
-            // Disponibilités des voisins
-            vector<pair<int, int>> coordonnees; // vecteur de paire de int
-            if (y > 0)
-            {
-                if (H_array[x][y - 1] == NULL)
-                {
-                    // cellule libre permettant un déplacement
-                    coordonnees.push_back(make_pair(x, y - 1));
-                }
-            }
-            else
-            {
-                if (H_array[x][TAILLE_SYSTEME - 1] == NULL)
-                {
-                    // cellule libre permettant un déplacement
-                    coordonnees.push_back(make_pair(x, TAILLE_SYSTEME - 1));
-                }
-            }
-            if (H_array[x][(y + 1) % TAILLE_SYSTEME] == NULL)
-            {
-                // cellule libe permettant un déplacement
-                coordonnees.push_back(make_pair(x, (y + 1) % TAILLE_SYSTEME));
-            }
-            if (x > 0)
-            {
-                if (H_array[x - 1][y] == NULL)
-                {
-                    // cellule libre permettant un déplacement
-                    coordonnees.push_back(make_pair(x - 1, y));
-                }
-            }
-            else
-            {
-                if (H_array[TAILLE_SYSTEME - 1][y] == NULL)
-                {
-                    // cellule libre permettant un déplacement
-                    coordonnees.push_back(make_pair(TAILLE_SYSTEME - 1, y));
-                }
-            }
-            if (H_array[(x + 1) % TAILLE_SYSTEME][y] == NULL)
-            {
-                // cellule libe permettant un déplacement
-                coordonnees.push_back(make_pair((x + 1) % TAILLE_SYSTEME, y));
-            }
-            //* Déplacement
             uniform_int_distribution<int> randInt(0, 3); // 0 et 3 inclus !
-            int choix = coordonnees.size();
-            if (choix > 0)
+            //* Choix d'une case voisine
+            int choix = randInt(generator);
+            if (H_array[coordonnees.at(choix).first][coordonnees.at(choix).second] == NULL) // cellule libre
             {
-                int index = randInt(generator) % choix;
                 //* Mise à jour des coordonnées de l'humain
-                H_array[x][y]->SetXH(coordonnees.at(index).first);
-                H_array[x][y]->SetYH(coordonnees.at(index).second);
+                H_array[x][y]->SetXH(coordonnees.at(choix).first);
+                H_array[x][y]->SetYH(coordonnees.at(choix).second);
                 //* Swap les pointeurs
-                H_array[coordonnees.at(index).first][coordonnees.at(index).second] = H_array[x][y]; // le pointeur voisin pointe sur notre humain
+                H_array[coordonnees.at(choix).first][coordonnees.at(choix).second] = H_array[x][y]; // le pointeur voisin pointe sur notre humain
                 H_array[x][y] = NULL;                                                               // le pointeur actuel cesse de pointer sur notre humain
             }
         }
         //* Libérer la mémoire de l'allocation
         free(permu);
         //* Sleep (FPS)
-        this_thread::sleep_for(chrono::seconds(2));
+        this_thread::sleep_for(chrono::seconds(1));
     }
 
     //* Supprimer tous les objets agent_pathogene

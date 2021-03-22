@@ -49,8 +49,28 @@ int *permutation(int n)
     return liste;
 }
 
-bool Genome_Match(double Genome_H, double Genome_AP)
+int main()
 {
-    //* fake
-    return true;
+
+    int n = 10;
+    int *permu;
+    double table[n];
+    for (int i = 0; i < n; i++)
+    {
+        table[i] = 0;
+    }
+    for (int j = 0; j < 1000000; j++)
+    {
+        permu = permutation(n);
+        for (int i = 0; i < n; i++)
+        {
+            table[i] += *(permu + i);
+        }
+    }
+    for (int i = 0; i < n; i++)
+    {
+        cout << table[i] / 1000000 << endl;
+    }
+
+    return 0;
 }
