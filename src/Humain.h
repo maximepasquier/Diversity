@@ -3,6 +3,7 @@
 
 #include <iostream>
 #include <string>
+#include <vector>
 
 class Humain
 {
@@ -11,10 +12,12 @@ public:
     ~Humain();
     bool Getcontamine();
     void Setcontamine(bool contamine);
-    double GetgenomeH();
-    void SetgenomeH(double genomeH);
-    double GetgenomeAP();
-    void SetgenomeAP(double genomeAP);
+    unsigned int GetgenomeH();
+    void SetgenomeH(unsigned int genomeH);
+    unsigned int GetgenomeAP();
+    void Setimmune(unsigned int genome);
+    std::vector<unsigned int> Getimmune();
+    void SetgenomeAP(unsigned int genomeAP);
     int GetXH();
     void SetXH(int x);
     int GetYH();
@@ -22,8 +25,9 @@ public:
 
 private:
     bool m_contamine;
-    double m_genome_H;
-    double m_genome_AP;
+    unsigned int m_genome_H;
+    unsigned int m_genome_AP;
+    std::vector<unsigned int> m_immune;
     int m_X;
     int m_Y;
 };

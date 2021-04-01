@@ -28,7 +28,7 @@ int *permutation(int n)
         liste1[i] = liste1[nombre];
         liste1[nombre] = tmp;
     }
-#if (1)
+#if (0)
     for (int i = n - 1; i >= 0; i--)
     {
         int nombre = rand_int(generator);

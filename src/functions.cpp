@@ -1,8 +1,22 @@
 #include <bits/stdc++.h>
 #include <algorithm>
+#include <math.h>
+#include <bits/stdc++.h>
 
 using namespace std;
 
+void Knuth_Shuffle(int liste[], int taille)
+{
+    srand(time(NULL));
+    for (int i = taille - 1; i > 0; i--)
+    {
+        int index = rand() % (i + 1);
+        int tmp = liste[i];
+        liste[i] = liste[index];
+        liste[index] = tmp;
+    }
+}
+/*
 int *permutation(int n)
 {
     unsigned int seed = std::chrono::system_clock::now().time_since_epoch().count();
@@ -48,9 +62,48 @@ int *permutation(int n)
 
     return liste;
 }
+*/
 
-bool Genome_Match(double Genome_H, double Genome_AP)
+int hammingDistance(unsigned int n1, unsigned int n2)
 {
-    //* fake
-    return true;
+    unsigned int x = n1 ^ n2;
+    int distance = 0;
+    while (x > 0)
+    {
+        distance += x & 1;
+        x >>= 1;
+    }
+    return distance;
+}
+
+//* Détermine le match entre deux génomes donnés
+float Genome_Match(unsigned int Genome_H, unsigned int Genome_AP, unsigned int puissance)
+{
+    int distance;
+    distance = hammingDistance(Genome_H, Genome_AP);
+    //float chance = pow(distance, 4) / pow(8, 4);
+    //cout << "distance : " << distance << ", chance : " << chance << endl;
+    return pow(distance, puissance) / pow(sizeof(Genome_H)*8, puissance);
+}
+
+unsigned int Generate_Genome(int deviation, unsigned int init, int *rand_int_list_octet)
+{
+    unsigned int mask = 0;
+    for (int i = 0; i < deviation; i++)
+    {
+        int index = rand_int_list_octet[i];
+        //cout << nombre << " ";
+        //mask += pow(2, nombre);
+        mask += 1 << index;
+    }
+    //cout << endl;
+    return init ^ mask;
+}
+
+unsigned int Mutations_AP(unsigned int genome_AP, int index)
+{
+    unsigned int mask = 0;
+    //mask = pow(2, index);
+    mask = 1 << index;
+    return genome_AP ^ mask;
 }

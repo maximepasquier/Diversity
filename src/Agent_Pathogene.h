@@ -13,7 +13,7 @@ public:
     void SetgenomeAP(double genomeAP);
 
 private:
-    double m_genome_AP;
+    int m_genome_AP;
 };
 
 #endif

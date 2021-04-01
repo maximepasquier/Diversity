@@ -2,7 +2,7 @@
 
 using namespace std;
 
-Humain::Humain() : m_genome_H(1), m_genome_AP(0), m_contamine(false), m_X(0), m_Y(0)
+Humain::Humain() : m_genome_H(0), m_genome_AP(0), m_contamine(false), m_X(0), m_Y(0)
 {
 
 }
@@ -23,24 +23,34 @@ void Humain::Setcontamine(bool contamine)
 }
 
 
-double Humain::GetgenomeH()
+unsigned int Humain::GetgenomeH()
 {
     return m_genome_H;
 }
 
-void Humain::SetgenomeH(double genome_H)
+void Humain::SetgenomeH(unsigned int genome_H)
 {
     m_genome_H = genome_H;
 }
 
-double Humain::GetgenomeAP()
+unsigned int Humain::GetgenomeAP()
 {
     return m_genome_AP;
 }
 
-void Humain::SetgenomeAP(double genome_AP)
+void Humain::SetgenomeAP(unsigned int genome_AP)
 {
     m_genome_AP = genome_AP;
+}
+
+std::vector<unsigned int> Humain::Getimmune()
+{
+    return m_immune;
+}
+
+void Humain::Setimmune(unsigned int genome)
+{
+    m_immune.push_back(genome);
 }
 
 int Humain::GetXH()
