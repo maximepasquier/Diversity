@@ -14,6 +14,7 @@ public:
     void display();
     void remove_all();
     void remove_element(node *n);
+    node *Get_head();
 
 private:
     node *head;

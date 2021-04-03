@@ -4,12 +4,10 @@ using namespace std;
 
 Humain::Humain() : m_genome_H(0), m_genome_AP(0), m_contamine(false), m_X(0), m_Y(0)
 {
-
 }
 
 Humain::~Humain() // déconstructeur
 {
-
 }
 
 bool Humain::Getcontamine()
@@ -21,7 +19,6 @@ void Humain::Setcontamine(bool contamine)
 {
     m_contamine = contamine;
 }
-
 
 unsigned int Humain::GetgenomeH()
 {

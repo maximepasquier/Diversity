@@ -7,6 +7,10 @@ Linked_list::Linked_list()
     head = NULL;
     tail = NULL;
 }
+node *Linked_list::Get_head()
+{
+    return head;
+}
 node *Linked_list::add_node(Agent_Pathogene ap)
 {
     node *tmp = new node;
@@ -41,7 +45,6 @@ void Linked_list::remove_all()
     node *tmp = head;
     while (tmp != NULL)
     {
-        //cout << "Elément supprimé !" << endl;
         head = tmp->suivant; // faire que la head soit le prochain node
         delete tmp;          // delete l'objet courant et toutes ses données
         tmp = head;          // replacer le pointeur sur le nouveau début de la chaine
