@@ -225,7 +225,7 @@ int main(int argc, char const *argv[])
         Humain_hy << '\n';
         Humain_immune << '\n';
 
-#if (0)
+#if (1)
         //* Clear screen
         printf("\x1b[2J"); // clear screen
         printf("\x1b[H");  // returning the cursor to the home position
@@ -416,7 +416,7 @@ int main(int argc, char const *argv[])
             }
         }
         //* Sleep (FPS)
-        //this_thread::sleep_for(chrono::seconds(1));
+        this_thread::sleep_for(chrono::seconds(1));
     }
 
     //* Close files
