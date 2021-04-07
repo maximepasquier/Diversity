@@ -2,6 +2,8 @@ language: cpp
 dist: xenial
 notifications:
   email: false
+compiler:
+- gcc
 
 # Define builds on mulitple OS/compiler combinations. 
 # Feel free to add/remove entries from this list.
