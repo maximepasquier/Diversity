@@ -37,7 +37,7 @@ script:
   - ./build-wrapper-linux-x86-64 --out-dir bw-output make compile
   # And finally run the SonarCloud analysis - read the "sonar-project.properties"
   # file to see the specific configuration
-  - sonar-scanner
+  - ./sonar-scanner
   - make compile
   
 cache:
