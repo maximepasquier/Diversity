@@ -9,8 +9,7 @@ addons:
   sonarcloud:
     organization: "maximepasquier"
     token:
-      secure: "04/Jj7rEdC/dJmLZADCrWvYk77353/aP5mwBcWROGAfnuo941+YpJXc+KgHh+nRTYr+p7oFA3tCw3hbBNrihE2YX+obODImdfMJi2qewa6M6ifdtiwJN+U7nn+eztiXr1aZLjEvMr/IW+GDdpN5B4BRLDzES/CU8LoW724PhRkYHNTDKVhKXs+pPRJ1GriOZfMUU+vONfbnsdTxU/ooJO6HGpscw+NL9a2Cg1JsHvlNFvZst/3yZwFmY2kHsUa5B19jkMnOfBKR2nZYnoKtZmyhoTbl+YggKU/3rF49bEnDoZMN4p8aUdRctWLd4BJFgbOih8bopwL4UVr7sVn3arwTcxBVpJJMQtykqjfCLrSVTqs3OO6bq5yFnq/FTd3DMZaTHxtn3nV1Hnn0t0Wl4zDp9xlNyypf5fTOVN2rWP4ioMCSaRUvSBE87Vc/YUir+QqP9LSj7K4+Ceh4smkgLwNMCoNSuv1oCb1UZD1UzCRDC3dUI82wyN+a7bW4F8bheuFz1ULFyMzlm39UdBTnpnO8H5aGNAO7X9ce0BeObc7dk+wujN3z/3qDQj2Jv2/uMCcXTYUJC4kU3wPCQ4NdC1dWGLMN4KXR4bz5Q4oIJgA8XaU9mQGzuCBjUepxIhh3gsFdzfZywz02RjbVPpLCW/bdPcUWDeEa4qZqUIkMnYVI="
-
+      secure: "b89UFlagjBF2W7RmiPVQhJv6+UBAJn6+vmAgkUjTkaWE7+7JGVCGewswLpijDG+Lbd+ArHdDE4sDNJBhWDxUOAUixWoJPmMEFuRKrA/3aK+hHD6FeJM5F5U7FQvpd0LtcnGbb6URJHiLRS2tWDhi39KnzaF44zr8AwlZu3LdqOnpDJpt3DLErueqAU5xEj68Ll8/wMPifWF09RcDqc7H48eU1d45YwCFxm02Ji0pJkV58UdyJsnib9y1vYvpnuas0nGVeLlm1n/F6M4AIXMzELce0i6g9weet3jK169nqdWWix5ALuA+/ejuwwm7Th++y8nEfJNTbHkJfir0hkeGznVnYQD9PM1P+0q4XA4lbax7r+wvvq+pO+UB3kJljdXNXPANyk05Dng2x1r0xN1ENeSaYIDUWRlqkrpTwfDlUCpliScV8hBxA9uQPwvvUG7Xcnmt0iBZh6AkfYkuDE4BAbTilqUC/BBfuGuTgo4KCE7yiHkWhkal4YUucjlCpJP2uvuY0Htqahzl78MVQWSAhxU2hU1koEK1IOlROK5466uvXpvgYo5D8VcCdXCiKGRj21JOaScQY3B4jJLNO/sA4V1mPk76/NhHMPOv28U4RBTOD8oFW0WnDoLmwk/xp+wBH5+LxUiif1itrhBDC0HrBVzLV3wgq3hEJyw6MEPZfbQ="
 
 # Define builds on mulitple OS/compiler combinations. 
 # Feel free to add/remove entries from this list.
@@ -40,7 +39,7 @@ script:
   - ./build-wrapper-linux-x86-64 --out-dir bw-output make compile
   # And finally run the SonarCloud analysis - read the "sonar-project.properties"
   # file to see the specific configuration
-  - sonar-scanner
+  #- sonar-scanner
   - make compile
   
 cache:
