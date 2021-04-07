@@ -39,6 +39,10 @@ script:
   # file to see the specific configuration
   - sonar-scanner
   - make compile
+  
+cache:
+  directories:
+    - '$HOME/.sonar/cache'
 
 after_success:
   - lcov --list coverage_out.info.cleaned  # Show test report in travis log.
