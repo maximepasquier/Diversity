@@ -25,7 +25,6 @@ before_install:
 
 install: 
   - cd $PARENTDIR/build
-  - make
 
 script:
   - make compile
