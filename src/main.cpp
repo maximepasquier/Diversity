@@ -12,93 +12,32 @@
 #include "node.h"
 #include "Linked_list.h"
 #include "functions.h"
+#include "file_functions.h"
 
 using namespace std;
+
+//* Déclaration des paramètres globaux
+int TAILLE_SYSTEME;          // largeur de la grille
+int NOMBRE_PERSONNES;        // nombre de personnes initialement (densité)
+int ITERATIONS;              // nombre d'itérations de la simulation
+unsigned int GENOME_INIT_H;  // unsigned char pour le génome humain initial
+int GENOME_DIVERSITY_H;      // diversité des génomes humains
+unsigned int GENOME_INIT_AP; // unsigned char pour le génome AP initial
+float VITESSE_MUTATIONS_AP;  // définit la vitesse à laquelle les pathogènes mutent
+float CHARGE_VIRALE;         // charge virale (niveau de contagion)
+unsigned int PUISSANCE;      // puissance des termes dans la fonction de génome match
+float TRAINEE;               // détermine la probabilité de contaminer une cellule
+float SURVIE_AP;             // probabilité que le pathogène contaminant une cellule reste en vie
 
 int main(int argc, char const *argv[])
 {
     //* Read from config file
-    ifstream config;
-    config.open("./Configuration/config.txt");
-    string line;
-    vector<pair<string, string>> file_data;
-    while (getline(config, line))
-    {
-        istringstream is_line(line);
-        string key;
-        if (getline(is_line, key, '='))
-        {
-            string value;
-            if (getline(is_line, value))
-            {
-                file_data.push_back(make_pair(key, value));
-            }
-        }
-    }
-
-    //* Déclaration des paramètres globaux
-    int TAILLE_SYSTEME;          // largeur de la grille
-    int NOMBRE_PERSONNES;        // nombre de personnes initialement (densité)
-    int ITERATIONS;              // nombre d'itérations de la simulation
-    unsigned int GENOME_INIT_H;  // unsigned char pour le génome humain initial
-    int GENOME_DIVERSITY_H;      // diversité des génomes humains
-    unsigned int GENOME_INIT_AP; // unsigned char pour le génome AP initial
-    float VITESSE_MUTATIONS_AP;  // définit la vitesse à laquelle les pathogènes mutent
-    float CHARGE_VIRALE;         // charge virale (niveau de contagion)
-    unsigned int PUISSANCE;      // puissance des termes dans la fonction de génome match
-    float TRAINEE;               // détermine la probabilité de contaminer une cellule
-    float SURVIE_AP;             // probabilité que le pathogène contaminant une cellule reste en vie
+    vector<pair<string, string>> configuration_file_data;
+    string configuration_file_path = "./Configuration/config.txt";
+    Read_Configuration_file(configuration_file_path, configuration_file_data);
 
     //* Assignation des paramètres globaux
-    for (int i = 0; i < file_data.size(); i++)
-    {
-        string key = file_data.at(i).first;
-        string value = file_data.at(i).second;
-        if (key == "TAILLE_SYSTEME")
-        {
-            TAILLE_SYSTEME = stoi(value);
-        }
-        else if (key == "NOMBRE_PERSONNES")
-        {
-            NOMBRE_PERSONNES = stoi(value);
-        }
-        else if (key == "ITERATIONS")
-        {
-            ITERATIONS = stoi(value);
-        }
-        else if (key == "GENOME_INIT_H")
-        {
-            GENOME_INIT_H = stoul(value);
-        }
-        else if (key == "GENOME_DIVERSITY_H")
-        {
-            GENOME_DIVERSITY_H = stoi(value);
-        }
-        else if (key == "GENOME_INIT_AP")
-        {
-            GENOME_INIT_AP = stoul(value);
-        }
-        else if (key == "VITESSE_MUTATIONS_AP")
-        {
-            VITESSE_MUTATIONS_AP = stof(value);
-        }
-        else if (key == "CHARGE_VIRALE")
-        {
-            CHARGE_VIRALE = stof(value);
-        }
-        else if (key == "PUISSANCE")
-        {
-            PUISSANCE = stoul(value);
-        }
-        else if (key == "TRAINEE")
-        {
-            TRAINEE = stof(value);
-        }
-        else if (key == "SURVIE_AP")
-        {
-            SURVIE_AP = stof(value);
-        }
-    }
+    Assign_global_variables(configuration_file_data);
 
     //* Initialiser un générateur de nombres aléatoire
     unsigned int seed = chrono::system_clock::now().time_since_epoch().count();
@@ -126,6 +65,7 @@ int main(int argc, char const *argv[])
             Pointer_array_AP[i][j] = NULL;
         }
     }
+    //Pointer_array_to_NULL(TAILLE_SYSTEME, Pointer_array_H, Pointer_array_AP);
 
     //* Ajouter des objets humain
     for (int i = 0; i < NOMBRE_PERSONNES; i++)
@@ -225,7 +165,7 @@ int main(int argc, char const *argv[])
         Humain_hy << '\n';
         Humain_immune << '\n';
 
-#if (1)
+#if (0)
         //* Clear screen
         printf("\x1b[2J"); // clear screen
         printf("\x1b[H");  // returning the cursor to the home position
@@ -416,7 +356,7 @@ int main(int argc, char const *argv[])
             }
         }
         //* Sleep (FPS)
-        this_thread::sleep_for(chrono::seconds(1));
+        //this_thread::sleep_for(chrono::seconds(1));
     }
 
     //* Close files

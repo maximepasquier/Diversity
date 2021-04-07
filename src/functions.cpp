@@ -2,6 +2,9 @@
 #include <algorithm>
 #include <math.h>
 #include <bits/stdc++.h>
+#include <vector>
+#include "Humain.h"
+#include "node.h"
 
 using namespace std;
 
@@ -54,3 +57,18 @@ unsigned int Mutations_AP(unsigned int genome_AP, int index)
     mask = 1 << index;
     return genome_AP ^ mask;
 }
+
+/*
+void Pointer_array_to_NULL(int taille, Humain *Pointer_array_H[][], node *Pointer_array_AP[][])
+{
+    for (int i = 0; i < taille; i++)
+    {
+        for (int j = 0; j < taille; j++)
+        {
+            //Pointer_array_H[i][j] = NULL;
+            //Pointer_array_AP[i][j] = NULL;
+            int a = 0;
+        }
+    }
+}
+*/

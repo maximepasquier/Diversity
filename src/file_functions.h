@@ -1,0 +1,2 @@
+void Read_Configuration_file(std::string configuration_file_path, std::vector<std::pair<std::string, std::string>> &file_data);
+void Assign_global_variables(std::vector<std::pair<std::string, std::string>> &configuration_file_data);

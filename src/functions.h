@@ -3,3 +3,4 @@ unsigned int Generate_Genome(int deviation, unsigned int init, int *rand_int_lis
 unsigned int Mutations_AP(unsigned int genome_AP, int index);
 int hammingDistance(unsigned int n1, unsigned int n2);
 void Knuth_Shuffle(int liste[], int taille);
+//void Pointer_array_to_NULL(int taille, Humain *Pointer_array_H[][], node *Pointer_array_AP[][]);
