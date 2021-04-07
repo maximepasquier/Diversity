@@ -5,6 +5,13 @@ notifications:
 compiler:
 - gcc
 
+addons:
+  sonarcloud:
+  organization: "maximepasquier"
+  token:
+    secure: "XfsETm9nFGpGsIeW1/nXE4Bq+eTsA/b055A2pId9I4idMJ2CEbnghiIdIganDOuyQJBPGuAAPD3p4PKG3TSIBFD/h0qDeTRl5wYpmx6bojmC+iprI42nt2XFkn/fcuvCG6mpAUVcRpDNcNaw4MwJO0qSXaylrPkRtjgb2/pHfmNVmRVTsVQM8F6Cc1KQtJl8sWaEhLofPoFEdL0ngGNV/NdtRNIn36lqlF4HxWclVx8SltPgfwwIreXs9GdelTmBfjEAPqIenAv6uSURcilCbn05x0JIglNX6WfLbzVJ1cz6/HCmxtu+e1wFocDTAnPnnjactnigmbjew/vpwgN7X5Ud08kD2Sz3yuxMmPdN328FUL6YBAuh6nWDAhE6YHPI9ew22Qwr0SS5eyU6tNBtwsgmCsmYdPAk6wWhM+9agDpH+Sndek/3+50JuGbJqOTLz305iSCZHGrZYRM/hjtZ913/EvSrEEa5iAN0aQjvAfPFYcX1BDeZmb5KOdGLsI7OA+iHRzDJzjfCJb2NihkHC0bQV5tTHIAxSisbC8LbKHU+GCCEYrS0xUIpyilRxn5HibDEn5auFdnabEzOZX3Mue+gm6JQ3cXOb6GLjO8KqQsk7EMniNGyQVfVuOAFIo0Ktn0aAV7qH/rUSPXlnbtgnEtvSTro+wqmrFwS3adz1CE="
+
+
 # Define builds on mulitple OS/compiler combinations. 
 # Feel free to add/remove entries from this list.
 matrix:
@@ -25,6 +32,12 @@ before_install:
   - PARENTDIR=$(pwd)
 
 script:
+  # Wraps the compilation with the Build Wrapper to generate configuration (used
+  # later by the SonarScanner) into the "bw-output" folder
+  - build-wrapper-linux-x86-64 --out-dir bw-output <your clean build command>
+  # And finally run the SonarCloud analysis - read the "sonar-project.properties"
+  # file to see the specific configuration
+  - sonar-scanner -Dsonar.cfamily.build-wrapper-output=bw-output
   - make compile
 
 after_success:
