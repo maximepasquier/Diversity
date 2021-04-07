@@ -21,16 +21,11 @@ matrix:
 before_install:
   - eval "${MATRIX_EVAL}"
   - PARENTDIR=$(pwd)
-  - mkdir $PARENTDIR/build
-
-install: 
-  - cd $PARENTDIR/build
 
 script:
   - make compile
 
 after_success:
-  - cd $PARENTDIR/build
   - lcov --list coverage_out.info.cleaned  # Show test report in travis log.
   # Install coverals gem for uploading coverage to coveralls.
   - gem install coveralls-lcov
