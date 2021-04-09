@@ -91,3 +91,46 @@ void Assign_global_variables(vector<pair<string, string>> &configuration_file_da
         }
     }
 }
+
+void Create_and_initialize_csv(ofstream &Humain_contamine, ofstream &Humain_genomeAP, ofstream &Humain_genomeH, ofstream &Humain_hx, ofstream &Humain_hy, ofstream &Humain_immune)
+{
+    Humain_contamine.open("./data/Humain_contamine.csv");
+    Humain_genomeAP.open("./data/Humain_genomeAP.csv");
+    Humain_genomeH.open("./data/Humain_genomeH.csv");
+    Humain_hx.open("./data/Humain_hx.csv");
+    Humain_hy.open("./data/Humain_hy.csv");
+    Humain_immune.open("./data/Humain_immune.csv");
+
+    for (int i = 0; i < NOMBRE_PERSONNES; i++)
+    {
+        Humain_contamine << "Humain_" << i << ',';
+        Humain_genomeAP << "Humain_" << i << ',';
+        Humain_genomeH << "Humain_" << i << ',';
+        Humain_hx << "Humain_" << i << ',';
+        Humain_hy << "Humain_" << i << ',';
+        Humain_immune << "Humain_" << i << ',';
+    }
+    Humain_contamine << '\n';
+    Humain_genomeAP << '\n';
+    Humain_genomeH << '\n';
+    Humain_hx << '\n';
+    Humain_hy << '\n';
+    Humain_immune << '\n';
+
+    Humain_contamine.close();
+    Humain_genomeAP.close();
+    Humain_genomeH.close();
+    Humain_hx.close();
+    Humain_hy.close();
+    Humain_immune.close();
+}
+
+void Open_append_mode_csv(ofstream &Humain_contamine, ofstream &Humain_genomeAP, ofstream &Humain_genomeH, ofstream &Humain_hx, ofstream &Humain_hy, ofstream &Humain_immune)
+{
+    Humain_contamine.open("./data/Humain_contamine.csv", std::ios::app);
+    Humain_genomeAP.open("./data/Humain_genomeAP.csv", std::ios::app);
+    Humain_genomeH.open("./data/Humain_genomeH.csv", std::ios::app);
+    Humain_hx.open("./data/Humain_hx.csv", std::ios::app);
+    Humain_hy.open("./data/Humain_hy.csv", std::ios::app);
+    Humain_immune.open("./data/Humain_immune.csv", std::ios::app);
+}

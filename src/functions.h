@@ -3,4 +3,6 @@ unsigned int Generate_Genome(int deviation, unsigned int init, int *rand_int_lis
 unsigned int Mutations_AP(unsigned int genome_AP, int index);
 int hammingDistance(unsigned int n1, unsigned int n2);
 void Knuth_Shuffle(int liste[], int taille);
-//void Pointer_array_to_NULL(int taille, Humain *Pointer_array_H[][], node *Pointer_array_AP[][]);
+void Pointer_array_to_NULL(int taille, Humain ***Pointer_array_H, node ***Pointer_array_AP);
+void Generate_human_genome_diversity(int nb_personnes, int genome_diversity_h, unsigned int genome_init_h, std::default_random_engine generator, Humain **Liste_H);
+void Add_human_obj_to_grid(int nb_personnes, int taille_systeme, Humain **Liste_H, Humain ***Pointer_array_H, std::default_random_engine generator);
