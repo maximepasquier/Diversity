@@ -86,7 +86,7 @@ int main(int argc, char const *argv[])
 
     //* Declarer les fichiers en écriture
     ofstream Humain_contamine, Humain_genomeAP, Humain_genomeH, Humain_hx, Humain_hy, Humain_immune;
-    
+
     //* Initialiser les fichier .csv
     Create_and_initialize_csv(Humain_contamine, Humain_genomeAP, Humain_genomeH, Humain_hx, Humain_hy, Humain_immune);
 
@@ -97,234 +97,63 @@ int main(int argc, char const *argv[])
     for (int iteration = 0; iteration < ITERATIONS; iteration++)
     {
         //* Print les itérations (avancement)
-        cout << iteration << endl;
+        //Print_progression(iteration, ITERATIONS);
+
         //* Write to .csv file
-        for (int i = 0; i < NOMBRE_PERSONNES; i++)
-        {
-            Humain_contamine << Liste_H[i]->Getcontamine() << ',';
-            Humain_genomeAP << Liste_H[i]->GetgenomeAP() << ',';
-            Humain_genomeH << Liste_H[i]->GetgenomeH() << ',';
-            Humain_hx << Liste_H[i]->GetXH() << ',';
-            Humain_hy << Liste_H[i]->GetYH() << ',';
-            vector<unsigned int> liste_immunite = Liste_H[i]->Getimmune();
-            int vsize = Liste_H[i]->Getimmune().size();
-            for (int j = 0; j < vsize; j++)
-            {
-                Humain_immune << liste_immunite[j] << ' ';
-            }
-            Humain_immune << ',';
-        }
-        Humain_contamine << '\n';
-        Humain_genomeAP << '\n';
-        Humain_genomeH << '\n';
-        Humain_hx << '\n';
-        Humain_hy << '\n';
-        Humain_immune << '\n';
+        Update_csv(NOMBRE_PERSONNES, Liste_H, Humain_contamine, Humain_genomeAP, Humain_genomeH, Humain_hx, Humain_hy, Humain_immune);
 
-#if (1)
-        //* Clear screen
-        printf("\x1b[2J"); // clear screen
-        printf("\x1b[H");  // returning the cursor to the home position
-
-        //* Parcours du domaine pour l'affichage
-        for (int i = 0; i < TAILLE_SYSTEME; i++)
-        {
-            for (int j = 0; j < TAILLE_SYSTEME; j++)
-            {
-                int count = 3;
-                if (Pointer_array_H[i][j] != NULL) // la cellule pointe sur un humain !
-                {
-                    cout << Pointer_array_H[i][j]->Getcontamine();
-                    count--;
-                }
-                if (Pointer_array_AP[i][j] != NULL)
-                {
-                    cout << '2';
-                    count--;
-                }
-                if (count == 3) // la cellule ne pointe sur rien
-                {
-                    cout << "-- ";
-                    continue;
-                }
-                for (int i = 0; i < count; i++)
-                {
-                    cout << ' ';
-                }
-            }
-            cout << endl;
-        }
-#endif
+        //* Print ASCII grid to screen
+        Print_ASCII_grid(TAILLE_SYSTEME, Pointer_array_H, Pointer_array_AP);
 
         //* Construire la permutations de la liste humain
-        //int liste[NOMBRE_PERSONNES]; // sorted list of consecutif int
-        int *liste;
-        liste = new int[NOMBRE_PERSONNES];
+        int *permuted_liste;
+        permuted_liste = new int[NOMBRE_PERSONNES];
 
         for (int i = 0; i < NOMBRE_PERSONNES; i++)
         {
-            liste[i] = i;
+            permuted_liste[i] = i;
         }
-        int taille = sizeof(liste) / sizeof(liste[0]);
-        Knuth_Shuffle(liste, taille);
+        Knuth_Shuffle(permuted_liste, NOMBRE_PERSONNES);
 
         //* Parcours du domaine (liste agents pathogènes)
-        node *tmp = Liste_AP.Get_head();
-        while (tmp != NULL)
-        {
-            float rand_f = rand_float(generator);
-            if (rand_f > SURVIE_AP)
-            {
-                //* Destruction de l'agent pathogène
-                int x, y;
-                x = tmp->AP.GetXAP();
-                y = tmp->AP.GetYAP();
-                Liste_AP.remove_element(Pointer_array_AP[x][y]);
-                Pointer_array_AP[x][y] = NULL;
-            }
-            tmp = tmp->suivant;
-        }
+        Update_AP(&Liste_AP, Pointer_array_AP, SURVIE_AP, generator);
 
         //* Parcours du domaine (liste humains)
         for (int i = 0; i < NOMBRE_PERSONNES; i++)
         {
-            int index_H, x, y;
-            index_H = liste[i];
-            x = Liste_H[index_H]->GetXH();
-            y = Liste_H[index_H]->GetYH();
+            int index_H = permuted_liste[i];
+            int x = Liste_H[index_H]->GetXH();
+            int y = Liste_H[index_H]->GetYH();
             vector<pair<int, int>> coordonnees; // vecteur de paire de int
             //* Push les coordonnées des 4 voisins
-            coordonnees.push_back(make_pair(x, (y - 1 + TAILLE_SYSTEME) % TAILLE_SYSTEME));
-            coordonnees.push_back(make_pair(x, (y + 1) % TAILLE_SYSTEME));
-            coordonnees.push_back(make_pair((x - 1 + TAILLE_SYSTEME) % TAILLE_SYSTEME, y));
-            coordonnees.push_back(make_pair((x + 1) % TAILLE_SYSTEME, y));
+            Get_coords_voisins(&coordonnees, TAILLE_SYSTEME, x, y);
 
             //* Déterminer les cas
             if (Liste_H[index_H]->Getcontamine()) //* contaminé
             {
-                //* Déterminer si il y a déjà une immunité
-                bool immunise = false;
-                vector<unsigned int> liste_immunite = Liste_H[index_H]->Getimmune();
-                for (int j = 0; j < liste_immunite.size(); j++)
-                {
-                    if (liste_immunite[j] == Liste_H[index_H]->GetgenomeAP())
-                    {
-                        immunise = true;
-                        Liste_H[index_H]->Setcontamine(false);
-                        Liste_H[index_H]->SetgenomeAP(0);
-                        break;
-                    }
-                }
-                if (!immunise)
-                {
-                    //* Déterminer la probabilité de s'immuniser à ce tour (en fonction des génomes)
-                    float chance; // % entre 0 et 1
-                    //* Chance de se débarrasser du pathogène
-                    chance = Genome_Match(Liste_H[index_H]->GetgenomeH(), Liste_H[index_H]->GetgenomeAP(), PUISSANCE);
-
-                    float rand_f = rand_float(generator);
-                    if (rand_f < chance) // on se débarrasse du pathogène
-                    {
-                        //* Immune
-                        Liste_H[index_H]->Setcontamine(false);
-                        Liste_H[index_H]->Setimmune(Liste_H[index_H]->GetgenomeAP());
-                        Liste_H[index_H]->SetgenomeAP(0);
-                    }
-                    else // le pathogène reste
-                    {
-                        //* Le pathogène mute
-                        float rand_f = rand_float(generator);
-                        if (rand_f < VITESSE_MUTATIONS_AP)
-                        {
-                            int index = rand_int_size(generator);
-                            Liste_H[index_H]->SetgenomeAP(Mutations_AP(Liste_H[index_H]->GetgenomeAP(), index));
-                        }
-                    }
-                }
+                Humain_hote(index_H, Liste_H, PUISSANCE, VITESSE_MUTATIONS_AP, generator);
             }
             else //* pas contaminé
             {
                 //* Un AP se trouve sur la même cellule
-                if (Pointer_array_AP[x][y] != NULL)
-                {
-                    if (!Liste_H[index_H]->Getcontamine()) // l'humain doit être sain pour être contaminé par ce pahogène
-                    {
-                        float rand_f = rand_float(generator);
-                        if (rand_f < CHARGE_VIRALE)
-                        {
-                            //* L'humain est contaminé par ce pathogène
-                            Liste_H[index_H]->Setcontamine(true);
-                            Liste_H[index_H]->SetgenomeAP(Pointer_array_AP[x][y]->AP.GetgenomeAP());
-                        }
-                    }
-                }
-                //* Analyse du voisinage
-                for (int i = 0; i < coordonnees.size(); i++)
-                {
-                    if (Pointer_array_H[coordonnees.at(i).first][coordonnees.at(i).second] != NULL) // un humain occupe cette case voisine
-                    {
-                        if (Pointer_array_H[coordonnees.at(i).first][coordonnees.at(i).second]->Getcontamine()) // ce voisin est contaminé
-                        {
-                            float rand_f = rand_float(generator);
-                            if (rand_f < CHARGE_VIRALE) // charge virale
-                            {
-                                //* Notre humain a été infecté par ce voisin
-                                Liste_H[index_H]->Setcontamine(true);
-                                Liste_H[index_H]->SetgenomeAP(Pointer_array_H[coordonnees.at(i).first][coordonnees.at(i).second]->GetgenomeAP());
-                            }
-                        }
-                    }
-                }
-            }
+                Collision_H_AP(Liste_H, index_H, Pointer_array_AP, x, y, CHARGE_VIRALE, generator);
 
-            //* Mouvements
-            uniform_int_distribution<int> randInt(0, 3);
-            //* Choix d'une case voisine
-            int choix = randInt(generator);
-            if (Pointer_array_H[coordonnees.at(choix).first][coordonnees.at(choix).second] == NULL) // cellule libre
-            {
-                //* Si l'individu est contaminé
-                if (Pointer_array_H[x][y]->Getcontamine())
-                {
-                    //* Déterminer si l'humain contamine la cellule qu'il quitte
-                    float rand_f = rand_float(generator);
-                    if (rand_f < TRAINEE)
-                    {
-                        //* Cellule contaminée (avant de bouger)
-                        if (Pointer_array_AP[x][y] != NULL)
-                        {
-                            //* Un AP a déjà contaminé la cellule (on l'écrase)
-                            Liste_AP.remove_element(Pointer_array_AP[x][y]);
-                            Pointer_array_AP[x][y] = NULL;
-                        }
-                        Agent_Pathogene *AP;
-                        AP = new Agent_Pathogene();
-                        Pointer_array_AP[x][y] = Liste_AP.add_node(*AP);
-                        Pointer_array_AP[x][y]->AP.SetgenomeAP(Pointer_array_H[x][y]->GetgenomeAP());
-                        //* Sauver les coordonnées de l'agent pathogène dans ses attributs
-                        Pointer_array_AP[x][y]->AP.SetXAP(x);
-                        Pointer_array_AP[x][y]->AP.SetYAP(y);
-                    }
-                }
-                //* Mise à jour des coordonnées de l'humain
-                Pointer_array_H[x][y]->SetXH(coordonnees.at(choix).first);
-                Pointer_array_H[x][y]->SetYH(coordonnees.at(choix).second);
-                //* Swap les pointeurs
-                Pointer_array_H[coordonnees.at(choix).first][coordonnees.at(choix).second] = Pointer_array_H[x][y]; // le pointeur voisin pointe sur notre humain
-                Pointer_array_H[x][y] = NULL;                                                                       // le pointeur actuel cesse de pointer sur notre humain
+                //* Analyse du voisinage
+                Analyse_voisinage(&coordonnees, Pointer_array_H, Liste_H, index_H, CHARGE_VIRALE, generator);
             }
+            //* Mouvements
+            //float r = rand_float(generator);
+            //cout << "true random : " << r << endl;
+            Mouvement(Pointer_array_H, Pointer_array_AP, &Liste_AP, TRAINEE, &coordonnees, x, y, rand_float, generator);
         }
         //* Sleep (FPS)
         this_thread::sleep_for(chrono::seconds(1));
+        //* Supprimer la permutation
+        delete[] permuted_liste;
     }
 
     //* Close files
-    Humain_contamine.close();
-    Humain_genomeAP.close();
-    Humain_genomeH.close();
-    Humain_hx.close();
-    Humain_hy.close();
-    Humain_immune.close();
+    Close_files(Humain_contamine, Humain_genomeAP, Humain_genomeH, Humain_hx, Humain_hy, Humain_immune);
 
     //* Supprimer tous les objets humains
 

@@ -3,6 +3,7 @@
 #include <math.h>
 #include <bits/stdc++.h>
 #include <vector>
+#include "Humain.h"
 
 using namespace std;
 
@@ -133,4 +134,39 @@ void Open_append_mode_csv(ofstream &Humain_contamine, ofstream &Humain_genomeAP,
     Humain_hx.open("./data/Humain_hx.csv", std::ios::app);
     Humain_hy.open("./data/Humain_hy.csv", std::ios::app);
     Humain_immune.open("./data/Humain_immune.csv", std::ios::app);
+}
+
+void Update_csv(int NOMBRE_PERSONNES, Humain **Liste_H, std::ofstream &Humain_contamine, std::ofstream &Humain_genomeAP, std::ofstream &Humain_genomeH, std::ofstream &Humain_hx, std::ofstream &Humain_hy, std::ofstream &Humain_immune)
+{
+    for (int i = 0; i < NOMBRE_PERSONNES; i++)
+    {
+        Humain_contamine << Liste_H[i]->Getcontamine() << ',';
+        Humain_genomeAP << Liste_H[i]->GetgenomeAP() << ',';
+        Humain_genomeH << Liste_H[i]->GetgenomeH() << ',';
+        Humain_hx << Liste_H[i]->GetXH() << ',';
+        Humain_hy << Liste_H[i]->GetYH() << ',';
+        vector<unsigned int> liste_immunite = Liste_H[i]->Getimmune();
+        int vsize = Liste_H[i]->Getimmune().size();
+        for (int j = 0; j < vsize; j++)
+        {
+            Humain_immune << liste_immunite[j] << ' ';
+        }
+        Humain_immune << ',';
+    }
+    Humain_contamine << '\n';
+    Humain_genomeAP << '\n';
+    Humain_genomeH << '\n';
+    Humain_hx << '\n';
+    Humain_hy << '\n';
+    Humain_immune << '\n';
+}
+
+void Close_files(std::ofstream &Humain_contamine, std::ofstream &Humain_genomeAP, std::ofstream &Humain_genomeH, std::ofstream &Humain_hx, std::ofstream &Humain_hy, std::ofstream &Humain_immune)
+{
+    Humain_contamine.close();
+    Humain_genomeAP.close();
+    Humain_genomeH.close();
+    Humain_hx.close();
+    Humain_hy.close();
+    Humain_immune.close();
 }
