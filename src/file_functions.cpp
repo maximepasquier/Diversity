@@ -43,7 +43,6 @@ void Assign_global_variables(vector<pair<string, string>> &configuration_file_da
 {
     for (int i = 0; i < configuration_file_data.size(); i++)
     {
-
         string key = configuration_file_data.at(i).first;
         string value = configuration_file_data.at(i).second;
         if (key == "TAILLE_SYSTEME")

@@ -3,6 +3,7 @@
 #include <bits/stdc++.h>
 #include <algorithm>
 #include <math.h>
+#include <random>
 #include <bits/stdc++.h>
 #include <string>
 #include <vector>
@@ -21,7 +22,6 @@ void Knuth_Shuffle(int *liste, int taille)
         int tmp = liste[i];
         liste[i] = liste[index];
         liste[index] = tmp;
-        //cout << "liste : " << liste[i] << endl;
     }
 }
 
@@ -116,14 +116,15 @@ void Add_human_obj_to_grid(int nb_personnes, int taille_systeme, Humain **Liste_
 
 void Print_progression(int current_iteration, int total)
 {
+    printf("%c[2K", 27); // clear line
     struct winsize w;
     ioctl(STDOUT_FILENO, TIOCGWINSZ, &w);
 
     //printf("lines %d\n", w.ws_row);
     //printf("columns %d\n", w.ws_col);
-    float ratio_done = (float)current_iteration / (float)total;
+    float ratio_done = (float)(current_iteration + 1) / (float)total;
     string progression = "[";
-    cout << "Progression : ";
+    cout << "Progress : [" << int(ratio_done * 100) << "%]";
     for (int i = 0; i < w.ws_col - 20; i++)
     {
         float a = (float)i / (float)(w.ws_col - 20);
@@ -139,9 +140,10 @@ void Print_progression(int current_iteration, int total)
     progression.append("]");
     cout << progression << '\r';
     cout.flush();
-    //printf("%c[2K", 27); // clear line
-    printf("\x1b[2J"); // clear screen
-    printf("\x1b[H");  // returning the cursor to the home position
+    if (current_iteration == total - 1)
+    {
+        cout << endl;
+    }
 }
 
 void Print_ASCII_grid(int taille_sys, Humain ***Pointer_array_H, node ***Pointer_array_AP)

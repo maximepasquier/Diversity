@@ -1,7 +1,7 @@
 .DEFAULT_GOAL := compile
 
 compile:
-	g++ -o ./bin/main ./src/*.cpp -std=c++11
+	g++ -o ./bin/main -I ./include ./src/*.cpp ./test/*.cpp -std=c++11
 run:
 	./bin/main
 

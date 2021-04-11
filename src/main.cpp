@@ -13,6 +13,7 @@
 #include "Linked_list.h"
 #include "functions.h"
 #include "file_functions.h"
+#include "test_variables.h"
 
 using namespace std;
 
@@ -38,6 +39,9 @@ int main(int argc, char const *argv[])
 
     //* Assignation des paramètres globaux
     Assign_global_variables(configuration_file_data);
+
+    //test: vérifier la cohérence des variables globales
+    test_variables_coherence(TAILLE_SYSTEME, NOMBRE_PERSONNES, ITERATIONS, GENOME_INIT_H, GENOME_DIVERSITY_H, GENOME_INIT_AP, VITESSE_MUTATIONS_AP, CHARGE_VIRALE, PUISSANCE, TRAINEE, SURVIE_AP);
 
     //* Initialiser un générateur de nombres aléatoire
     unsigned int seed = chrono::system_clock::now().time_since_epoch().count();
@@ -74,11 +78,20 @@ int main(int argc, char const *argv[])
     //* Réinitialisation des matrices de pointeurs (NULL)
     Pointer_array_to_NULL(TAILLE_SYSTEME, Pointer_array_H, Pointer_array_AP);
 
+    //test : controle pointer to null
+    test_is_Pointer_array_to_null(TAILLE_SYSTEME, Pointer_array_H, Pointer_array_AP);
+
     //* Initaliser des génomes pour les humains
     Generate_human_genome_diversity(NOMBRE_PERSONNES, GENOME_DIVERSITY_H, GENOME_INIT_H, generator, Liste_H);
 
+    //test : vérifier la diversité des génomes
+    test_diversity_genome(Liste_H, NOMBRE_PERSONNES, GENOME_DIVERSITY_H, GENOME_INIT_H);
+
     //* Ajouter des objets humain
     Add_human_obj_to_grid(NOMBRE_PERSONNES, TAILLE_SYSTEME, Liste_H, Pointer_array_H, generator);
+
+    // test : vérifier que chaque humain ait des coordonnées dans ses attributs + aucun conflit entre les humains
+    test_humain_coords_conflits(Liste_H, NOMBRE_PERSONNES);
 
     //* Contaminer un humain (patient zéro)
     Liste_H[0]->Setcontamine(true);
@@ -97,13 +110,13 @@ int main(int argc, char const *argv[])
     for (int iteration = 0; iteration < ITERATIONS; iteration++)
     {
         //* Print les itérations (avancement)
-        //Print_progression(iteration, ITERATIONS);
+        Print_progression(iteration, ITERATIONS);
 
         //* Write to .csv file
         Update_csv(NOMBRE_PERSONNES, Liste_H, Humain_contamine, Humain_genomeAP, Humain_genomeH, Humain_hx, Humain_hy, Humain_immune);
 
         //* Print ASCII grid to screen
-        Print_ASCII_grid(TAILLE_SYSTEME, Pointer_array_H, Pointer_array_AP);
+        //Print_ASCII_grid(TAILLE_SYSTEME, Pointer_array_H, Pointer_array_AP);
 
         //* Construire la permutations de la liste humain
         int *permuted_liste;
