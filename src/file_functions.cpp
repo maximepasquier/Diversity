@@ -7,6 +7,7 @@
 
 using namespace std;
 
+/*
 extern int TAILLE_SYSTEME;          // largeur de la grille
 extern int NOMBRE_PERSONNES;        // nombre de personnes initialement (densité)
 extern int ITERATIONS;              // nombre d'itérations de la simulation
@@ -18,6 +19,7 @@ extern float CHARGE_VIRALE;         // charge virale (niveau de contagion)
 extern unsigned int PUISSANCE;      // puissance des termes dans la fonction de génome match
 extern float TRAINEE;               // détermine la probabilité de contaminer une cellule
 extern float SURVIE_AP;             // probabilité que le pathogène contaminant une cellule reste en vie
+*/
 
 void Read_Configuration_file(string configuration_file_path, vector<pair<string, string>> &file_data)
 {
@@ -38,7 +40,7 @@ void Read_Configuration_file(string configuration_file_path, vector<pair<string,
         }
     }
 }
-
+/*
 void Assign_global_variables(vector<pair<string, string>> &configuration_file_data)
 {
     for (int i = 0; i < configuration_file_data.size(); i++)
@@ -91,8 +93,9 @@ void Assign_global_variables(vector<pair<string, string>> &configuration_file_da
         }
     }
 }
+*/
 
-void Create_and_initialize_csv(ofstream &Humain_contamine, ofstream &Humain_genomeAP, ofstream &Humain_genomeH, ofstream &Humain_hx, ofstream &Humain_hy, ofstream &Humain_immune)
+void Create_and_initialize_csv(int NOMBRE_PERSONNES, ofstream &Humain_contamine, ofstream &Humain_genomeAP, ofstream &Humain_genomeH, ofstream &Humain_hx, ofstream &Humain_hy, ofstream &Humain_immune)
 {
     Humain_contamine.open("./data/Humain_contamine.csv");
     Humain_genomeAP.open("./data/Humain_genomeAP.csv");

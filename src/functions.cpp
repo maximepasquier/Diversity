@@ -13,6 +13,8 @@
 
 using namespace std;
 
+extern default_random_engine generator;
+
 void Knuth_Shuffle(int *liste, int taille)
 {
     srand(time(NULL));
@@ -75,7 +77,7 @@ void Pointer_array_to_NULL(int taille, Humain ***Pointer_array_H, node ***Pointe
     }
 }
 
-void Generate_human_genome_diversity(int nb_personnes, int genome_diversity_h, unsigned int genome_init_h, default_random_engine generator, Humain **Liste_H)
+void Generate_human_genome_diversity(int nb_personnes, int genome_diversity_h, unsigned int genome_init_h, Humain **Liste_H)
 {
     uniform_int_distribution<int> rand_int_size(0, 31);
     for (int i = 0; i < nb_personnes; i++)
@@ -90,7 +92,7 @@ void Generate_human_genome_diversity(int nb_personnes, int genome_diversity_h, u
     }
 }
 
-void Add_human_obj_to_grid(int nb_personnes, int taille_systeme, Humain **Liste_H, Humain ***Pointer_array_H, std::default_random_engine generator)
+void Add_human_obj_to_grid(int nb_personnes, int taille_systeme, Humain **Liste_H, Humain ***Pointer_array_H)
 {
     uniform_int_distribution<int> rand_int_taille_systeme(0, taille_systeme - 1);
     for (int i = 0; i < nb_personnes; i++)
@@ -181,7 +183,7 @@ void Print_ASCII_grid(int taille_sys, Humain ***Pointer_array_H, node ***Pointer
     }
 }
 
-void Update_AP(Linked_list *Liste_AP, node ***Pointer_array_AP, float survie_ap, std::default_random_engine generator)
+void Update_AP(Linked_list *Liste_AP, node ***Pointer_array_AP, float survie_ap)
 {
     uniform_real_distribution<float> rand_float(0.0, 1.0);
     node *tmp = Liste_AP->Get_head();
@@ -208,7 +210,7 @@ void Get_coords_voisins(vector<pair<int, int>> *coords, int taille_sys, int x, i
     coords->push_back(make_pair((x + 1) % taille_sys, y));
 }
 
-void Humain_hote(int index_H, Humain **Liste_H, unsigned int PUISSANCE, float vitesse_mutation_ap, std::default_random_engine generator)
+void Humain_hote(int index_H, Humain **Liste_H, unsigned int PUISSANCE, float vitesse_mutation_ap)
 {
     //* Déterminer si il y a déjà une immunité
     bool immunise = false;
@@ -253,7 +255,7 @@ void Humain_hote(int index_H, Humain **Liste_H, unsigned int PUISSANCE, float vi
     }
 }
 
-void Collision_H_AP(Humain **Liste_H, int index_H, node ***Pointer_array_AP, int x, int y, float CHARGE_VIRALE, std::default_random_engine generator)
+void Collision_H_AP(Humain **Liste_H, int index_H, node ***Pointer_array_AP, int x, int y, float CHARGE_VIRALE)
 {
     uniform_real_distribution<float> rand_float(0.0, 1.0);
     if (Pointer_array_AP[x][y] != NULL)
@@ -271,7 +273,7 @@ void Collision_H_AP(Humain **Liste_H, int index_H, node ***Pointer_array_AP, int
     }
 }
 
-void Analyse_voisinage(std::vector<std::pair<int, int>> *coordonnees, Humain ***Pointer_array_H, Humain **Liste_H, int index_H, float CHARGE_VIRALE, std::default_random_engine generator)
+void Analyse_voisinage(std::vector<std::pair<int, int>> *coordonnees, Humain ***Pointer_array_H, Humain **Liste_H, int index_H, float CHARGE_VIRALE)
 {
     uniform_real_distribution<float> rand_float(0.0, 1.0);
     for (int i = 0; i < coordonnees->size(); i++)
@@ -291,10 +293,10 @@ void Analyse_voisinage(std::vector<std::pair<int, int>> *coordonnees, Humain ***
         }
     }
 }
-void Mouvement(Humain ***Pointer_array_H, node ***Pointer_array_AP, Linked_list *Liste_AP, float TRAINEE, std::vector<std::pair<int, int>> *coordonnees, int x, int y, uniform_real_distribution<float> rand_float, default_random_engine generator)
+void Mouvement(Humain ***Pointer_array_H, node ***Pointer_array_AP, Linked_list *Liste_AP, float TRAINEE, std::vector<std::pair<int, int>> *coordonnees, int x, int y)
 {
     uniform_int_distribution<int> randInt(0, 3);
-    //uniform_real_distribution<float> rand_float(0.0, 1.0);
+    uniform_real_distribution<float> rand_float(0.0, 1.0);
     //* Choix d'une case voisine
     int choix = randInt(generator);
     //float r = rand_float(generator);
