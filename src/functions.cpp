@@ -64,7 +64,7 @@ unsigned int Mutations_AP(unsigned int genome_AP, int index)
     mask = 1 << index;
     return genome_AP ^ mask;
 }
-
+/*
 void Pointer_array_to_NULL(int taille, Humain ***Pointer_array_H, node ***Pointer_array_AP)
 {
     for (int i = 0; i < taille; i++)
@@ -92,6 +92,7 @@ void Generate_human_genome_diversity(int nb_personnes, int genome_diversity_h, u
     }
 }
 
+
 void Add_human_obj_to_grid(int nb_personnes, int taille_systeme, Humain **Liste_H, Humain ***Pointer_array_H)
 {
     uniform_int_distribution<int> rand_int_taille_systeme(0, taille_systeme - 1);
@@ -115,7 +116,7 @@ void Add_human_obj_to_grid(int nb_personnes, int taille_systeme, Humain **Liste_
         }
     }
 }
-
+*/
 void Print_progression(int current_iteration, int total)
 {
     printf("%c[2K", 27); // clear line

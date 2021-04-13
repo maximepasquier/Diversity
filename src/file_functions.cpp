@@ -93,7 +93,7 @@ void Assign_global_variables(vector<pair<string, string>> &configuration_file_da
         }
     }
 }
-*/
+
 
 void Create_and_initialize_csv(int NOMBRE_PERSONNES, ofstream &Humain_contamine, ofstream &Humain_genomeAP, ofstream &Humain_genomeH, ofstream &Humain_hx, ofstream &Humain_hy, ofstream &Humain_immune)
 {
@@ -172,3 +172,4 @@ void Close_files(std::ofstream &Humain_contamine, std::ofstream &Humain_genomeAP
     Humain_hy.close();
     Humain_immune.close();
 }
+*/

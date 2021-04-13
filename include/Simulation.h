@@ -24,14 +24,29 @@ public:
     Simulation();
     Simulation(std::string configuration_file_path);
     ~Simulation();
+    void Init(std::string m_configuration_file_path);
+    void Read(std::string m_configuration_file_path);
+    void Set();
+    void File_init();
+    void test_variables_coherence2();
+    void Data_structure_creation();
+    void Model_init();
+    void Run();
     void Assign_variables();
     void Set_Pointer_array();
     void Set_Liste_H();
     void Patient_zero();
     void Iterations();
     void Delete_obj();
+    void Close_files();
+    void Pointer_array_to_NULL();
+    void Generate_human_genome_diversity();
+    void Add_human_obj_to_grid();
+    void Create_and_initialize_csv();
+    void Open_append_mode_csv();
+    void Update_csv();
 
-private:
+protected:
     int m_TAILLE_SYSTEME;          // largeur de la grille
     int m_NOMBRE_PERSONNES;        // nombre de personnes initialement (densité)
     int m_ITERATIONS;              // nombre d'itérations de la simulation
@@ -47,7 +62,7 @@ private:
     std::vector<std::pair<std::string, std::string>> m_configuration_file_data;
     Humain ***m_Pointer_array_H;
     node ***m_Pointer_array_AP;
-    Linked_list m_Liste_AP;    
+    Linked_list m_Liste_AP;
     std::ofstream m_Humain_contamine, m_Humain_genomeAP, m_Humain_genomeH, m_Humain_hx, m_Humain_hy, m_Humain_immune;
     Humain **m_Liste_H;
 };
