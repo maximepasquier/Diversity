@@ -57,6 +57,12 @@ public:
     void Analyse_voisinage(std::vector<std::pair<int, int>> *coordonnees, int index_H);
     void Mouvement(std::vector<std::pair<int, int>> *coordonnees, int x, int y);
     void Moving(std::vector<std::pair<int, int>> *coordonnees, int x, int y, int choix);
+    void Contaminate_cell(int x, int y);
+    void Pointer_move_update(std::vector<std::pair<int, int>> *coordonnees, int x, int y, int choix);
+    void Add_AP_to_cell(int x,int y);
+    bool Is_immune(int index_H);
+    void AP_mutation(int index_H);
+    void Get_immunity(int index_H);
 
 protected:
     int m_TAILLE_SYSTEME;          // largeur de la grille

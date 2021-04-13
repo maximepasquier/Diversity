@@ -99,36 +99,51 @@ void Simulation::Mouvement(vector<pair<int, int>> *coordonnees, int x, int y)
 
 void Simulation::Moving(vector<pair<int, int>> *coordonnees, int x, int y, int choix)
 {
-    uniform_real_distribution<float> rand_float(0.0, 1.0);
     //* Si l'individu est contaminé
     if (m_Pointer_array_H[x][y]->Getcontamine())
     {
-        //* Déterminer si l'humain contamine la cellule qu'il quitte
-        float rand_f = rand_float(generator);
-        if (rand_f < m_TRAINEE)
-        {
-            //* Cellule contaminée (avant de bouger)
-            if (m_Pointer_array_AP[x][y] != NULL)
-            {
-                //* Un AP a déjà contaminé la cellule (on l'écrase)
-                m_Liste_AP.remove_element(m_Pointer_array_AP[x][y]);
-                m_Pointer_array_AP[x][y] = NULL;
-            }
-            Agent_Pathogene *AP;
-            AP = new Agent_Pathogene();
-            m_Pointer_array_AP[x][y] = m_Liste_AP.add_node(*AP);
-            m_Pointer_array_AP[x][y]->AP.SetgenomeAP(m_Pointer_array_H[x][y]->GetgenomeAP());
-            //* Sauver les coordonnées de l'agent pathogène dans ses attributs
-            m_Pointer_array_AP[x][y]->AP.SetXAP(x);
-            m_Pointer_array_AP[x][y]->AP.SetYAP(y);
-        }
+        Contaminate_cell(x, y);
     }
+    Pointer_move_update(coordonnees, x, y, choix);
+}
+
+void Simulation::Pointer_move_update(vector<pair<int, int>> *coordonnees, int x, int y, int choix)
+{
     //* Mise à jour des coordonnées de l'humain
     m_Pointer_array_H[x][y]->SetXH(coordonnees->at(choix).first);
     m_Pointer_array_H[x][y]->SetYH(coordonnees->at(choix).second);
     //* Swap les pointeurs
     m_Pointer_array_H[coordonnees->at(choix).first][coordonnees->at(choix).second] = m_Pointer_array_H[x][y]; // le pointeur voisin pointe sur notre humain
-    m_Pointer_array_H[x][y] = NULL;                                                                           // le pointeur actuel cesse de pointer sur notre humain
+    m_Pointer_array_H[x][y] = NULL;
+}
+
+void Simulation::Contaminate_cell(int x, int y)
+{
+    uniform_real_distribution<float> rand_float(0.0, 1.0);
+    //* Déterminer si l'humain contamine la cellule qu'il quitte
+    float rand_f = rand_float(generator);
+    if (rand_f < m_TRAINEE)
+    {
+        //* Cellule contaminée (avant de bouger)
+        if (m_Pointer_array_AP[x][y] != NULL)
+        {
+            //* Un AP a déjà contaminé la cellule (on l'écrase)
+            m_Liste_AP.remove_element(m_Pointer_array_AP[x][y]);
+            m_Pointer_array_AP[x][y] = NULL;
+        }
+        Add_AP_to_cell(x, y);
+    }
+}
+
+void Simulation::Add_AP_to_cell(int x, int y)
+{
+    Agent_Pathogene *AP;
+    AP = new Agent_Pathogene();
+    m_Pointer_array_AP[x][y] = m_Liste_AP.add_node(*AP);
+    m_Pointer_array_AP[x][y]->AP.SetgenomeAP(m_Pointer_array_H[x][y]->GetgenomeAP());
+    //* Sauver les coordonnées de l'agent pathogène dans ses attributs
+    m_Pointer_array_AP[x][y]->AP.SetXAP(x);
+    m_Pointer_array_AP[x][y]->AP.SetYAP(y);
 }
 
 void Simulation::Contamination_cases(vector<pair<int, int>> *coordonnees, int x, int y, int index_H)
@@ -190,44 +205,57 @@ void Simulation::Collision_H_AP(int x, int y, int index_H)
 void Simulation::Humain_hote(int index_H)
 {
     //* Déterminer si il y a déjà une immunité
-    bool immunise = false;
-    vector<unsigned int> liste_immunite = m_Liste_H[index_H]->Getimmune();
-    uniform_real_distribution<float> rand_float(0.0, 1.0);
-    uniform_int_distribution<int> rand_int_size(0, 31);
-    for (int j = 0; j < liste_immunite.size(); j++)
-    {
-        if (liste_immunite[j] == m_Liste_H[index_H]->GetgenomeAP())
-        {
-            immunise = true;
-            m_Liste_H[index_H]->Setcontamine(false);
-            m_Liste_H[index_H]->SetgenomeAP(0);
-            break;
-        }
-    }
-    if (!immunise)
+    if (!Is_immune(index_H))
     {
         //* Déterminer la probabilité de s'immuniser à ce tour (en fonction des génomes)
         float chance; // % entre 0 et 1
         //* Chance de se débarrasser du pathogène
         chance = Genome_Match(m_Liste_H[index_H]->GetgenomeH(), m_Liste_H[index_H]->GetgenomeAP(), m_PUISSANCE);
-
+        uniform_real_distribution<float> rand_float(0.0, 1.0);
         float rand_f = rand_float(generator);
         if (rand_f < chance) // on se débarrasse du pathogène
         {
-            //* Immune
-            m_Liste_H[index_H]->Setcontamine(false);
-            m_Liste_H[index_H]->Setimmune(m_Liste_H[index_H]->GetgenomeAP());
-            m_Liste_H[index_H]->SetgenomeAP(0);
+            Get_immunity(index_H);
         }
         else // le pathogène reste
         {
-            //* Le pathogène mute
-            float rand_f = rand_float(generator);
-            if (rand_f < m_VITESSE_MUTATIONS_AP)
-            {
-                int index = rand_int_size(generator);
-                m_Liste_H[index_H]->SetgenomeAP(Mutations_AP(m_Liste_H[index_H]->GetgenomeAP(), index));
-            }
+            AP_mutation(index_H);
         }
     }
+}
+
+void Simulation::Get_immunity(int index_H)
+{
+    //* Immune
+    m_Liste_H[index_H]->Setcontamine(false);
+    m_Liste_H[index_H]->Setimmune(m_Liste_H[index_H]->GetgenomeAP());
+    m_Liste_H[index_H]->SetgenomeAP(0);
+}
+
+void Simulation::AP_mutation(int index_H)
+{
+    uniform_real_distribution<float> rand_float(0.0, 1.0);
+    uniform_int_distribution<int> rand_int_size(0, 31);
+    //* Le pathogène mute
+    float rand_f = rand_float(generator);
+    if (rand_f < m_VITESSE_MUTATIONS_AP)
+    {
+        int index = rand_int_size(generator);
+        m_Liste_H[index_H]->SetgenomeAP(Mutations_AP(m_Liste_H[index_H]->GetgenomeAP(), index));
+    }
+}
+
+bool Simulation::Is_immune(int index_H)
+{
+    vector<unsigned int> liste_immunite = m_Liste_H[index_H]->Getimmune();
+    for (int j = 0; j < liste_immunite.size(); j++)
+    {
+        if (liste_immunite[j] == m_Liste_H[index_H]->GetgenomeAP())
+        {
+            m_Liste_H[index_H]->Setcontamine(false);
+            m_Liste_H[index_H]->SetgenomeAP(0);
+            return true;
+        }
+    }
+    return false;
 }
