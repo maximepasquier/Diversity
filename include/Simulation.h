@@ -47,6 +47,16 @@ public:
     void Create_and_initialize_csv();
     void Open_append_mode_csv();
     void Update_csv();
+    void One_iteration();
+    void Update_all_AP();
+    void Update_all_H(int *permuted_liste);
+    void Update_one_H(int index_H);
+    void Contamination_cases(std::vector<std::pair<int, int>> *coordonnees, int x, int y, int index_H);
+    void Humain_hote(int index_H);
+    void Collision_H_AP(int x, int y, int index_H);
+    void Analyse_voisinage(std::vector<std::pair<int, int>> *coordonnees, int index_H);
+    void Mouvement(std::vector<std::pair<int, int>> *coordonnees, int x, int y);
+    void Moving(std::vector<std::pair<int, int>> *coordonnees, int x, int y, int choix);
 
 protected:
     int m_TAILLE_SYSTEME;          // largeur de la grille

@@ -42,7 +42,6 @@ void Simulation::Init()
 void Simulation::Run()
 {
     Iterations();
-    //* Close files
     Close_files();
     Delete_obj();
 }

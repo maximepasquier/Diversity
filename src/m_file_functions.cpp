@@ -6,12 +6,20 @@
 #include "functions.h"
 #include "Simulation.h"
 
+#include <sys/types.h>
+#include <sys/stat.h>
+#include <unistd.h>
+#include <stdio.h>
+#include <stdlib.h>
+
 using namespace std;
 
 void Simulation::Read_Configuration_file()
 {
     ifstream config;
-    config.open(m_configuration_file_path);
+    string path_copy = m_configuration_file_path;
+    path_copy.append("/config.txt");
+    config.open(path_copy);
     string line;
     while (getline(config, line))
     {
@@ -48,22 +56,30 @@ void Simulation::File_init()
 
 void Simulation::Open_append_mode_csv()
 {
-    m_Humain_contamine.open("./data/Humain_contamine.csv", std::ios::app);
-    m_Humain_genomeAP.open("./data/Humain_genomeAP.csv", std::ios::app);
-    m_Humain_genomeH.open("./data/Humain_genomeH.csv", std::ios::app);
-    m_Humain_hx.open("./data/Humain_hx.csv", std::ios::app);
-    m_Humain_hy.open("./data/Humain_hy.csv", std::ios::app);
-    m_Humain_immune.open("./data/Humain_immune.csv", std::ios::app);
+    string path_copy = m_configuration_file_path;
+    path_copy.append("/data_csv");
+
+    m_Humain_contamine.open(path_copy + "/Humain_contamine.csv", std::ios::app);
+    m_Humain_genomeAP.open(path_copy + "/Humain_genomeAP.csv", std::ios::app);
+    m_Humain_genomeH.open(path_copy + "/Humain_genomeH.csv", std::ios::app);
+    m_Humain_hx.open(path_copy + "/Humain_hx.csv", std::ios::app);
+    m_Humain_hy.open(path_copy + "/Humain_hy.csv", std::ios::app);
+    m_Humain_immune.open(path_copy + "/Humain_immune.csv", std::ios::app);
 }
 
 void Simulation::Create_and_initialize_csv()
 {
-    m_Humain_contamine.open("./data/Humain_contamine.csv");
-    m_Humain_genomeAP.open("./data/Humain_genomeAP.csv");
-    m_Humain_genomeH.open("./data/Humain_genomeH.csv");
-    m_Humain_hx.open("./data/Humain_hx.csv");
-    m_Humain_hy.open("./data/Humain_hy.csv");
-    m_Humain_immune.open("./data/Humain_immune.csv");
+    string path_copy = m_configuration_file_path;
+    path_copy.append("/data_csv");
+    const char *file_path = path_copy.c_str();
+    int directory_fd = mkdir(file_path, 0777);
+
+    m_Humain_contamine.open(path_copy + "/Humain_contamine.csv");
+    m_Humain_genomeAP.open(path_copy + "/Humain_genomeAP.csv");
+    m_Humain_genomeH.open(path_copy + "/Humain_genomeH.csv");
+    m_Humain_hx.open(path_copy + "/Humain_hx.csv");
+    m_Humain_hy.open(path_copy + "/Humain_hy.csv");
+    m_Humain_immune.open(path_copy + "/Humain_immune.csv");
 
     for (int i = 0; i < m_NOMBRE_PERSONNES; i++)
     {
@@ -81,12 +97,7 @@ void Simulation::Create_and_initialize_csv()
     m_Humain_hy << '\n';
     m_Humain_immune << '\n';
 
-    m_Humain_contamine.close();
-    m_Humain_genomeAP.close();
-    m_Humain_genomeH.close();
-    m_Humain_hx.close();
-    m_Humain_hy.close();
-    m_Humain_immune.close();
+    Close_files();
 }
 
 void Simulation::Update_csv()
