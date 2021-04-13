@@ -15,8 +15,6 @@
 #include "node.h"
 #include "Linked_list.h"
 #include "functions.h"
-#include "file_functions.h"
-#include "test_variables.h"
 
 class Simulation
 {
@@ -24,11 +22,15 @@ public:
     Simulation();
     Simulation(std::string configuration_file_path);
     ~Simulation();
-    void Init(std::string m_configuration_file_path);
-    void Read(std::string m_configuration_file_path);
+    void Init();
+    void Read();
     void Set();
     void File_init();
-    void test_variables_coherence2();
+    void Read_Configuration_file();
+    void test_variables_coherence();
+    void test_is_Pointer_array_to_null();
+    void test_diversity_genome();
+    void test_humain_coords_conflits();
     void Data_structure_creation();
     void Model_init();
     void Run();

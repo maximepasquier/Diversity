@@ -8,7 +8,7 @@
 
 using namespace std;
 
-void Simulation::test_variables_coherence2()
+void Simulation::test_variables_coherence()
 {
     //* TAILLE_SYSTEME non valide
     if (m_TAILLE_SYSTEME <= 0)
@@ -101,5 +101,56 @@ void Simulation::test_variables_coherence2()
         cout << "Système trop petit pour le nombre de personnes !" << endl;
         cout << "Augmentez la valeur de TAILLE_SYSTEME ou réduisez la valeur de NOMBRE_PERSONNES du fichier config." << endl;
         exit(EXIT_FAILURE);
+    }
+}
+
+void Simulation::test_is_Pointer_array_to_null()
+{
+    for (int i = 0; i < m_TAILLE_SYSTEME; i++)
+    {
+        for (int j = 0; j < m_TAILLE_SYSTEME; j++)
+        {
+            if (m_Pointer_array_H[i][j] != NULL || m_Pointer_array_AP[i][j] != NULL)
+            {
+                cout << "Les matrices de pointeurs n'ont pas été correctement initialisée à NULL !" << endl;
+                exit(EXIT_FAILURE);
+            }
+        }
+    }
+}
+
+void Simulation::test_diversity_genome()
+{
+    for (int i = 0; i < m_NOMBRE_PERSONNES; i++)
+    {
+        //* La divergence des génomes par rapport à l'initial vaut la valeur de diversité
+        if (hammingDistance(m_Liste_H[i]->GetgenomeH(), m_GENOME_INIT_H) != m_GENOME_DIVERSITY_H)
+        {
+            cout << "La génération de génomes pour les humains a rencontré une erreur !" << endl;
+            exit(EXIT_FAILURE);
+        }
+    }
+}
+
+void Simulation::test_humain_coords_conflits()
+{
+    for (int i = 0; i < m_NOMBRE_PERSONNES; i++)
+    {
+        int x = m_Liste_H[i]->GetXH();
+        int y = m_Liste_H[i]->GetYH();
+        for (int j = 0; j < m_NOMBRE_PERSONNES; j++)
+        {
+            //* Deux individus sur la même ligne
+            if(i != j && x == m_Liste_H[j]->GetXH())
+            {
+                //* Deux individus sur la même colonne
+                if(y == m_Liste_H[j]->GetYH())
+                {
+                    cout << "Un collision s'est produite entre deux humains !" << endl;
+                    cout << "Deux individus semblent se trouver sur la même cellule" << endl;
+                    exit(EXIT_FAILURE);
+                }
+            }
+        }   
     }
 }
