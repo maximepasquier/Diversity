@@ -92,6 +92,7 @@ void Simulation::Delete_obj()
     {
         delete m_Liste_H[i];
     }
+    delete[] m_Liste_H;
 
     for (int i = 0; i < m_TAILLE_SYSTEME; i++)
     {
@@ -100,7 +101,11 @@ void Simulation::Delete_obj()
             delete m_Pointer_array_H[i][j];
             delete m_Pointer_array_AP[i][j];
         }
+        delete[] m_Pointer_array_H[i];
+        delete[] m_Pointer_array_AP[i];   
     }
+    delete[] m_Pointer_array_H;
+    delete[] m_Pointer_array_AP;
 
     //* Supprimer tous les objets agent_pathogene
     m_Liste_AP.remove_all();

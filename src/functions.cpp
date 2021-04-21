@@ -141,10 +141,18 @@ void Print_ASCII_grid(int taille_sys, Humain ***Pointer_array_H, node ***Pointer
     }
 }
 
-void Get_coords_voisins(vector<pair<int, int>> *coords, int taille_sys, int x, int y)
+void Get_coords_voisins(vector<pair<int, int>> &coords, int taille_sys, int x, int y)
 {
+    
+    coords[0] = make_pair(x, (y - 1 + taille_sys) % taille_sys);
+    coords[1] = make_pair(x, (y + 1) % taille_sys);
+    coords[2] = make_pair((x - 1 + taille_sys) % taille_sys, y);
+    coords[3] = make_pair((x + 1) % taille_sys, y);
+    
+    /*
     coords->push_back(make_pair(x, (y - 1 + taille_sys) % taille_sys));
     coords->push_back(make_pair(x, (y + 1) % taille_sys));
     coords->push_back(make_pair((x - 1 + taille_sys) % taille_sys, y));
     coords->push_back(make_pair((x + 1) % taille_sys, y));
+    */
 }

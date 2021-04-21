@@ -14,32 +14,45 @@ void Simulation::Iterations()
 {
     for (int iteration = 0; iteration < m_ITERATIONS; iteration++)
     {
+        //* Print les itérations (avancement)
+        Print_progression(iteration, m_ITERATIONS);
+        //* Print ASCII grid to screen
+        //Print_ASCII_grid(m_TAILLE_SYSTEME, m_Pointer_array_H, m_Pointer_array_AP);
         One_iteration();
     }
 }
 
 void Simulation::One_iteration()
 {
-    //* Print les itérations (avancement)
-    //Print_progression(iteration, ITERATIONS);
-
     //* Write to .csv file
+    auto Update_csv_start = chrono::steady_clock::now();
     Update_csv();
-
-    //* Print ASCII grid to screen
-    Print_ASCII_grid(m_TAILLE_SYSTEME, m_Pointer_array_H, m_Pointer_array_AP);
+    auto Update_csv_end = chrono::steady_clock::now();
+    auto Update_csv_diff = Update_csv_end - Update_csv_start;
+    m_Update_csv_time += chrono::duration<double, nano>(Update_csv_diff).count();
 
     //* Construire la permutations de la liste humain
+    auto Permutation_start = chrono::steady_clock::now();
     int *permuted_liste = new int[m_NOMBRE_PERSONNES];
     Permutation(permuted_liste, m_NOMBRE_PERSONNES);
+    auto Permutation_end = chrono::steady_clock::now();
+    auto Permutation_diff = Permutation_end - Permutation_start;
+    m_Permutations_time += chrono::duration<double, nano>(Permutation_diff).count();
 
     //* Parcours du domaine (liste agents pathogènes)
+    auto Update_all_AP_start = chrono::steady_clock::now();
     Update_all_AP();
-
+    auto Update_all_AP_end = chrono::steady_clock::now();
+    auto Update_all_AP_diff = Update_all_AP_end - Update_all_AP_start;
+    m_Update_AP_time += chrono::duration<double, nano>(Update_all_AP_diff).count();
     //* Parcours du domaine (liste humains)
+    auto Update_all_H_start = chrono::steady_clock::now();
     Update_all_H(permuted_liste);
+    auto Update_all_H_end = chrono::steady_clock::now();
+    auto Update_all_H_diff = Update_all_H_end - Update_all_H_start;
+    m_Update_H_time += chrono::duration<double, nano>(Update_all_H_diff).count();
     //* Sleep (FPS)
-    this_thread::sleep_for(chrono::seconds(1));
+    //this_thread::sleep_for(chrono::seconds(1));
     //* Supprimer la permutation
     delete[] permuted_liste;
 }
@@ -76,14 +89,29 @@ void Simulation::Update_one_H(int index_H)
 {
     int x = m_Liste_H[index_H]->GetXH();
     int y = m_Liste_H[index_H]->GetYH();
-    vector<pair<int, int>> coordonnees; // vecteur de paire de int
+    //vector<pair<int, int>> coordonnees; // vecteur de paire de int
+    //coordonnees.reserve(4);
+    vector<pair<int, int>> coordonnees(4);
     //* Push les coordonnées des 4 voisins
-    Get_coords_voisins(&coordonnees, m_TAILLE_SYSTEME, x, y);
 
+    auto Coord_start = chrono::steady_clock::now();
+    Get_coords_voisins(coordonnees, m_TAILLE_SYSTEME, x, y);
+    auto Coord_end = chrono::steady_clock::now();
+    auto Coord_diff = Coord_end - Coord_start;
+    m_Coords_time += chrono::duration<double, nano>(Coord_diff).count();
+
+    auto Contamination_cases_start = chrono::steady_clock::now();
     Contamination_cases(&coordonnees, x, y, index_H);
+    auto Contamination_cases_end = chrono::steady_clock::now();
+    auto Contamination_cases_diff = Contamination_cases_end - Contamination_cases_start;
+    m_Contamination_cases_time += chrono::duration<double, nano>(Contamination_cases_diff).count();
 
     //* Mouvements
+    auto Mouvement_start = chrono::steady_clock::now();
     Mouvement(&coordonnees, x, y);
+    auto Mouvement_end = chrono::steady_clock::now();
+    auto Mouvement_diff = Mouvement_end - Mouvement_start;
+    m_Mouvement_time += chrono::duration<double, nano>(Mouvement_diff).count();
 }
 
 void Simulation::Mouvement(vector<pair<int, int>> *coordonnees, int x, int y)

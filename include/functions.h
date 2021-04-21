@@ -12,7 +12,7 @@ void Add_human_obj_to_grid(int nb_personnes, int taille_systeme, Humain **Liste_
 void Print_progression(int current_iteration, int total);
 void Print_ASCII_grid(int taille, Humain ***Pointer_array_H, node ***Pointer_array_AP);
 void Update_AP(Linked_list *Liste_AP, node ***Pointer_array_AP, float survie_ap);
-void Get_coords_voisins(std::vector<std::pair<int, int>> *coords, int taille_sys, int x, int y);
+void Get_coords_voisins(std::vector<std::pair<int, int>> &coords, int taille_sys, int x, int y);
 void Humain_hote(int index_H, Humain **Liste_H, unsigned int PUISSANCE, float vitesse_mutation_ap);
 void Collision_H_AP(Humain **Liste_H, int index_H, node ***Pointer_array_AP, int x, int y, float CHARGE_VIRALE);
 void Analyse_voisinage(std::vector<std::pair<int, int>> *coordonnees, Humain ***Pointer_array_H, Humain **Liste_H, int index_H, float CHARGE_VIRALE);

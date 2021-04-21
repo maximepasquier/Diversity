@@ -1,5 +1,6 @@
 #include <iostream>
 #include <math.h>
+#include <string>
 #include "Humain.h"
 #include "node.h"
 #include "Linked_list.h"
@@ -44,6 +45,7 @@ void Simulation::Close_files()
     m_Humain_hx.close();
     m_Humain_hy.close();
     m_Humain_immune.close();
+    m_times.close();
 }
 
 void Simulation::File_init()
@@ -80,6 +82,7 @@ void Simulation::Create_and_initialize_csv()
     m_Humain_hx.open(path_copy + "/Humain_hx.csv");
     m_Humain_hy.open(path_copy + "/Humain_hy.csv");
     m_Humain_immune.open(path_copy + "/Humain_immune.csv");
+    m_times.open(path_copy + "/times.csv");
 
     for (int i = 0; i < m_NOMBRE_PERSONNES; i++)
     {
@@ -90,6 +93,21 @@ void Simulation::Create_and_initialize_csv()
         m_Humain_hy << "Humain_" << i << ',';
         m_Humain_immune << "Humain_" << i << ',';
     }
+    //* Write to times.csv file
+
+    m_times << "Init" << ',';
+    m_times << "Run" << ',';
+    m_times << "Iterations" << ',';
+    m_times << "Update_csv" << ',';
+    m_times << "Permutations" << ',';
+    m_times << "Update_AP" << ',';
+    m_times << "Update_H" << ',';
+    m_times << "Coords" << ',';
+    m_times << "Contamination_cases" << ',';
+    m_times << "Mouvement" << ',';
+    m_times << "Total" << ',';
+    m_times << '\n';
+
     m_Humain_contamine << '\n';
     m_Humain_genomeAP << '\n';
     m_Humain_genomeH << '\n';
@@ -102,13 +120,28 @@ void Simulation::Create_and_initialize_csv()
 
 void Simulation::Update_csv()
 {
+    // char buff[64];
     for (int i = 0; i < m_NOMBRE_PERSONNES; i++)
     {
+        /*
+        sprintf(buff, "%d,", m_Liste_H[i]->Getcontamine());
+        m_Humain_contamine << buff;
+        sprintf(buff, "%d,", m_Liste_H[i]->GetgenomeAP());
+        m_Humain_genomeAP << buff;
+        sprintf(buff, "%d,", m_Liste_H[i]->GetgenomeH());
+        m_Humain_genomeH << buff;
+        sprintf(buff, "%d,", m_Liste_H[i]->GetXH());
+        m_Humain_hx << buff;
+        sprintf(buff, "%d,", m_Liste_H[i]->GetYH());
+        m_Humain_hy << buff;
+        */
+
         m_Humain_contamine << m_Liste_H[i]->Getcontamine() << ',';
         m_Humain_genomeAP << m_Liste_H[i]->GetgenomeAP() << ',';
         m_Humain_genomeH << m_Liste_H[i]->GetgenomeH() << ',';
         m_Humain_hx << m_Liste_H[i]->GetXH() << ',';
         m_Humain_hy << m_Liste_H[i]->GetYH() << ',';
+
         vector<unsigned int> liste_immunite = m_Liste_H[i]->Getimmune();
         int vsize = m_Liste_H[i]->Getimmune().size();
         for (int j = 0; j < vsize; j++)

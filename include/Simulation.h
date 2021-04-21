@@ -59,12 +59,12 @@ public:
     void Moving(std::vector<std::pair<int, int>> *coordonnees, int x, int y, int choix);
     void Contaminate_cell(int x, int y);
     void Pointer_move_update(std::vector<std::pair<int, int>> *coordonnees, int x, int y, int choix);
-    void Add_AP_to_cell(int x,int y);
+    void Add_AP_to_cell(int x, int y);
     bool Is_immune(int index_H);
     void AP_mutation(int index_H);
     void Get_immunity(int index_H);
 
-protected:
+private:
     int m_TAILLE_SYSTEME;          // largeur de la grille
     int m_NOMBRE_PERSONNES;        // nombre de personnes initialement (densité)
     int m_ITERATIONS;              // nombre d'itérations de la simulation
@@ -81,8 +81,20 @@ protected:
     Humain ***m_Pointer_array_H;
     node ***m_Pointer_array_AP;
     Linked_list m_Liste_AP;
-    std::ofstream m_Humain_contamine, m_Humain_genomeAP, m_Humain_genomeH, m_Humain_hx, m_Humain_hy, m_Humain_immune;
+    std::ofstream m_Humain_contamine, m_Humain_genomeAP, m_Humain_genomeH, m_Humain_hx, m_Humain_hy, m_Humain_immune, m_times;
     Humain **m_Liste_H;
+    //using time = std::chrono::duration<int64_t, std::nano>;
+    unsigned long long int m_Init_time = 0;
+    unsigned long long int m_Run_time = 0;
+    unsigned long long int m_Iterations_time = 0;
+    unsigned long long int m_Update_csv_time = 0;
+    unsigned long long int m_Permutations_time = 0;
+    unsigned long long int m_Update_AP_time = 0;
+    unsigned long long int m_Update_H_time = 0;
+    unsigned long long int m_Coords_time = 0;
+    unsigned long long int m_Contamination_cases_time = 0;
+    unsigned long long int m_Mouvement_time = 0;
+    unsigned long long int m_Total_time = 0;
 };
 
 #endif

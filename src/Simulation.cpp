@@ -24,8 +24,57 @@ Simulation::Simulation()
 
 Simulation::Simulation(string configuration_file_path) : m_configuration_file_path(configuration_file_path)
 {
+    int time_metrique = 1000000000;
+    /*
+    cout << m_Init_time / time_metrique << endl;
+    cout << m_Run_time / time_metrique << endl;
+    cout << m_Iterations_time / time_metrique << endl;
+    cout << m_Update_csv_time / time_metrique << endl;
+    cout << m_Permutations_time / time_metrique << endl;
+    cout << m_Update_AP_time / time_metrique << endl;
+    cout << m_Update_H_time / time_metrique << endl;
+    cout << m_Coords_time / time_metrique << endl;
+    cout << m_Contamination_cases_time / time_metrique << endl;
+    cout << m_Mouvement_time / time_metrique << endl;
+    cout << m_Total_time / time_metrique << endl;
+    */
+
+    auto start = chrono::steady_clock::now();
+
+    auto Init_start = chrono::steady_clock::now();
     Init();
+    auto Init_end = chrono::steady_clock::now();
+    auto Init_diff = Init_end - Init_start;
+    m_Init_time = chrono::duration<double, nano>(Init_diff).count();
+
+    auto Run_start = chrono::steady_clock::now();
     Run();
+    auto Run_end = chrono::steady_clock::now();
+    auto Run_diff = Run_end - Run_start;
+    m_Run_time = chrono::duration<double, nano>(Run_diff).count();
+
+    auto end = chrono::steady_clock::now();
+    auto diff = end - start;
+    m_Total_time = chrono::duration<double, nano>(diff).count();
+
+    /*
+    cout << "m_Init_time : " << m_Init_time / time_metrique << endl;
+    cout << "m_Run_time : " << m_Run_time / time_metrique << endl;
+    cout << "m_Iterations_time : " << m_Iterations_time / time_metrique << endl;
+    cout << "m_Update_csv_time : " << m_Update_csv_time / time_metrique << endl;
+    cout << "m_Permutations_time : " << m_Permutations_time / time_metrique << endl;
+    cout << "m_Update_AP_time : " << m_Update_AP_time / time_metrique << endl;
+    cout << "m_Update_H_time : " << m_Update_H_time / time_metrique << endl;
+    cout << "m_Coords_time : " << m_Coords_time / time_metrique << endl;
+    cout << "m_Contamination_cases_time : " << m_Contamination_cases_time / time_metrique << endl;
+    cout << "m_Mouvement_time : " << m_Mouvement_time / time_metrique << endl;
+    cout << "m_Total_time : " << m_Total_time / time_metrique << endl;
+    */
+    string path_copy = m_configuration_file_path;
+    path_copy.append("/data_csv");
+    m_times.open(path_copy + "/times.csv", std::ios::app);
+    m_times << m_Init_time / time_metrique << ',' << m_Run_time / time_metrique << ',' << m_Iterations_time / time_metrique << ',' << m_Update_csv_time / time_metrique << ',' << m_Permutations_time / time_metrique << ',' << m_Update_AP_time / time_metrique << ',' << m_Update_H_time / time_metrique << ',' << m_Coords_time / time_metrique << ',' << m_Contamination_cases_time / time_metrique << ',' << m_Mouvement_time / time_metrique << ',' << m_Total_time / time_metrique;
+    m_times.close();
 }
 
 Simulation::~Simulation() // déconstructeur
@@ -41,7 +90,12 @@ void Simulation::Init()
 
 void Simulation::Run()
 {
+    auto Iterations_start = chrono::steady_clock::now();
     Iterations();
+    auto Iterations_end = chrono::steady_clock::now();
+    auto Iterations_diff = Iterations_end - Iterations_start;
+    m_Iterations_time = chrono::duration<double, nano>(Iterations_diff).count();
+
     Close_files();
     Delete_obj();
 }
