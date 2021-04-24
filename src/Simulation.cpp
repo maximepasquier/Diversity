@@ -24,7 +24,7 @@ Simulation::Simulation()
 
 Simulation::Simulation(string configuration_file_path) : m_configuration_file_path(configuration_file_path)
 {
-    int time_metrique = 1000000000;
+    int time_metrique = 1000000;
     /*
     cout << m_Init_time / time_metrique << endl;
     cout << m_Run_time / time_metrique << endl;
@@ -130,8 +130,8 @@ void Simulation::Model_init()
 {
     //* Initaliser des génomes pour les humains
     Generate_human_genome_diversity();
-    //test : vérifier la diversité des génomes
-    test_diversity_genome();
+    // test : vérifier la diversité des génomes
+    //test_diversity_genome();
     //* Ajouter des objets humain
     Add_human_obj_to_grid();
     // test : vérifier que chaque humain ait des coordonnées dans ses attributs + aucun conflit entre les humains

@@ -46,6 +46,7 @@ void Simulation::Close_files()
     m_Humain_hy.close();
     m_Humain_immune.close();
     m_times.close();
+    m_HammingDistance.close();
 }
 
 void Simulation::File_init()
@@ -67,6 +68,7 @@ void Simulation::Open_append_mode_csv()
     m_Humain_hx.open(path_copy + "/Humain_hx.csv", std::ios::app);
     m_Humain_hy.open(path_copy + "/Humain_hy.csv", std::ios::app);
     m_Humain_immune.open(path_copy + "/Humain_immune.csv", std::ios::app);
+    m_HammingDistance.open(path_copy + "/HammingDistance.csv", std::ios::app);
 }
 
 void Simulation::Create_and_initialize_csv()
@@ -83,15 +85,28 @@ void Simulation::Create_and_initialize_csv()
     m_Humain_hy.open(path_copy + "/Humain_hy.csv");
     m_Humain_immune.open(path_copy + "/Humain_immune.csv");
     m_times.open(path_copy + "/times.csv");
+    m_HammingDistance.open(path_copy + "/HammingDistance.csv");
 
     for (int i = 0; i < m_NOMBRE_PERSONNES; i++)
     {
-        m_Humain_contamine << "Humain_" << i << ',';
-        m_Humain_genomeAP << "Humain_" << i << ',';
-        m_Humain_genomeH << "Humain_" << i << ',';
-        m_Humain_hx << "Humain_" << i << ',';
-        m_Humain_hy << "Humain_" << i << ',';
-        m_Humain_immune << "Humain_" << i << ',';
+        m_Humain_contamine << "Humain_" << i;
+        m_Humain_genomeAP << "Humain_" << i;
+        m_Humain_genomeH << "Humain_" << i;
+        m_Humain_hx << "Humain_" << i;
+        m_Humain_hy << "Humain_" << i;
+        m_Humain_immune << "Humain_" << i;
+        m_HammingDistance << "Humain_" << i;
+
+        if (i != m_NOMBRE_PERSONNES - 1)
+        {
+            m_Humain_contamine << ',';
+            m_Humain_genomeAP << ',';
+            m_Humain_genomeH << ',';
+            m_Humain_hx << ',';
+            m_Humain_hy << ',';
+            m_Humain_immune << ',';
+            m_HammingDistance << ',';
+        }
     }
     //* Write to times.csv file
 
@@ -114,11 +129,12 @@ void Simulation::Create_and_initialize_csv()
     m_Humain_hx << '\n';
     m_Humain_hy << '\n';
     m_Humain_immune << '\n';
+    m_HammingDistance << '\n';
 
     Close_files();
 }
 
-void Simulation::Update_csv()
+void Simulation::Update_csv(int iteration)
 {
     // char buff[64];
     for (int i = 0; i < m_NOMBRE_PERSONNES; i++)
@@ -136,11 +152,20 @@ void Simulation::Update_csv()
         m_Humain_hy << buff;
         */
 
-        m_Humain_contamine << m_Liste_H[i]->Getcontamine() << ',';
-        m_Humain_genomeAP << m_Liste_H[i]->GetgenomeAP() << ',';
-        m_Humain_genomeH << m_Liste_H[i]->GetgenomeH() << ',';
-        m_Humain_hx << m_Liste_H[i]->GetXH() << ',';
-        m_Humain_hy << m_Liste_H[i]->GetYH() << ',';
+        m_Humain_contamine << m_Liste_H[i]->Getcontamine();
+        if (m_Liste_H[i]->Getcontamine())
+        {
+            m_Humain_genomeAP << m_Liste_H[i]->GetgenomeAP();
+            m_HammingDistance << m_Liste_H[i]->GetHamming();
+        }
+        else
+        {
+            m_Humain_genomeAP << NAN;
+            m_HammingDistance << NAN;
+        }
+        m_Humain_genomeH << m_Liste_H[i]->GetgenomeH();
+        m_Humain_hx << m_Liste_H[i]->GetXH();
+        m_Humain_hy << m_Liste_H[i]->GetYH();
 
         vector<unsigned int> liste_immunite = m_Liste_H[i]->Getimmune();
         int vsize = m_Liste_H[i]->Getimmune().size();
@@ -148,12 +173,30 @@ void Simulation::Update_csv()
         {
             m_Humain_immune << liste_immunite[j] << ' ';
         }
-        m_Humain_immune << ',';
+        if(vsize == 0)
+        {
+            m_Humain_immune << NAN;
+        }
+
+        if (i != m_NOMBRE_PERSONNES - 1)
+        {
+            m_Humain_contamine << ',';
+            m_Humain_genomeAP << ',';
+            m_Humain_genomeH << ',';
+            m_Humain_hx << ',';
+            m_Humain_hy << ',';
+            m_Humain_immune << ',';
+            m_HammingDistance << ',';
+        }
     }
-    m_Humain_contamine << '\n';
-    m_Humain_genomeAP << '\n';
-    m_Humain_genomeH << '\n';
-    m_Humain_hx << '\n';
-    m_Humain_hy << '\n';
-    m_Humain_immune << '\n';
+    if (iteration != m_ITERATIONS - 1)
+    {
+        m_Humain_contamine << '\n';
+        m_Humain_genomeAP << '\n';
+        m_Humain_genomeH << '\n';
+        m_Humain_hx << '\n';
+        m_Humain_hy << '\n';
+        m_Humain_immune << '\n';
+        m_HammingDistance << '\n';
+    }
 }

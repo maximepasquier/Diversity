@@ -121,6 +121,7 @@ void Simulation::test_is_Pointer_array_to_null()
 
 void Simulation::test_diversity_genome()
 {
+    //! Erreur si un bit est permuté deux fois, à modifier
     for (int i = 0; i < m_NOMBRE_PERSONNES; i++)
     {
         //* La divergence des génomes par rapport à l'initial vaut la valeur de diversité

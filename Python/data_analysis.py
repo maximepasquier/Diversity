@@ -7,7 +7,7 @@ from itertools import count
 from matplotlib.animation import FuncAnimation
 
 # Lecture des fichiers
-contamine = pd.read_csv("/home/maxime/Documents/Automate_Cellulaire/Diversity/Simulations/Systeme_1/data_csv/Humain_contamine.csv")
+# contamine = pd.read_csv("/home/maxime/Documents/Automate_Cellulaire/Diversity/Simulations/Systeme_1/data_csv/Humain_contamine.csv")
 # genomeAP = pd.read_csv(r'/home/kilian/Documents/Automate_Cellulaire/Diversity/data/genomeAP.csv')
 # genomeH = pd.read_csv(r'/home/kilian/Documents/Automate_Cellulaire/Diversity/data/genomeH.csv')
 # hx = pd.read_csv(r'/home/kilian/Documents/Automate_Cellulaire/Diversity/data/hx.csv')
@@ -20,7 +20,7 @@ contamine = pd.read_csv("/home/maxime/Documents/Automate_Cellulaire/Diversity/Si
 # sum_contamine = contamine.sum(axis=1)
 # sum_contamine.plot(figsize=(15,10))
 # plt.show()
-
+'''
 t = np.arange(0.0, 2.0, 0.01)
 s = 1 + np.sin(2 * np.pi * t)
 
@@ -36,8 +36,11 @@ plt.show()
 
 
 '''
+
+
 def animate(i):
-    contamine = pd.read_csv("/home/maxime/Documents/Automate_Cellulaire/Diversity/Simulations/Systeme_1/data_csv/Humain_contamine.csv")
+    contamine = pd.read_csv(
+        "/home/maxime/Documents/Automate_Cellulaire/Diversity/Simulations/Systeme_1/data_csv/Humain_contamine.csv")
     sum_contamine = contamine.sum(axis=1)
     plt.cla()
     plt.title("Contaminations")
@@ -52,7 +55,7 @@ ani = FuncAnimation(plt.gcf(), animate, interval=100)
 plt.tight_layout()
 plt.show()
 
-
+'''
 contamine_data = pd.DataFrame(contamine)
 ax = plt.gca()
 contamine_data.plot(kind='line',y = 'Humain_6',ax=ax,color='red')

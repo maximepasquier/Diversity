@@ -6,7 +6,7 @@
 using namespace std;
 
 //* Initialiser globalement un générateur de nombres aléatoire
-unsigned int seed = chrono::system_clock::now().time_since_epoch().count();
+//unsigned int seed = chrono::system_clock::now().time_since_epoch().count();
 //default_random_engine generator(seed);
 default_random_engine generator(123456789);
 

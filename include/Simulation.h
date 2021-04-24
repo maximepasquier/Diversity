@@ -46,8 +46,8 @@ public:
     void Add_human_obj_to_grid();
     void Create_and_initialize_csv();
     void Open_append_mode_csv();
-    void Update_csv();
-    void One_iteration();
+    void Update_csv(int iteration);
+    void One_iteration(int iteration);
     void Update_all_AP();
     void Update_all_H(int *permuted_liste);
     void Update_one_H(int index_H);
@@ -60,7 +60,8 @@ public:
     void Contaminate_cell(int x, int y);
     void Pointer_move_update(std::vector<std::pair<int, int>> *coordonnees, int x, int y, int choix);
     void Add_AP_to_cell(int x, int y);
-    bool Is_immune(int index_H);
+    bool Is_immune(int index_H, unsigned int genome_AP);
+    bool Is_immune_cell(int x, int y, int index_H);
     void AP_mutation(int index_H);
     void Get_immunity(int index_H);
 
@@ -81,7 +82,7 @@ private:
     Humain ***m_Pointer_array_H;
     node ***m_Pointer_array_AP;
     Linked_list m_Liste_AP;
-    std::ofstream m_Humain_contamine, m_Humain_genomeAP, m_Humain_genomeH, m_Humain_hx, m_Humain_hy, m_Humain_immune, m_times;
+    std::ofstream m_Humain_contamine, m_Humain_genomeAP, m_Humain_genomeH, m_Humain_hx, m_Humain_hy, m_Humain_immune, m_times, m_HammingDistance;
     Humain **m_Liste_H;
     //using time = std::chrono::duration<int64_t, std::nano>;
     unsigned long long int m_Init_time = 0;

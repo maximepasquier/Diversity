@@ -17,10 +17,12 @@ extern default_random_engine generator;
 
 void Knuth_Shuffle(int *liste, int taille)
 {
-    srand(time(NULL));
+    //srand(time(NULL));
+    uniform_int_distribution<int> rand_int(0,taille);
     for (int i = taille - 1; i > 0; i--)
     {
-        int index = rand() % (i + 1);
+        //int index = rand() % (i + 1);
+        int index = rand_int(generator) % (i + 1);
         int tmp = liste[i];
         liste[i] = liste[index];
         liste[index] = tmp;
@@ -49,11 +51,9 @@ int hammingDistance(unsigned int n1, unsigned int n2)
 }
 
 //* Détermine le match entre deux génomes donnés
-float Genome_Match(unsigned int Genome_H, unsigned int Genome_AP, unsigned int puissance)
+float Genome_Match(int distance, int genome_size, unsigned int puissance)
 {
-    int distance;
-    distance = hammingDistance(Genome_H, Genome_AP);
-    return pow(distance, puissance) / pow(sizeof(Genome_H) * 8, puissance);
+    return pow(distance, puissance) / pow(genome_size * 8, puissance);
 }
 
 unsigned int Generate_Genome(int deviation, unsigned int init, int *rand_int_list_octet)

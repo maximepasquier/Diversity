@@ -22,6 +22,8 @@ public:
     void SetXH(int x);
     int GetYH();
     void SetYH(int y);
+    int GetHamming();
+    void SetHamming(int distance);
 
 private:
     bool m_contamine;
@@ -30,6 +32,7 @@ private:
     std::vector<unsigned int> m_immune;
     int m_X;
     int m_Y;
+    int m_hamming_distance;
 };
 
 #endif

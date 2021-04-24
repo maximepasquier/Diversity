@@ -18,15 +18,15 @@ void Simulation::Iterations()
         Print_progression(iteration, m_ITERATIONS);
         //* Print ASCII grid to screen
         //Print_ASCII_grid(m_TAILLE_SYSTEME, m_Pointer_array_H, m_Pointer_array_AP);
-        One_iteration();
+        One_iteration(iteration);
     }
 }
 
-void Simulation::One_iteration()
+void Simulation::One_iteration(int iteration)
 {
     //* Write to .csv file
     auto Update_csv_start = chrono::steady_clock::now();
-    Update_csv();
+    Update_csv(iteration);
     auto Update_csv_end = chrono::steady_clock::now();
     auto Update_csv_diff = Update_csv_end - Update_csv_start;
     m_Update_csv_time += chrono::duration<double, nano>(Update_csv_diff).count();
@@ -200,12 +200,16 @@ void Simulation::Analyse_voisinage(vector<pair<int, int>> *coordonnees, int inde
         {
             if (m_Pointer_array_H[coordonnees->at(i).first][coordonnees->at(i).second]->Getcontamine()) // ce voisin est contaminé
             {
-                float rand_f = rand_float(generator);
-                if (rand_f < m_CHARGE_VIRALE) // charge virale
+                if (!Is_immune(index_H, m_Pointer_array_H[coordonnees->at(i).first][coordonnees->at(i).second]->GetgenomeAP()))
                 {
-                    //* Notre humain a été infecté par ce voisin
-                    m_Liste_H[index_H]->Setcontamine(true);
-                    m_Liste_H[index_H]->SetgenomeAP(m_Pointer_array_H[coordonnees->at(i).first][coordonnees->at(i).second]->GetgenomeAP());
+                    float rand_f = rand_float(generator);
+                    if (rand_f < m_CHARGE_VIRALE) // charge virale
+                    {
+                        //* Notre humain a été infecté par ce voisin
+                        m_Liste_H[index_H]->Setcontamine(true);
+                        m_Liste_H[index_H]->SetgenomeAP(m_Pointer_array_H[coordonnees->at(i).first][coordonnees->at(i).second]->GetgenomeAP());
+                        m_Liste_H[index_H]->SetHamming(hammingDistance(m_Liste_H[index_H]->GetgenomeH(), m_Liste_H[index_H]->GetgenomeAP()));
+                    }
                 }
             }
         }
@@ -219,12 +223,16 @@ void Simulation::Collision_H_AP(int x, int y, int index_H)
     {
         if (!m_Liste_H[index_H]->Getcontamine()) // l'humain doit être sain pour être contaminé par ce pahogène
         {
-            float rand_f = rand_float(generator);
-            if (rand_f < m_CHARGE_VIRALE)
+            if (!Is_immune(index_H, m_Pointer_array_AP[x][y]->AP.GetgenomeAP()))
             {
-                //* L'humain est contaminé par ce pathogène
-                m_Liste_H[index_H]->Setcontamine(true);
-                m_Liste_H[index_H]->SetgenomeAP(m_Pointer_array_AP[x][y]->AP.GetgenomeAP());
+                float rand_f = rand_float(generator);
+                if (rand_f < m_CHARGE_VIRALE)
+                {
+                    //* L'humain est contaminé par ce pathogène
+                    m_Liste_H[index_H]->Setcontamine(true);
+                    m_Liste_H[index_H]->SetgenomeAP(m_Pointer_array_AP[x][y]->AP.GetgenomeAP());
+                    m_Liste_H[index_H]->SetHamming(hammingDistance(m_Liste_H[index_H]->GetgenomeH(), m_Liste_H[index_H]->GetgenomeAP()));
+                }
             }
         }
     }
@@ -232,23 +240,22 @@ void Simulation::Collision_H_AP(int x, int y, int index_H)
 
 void Simulation::Humain_hote(int index_H)
 {
-    //* Déterminer si il y a déjà une immunité
-    if (!Is_immune(index_H))
+    //* Déterminer la probabilité de s'immuniser à ce tour (en fonction des génomes)
+    //float chance; // % entre 0 et 1
+    //* Chance de se débarrasser du pathogène
+    //int distance = hammingDistance(m_Liste_H[index_H]->GetgenomeH(), m_Liste_H[index_H]->GetgenomeAP());
+    float chance = Genome_Match(m_Liste_H[index_H]->GetHamming(), sizeof(m_Liste_H[index_H]->GetgenomeH()), m_PUISSANCE);
+    uniform_real_distribution<float> rand_float(0.0, 1.0);
+    float rand_f = rand_float(generator);
+    if (rand_f < chance) // on se débarrasse du pathogène
     {
-        //* Déterminer la probabilité de s'immuniser à ce tour (en fonction des génomes)
-        float chance; // % entre 0 et 1
-        //* Chance de se débarrasser du pathogène
-        chance = Genome_Match(m_Liste_H[index_H]->GetgenomeH(), m_Liste_H[index_H]->GetgenomeAP(), m_PUISSANCE);
-        uniform_real_distribution<float> rand_float(0.0, 1.0);
-        float rand_f = rand_float(generator);
-        if (rand_f < chance) // on se débarrasse du pathogène
-        {
-            Get_immunity(index_H);
-        }
-        else // le pathogène reste
-        {
-            AP_mutation(index_H);
-        }
+        Get_immunity(index_H);
+    }
+    else // le pathogène reste
+    {
+        //* Mémoriser la distance de hamming dans les attributs de l'individu
+        //m_Liste_H[index_H]->SetHamming(distance);
+        AP_mutation(index_H);
     }
 }
 
@@ -273,15 +280,13 @@ void Simulation::AP_mutation(int index_H)
     }
 }
 
-bool Simulation::Is_immune(int index_H)
+bool Simulation::Is_immune(int index_H, unsigned int genome_AP)
 {
     vector<unsigned int> liste_immunite = m_Liste_H[index_H]->Getimmune();
     for (int j = 0; j < liste_immunite.size(); j++)
     {
-        if (liste_immunite[j] == m_Liste_H[index_H]->GetgenomeAP())
+        if (liste_immunite[j] == genome_AP)
         {
-            m_Liste_H[index_H]->Setcontamine(false);
-            m_Liste_H[index_H]->SetgenomeAP(0);
             return true;
         }
     }

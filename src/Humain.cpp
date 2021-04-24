@@ -2,7 +2,7 @@
 
 using namespace std;
 
-Humain::Humain() : m_genome_H(0), m_genome_AP(0), m_contamine(false), m_X(0), m_Y(0)
+Humain::Humain() : m_genome_H(0), m_genome_AP(0), m_contamine(false), m_X(0), m_Y(0), m_hamming_distance(0)
 {
 }
 
@@ -68,4 +68,14 @@ int Humain::GetYH()
 void Humain::SetYH(int y)
 {
     m_Y = y;
+}
+
+int Humain::GetHamming()
+{
+    return m_hamming_distance;
+}
+
+void Humain::SetHamming(int distance)
+{
+    m_hamming_distance = distance;
 }
