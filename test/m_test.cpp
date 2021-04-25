@@ -135,6 +135,7 @@ void Simulation::test_diversity_genome()
 
 void Simulation::test_humain_coords_conflits()
 {
+    //! Erreur avec cette fonction : temps exponentiel pour exécution
     for (int i = 0; i < m_NOMBRE_PERSONNES; i++)
     {
         int x = m_Liste_H[i]->GetXH();

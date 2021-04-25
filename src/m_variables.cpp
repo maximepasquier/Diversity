@@ -79,9 +79,11 @@ void Simulation::Set_Pointer_array()
 
 void Simulation::Set_Liste_H()
 {
+    //cout << "set humains" << endl;
     m_Liste_H = new Humain *[m_NOMBRE_PERSONNES];
     for (int i = 0; i < m_NOMBRE_PERSONNES; i++)
     {
+        //cout << "humain : " << i << endl;
         m_Liste_H[i] = new Humain;
     }
 }

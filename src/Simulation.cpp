@@ -83,8 +83,11 @@ Simulation::~Simulation() // déconstructeur
 
 void Simulation::Init()
 {
+    //cout << "Lecture des paramètres..." << endl;
     Read();
+    //cout << "Initialisation du modèle..." << endl;
     Set();
+    //cout << "Initialisation des fichier csv" << endl;
     File_init();
 }
 
@@ -95,8 +98,9 @@ void Simulation::Run()
     auto Iterations_end = chrono::steady_clock::now();
     auto Iterations_diff = Iterations_end - Iterations_start;
     m_Iterations_time = chrono::duration<double, nano>(Iterations_diff).count();
-
+    //cout << "Fermeture des fichiers csv..." << endl;
     Close_files();
+    //cout << "Libération de la mémoire..." << endl;
     Delete_obj();
 }
 
@@ -135,6 +139,6 @@ void Simulation::Model_init()
     //* Ajouter des objets humain
     Add_human_obj_to_grid();
     // test : vérifier que chaque humain ait des coordonnées dans ses attributs + aucun conflit entre les humains
-    test_humain_coords_conflits();
+    //test_humain_coords_conflits();
     Patient_zero();
 }

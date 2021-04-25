@@ -253,8 +253,6 @@ void Simulation::Humain_hote(int index_H)
     }
     else // le pathogène reste
     {
-        //* Mémoriser la distance de hamming dans les attributs de l'individu
-        //m_Liste_H[index_H]->SetHamming(distance);
         AP_mutation(index_H);
     }
 }
