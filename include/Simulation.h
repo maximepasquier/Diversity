@@ -25,6 +25,7 @@ public:
     void Init();
     void Read();
     void Set();
+    void File_init_all_data();
     void File_init();
     void Read_Configuration_file();
     void test_variables_coherence();
@@ -40,14 +41,19 @@ public:
     void Patient_zero();
     void Iterations();
     void Delete_obj();
+    void Close_files_all_data();
     void Close_files();
     void Pointer_array_to_NULL();
     void Generate_human_genome_diversity();
     void Add_human_obj_to_grid();
+    void Create_and_initialize_csv_all_data();
     void Create_and_initialize_csv();
+    void Open_append_mode_csv_all_data();
     void Open_append_mode_csv();
-    void Update_csv(int iteration);
+    void Update_csv_all_data(int iteration);
+    void Update_csv();
     void One_iteration(int iteration);
+    int Update_infected_number();
     void Update_all_AP();
     void Update_all_H(int *permuted_liste);
     void Update_one_H(int index_H);
@@ -77,12 +83,17 @@ private:
     unsigned int m_PUISSANCE;      // puissance des termes dans la fonction de génome match
     float m_TRAINEE;               // détermine la probabilité de contaminer une cellule
     float m_SURVIE_AP;             // probabilité que le pathogène contaminant une cellule reste en vie
+
+    int m_nombre_contamine;        // compteur du nombre d'individus contaminés à chaque itération
     std::string m_configuration_file_path;
     std::vector<std::pair<std::string, std::string>> m_configuration_file_data;
     Humain ***m_Pointer_array_H;
     node ***m_Pointer_array_AP;
     Linked_list m_Liste_AP;
+    //* Fichiers csv pour stocker toutes les données de la simulation
     std::ofstream m_Humain_contamine, m_Humain_genomeAP, m_Humain_genomeH, m_Humain_hx, m_Humain_hy, m_Humain_immune, m_times, m_HammingDistance;
+    //* Fichier csv pour la prise des données essentielles + pré analyses dans python
+    std::ofstream m_nombre_contamine_file;
     Humain **m_Liste_H;
     //using time = std::chrono::duration<int64_t, std::nano>;
     unsigned long long int m_Init_time = 0;

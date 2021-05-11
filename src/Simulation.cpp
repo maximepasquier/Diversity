@@ -22,7 +22,7 @@ Simulation::Simulation()
 {
 }
 
-Simulation::Simulation(string configuration_file_path) : m_configuration_file_path(configuration_file_path)
+Simulation::Simulation(string configuration_file_path) : m_configuration_file_path(configuration_file_path), m_nombre_contamine(0)
 {
     int time_metrique = 1000000;
     /*
@@ -88,6 +88,7 @@ void Simulation::Init()
     //cout << "Initialisation du modèle..." << endl;
     Set();
     //cout << "Initialisation des fichier csv" << endl;
+    //File_init_all_data();
     File_init();
 }
 
@@ -99,7 +100,7 @@ void Simulation::Run()
     auto Iterations_diff = Iterations_end - Iterations_start;
     m_Iterations_time = chrono::duration<double, nano>(Iterations_diff).count();
     //cout << "Fermeture des fichiers csv..." << endl;
-    Close_files();
+    //Close_files_all_data();
     //cout << "Libération de la mémoire..." << endl;
     Delete_obj();
 }
@@ -111,7 +112,7 @@ void Simulation::Read()
     //* Assignation des paramètres globaux
     Assign_variables();
     //test: vérifier la cohérence des variables globales
-    test_variables_coherence();
+    //test_variables_coherence();
 }
 
 void Simulation::Set()
@@ -127,7 +128,7 @@ void Simulation::Data_structure_creation()
     //* Réinitialisation des matrices de pointeurs (NULL)
     Pointer_array_to_NULL();
     //test : controle pointer to null
-    test_is_Pointer_array_to_null();
+    //test_is_Pointer_array_to_null();
 }
 
 void Simulation::Model_init()

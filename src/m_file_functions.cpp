@@ -37,7 +37,7 @@ void Simulation::Read_Configuration_file()
     }
 }
 
-void Simulation::Close_files()
+void Simulation::Close_files_all_data()
 {
     m_Humain_contamine.close();
     m_Humain_genomeAP.close();
@@ -49,6 +49,20 @@ void Simulation::Close_files()
     m_HammingDistance.close();
 }
 
+void Simulation::Close_files()
+{
+    m_nombre_contamine_file.close();
+    m_times.close();
+}
+
+void Simulation::File_init_all_data()
+{
+    //* Initialiser les fichier .csv
+    Create_and_initialize_csv_all_data();
+    //* Open .csv files to append
+    Open_append_mode_csv_all_data();
+}
+
 void Simulation::File_init()
 {
     //* Initialiser les fichier .csv
@@ -57,7 +71,7 @@ void Simulation::File_init()
     Open_append_mode_csv();
 }
 
-void Simulation::Open_append_mode_csv()
+void Simulation::Open_append_mode_csv_all_data()
 {
     string path_copy = m_configuration_file_path;
     path_copy.append("/data_csv");
@@ -71,7 +85,15 @@ void Simulation::Open_append_mode_csv()
     m_HammingDistance.open(path_copy + "/HammingDistance.csv", std::ios::app);
 }
 
-void Simulation::Create_and_initialize_csv()
+void Simulation::Open_append_mode_csv()
+{
+    string path_copy = m_configuration_file_path;
+    path_copy.append("/data_csv");
+
+    m_nombre_contamine_file.open(path_copy + "/m_nombre_contamine.csv", std::ios::app);
+}
+
+void Simulation::Create_and_initialize_csv_all_data()
 {
     string path_copy = m_configuration_file_path;
     path_copy.append("/data_csv");
@@ -131,10 +153,39 @@ void Simulation::Create_and_initialize_csv()
     m_Humain_immune << '\n';
     m_HammingDistance << '\n';
 
+    Close_files_all_data();
+}
+
+void Simulation::Create_and_initialize_csv()
+{
+    string path_copy = m_configuration_file_path;
+    path_copy.append("/data_csv");
+    const char *file_path = path_copy.c_str();
+    int directory_fd = mkdir(file_path, 0777);
+
+    m_nombre_contamine_file.open(path_copy + "/m_nombre_contamine.csv");
+    m_times.open(path_copy + "/times.csv");
+    m_nombre_contamine_file << "Nombre de contaminés";
+
+    //* Write to times.csv file
+
+    m_times << "Init" << ',';
+    m_times << "Run" << ',';
+    m_times << "Iterations" << ',';
+    m_times << "Update_csv" << ',';
+    m_times << "Permutations" << ',';
+    m_times << "Update_AP" << ',';
+    m_times << "Update_H" << ',';
+    m_times << "Coords" << ',';
+    m_times << "Contamination_cases" << ',';
+    m_times << "Mouvement" << ',';
+    m_times << "Total" << ',';
+    m_times << '\n';
+
     Close_files();
 }
 
-void Simulation::Update_csv(int iteration)
+void Simulation::Update_csv_all_data(int iteration)
 {
     // char buff[64];
     for (int i = 0; i < m_NOMBRE_PERSONNES; i++)
@@ -199,4 +250,9 @@ void Simulation::Update_csv(int iteration)
         m_Humain_immune << '\n';
         m_HammingDistance << '\n';
     }
+}
+
+void Simulation::Update_csv()
+{
+    m_nombre_contamine_file << '\n' << m_nombre_contamine;
 }

@@ -24,9 +24,12 @@ void Simulation::Iterations()
 
 void Simulation::One_iteration(int iteration)
 {
+    //* Compter le nombre de contaminés
+    m_nombre_contamine = Update_infected_number();
     //* Write to .csv file
     auto Update_csv_start = chrono::steady_clock::now();
-    Update_csv(iteration);
+    //Update_csv_all_data(iteration);
+    Update_csv();
     auto Update_csv_end = chrono::steady_clock::now();
     auto Update_csv_diff = Update_csv_end - Update_csv_start;
     m_Update_csv_time += chrono::duration<double, nano>(Update_csv_diff).count();
