@@ -1,8 +1,9 @@
 #include <iostream>
 #include <math.h>
-#include "Humain.h"
-#include "node.h"
-#include "Linked_list.h"
+#include <random>
+#include "Individu.h"
+#include "AP_linked_list_node.h"
+#include "AP_linked_list.h"
 #include "functions.h"
 #include "Simulation.h"
 
@@ -13,9 +14,9 @@ extern default_random_engine generator;
 void Simulation::Patient_zero()
 {
     //* Contaminer un humain (patient zéro)
-    m_Liste_H[0]->Setcontamine(true);
-    m_Liste_H[0]->SetgenomeAP(m_GENOME_INIT_AP);
-    m_Liste_H[0]->IncrNombreDeFoisContamine();
+    m_Liste_I[0]->Setcontamine(true);
+    m_Liste_I[0]->SetgenomeAP(m_GENOME_INIT_AP);
+    m_Liste_I[0]->IncrNombreDeFoisContamine();
 }
 
 void Simulation::Generate_human_genome_diversity()
@@ -29,7 +30,7 @@ void Simulation::Generate_human_genome_diversity()
         {
             rand_int_list_octet[j] = rand_int_size(generator); // générer aléatoirement des indices
         }
-        m_Liste_H[i]->SetgenomeH(Generate_Genome(m_GENOME_DIVERSITY_H, m_GENOME_INIT_H, rand_int_list_octet));
+        m_Liste_I[i]->SetgenomeH(Generate_Genome(m_GENOME_DIVERSITY_H, m_GENOME_INIT_H, rand_int_list_octet));
     }
 }
 
@@ -45,12 +46,12 @@ void Simulation::Add_human_obj_to_grid()
             ligne = rand_int_taille_systeme(generator);
             colonne = rand_int_taille_systeme(generator);
             //* Assigner un pointeur à chaque humain
-            if (m_Pointer_array_H[ligne][colonne] == NULL) // pointeur libre
+            if (m_Pointer_array_I[ligne][colonne] == NULL) // pointeur libre
             {
-                m_Pointer_array_H[ligne][colonne] = m_Liste_H[i]; // assignation faite
+                m_Pointer_array_I[ligne][colonne] = m_Liste_I[i]; // assignation faite
                 //* Enregistrer les coordonnées de l'humain dans ses attributs
-                m_Liste_H[i]->SetXH(ligne);
-                m_Liste_H[i]->SetYH(colonne);
+                m_Liste_I[i]->SetXH(ligne);
+                m_Liste_I[i]->SetYH(colonne);
                 break;
             }
         }

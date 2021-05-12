@@ -1,8 +1,6 @@
-#include <iostream>
-#include <math.h>
-#include "Humain.h"
-#include "node.h"
-#include "Linked_list.h"
+#include "Individu.h"
+#include "AP_linked_list_node.h"
+#include "AP_linked_list.h"
 #include "functions.h"
 #include "Simulation.h"
 
@@ -64,27 +62,27 @@ void Simulation::Assign_variables()
 void Simulation::Set_Pointer_array()
 {
     //* Déclaration des matrices de pointeurs pour les humains
-    m_Pointer_array_H = new Humain **[m_TAILLE_SYSTEME];
+    m_Pointer_array_I = new Individu **[m_TAILLE_SYSTEME];
     for (int i = 0; i < m_TAILLE_SYSTEME; i++)
     {
-        m_Pointer_array_H[i] = new Humain *[m_TAILLE_SYSTEME];
+        m_Pointer_array_I[i] = new Individu *[m_TAILLE_SYSTEME];
     }
     //* Déclaration des matrices de pointeurs pour les agents pathogènes
-    m_Pointer_array_AP = new node **[m_TAILLE_SYSTEME];
+    m_Pointer_array_AP = new AP_linked_list_node **[m_TAILLE_SYSTEME];
     for (int i = 0; i < m_TAILLE_SYSTEME; i++)
     {
-        m_Pointer_array_AP[i] = new node *[m_TAILLE_SYSTEME];
+        m_Pointer_array_AP[i] = new AP_linked_list_node *[m_TAILLE_SYSTEME];
     }
 }
 
 void Simulation::Set_Liste_H()
 {
     //cout << "set humains" << endl;
-    m_Liste_H = new Humain *[m_NOMBRE_PERSONNES];
+    m_Liste_I = new Individu *[m_NOMBRE_PERSONNES];
     for (int i = 0; i < m_NOMBRE_PERSONNES; i++)
     {
         //cout << "humain : " << i << endl;
-        m_Liste_H[i] = new Humain;
+        m_Liste_I[i] = new Individu;
     }
 }
 
@@ -92,21 +90,21 @@ void Simulation::Delete_obj()
 {
     for (int i = 0; i < m_NOMBRE_PERSONNES; i++)
     {
-        delete m_Liste_H[i];
+        delete m_Liste_I[i];
     }
-    delete[] m_Liste_H;
+    delete[] m_Liste_I;
 
     for (int i = 0; i < m_TAILLE_SYSTEME; i++)
     {
         for (int j = 0; j > m_TAILLE_SYSTEME; j++)
         {
-            delete m_Pointer_array_H[i][j];
+            delete m_Pointer_array_I[i][j];
             delete m_Pointer_array_AP[i][j];
         }
-        delete[] m_Pointer_array_H[i];
+        delete[] m_Pointer_array_I[i];
         delete[] m_Pointer_array_AP[i];   
     }
-    delete[] m_Pointer_array_H;
+    delete[] m_Pointer_array_I;
     delete[] m_Pointer_array_AP;
 
     //* Supprimer tous les objets agent_pathogene
@@ -119,7 +117,7 @@ void Simulation::Pointer_array_to_NULL()
     {
         for (int j = 0; j < m_TAILLE_SYSTEME; j++)
         {
-            m_Pointer_array_H[i][j] = NULL;
+            m_Pointer_array_I[i][j] = NULL;
             m_Pointer_array_AP[i][j] = NULL;
         }
     }

@@ -1,17 +1,11 @@
-#include <iostream>
 #include <math.h>
-#include <string>
-#include "Humain.h"
-#include "node.h"
-#include "Linked_list.h"
-#include "functions.h"
+#include <sstream>
+#include <sys/stat.h>
+#include "Individu.h"
+#include "AP_linked_list_node.h"
+#include "AP_linked_list.h"
 #include "Simulation.h"
 
-#include <sys/types.h>
-#include <sys/stat.h>
-#include <unistd.h>
-#include <stdio.h>
-#include <stdlib.h>
 
 using namespace std;
 
@@ -190,39 +184,25 @@ void Simulation::Create_and_initialize_csv()
 
 void Simulation::Update_csv_all_data(int iteration)
 {
-    // char buff[64];
     for (int i = 0; i < m_NOMBRE_PERSONNES; i++)
     {
-        /*
-        sprintf(buff, "%d,", m_Liste_H[i]->Getcontamine());
-        m_Humain_contamine << buff;
-        sprintf(buff, "%d,", m_Liste_H[i]->GetgenomeAP());
-        m_Humain_genomeAP << buff;
-        sprintf(buff, "%d,", m_Liste_H[i]->GetgenomeH());
-        m_Humain_genomeH << buff;
-        sprintf(buff, "%d,", m_Liste_H[i]->GetXH());
-        m_Humain_hx << buff;
-        sprintf(buff, "%d,", m_Liste_H[i]->GetYH());
-        m_Humain_hy << buff;
-        */
-
-        m_Humain_contamine << m_Liste_H[i]->Getcontamine();
-        if (m_Liste_H[i]->Getcontamine())
+        m_Humain_contamine << m_Liste_I[i]->Getcontamine();
+        if (m_Liste_I[i]->Getcontamine())
         {
-            m_Humain_genomeAP << m_Liste_H[i]->GetgenomeAP();
-            m_HammingDistance << m_Liste_H[i]->GetHamming();
+            m_Humain_genomeAP << m_Liste_I[i]->GetgenomeAP();
+            m_HammingDistance << m_Liste_I[i]->GetHamming();
         }
         else
         {
             m_Humain_genomeAP << NAN;
             m_HammingDistance << NAN;
         }
-        m_Humain_genomeH << m_Liste_H[i]->GetgenomeH();
-        m_Humain_hx << m_Liste_H[i]->GetXH();
-        m_Humain_hy << m_Liste_H[i]->GetYH();
+        m_Humain_genomeH << m_Liste_I[i]->GetgenomeH();
+        m_Humain_hx << m_Liste_I[i]->GetXH();
+        m_Humain_hy << m_Liste_I[i]->GetYH();
 
-        vector<unsigned int> liste_immunite = m_Liste_H[i]->Getimmune();
-        int vsize = m_Liste_H[i]->Getimmune().size();
+        vector<unsigned int> liste_immunite = m_Liste_I[i]->Getimmune();
+        int vsize = m_Liste_I[i]->Getimmune().size();
         for (int j = 0; j < vsize; j++)
         {
             m_Humain_immune << liste_immunite[j] << ' ';

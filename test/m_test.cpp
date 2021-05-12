@@ -1,8 +1,8 @@
 #include <iostream>
 #include <math.h>
-#include "Humain.h"
-#include "node.h"
-#include "Linked_list.h"
+#include "Individu.h"
+#include "AP_linked_list_node.h"
+#include "AP_linked_list.h"
 #include "functions.h"
 #include "Simulation.h"
 
@@ -110,7 +110,7 @@ void Simulation::test_is_Pointer_array_to_null()
     {
         for (int j = 0; j < m_TAILLE_SYSTEME; j++)
         {
-            if (m_Pointer_array_H[i][j] != NULL || m_Pointer_array_AP[i][j] != NULL)
+            if (m_Pointer_array_I[i][j] != NULL || m_Pointer_array_AP[i][j] != NULL)
             {
                 cout << "Les matrices de pointeurs n'ont pas été correctement initialisée à NULL !" << endl;
                 exit(EXIT_FAILURE);
@@ -125,7 +125,7 @@ void Simulation::test_diversity_genome()
     for (int i = 0; i < m_NOMBRE_PERSONNES; i++)
     {
         //* La divergence des génomes par rapport à l'initial vaut la valeur de diversité
-        if (hammingDistance(m_Liste_H[i]->GetgenomeH(), m_GENOME_INIT_H) != m_GENOME_DIVERSITY_H)
+        if (hammingDistance(m_Liste_I[i]->GetgenomeH(), m_GENOME_INIT_H) != m_GENOME_DIVERSITY_H)
         {
             cout << "La génération de génomes pour les humains a rencontré une erreur !" << endl;
             exit(EXIT_FAILURE);
@@ -138,15 +138,15 @@ void Simulation::test_humain_coords_conflits()
     //! Erreur avec cette fonction : temps exponentiel pour exécution
     for (int i = 0; i < m_NOMBRE_PERSONNES; i++)
     {
-        int x = m_Liste_H[i]->GetXH();
-        int y = m_Liste_H[i]->GetYH();
+        int x = m_Liste_I[i]->GetXH();
+        int y = m_Liste_I[i]->GetYH();
         for (int j = 0; j < m_NOMBRE_PERSONNES; j++)
         {
             //* Deux individus sur la même ligne
-            if(i != j && x == m_Liste_H[j]->GetXH())
+            if(i != j && x == m_Liste_I[j]->GetXH())
             {
                 //* Deux individus sur la même colonne
-                if(y == m_Liste_H[j]->GetYH())
+                if(y == m_Liste_I[j]->GetYH())
                 {
                     cout << "Un collision s'est produite entre deux humains !" << endl;
                     cout << "Deux individus semblent se trouver sur la même cellule" << endl;

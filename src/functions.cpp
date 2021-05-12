@@ -1,15 +1,10 @@
 #include <sys/ioctl.h>
+#include <iostream>
 #include <unistd.h>
-#include <bits/stdc++.h>
-#include <algorithm>
-#include <math.h>
 #include <random>
-#include <bits/stdc++.h>
-#include <string>
-#include <vector>
-#include "Humain.h"
-#include "node.h"
-#include "Linked_list.h"
+#include "Individu.h"
+#include "AP_linked_list_node.h"
+#include "AP_linked_list.h"
 
 using namespace std;
 
@@ -17,11 +12,9 @@ extern default_random_engine generator;
 
 void Knuth_Shuffle(int *liste, int taille)
 {
-    //srand(time(NULL));
     uniform_int_distribution<int> rand_int(0,taille);
     for (int i = taille - 1; i > 0; i--)
     {
-        //int index = rand() % (i + 1);
         int index = rand_int(generator) % (i + 1);
         int tmp = liste[i];
         liste[i] = liste[index];
@@ -80,8 +73,6 @@ void Print_progression(int current_iteration, int total)
     struct winsize w;
     ioctl(STDOUT_FILENO, TIOCGWINSZ, &w);
 
-    //printf("lines %d\n", w.ws_row);
-    //printf("columns %d\n", w.ws_col);
     float ratio_done = (float)(current_iteration + 1) / (float)total;
     string progression = "[";
     cout << "Progress : [" << int(ratio_done * 100) << "%]";
@@ -106,7 +97,7 @@ void Print_progression(int current_iteration, int total)
     }
 }
 
-void Print_ASCII_grid(int taille_sys, Humain ***Pointer_array_H, node ***Pointer_array_AP)
+void Print_ASCII_grid(int taille_sys, Individu ***Pointer_array_I, AP_linked_list_node ***Pointer_array_AP)
 {
     printf("\x1b[2J"); // clear screen
     printf("\x1b[H");  // returning the cursor to the home position
@@ -117,9 +108,9 @@ void Print_ASCII_grid(int taille_sys, Humain ***Pointer_array_H, node ***Pointer
         for (int j = 0; j < taille_sys; j++)
         {
             int count = 3;
-            if (Pointer_array_H[i][j] != NULL) // la cellule pointe sur un humain !
+            if (Pointer_array_I[i][j] != NULL) // la cellule pointe sur un humain !
             {
-                cout << Pointer_array_H[i][j]->Getcontamine();
+                cout << Pointer_array_I[i][j]->Getcontamine();
                 count--;
             }
             if (Pointer_array_AP[i][j] != NULL)
@@ -142,17 +133,9 @@ void Print_ASCII_grid(int taille_sys, Humain ***Pointer_array_H, node ***Pointer
 }
 
 void Get_coords_voisins(vector<pair<int, int>> &coords, int taille_sys, int x, int y)
-{
-    
+{  
     coords[0] = make_pair(x, (y - 1 + taille_sys) % taille_sys);
     coords[1] = make_pair(x, (y + 1) % taille_sys);
     coords[2] = make_pair((x - 1 + taille_sys) % taille_sys, y);
     coords[3] = make_pair((x + 1) % taille_sys, y);
-    
-    /*
-    coords->push_back(make_pair(x, (y - 1 + taille_sys) % taille_sys));
-    coords->push_back(make_pair(x, (y + 1) % taille_sys));
-    coords->push_back(make_pair((x - 1 + taille_sys) % taille_sys, y));
-    coords->push_back(make_pair((x + 1) % taille_sys, y));
-    */
 }
