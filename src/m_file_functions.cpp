@@ -52,6 +52,7 @@ void Simulation::Close_files_all_data()
 void Simulation::Close_files()
 {
     m_nombre_contamine_file.close();
+    m_nombre_AP_diff_file.close();
     m_times.close();
 }
 
@@ -91,6 +92,7 @@ void Simulation::Open_append_mode_csv()
     path_copy.append("/data_csv");
 
     m_nombre_contamine_file.open(path_copy + "/m_nombre_contamine.csv", std::ios::app);
+    m_nombre_AP_diff_file.open(path_copy + "/m_nombre_AP.csv", std::ios::app);
 }
 
 void Simulation::Create_and_initialize_csv_all_data()
@@ -164,11 +166,12 @@ void Simulation::Create_and_initialize_csv()
     int directory_fd = mkdir(file_path, 0777);
 
     m_nombre_contamine_file.open(path_copy + "/m_nombre_contamine.csv");
+    m_nombre_AP_diff_file.open(path_copy + "/m_nombre_AP.csv");
     m_times.open(path_copy + "/times.csv");
     m_nombre_contamine_file << "Nombre de contaminés";
+    m_nombre_AP_diff_file << "Nombre AP";
 
     //* Write to times.csv file
-
     m_times << "Init" << ',';
     m_times << "Run" << ',';
     m_times << "Iterations" << ',';
@@ -224,7 +227,7 @@ void Simulation::Update_csv_all_data(int iteration)
         {
             m_Humain_immune << liste_immunite[j] << ' ';
         }
-        if(vsize == 0)
+        if (vsize == 0)
         {
             m_Humain_immune << NAN;
         }
@@ -255,4 +258,5 @@ void Simulation::Update_csv_all_data(int iteration)
 void Simulation::Update_csv()
 {
     m_nombre_contamine_file << '\n' << m_nombre_contamine;
+    m_nombre_AP_diff_file << '\n' << m_nombre_AP_diff;
 }

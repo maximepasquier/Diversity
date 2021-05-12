@@ -34,6 +34,7 @@ public:
     void test_humain_coords_conflits();
     void Data_structure_creation();
     void Model_init();
+    void Mesures();
     void Run();
     void Assign_variables();
     void Set_Pointer_array();
@@ -70,6 +71,9 @@ public:
     bool Is_immune_cell(int x, int y, int index_H);
     void AP_mutation(int index_H);
     void Get_immunity(int index_H);
+    void Nombre_de_fois_contamine();
+    int Update_nombre_AP_diff();
+    void Resistance_naturelle(int index_H);
 
 private:
     int m_TAILLE_SYSTEME;          // largeur de la grille
@@ -84,7 +88,8 @@ private:
     float m_TRAINEE;               // détermine la probabilité de contaminer une cellule
     float m_SURVIE_AP;             // probabilité que le pathogène contaminant une cellule reste en vie
 
-    int m_nombre_contamine;        // compteur du nombre d'individus contaminés à chaque itération
+    int m_nombre_contamine; // compteur du nombre d'individus contaminés à chaque itération
+    int m_nombre_AP_diff;        // compteur du nombre d'agents pathogènes à chaque itération
     std::string m_configuration_file_path;
     std::vector<std::pair<std::string, std::string>> m_configuration_file_data;
     Humain ***m_Pointer_array_H;
@@ -93,7 +98,7 @@ private:
     //* Fichiers csv pour stocker toutes les données de la simulation
     std::ofstream m_Humain_contamine, m_Humain_genomeAP, m_Humain_genomeH, m_Humain_hx, m_Humain_hy, m_Humain_immune, m_times, m_HammingDistance;
     //* Fichier csv pour la prise des données essentielles + pré analyses dans python
-    std::ofstream m_nombre_contamine_file;
+    std::ofstream m_nombre_contamine_file, m_nombre_de_fois_contamine_file, m_nombre_AP_diff_file;
     Humain **m_Liste_H;
     //using time = std::chrono::duration<int64_t, std::nano>;
     unsigned long long int m_Init_time = 0;

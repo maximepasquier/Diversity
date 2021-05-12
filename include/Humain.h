@@ -24,6 +24,9 @@ public:
     void SetYH(int y);
     int GetHamming();
     void SetHamming(int distance);
+    int GetNombreDeFoisContamine();
+    void IncrNombreDeFoisContamine();
+    void DecrNombreDeFoisContamine();
 
 private:
     bool m_contamine;
@@ -33,6 +36,7 @@ private:
     int m_X;
     int m_Y;
     int m_hamming_distance;
+    int m_nombre_de_fois_contamine;
 };
 
 #endif

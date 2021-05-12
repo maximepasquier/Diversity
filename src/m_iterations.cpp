@@ -26,6 +26,10 @@ void Simulation::One_iteration(int iteration)
 {
     //* Compter le nombre de contaminés
     m_nombre_contamine = Update_infected_number();
+
+    //* Compter le nombre d'agents pathogènes différents
+    m_nombre_AP_diff = Update_nombre_AP_diff();
+
     //* Write to .csv file
     auto Update_csv_start = chrono::steady_clock::now();
     //Update_csv_all_data(iteration);
@@ -95,8 +99,8 @@ void Simulation::Update_one_H(int index_H)
     //vector<pair<int, int>> coordonnees; // vecteur de paire de int
     //coordonnees.reserve(4);
     vector<pair<int, int>> coordonnees(4);
-    //* Push les coordonnées des 4 voisins
 
+    //* Push les coordonnées des 4 voisins
     auto Coord_start = chrono::steady_clock::now();
     Get_coords_voisins(coordonnees, m_TAILLE_SYSTEME, x, y);
     auto Coord_end = chrono::steady_clock::now();
@@ -191,6 +195,12 @@ void Simulation::Contamination_cases(vector<pair<int, int>> *coordonnees, int x,
 
         //* Analyse du voisinage
         Analyse_voisinage(coordonnees, index_H);
+
+        //* Si contaminé à cette itération alors on vérifie si il y a résistance naturelle
+        if (m_Liste_H[index_H]->Getcontamine())
+        {
+            Resistance_naturelle(index_H);
+        }
     }
 }
 
@@ -241,6 +251,23 @@ void Simulation::Collision_H_AP(int x, int y, int index_H)
     }
 }
 
+void Simulation::Resistance_naturelle(int index_H)
+{
+    //* Déterminer si l'individu est résistant au pathogène contracté
+    float chance = Genome_Match(m_Liste_H[index_H]->GetHamming(), sizeof(m_Liste_H[index_H]->GetgenomeH()), m_PUISSANCE);
+    uniform_real_distribution<float> rand_float(0.0, 1.0);
+    float rand_f = rand_float(generator);
+    if (rand_f < chance) // on se débarrasse du pathogène, on est résistant
+    {
+        m_Liste_H[index_H]->Setcontamine(false);
+        m_Liste_H[index_H]->DecrNombreDeFoisContamine();
+    }
+    else
+    {
+        m_Liste_H[index_H]->IncrNombreDeFoisContamine();
+    }
+}
+
 void Simulation::Humain_hote(int index_H)
 {
     //* Déterminer la probabilité de s'immuniser à ce tour (en fonction des génomes)
@@ -265,7 +292,7 @@ void Simulation::Get_immunity(int index_H)
     //* Immune
     m_Liste_H[index_H]->Setcontamine(false);
     m_Liste_H[index_H]->Setimmune(m_Liste_H[index_H]->GetgenomeAP());
-    m_Liste_H[index_H]->SetgenomeAP(0);
+    //m_Liste_H[index_H]->SetgenomeAP(0);
 }
 
 void Simulation::AP_mutation(int index_H)

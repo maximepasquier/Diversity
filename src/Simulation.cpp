@@ -53,6 +53,8 @@ Simulation::Simulation(string configuration_file_path) : m_configuration_file_pa
     auto Run_diff = Run_end - Run_start;
     m_Run_time = chrono::duration<double, nano>(Run_diff).count();
 
+    Mesures();
+
     auto end = chrono::steady_clock::now();
     auto diff = end - start;
     m_Total_time = chrono::duration<double, nano>(diff).count();
@@ -99,8 +101,14 @@ void Simulation::Run()
     auto Iterations_end = chrono::steady_clock::now();
     auto Iterations_diff = Iterations_end - Iterations_start;
     m_Iterations_time = chrono::duration<double, nano>(Iterations_diff).count();
+}
+
+void Simulation::Mesures()
+{
+    Nombre_de_fois_contamine();
     //cout << "Fermeture des fichiers csv..." << endl;
     //Close_files_all_data();
+    Close_files();
     //cout << "Libération de la mémoire..." << endl;
     Delete_obj();
 }

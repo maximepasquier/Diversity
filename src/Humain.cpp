@@ -2,7 +2,7 @@
 
 using namespace std;
 
-Humain::Humain() : m_genome_H(0), m_genome_AP(0), m_contamine(false), m_X(0), m_Y(0), m_hamming_distance(0)
+Humain::Humain() : m_genome_H(0), m_genome_AP(0), m_contamine(false), m_X(0), m_Y(0), m_hamming_distance(0), m_nombre_de_fois_contamine(0)
 {
 }
 
@@ -78,4 +78,19 @@ int Humain::GetHamming()
 void Humain::SetHamming(int distance)
 {
     m_hamming_distance = distance;
+}
+
+int Humain::GetNombreDeFoisContamine()
+{
+    return m_nombre_de_fois_contamine;
+}
+
+void Humain::IncrNombreDeFoisContamine()
+{
+    m_nombre_de_fois_contamine += 1;
+}
+
+void Humain::DecrNombreDeFoisContamine()
+{
+    m_nombre_de_fois_contamine -= 1;
 }

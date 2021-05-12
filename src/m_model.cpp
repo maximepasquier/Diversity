@@ -15,6 +15,7 @@ void Simulation::Patient_zero()
     //* Contaminer un humain (patient zéro)
     m_Liste_H[0]->Setcontamine(true);
     m_Liste_H[0]->SetgenomeAP(m_GENOME_INIT_AP);
+    m_Liste_H[0]->IncrNombreDeFoisContamine();
 }
 
 void Simulation::Generate_human_genome_diversity()

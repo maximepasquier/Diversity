@@ -71,7 +71,7 @@ unsigned int Mutations_AP(unsigned int genome_AP, int index)
 {
     unsigned int mask = 0;
     mask = 1 << index;
-    return genome_AP ^ mask;
+    return uint(genome_AP ^ mask);
 }
 
 void Print_progression(int current_iteration, int total)
