@@ -37,7 +37,6 @@ public:
     void SetHamming(int distance);
     int GetNombreDeFoisContamine();
     void IncrNombreDeFoisContamine();
-    void DecrNombreDeFoisContamine();
 
 private:
     bool m_contamine;

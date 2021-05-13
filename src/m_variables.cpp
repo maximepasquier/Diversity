@@ -1,7 +1,5 @@
 #include "Individu.h"
-#include "AP_linked_list_node.h"
 #include "AP_linked_list.h"
-#include "functions.h"
 #include "Simulation.h"
 
 using namespace std;
@@ -77,11 +75,9 @@ void Simulation::Set_Pointer_array()
 
 void Simulation::Set_Liste_H()
 {
-    //cout << "set humains" << endl;
     m_Liste_I = new Individu *[m_NOMBRE_PERSONNES];
     for (int i = 0; i < m_NOMBRE_PERSONNES; i++)
     {
-        //cout << "humain : " << i << endl;
         m_Liste_I[i] = new Individu;
     }
 }

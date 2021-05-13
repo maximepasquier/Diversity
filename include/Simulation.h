@@ -7,7 +7,6 @@
 #include "Agent_Pathogene.h"
 #include "AP_linked_list_node.h"
 #include "AP_linked_list.h"
-#include "functions.h"
 
 /**
  * La classe simulation est le coeur de la simulation et contient
@@ -29,6 +28,7 @@ public:
     void Model_init();
     void Mesures();
     void Run();
+    void End();
     void Data_structure_creation();
     //* Méthodes du fichier "m_variables.cpp"
     void Assign_variables();
@@ -125,14 +125,8 @@ private:
     //* Variables pour calculer les temps d'exécution du programme
     unsigned long long int m_Init_time = 0;
     unsigned long long int m_Run_time = 0;
-    unsigned long long int m_Iterations_time = 0;
-    unsigned long long int m_Update_csv_time = 0;
-    unsigned long long int m_Permutations_time = 0;
-    unsigned long long int m_Update_AP_time = 0;
-    unsigned long long int m_Update_H_time = 0;
-    unsigned long long int m_Coords_time = 0;
-    unsigned long long int m_Contamination_cases_time = 0;
-    unsigned long long int m_Mouvement_time = 0;
+    unsigned long long int m_Mesures_time = 0;
+    unsigned long long int m_End_time = 0;
     unsigned long long int m_Total_time = 0;
 };
 

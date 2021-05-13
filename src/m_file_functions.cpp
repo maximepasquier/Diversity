@@ -1,11 +1,7 @@
 #include <math.h>
 #include <sstream>
 #include <sys/stat.h>
-#include "Individu.h"
-#include "AP_linked_list_node.h"
-#include "AP_linked_list.h"
 #include "Simulation.h"
-
 
 using namespace std;
 
@@ -168,14 +164,8 @@ void Simulation::Create_and_initialize_csv()
     //* Write to times.csv file
     m_times << "Init" << ',';
     m_times << "Run" << ',';
-    m_times << "Iterations" << ',';
-    m_times << "Update_csv" << ',';
-    m_times << "Permutations" << ',';
-    m_times << "Update_AP" << ',';
-    m_times << "Update_H" << ',';
-    m_times << "Coords" << ',';
-    m_times << "Contamination_cases" << ',';
-    m_times << "Mouvement" << ',';
+    m_times << "Mesures" << ',';
+    m_times << "Close" << ',';
     m_times << "Total" << ',';
     m_times << '\n';
 

@@ -1,7 +1,5 @@
 #include "Agent_Pathogene.h"
 
-using namespace std;
-
 Agent_Pathogene::Agent_Pathogene() : m_genome_AP(0)
 {
 }
@@ -10,12 +8,12 @@ Agent_Pathogene::~Agent_Pathogene() // déconstructeur
 {
 }
 
-int Agent_Pathogene::GetgenomeAP()
+unsigned int Agent_Pathogene::GetgenomeAP()
 {
     return m_genome_AP;
 }
 
-void Agent_Pathogene::SetgenomeAP(int genomeAP)
+void Agent_Pathogene::SetgenomeAP(unsigned int genomeAP)
 {
     m_genome_AP = genomeAP;
 }

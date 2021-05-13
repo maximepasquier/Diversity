@@ -1,7 +1,5 @@
 #include "Individu.h"
 
-using namespace std;
-
 Individu::Individu() : m_genome_I(0), m_genome_AP(0), m_contamine(false), m_X(0), m_Y(0), m_hamming_distance(0), m_nombre_de_fois_contamine(0)
 {
 }
@@ -88,9 +86,4 @@ int Individu::GetNombreDeFoisContamine()
 void Individu::IncrNombreDeFoisContamine()
 {
     m_nombre_de_fois_contamine += 1;
-}
-
-void Individu::DecrNombreDeFoisContamine()
-{
-    m_nombre_de_fois_contamine -= 1;
 }

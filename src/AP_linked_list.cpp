@@ -1,8 +1,6 @@
 #include <iostream>
 #include "AP_linked_list.h"
 
-using namespace std;
-
 AP_linked_list::AP_linked_list()
 {
     head = NULL;
@@ -37,7 +35,7 @@ void AP_linked_list::display()
     AP_linked_list_node *tmp = head;
     while (tmp != NULL)
     {
-        cout << "Je suis : " << tmp << ", Précédent est : " << tmp->precedent << ", Suivant est : " << tmp->suivant << endl;
+        std::cout << "Je suis : " << tmp << ", Précédent est : " << tmp->precedent << ", Suivant est : " << tmp->suivant << std::endl;
         tmp = tmp->suivant;
     }
 }

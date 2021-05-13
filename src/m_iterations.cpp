@@ -31,33 +31,17 @@ void Simulation::One_iteration(int iteration)
     m_nombre_AP_diff = Update_nombre_AP_diff();
 
     //* Write to .csv file
-    auto Update_csv_start = chrono::steady_clock::now();
     //Update_csv_all_data(iteration);
     Update_csv();
-    auto Update_csv_end = chrono::steady_clock::now();
-    auto Update_csv_diff = Update_csv_end - Update_csv_start;
-    m_Update_csv_time += chrono::duration<double, nano>(Update_csv_diff).count();
 
     //* Construire la permutations de la liste humain
-    auto Permutation_start = chrono::steady_clock::now();
     int *permuted_liste = new int[m_NOMBRE_PERSONNES];
     Permutation(permuted_liste, m_NOMBRE_PERSONNES);
-    auto Permutation_end = chrono::steady_clock::now();
-    auto Permutation_diff = Permutation_end - Permutation_start;
-    m_Permutations_time += chrono::duration<double, nano>(Permutation_diff).count();
 
     //* Parcours du domaine (liste agents pathogènes)
-    auto Update_all_AP_start = chrono::steady_clock::now();
     Update_all_AP();
-    auto Update_all_AP_end = chrono::steady_clock::now();
-    auto Update_all_AP_diff = Update_all_AP_end - Update_all_AP_start;
-    m_Update_AP_time += chrono::duration<double, nano>(Update_all_AP_diff).count();
     //* Parcours du domaine (liste humains)
-    auto Update_all_H_start = chrono::steady_clock::now();
     Update_all_H(permuted_liste);
-    auto Update_all_H_end = chrono::steady_clock::now();
-    auto Update_all_H_diff = Update_all_H_end - Update_all_H_start;
-    m_Update_H_time += chrono::duration<double, nano>(Update_all_H_diff).count();
     //* Sleep (FPS)
     //this_thread::sleep_for(chrono::seconds(1));
     //* Supprimer la permutation
@@ -99,24 +83,12 @@ void Simulation::Update_one_H(int index_H)
     vector<pair<int, int>> coordonnees(4);
 
     //* Push les coordonnées des 4 voisins
-    auto Coord_start = chrono::steady_clock::now();
     Get_coords_voisins(coordonnees, m_TAILLE_SYSTEME, x, y);
-    auto Coord_end = chrono::steady_clock::now();
-    auto Coord_diff = Coord_end - Coord_start;
-    m_Coords_time += chrono::duration<double, nano>(Coord_diff).count();
 
-    auto Contamination_cases_start = chrono::steady_clock::now();
     Contamination_cases(&coordonnees, x, y, index_H);
-    auto Contamination_cases_end = chrono::steady_clock::now();
-    auto Contamination_cases_diff = Contamination_cases_end - Contamination_cases_start;
-    m_Contamination_cases_time += chrono::duration<double, nano>(Contamination_cases_diff).count();
 
     //* Mouvements
-    auto Mouvement_start = chrono::steady_clock::now();
     Mouvement(&coordonnees, x, y);
-    auto Mouvement_end = chrono::steady_clock::now();
-    auto Mouvement_diff = Mouvement_end - Mouvement_start;
-    m_Mouvement_time += chrono::duration<double, nano>(Mouvement_diff).count();
 }
 
 void Simulation::Mouvement(vector<pair<int, int>> *coordonnees, int x, int y)
@@ -258,7 +230,6 @@ void Simulation::Resistance_naturelle(int index_H)
     if (rand_f < chance) // on se débarrasse du pathogène, on est résistant
     {
         m_Liste_I[index_H]->Setcontamine(false);
-        m_Liste_I[index_H]->DecrNombreDeFoisContamine();
     }
     else
     {

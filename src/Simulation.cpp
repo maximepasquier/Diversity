@@ -2,9 +2,7 @@
 #include <random>
 #include "Individu.h"
 #include "Agent_Pathogene.h"
-#include "AP_linked_list_node.h"
 #include "AP_linked_list.h"
-#include "functions.h"
 #include "Simulation.h"
 
 using namespace std;
@@ -33,7 +31,17 @@ Simulation::Simulation(string configuration_file_path) : m_configuration_file_pa
     auto Run_diff = Run_end - Run_start;
     m_Run_time = chrono::duration<double, nano>(Run_diff).count();
 
+    auto Mesures_start = chrono::steady_clock::now();
     Mesures();
+    auto Mesures_end = chrono::steady_clock::now();
+    auto Mesures_diff = Mesures_end - Mesures_start;
+    m_Mesures_time = chrono::duration<double, nano>(Mesures_diff).count();
+
+    auto End_start = chrono::steady_clock::now();
+    End();
+    auto End_end = chrono::steady_clock::now();
+    auto End_diff = End_end - End_start;
+    m_End_time = chrono::duration<double, nano>(End_diff).count();
 
     auto end = chrono::steady_clock::now();
     auto diff = end - start;
@@ -42,7 +50,11 @@ Simulation::Simulation(string configuration_file_path) : m_configuration_file_pa
     string path_copy = m_configuration_file_path;
     path_copy.append("/data_csv");
     m_times.open(path_copy + "/times.csv", std::ios::app);
-    m_times << m_Init_time / time_metrique << ',' << m_Run_time / time_metrique << ',' << m_Iterations_time / time_metrique << ',' << m_Update_csv_time / time_metrique << ',' << m_Permutations_time / time_metrique << ',' << m_Update_AP_time / time_metrique << ',' << m_Update_H_time / time_metrique << ',' << m_Coords_time / time_metrique << ',' << m_Contamination_cases_time / time_metrique << ',' << m_Mouvement_time / time_metrique << ',' << m_Total_time / time_metrique;
+    m_times << m_Init_time / time_metrique << ','
+            << m_Run_time / time_metrique << ','
+            << m_Mesures_time / time_metrique << ','
+            << m_End_time / time_metrique << ','
+            << m_Total_time / time_metrique;
     m_times.close();
 }
 
@@ -60,16 +72,16 @@ void Simulation::Init()
 
 void Simulation::Run()
 {
-    auto Iterations_start = chrono::steady_clock::now();
     Iterations();
-    auto Iterations_end = chrono::steady_clock::now();
-    auto Iterations_diff = Iterations_end - Iterations_start;
-    m_Iterations_time = chrono::duration<double, nano>(Iterations_diff).count();
 }
 
 void Simulation::Mesures()
 {
     Nombre_de_fois_contamine();
+}
+
+void Simulation::End()
+{
     //Close_files_all_data();
     Close_files();
     Delete_obj();

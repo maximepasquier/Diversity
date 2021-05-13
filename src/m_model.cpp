@@ -1,9 +1,6 @@
-#include <iostream>
-#include <math.h>
 #include <random>
 #include "Individu.h"
 #include "AP_linked_list_node.h"
-#include "AP_linked_list.h"
 #include "functions.h"
 #include "Simulation.h"
 

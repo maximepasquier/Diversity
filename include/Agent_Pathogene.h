@@ -18,8 +18,8 @@ class Agent_Pathogene
 public:
     Agent_Pathogene();
     ~Agent_Pathogene();
-    int GetgenomeAP();
-    void SetgenomeAP(int genomeAP);
+    unsigned int GetgenomeAP();
+    void SetgenomeAP(unsigned int genomeAP);
 
     int GetXAP();
     void SetXAP(int x);
@@ -27,7 +27,7 @@ public:
     void SetYAP(int y);
 
 private:
-    int m_genome_AP;
+    unsigned int m_genome_AP;
     int m_X;
     int m_Y;
 };
