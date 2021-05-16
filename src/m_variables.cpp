@@ -4,6 +4,7 @@
 
 using namespace std;
 
+//* Traduction des informations du fichier congif en variables
 void Simulation::Assign_variables()
 {
     for (int i = 0; i < m_configuration_file_data.size(); i++)
@@ -14,21 +15,21 @@ void Simulation::Assign_variables()
         {
             m_TAILLE_SYSTEME = stoi(value);
         }
-        else if (key == "NOMBRE_PERSONNES")
+        else if (key == "NOMBRE_INDIVIDUS")
         {
-            m_NOMBRE_PERSONNES = stoi(value);
+            m_NOMBRE_INDIVIDUS = stoi(value);
         }
         else if (key == "ITERATIONS")
         {
             m_ITERATIONS = stoi(value);
         }
-        else if (key == "GENOME_INIT_H")
+        else if (key == "GENOME_INIT_I")
         {
-            m_GENOME_INIT_H = stoul(value);
+            m_GENOME_INIT_I = stoul(value);
         }
-        else if (key == "GENOME_DIVERSITY_H")
+        else if (key == "GENOME_DIVERSITY_I")
         {
-            m_GENOME_DIVERSITY_H = stoi(value);
+            m_GENOME_DIVERSITY_I = stoi(value);
         }
         else if (key == "GENOME_INIT_AP")
         {
@@ -57,9 +58,10 @@ void Simulation::Assign_variables()
     }
 }
 
+//* Allocation des matrices (représentation spatiale)
 void Simulation::Set_Pointer_array()
 {
-    //* Déclaration des matrices de pointeurs pour les humains
+    //* Déclaration des matrices de pointeurs pour les individus
     m_Pointer_array_I = new Individu **[m_TAILLE_SYSTEME];
     for (int i = 0; i < m_TAILLE_SYSTEME; i++)
     {
@@ -73,18 +75,20 @@ void Simulation::Set_Pointer_array()
     }
 }
 
-void Simulation::Set_Liste_H()
+//* Création de la liste contanant tous les individus
+void Simulation::Set_Liste_I()
 {
-    m_Liste_I = new Individu *[m_NOMBRE_PERSONNES];
-    for (int i = 0; i < m_NOMBRE_PERSONNES; i++)
+    m_Liste_I = new Individu *[m_NOMBRE_INDIVIDUS];
+    for (int i = 0; i < m_NOMBRE_INDIVIDUS; i++)
     {
         m_Liste_I[i] = new Individu;
     }
 }
 
+//* Suppression des allocations sur le tas
 void Simulation::Delete_obj()
 {
-    for (int i = 0; i < m_NOMBRE_PERSONNES; i++)
+    for (int i = 0; i < m_NOMBRE_INDIVIDUS; i++)
     {
         delete m_Liste_I[i];
     }
@@ -107,6 +111,7 @@ void Simulation::Delete_obj()
     m_Liste_AP.remove_all();
 }
 
+//* Initialise les matrices de pointeurs à NULL
 void Simulation::Pointer_array_to_NULL()
 {
     for (int i = 0; i < m_TAILLE_SYSTEME; i++)

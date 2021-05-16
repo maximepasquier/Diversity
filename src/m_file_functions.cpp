@@ -5,8 +5,16 @@
 
 using namespace std;
 
+//* Lecture du fichier config
 void Simulation::Read_Configuration_file()
 {
+    /**
+     * Lis le fichier config et le parse par le symbole "="
+     * Nous avons donc des paires (clef,valeur) avec la clef 
+     * étant la partie gauche du "=" et la valeur la partie
+     * droite. Cette implémentation n'autorise pas les espaces !
+     * Les paires sont ensuites push dans un vecteur.
+     */
     ifstream config;
     string path_copy = m_configuration_file_path;
     path_copy.append("/config.txt");
@@ -39,11 +47,13 @@ void Simulation::Close_files_all_data()
     m_HammingDistance.close();
 }
 
+//* Ferme les fichiers csv
 void Simulation::Close_files()
 {
     m_nombre_contamine_file.close();
     m_nombre_AP_diff_file.close();
     m_times.close();
+    m_SIR_recovered_file.close();
 }
 
 void Simulation::File_init_all_data()
@@ -54,6 +64,7 @@ void Simulation::File_init_all_data()
     Open_append_mode_csv_all_data();
 }
 
+//* Initialise les fichiers csv
 void Simulation::File_init()
 {
     //* Initialiser les fichier .csv
@@ -76,6 +87,7 @@ void Simulation::Open_append_mode_csv_all_data()
     m_HammingDistance.open(path_copy + "/HammingDistance.csv", std::ios::app);
 }
 
+//* Ouvre les fichier en mode append
 void Simulation::Open_append_mode_csv()
 {
     string path_copy = m_configuration_file_path;
@@ -83,7 +95,9 @@ void Simulation::Open_append_mode_csv()
 
     m_nombre_contamine_file.open(path_copy + "/m_nombre_contamine.csv", std::ios::app);
     m_nombre_AP_diff_file.open(path_copy + "/m_nombre_AP.csv", std::ios::app);
+    m_SIR_recovered_file.open(path_copy + "/m_SIR_recovered_file.csv", std::ios::app);
 }
+
 
 void Simulation::Create_and_initialize_csv_all_data()
 {
@@ -101,7 +115,7 @@ void Simulation::Create_and_initialize_csv_all_data()
     m_times.open(path_copy + "/times.csv");
     m_HammingDistance.open(path_copy + "/HammingDistance.csv");
 
-    for (int i = 0; i < m_NOMBRE_PERSONNES; i++)
+    for (int i = 0; i < m_NOMBRE_INDIVIDUS; i++)
     {
         m_Humain_contamine << "Humain_" << i;
         m_Humain_genomeAP << "Humain_" << i;
@@ -111,7 +125,7 @@ void Simulation::Create_and_initialize_csv_all_data()
         m_Humain_immune << "Humain_" << i;
         m_HammingDistance << "Humain_" << i;
 
-        if (i != m_NOMBRE_PERSONNES - 1)
+        if (i != m_NOMBRE_INDIVIDUS - 1)
         {
             m_Humain_contamine << ',';
             m_Humain_genomeAP << ',';
@@ -148,33 +162,44 @@ void Simulation::Create_and_initialize_csv_all_data()
     Close_files_all_data();
 }
 
+//* Crée les fichiers csv et les initialise
 void Simulation::Create_and_initialize_csv()
 {
+    /**
+     * Récupère le path du projet
+     * Crée un dossier qui va contenir les fichiers csv 
+     */
     string path_copy = m_configuration_file_path;
     path_copy.append("/data_csv");
     const char *file_path = path_copy.c_str();
     int directory_fd = mkdir(file_path, 0777);
 
+    //* Create
     m_nombre_contamine_file.open(path_copy + "/m_nombre_contamine.csv");
     m_nombre_AP_diff_file.open(path_copy + "/m_nombre_AP.csv");
     m_times.open(path_copy + "/times.csv");
+    m_SIR_recovered_file.open(path_copy + "/m_SIR_recovered_file.csv");
+
+    //* Init colonne names
     m_nombre_contamine_file << "Nombre de contaminés";
     m_nombre_AP_diff_file << "Nombre AP";
+    m_SIR_recovered_file << "Recovered";
 
     //* Write to times.csv file
     m_times << "Init" << ',';
     m_times << "Run" << ',';
     m_times << "Mesures" << ',';
     m_times << "Close" << ',';
-    m_times << "Total" << ',';
+    m_times << "Total";
     m_times << '\n';
 
+    //* Ferme les fichiers
     Close_files();
 }
 
 void Simulation::Update_csv_all_data(int iteration)
 {
-    for (int i = 0; i < m_NOMBRE_PERSONNES; i++)
+    for (int i = 0; i < m_NOMBRE_INDIVIDUS; i++)
     {
         m_Humain_contamine << m_Liste_I[i]->Getcontamine();
         if (m_Liste_I[i]->Getcontamine())
@@ -202,7 +227,7 @@ void Simulation::Update_csv_all_data(int iteration)
             m_Humain_immune << NAN;
         }
 
-        if (i != m_NOMBRE_PERSONNES - 1)
+        if (i != m_NOMBRE_INDIVIDUS - 1)
         {
             m_Humain_contamine << ',';
             m_Humain_genomeAP << ',';
@@ -225,6 +250,7 @@ void Simulation::Update_csv_all_data(int iteration)
     }
 }
 
+//* Mise à jour des fichiers csv à chaque itération
 void Simulation::Update_csv()
 {
     m_nombre_contamine_file << '\n' << m_nombre_contamine;

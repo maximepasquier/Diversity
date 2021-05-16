@@ -18,7 +18,7 @@ void Simulation::test_variables_coherence()
     }
 
     //* NOMBRE_PERSONNES non valide
-    if (m_NOMBRE_PERSONNES <= 0)
+    if (m_NOMBRE_INDIVIDUS <= 0)
     {
         cout << "Valeur de NOMBRE_PERSONNES non valide !" << endl;
         exit(EXIT_FAILURE);
@@ -32,18 +32,18 @@ void Simulation::test_variables_coherence()
     }
 
     //* GENOME_INIT_H non valide
-    if (m_GENOME_INIT_H < 0 || m_GENOME_INIT_H > pow(2, 8 * sizeof(m_GENOME_INIT_H)))
+    if (m_GENOME_INIT_I < 0 || m_GENOME_INIT_I > pow(2, 8 * sizeof(m_GENOME_INIT_I)))
     {
         cout << "Valeur de GENOME_INIT_H non valide !" << endl;
-        cout << "Les valeurs adimissibles sont comprises entre 0 et 2^" << 8 * sizeof(m_GENOME_INIT_H) << endl;
+        cout << "Les valeurs adimissibles sont comprises entre 0 et 2^" << 8 * sizeof(m_GENOME_INIT_I) << endl;
         exit(EXIT_FAILURE);
     }
 
     //* GENOME_DIVERSITY_H non valide
-    if (m_GENOME_DIVERSITY_H < 0 || m_GENOME_DIVERSITY_H > 8 * sizeof(m_GENOME_DIVERSITY_H))
+    if (m_GENOME_DIVERSITY_I < 0 || m_GENOME_DIVERSITY_I > 8 * sizeof(m_GENOME_DIVERSITY_I))
     {
         cout << "Valeur de GENOME_DIVERSITY_H non valide !" << endl;
-        cout << "Les valeurs adimissibles sont comprises entre 0 et " << 8 * sizeof(m_GENOME_DIVERSITY_H) << endl;
+        cout << "Les valeurs adimissibles sont comprises entre 0 et " << 8 * sizeof(m_GENOME_DIVERSITY_I) << endl;
         exit(EXIT_FAILURE);
     }
 
@@ -96,7 +96,7 @@ void Simulation::test_variables_coherence()
     }
 
     //* Matrice suffisamment grande pour le nombre de personnes
-    if (m_NOMBRE_PERSONNES > m_TAILLE_SYSTEME * m_TAILLE_SYSTEME)
+    if (m_NOMBRE_INDIVIDUS > m_TAILLE_SYSTEME * m_TAILLE_SYSTEME)
     {
         cout << "Système trop petit pour le nombre de personnes !" << endl;
         cout << "Augmentez la valeur de TAILLE_SYSTEME ou réduisez la valeur de NOMBRE_PERSONNES du fichier config." << endl;
@@ -122,10 +122,10 @@ void Simulation::test_is_Pointer_array_to_null()
 void Simulation::test_diversity_genome()
 {
     //! Erreur si un bit est permuté deux fois, à modifier
-    for (int i = 0; i < m_NOMBRE_PERSONNES; i++)
+    for (int i = 0; i < m_NOMBRE_INDIVIDUS; i++)
     {
         //* La divergence des génomes par rapport à l'initial vaut la valeur de diversité
-        if (hammingDistance(m_Liste_I[i]->GetgenomeH(), m_GENOME_INIT_H) != m_GENOME_DIVERSITY_H)
+        if (hammingDistance(m_Liste_I[i]->GetgenomeH(), m_GENOME_INIT_I) != m_GENOME_DIVERSITY_I)
         {
             cout << "La génération de génomes pour les humains a rencontré une erreur !" << endl;
             exit(EXIT_FAILURE);
@@ -136,11 +136,11 @@ void Simulation::test_diversity_genome()
 void Simulation::test_humain_coords_conflits()
 {
     //! Erreur avec cette fonction : temps exponentiel pour exécution
-    for (int i = 0; i < m_NOMBRE_PERSONNES; i++)
+    for (int i = 0; i < m_NOMBRE_INDIVIDUS; i++)
     {
         int x = m_Liste_I[i]->GetXH();
         int y = m_Liste_I[i]->GetYH();
-        for (int j = 0; j < m_NOMBRE_PERSONNES; j++)
+        for (int j = 0; j < m_NOMBRE_INDIVIDUS; j++)
         {
             //* Deux individus sur la même ligne
             if(i != j && x == m_Liste_I[j]->GetXH())

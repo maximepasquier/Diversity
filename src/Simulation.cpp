@@ -13,7 +13,7 @@ Simulation::Simulation()
 {
 }
 
-Simulation::Simulation(string configuration_file_path) : m_configuration_file_path(configuration_file_path), m_nombre_contamine(0)
+Simulation::Simulation(string configuration_file_path, bool immunity, bool natural_resistance) : m_configuration_file_path(configuration_file_path), m_nombre_contamine(0), m_immunity(immunity), m_natural_resistance(natural_resistance)
 {
     int time_metrique = 1000000;
 
@@ -62,6 +62,7 @@ Simulation::~Simulation() // déconstructeur
 {
 }
 
+//* Phase d'initalisation de la simulation
 void Simulation::Init()
 {
     Read();
@@ -70,16 +71,19 @@ void Simulation::Init()
     File_init();
 }
 
+//* Phase d'exécution de la simulation
 void Simulation::Run()
 {
     Iterations();
 }
 
+//* Phase de mesures de la simulation
 void Simulation::Mesures()
 {
     Nombre_de_fois_contamine();
 }
 
+//* Phase de terminaison de la simulation
 void Simulation::End()
 {
     //Close_files_all_data();
@@ -87,6 +91,7 @@ void Simulation::End()
     Delete_obj();
 }
 
+//* Lecture des données de la simulation
 void Simulation::Read()
 {
     //* Read from config file
@@ -95,25 +100,28 @@ void Simulation::Read()
     Assign_variables();
 }
 
+//* Structure de la simulation
 void Simulation::Set()
 {
     Data_structure_creation();
     Model_init();
 }
 
+//* Création des structures de données
 void Simulation::Data_structure_creation()
 {
     Set_Pointer_array();
-    Set_Liste_H();
+    Set_Liste_I();
     //* Réinitialisation des matrices de pointeurs (NULL)
     Pointer_array_to_NULL();
 }
 
+//* Initialisation du modèle
 void Simulation::Model_init()
 {
     //* Initaliser des génomes pour les humains
-    Generate_human_genome_diversity();
+    Generate_genome_diversity();
     //* Ajouter des objets humain
-    Add_human_obj_to_grid();
+    Add_individu_obj_to_grid();
     Patient_zero();
 }

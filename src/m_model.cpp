@@ -8,6 +8,7 @@ using namespace std;
 
 extern default_random_engine generator;
 
+//* Contamination du premier individu
 void Simulation::Patient_zero()
 {
     //* Contaminer un humain (patient zéro)
@@ -16,25 +17,36 @@ void Simulation::Patient_zero()
     m_Liste_I[0]->IncrNombreDeFoisContamine();
 }
 
-void Simulation::Generate_human_genome_diversity()
+//* Génère les génomes des individus
+void Simulation::Generate_genome_diversity()
 {
+    /**
+     * Génère une liste d'indice aléatoire représentant les positions des bits
+     * à complémenter.
+     */
     uniform_int_distribution<int> rand_int_size(0, 31);
-    for (int i = 0; i < m_NOMBRE_PERSONNES; i++)
+    for (int i = 0; i < m_NOMBRE_INDIVIDUS; i++)
     {
         //* Initaliser des génomes pour les humains
-        int rand_int_list_octet[m_GENOME_DIVERSITY_H]; // indices des génomes à complémenter
-        for (int j = 0; j < m_GENOME_DIVERSITY_H; j++)
+        int rand_int_list_octet[m_GENOME_DIVERSITY_I]; // indices des génomes à complémenter
+        for (int j = 0; j < m_GENOME_DIVERSITY_I; j++)
         {
             rand_int_list_octet[j] = rand_int_size(generator); // générer aléatoirement des indices
         }
-        m_Liste_I[i]->SetgenomeH(Generate_Genome(m_GENOME_DIVERSITY_H, m_GENOME_INIT_H, rand_int_list_octet));
+        m_Liste_I[i]->SetgenomeH(Generate_Genome(m_GENOME_DIVERSITY_I, m_GENOME_INIT_I, rand_int_list_octet));
     }
 }
 
-void Simulation::Add_human_obj_to_grid()
+//* Dépose tous les individus sur la grille
+void Simulation::Add_individu_obj_to_grid()
 {
+    /**
+     * Dépose tous les individus aléatoirement sans que deux
+     * individus ne se trouvent sur la même cellule.
+     * Set les coordonnées des individus dans leurs attributs.
+     */
     uniform_int_distribution<int> rand_int_taille_systeme(0, m_TAILLE_SYSTEME - 1);
-    for (int i = 0; i < m_NOMBRE_PERSONNES; i++)
+    for (int i = 0; i < m_NOMBRE_INDIVIDUS; i++)
     {
         //* Générer les indices [i][j] de la matrice de pointeurs
         while (1)
