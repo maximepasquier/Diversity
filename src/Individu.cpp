@@ -1,6 +1,6 @@
 #include "Individu.h"
 
-Individu::Individu() : m_contamine(false), m_nombre_de_fois_contamine(0)
+Individu::Individu() : m_contamine(false), m_nombre_de_fois_contamine(0), m_temps_contamine(0)
 {
 }
 

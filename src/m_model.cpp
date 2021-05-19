@@ -17,7 +17,6 @@ void Simulation::Patient_zero()
     m_Liste_I[index_I]->Setcontamine(true);
     m_Liste_I[index_I]->SetgenomeAP(m_GENOME_INIT_AP);
     m_Liste_I[index_I]->SetHamming(hammingDistance(m_Liste_I[index_I]->GetgenomeI(), m_GENOME_INIT_AP));
-    m_Liste_I[index_I]->IncrNombreDeFoisContamine();
 }
 
 //* Génère les génomes des individus

@@ -1,4 +1,5 @@
 #include <math.h>
+#include <algorithm>
 #include <sstream>
 #include <sys/stat.h>
 #include "Simulation.h"
@@ -29,6 +30,10 @@ void Simulation::Read_Configuration_file()
             string value;
             if (getline(is_line, value))
             {
+                string::iterator end_pos_key = remove(key.begin(), key.end(), ' ');
+                key.erase(end_pos_key, key.end());
+                string::iterator end_pos_value = remove(value.begin(), value.end(), ' ');
+                value.erase(end_pos_value, value.end());
                 m_configuration_file_data.push_back(make_pair(key, value));
             }
         }
@@ -97,7 +102,6 @@ void Simulation::Open_append_mode_csv()
     m_nombre_AP_diff_file.open(path_copy + "/m_nombre_AP.csv", std::ios::app);
     m_SIR_recovered_file.open(path_copy + "/m_SIR_recovered_file.csv", std::ios::app);
 }
-
 
 void Simulation::Create_and_initialize_csv_all_data()
 {
@@ -253,6 +257,8 @@ void Simulation::Update_csv_all_data(int iteration)
 //* Mise à jour des fichiers csv à chaque itération
 void Simulation::Update_csv()
 {
-    m_nombre_contamine_file << '\n' << m_nombre_contamine;
-    m_nombre_AP_diff_file << '\n' << m_nombre_AP_diff;
+    m_nombre_contamine_file << '\n'
+                            << m_nombre_contamine;
+    m_nombre_AP_diff_file << '\n'
+                          << m_nombre_AP_diff;
 }

@@ -1,3 +1,4 @@
+#include <string>
 #include "Individu.h"
 #include "AP_linked_list.h"
 #include "Simulation.h"
@@ -57,12 +58,35 @@ void Simulation::Assign_variables()
         }
         else if (key == "NOMBRE_MOUVEMENT")
         {
-            m_NOMBRE_MOUVEMENT = stof(value);
+            m_NOMBRE_MOUVEMENT = stoi(value);
         }
         else if (key == "TEMPS_AVANT_IMMUNITE")
         {
-            m_TEMPS_AVANT_IMMUNITE = stof(value);
+            m_TEMPS_AVANT_IMMUNITE = stoi(value);
         }
+        else if (key == "IMMUNITE_MECANISME")
+        {
+            if(value.compare("true") == 0)
+            {
+                m_IMMUNITE_MECANISME = true;
+            }
+            if(value.compare("false") == 0)
+            {
+                m_IMMUNITE_MECANISME = false;
+            }
+        }
+        else if (key == "RESISTANCE_MECANISME")
+        {
+            if(value.compare("true") == 0)
+            {
+                m_RESISTANCE_MECANISME = true;
+            }
+            if(value.compare("false") == 0)
+            {
+                m_RESISTANCE_MECANISME = false;
+            }
+        }
+
     }
 }
 
