@@ -11,5 +11,5 @@ int hammingDistance(unsigned int n1, unsigned int n2);
 void Knuth_Shuffle(int *liste, int taille);
 void Permutation(int *liste, int taille);
 void Print_progression(int current_iteration, int total);
-void Print_ASCII_grid(int taille, Individu ***Pointer_array_H, AP_linked_list_node ***Pointer_array_AP);
+void Print_ASCII_grid(int taille, Individu ***Pointer_array_I, AP_linked_list_node ***Pointer_array_AP);
 void Get_coords_voisins(std::vector<std::pair<int, int>> &coords, int taille_sys, int x, int y);

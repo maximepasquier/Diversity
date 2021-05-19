@@ -212,9 +212,9 @@ void Simulation::Update_csv_all_data(int iteration)
             m_Humain_genomeAP << NAN;
             m_HammingDistance << NAN;
         }
-        m_Humain_genomeH << m_Liste_I[i]->GetgenomeH();
-        m_Humain_hx << m_Liste_I[i]->GetXH();
-        m_Humain_hy << m_Liste_I[i]->GetYH();
+        m_Humain_genomeH << m_Liste_I[i]->GetgenomeI();
+        m_Humain_hx << m_Liste_I[i]->GetXI();
+        m_Humain_hy << m_Liste_I[i]->GetYI();
 
         vector<unsigned int> liste_immunite = m_Liste_I[i]->Getimmune();
         int vsize = m_Liste_I[i]->Getimmune().size();

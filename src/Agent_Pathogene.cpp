@@ -1,6 +1,6 @@
 #include "Agent_Pathogene.h"
 
-Agent_Pathogene::Agent_Pathogene() : m_genome_AP(0)
+Agent_Pathogene::Agent_Pathogene()
 {
 }
 

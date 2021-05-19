@@ -1,6 +1,6 @@
 #include "Individu.h"
 
-Individu::Individu() : m_genome_I(0), m_genome_AP(0), m_contamine(false), m_X(0), m_Y(0), m_hamming_distance(0), m_nombre_de_fois_contamine(0)
+Individu::Individu() : m_contamine(false), m_nombre_de_fois_contamine(0)
 {
 }
 
@@ -18,12 +18,12 @@ void Individu::Setcontamine(bool contamine)
     m_contamine = contamine;
 }
 
-unsigned int Individu::GetgenomeH()
+unsigned int Individu::GetgenomeI()
 {
     return m_genome_I;
 }
 
-void Individu::SetgenomeH(unsigned int genome_I)
+void Individu::SetgenomeI(unsigned int genome_I)
 {
     m_genome_I = genome_I;
 }
@@ -48,22 +48,22 @@ void Individu::Setimmune(unsigned int genome)
     m_immune.push_back(genome);
 }
 
-int Individu::GetXH()
+int Individu::GetXI()
 {
     return m_X;
 }
 
-void Individu::SetXH(int x)
+void Individu::SetXI(int x)
 {
     m_X = x;
 }
 
-int Individu::GetYH()
+int Individu::GetYI()
 {
     return m_Y;
 }
 
-void Individu::SetYH(int y)
+void Individu::SetYI(int y)
 {
     m_Y = y;
 }
@@ -86,4 +86,19 @@ int Individu::GetNombreDeFoisContamine()
 void Individu::IncrNombreDeFoisContamine()
 {
     m_nombre_de_fois_contamine += 1;
+}
+
+int Individu::GetTempsContamine()
+{
+    return m_temps_contamine;
+}
+
+void Individu::SetTempsContamine(int temps)
+{
+    m_temps_contamine = temps;
+}
+
+void Individu::IncrTempsContamine()
+{
+    m_temps_contamine += 1;
 }

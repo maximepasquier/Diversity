@@ -88,19 +88,27 @@ void Simulation::Update_all_I(int *permuted_liste)
 //* Mise à jour de l'individu indexé à index_I
 void Simulation::Update_one_I(int index_I)
 {
-    //* Get coords de l'individu
-    int x = m_Liste_I[index_I]->GetXH();
-    int y = m_Liste_I[index_I]->GetYH();
-    vector<pair<int, int>> coordonnees(4);
+    bool RunOnce = true;
+    for (int i = 0; i < m_NOMBRE_MOUVEMENT; i++)
+    {
+        //* Get coords de l'individu
+        int x = m_Liste_I[index_I]->GetXI();
+        int y = m_Liste_I[index_I]->GetYI();
+        vector<pair<int, int>> coordonnees(4);
 
-    //* Push les coordonnées des 4 voisins
-    Get_coords_voisins(coordonnees, m_TAILLE_SYSTEME, x, y);
+        //* Push les coordonnées des 4 voisins
+        Get_coords_voisins(coordonnees, m_TAILLE_SYSTEME, x, y);
 
-    //* Mise à jour de l'état de l'individu
-    Contamination_cases(&coordonnees, x, y, index_I);
+        //* Mise à jour de l'état de l'individu
+        if (RunOnce)
+        {
+            Contamination_cases(&coordonnees, x, y, index_I);
+            RunOnce = false;
+        }
 
-    //* Mouvements
-    Mouvement(&coordonnees, x, y);
+        //* Mouvements
+        Mouvement(&coordonnees, x, y);
+    }
 }
 
 //* Permet de déplacer un individu
@@ -130,8 +138,8 @@ void Simulation::Moving(vector<pair<int, int>> *coordonnees, int x, int y, int c
 void Simulation::Pointer_move_update(vector<pair<int, int>> *coordonnees, int x, int y, int choix)
 {
     //* Mise à jour des coordonnées de l'individu
-    m_Pointer_array_I[x][y]->SetXH(coordonnees->at(choix).first);
-    m_Pointer_array_I[x][y]->SetYH(coordonnees->at(choix).second);
+    m_Pointer_array_I[x][y]->SetXI(coordonnees->at(choix).first);
+    m_Pointer_array_I[x][y]->SetYI(coordonnees->at(choix).second);
     //* Swap les pointeurs
     m_Pointer_array_I[coordonnees->at(choix).first][coordonnees->at(choix).second] = m_Pointer_array_I[x][y]; // le pointeur voisin pointe sur notre individu
     m_Pointer_array_I[x][y] = NULL;
@@ -143,7 +151,7 @@ void Simulation::Contaminate_cell(int x, int y)
     uniform_real_distribution<float> rand_float(0.0, 1.0);
     //* Déterminer si l'humain contamine la cellule qu'il quitte
     float rand_f = rand_float(generator);
-    if (rand_f < m_TRAINEE)
+    if (rand_f < m_CELLULE_AP)
     {
         //* Cellule contaminée (avant de bouger)
         if (m_Pointer_array_AP[x][y] != NULL)
@@ -174,6 +182,8 @@ void Simulation::Contamination_cases(vector<pair<int, int>> *coordonnees, int x,
     //* Déterminer les cas
     if (m_Liste_I[index_I]->Getcontamine()) //* contaminé
     {
+        //* Incrémente le compteur d'itération contaminé
+        m_Liste_I[index_I]->IncrTempsContamine();
         Individu_hote(index_I);
     }
     else //* pas contaminé
@@ -183,15 +193,6 @@ void Simulation::Contamination_cases(vector<pair<int, int>> *coordonnees, int x,
 
         //* Analyse du voisinage
         Analyse_voisinage(coordonnees, index_I);
-
-        //* Si contaminé à cette itération alors on vérifie si il y a résistance naturelle
-        if (m_Liste_I[index_I]->Getcontamine())
-        {
-            if (m_natural_resistance)
-            {
-                Resistance_naturelle(index_I);
-            }
-        }
     }
 }
 
@@ -220,7 +221,7 @@ void Simulation::Analyse_voisinage(vector<pair<int, int>> *coordonnees, int inde
                         //* Notre humain a été infecté par ce voisin
                         m_Liste_I[index_I]->Setcontamine(true);
                         m_Liste_I[index_I]->SetgenomeAP(m_Pointer_array_I[coordonnees->at(i).first][coordonnees->at(i).second]->GetgenomeAP());
-                        m_Liste_I[index_I]->SetHamming(hammingDistance(m_Liste_I[index_I]->GetgenomeH(), m_Liste_I[index_I]->GetgenomeAP()));
+                        m_Liste_I[index_I]->SetHamming(hammingDistance(m_Liste_I[index_I]->GetgenomeI(), m_Liste_I[index_I]->GetgenomeAP()));
                     }
                 }
             }
@@ -248,31 +249,9 @@ void Simulation::Collision_I_AP(int x, int y, int index_I)
                 //* L'humain est contaminé par ce pathogène
                 m_Liste_I[index_I]->Setcontamine(true);
                 m_Liste_I[index_I]->SetgenomeAP(m_Pointer_array_AP[x][y]->AP.GetgenomeAP());
-                m_Liste_I[index_I]->SetHamming(hammingDistance(m_Liste_I[index_I]->GetgenomeH(), m_Liste_I[index_I]->GetgenomeAP()));
+                m_Liste_I[index_I]->SetHamming(hammingDistance(m_Liste_I[index_I]->GetgenomeI(), m_Liste_I[index_I]->GetgenomeAP()));
             }
         }
-    }
-}
-
-//* Détermine si l'individu est résistant ou non au pathogène contracté
-void Simulation::Resistance_naturelle(int index_I)
-{
-    /**
-     * Notre individu vient de se faire contaminer
-     * Calcul de la distance de hamming 
-     * Détermine une probabilité de ne pas être affecté
-     */
-    //* Déterminer si l'individu est résistant au pathogène contracté
-    float chance = Genome_Match(m_Liste_I[index_I]->GetHamming(), sizeof(m_Liste_I[index_I]->GetgenomeH()), m_PUISSANCE);
-    uniform_real_distribution<float> rand_float(0.0, 1.0);
-    float rand_f = rand_float(generator);
-    if (rand_f < chance) // on se débarrasse du pathogène, on est résistant
-    {
-        m_Liste_I[index_I]->Setcontamine(false);
-    }
-    else
-    {
-        m_Liste_I[index_I]->IncrNombreDeFoisContamine();
     }
 }
 
@@ -286,16 +265,29 @@ void Simulation::Individu_hote(int index_I)
      * Si l'individu ne s'immunise pas alors le pathogène 
      * peut muter
      */
+    //* Incrémente le nombre de fois contaminé
+    if(m_Liste_I[index_I]->GetTempsContamine() == m_TEMPS_AVANT_IMMUNITE)
+    {
+        m_Liste_I[index_I]->IncrNombreDeFoisContamine();
+    }
+
     //* Déterminer la probabilité de s'immuniser à ce tour (en fonction des génomes)
-    float chance = Genome_Match(m_Liste_I[index_I]->GetHamming(), sizeof(m_Liste_I[index_I]->GetgenomeH()), m_PUISSANCE);
+    float chance = Genome_Match(m_Liste_I[index_I]->GetHamming(), sizeof(m_Liste_I[index_I]->GetgenomeI()), m_PARAMETRE_FONCTION);
     uniform_real_distribution<float> rand_float(0.0, 1.0);
     float rand_f = rand_float(generator);
     if (rand_f < chance) // on se débarrasse du pathogène
     {
-        if (m_immunity)
+        //* Déterminer si l'individu s'immunise ou est naturellement résistant
+        if (m_Liste_I[index_I]->GetTempsContamine() < m_TEMPS_AVANT_IMMUNITE)
+        {
+            Resistance_naturelle(index_I);
+        }
+        else
         {
             Get_immunity(index_I);
         }
+        //* Reset le compteur de temps étant contaminé
+        m_Liste_I[index_I]->SetTempsContamine(0);
     }
     else // le pathogène reste
     {
@@ -309,6 +301,12 @@ void Simulation::Get_immunity(int index_I)
     //* Immune
     m_Liste_I[index_I]->Setcontamine(false);
     m_Liste_I[index_I]->Setimmune(m_Liste_I[index_I]->GetgenomeAP());
+}
+
+//* L'individu est résistant au pathogène
+void Simulation::Resistance_naturelle(int index_I)
+{
+    m_Liste_I[index_I]->Setcontamine(false);
 }
 
 //* Mutation de l'agent pathogène

@@ -1,4 +1,5 @@
 #include <random>
+#include <iostream>
 #include "Individu.h"
 #include "AP_linked_list_node.h"
 #include "functions.h"
@@ -12,9 +13,11 @@ extern default_random_engine generator;
 void Simulation::Patient_zero()
 {
     //* Contaminer un humain (patient zéro)
-    m_Liste_I[0]->Setcontamine(true);
-    m_Liste_I[0]->SetgenomeAP(m_GENOME_INIT_AP);
-    m_Liste_I[0]->IncrNombreDeFoisContamine();
+    int index_I = 0;
+    m_Liste_I[index_I]->Setcontamine(true);
+    m_Liste_I[index_I]->SetgenomeAP(m_GENOME_INIT_AP);
+    m_Liste_I[index_I]->SetHamming(hammingDistance(m_Liste_I[index_I]->GetgenomeI(), m_GENOME_INIT_AP));
+    m_Liste_I[index_I]->IncrNombreDeFoisContamine();
 }
 
 //* Génère les génomes des individus
@@ -33,7 +36,7 @@ void Simulation::Generate_genome_diversity()
         {
             rand_int_list_octet[j] = rand_int_size(generator); // générer aléatoirement des indices
         }
-        m_Liste_I[i]->SetgenomeH(Generate_Genome(m_GENOME_DIVERSITY_I, m_GENOME_INIT_I, rand_int_list_octet));
+        m_Liste_I[i]->SetgenomeI(Generate_Genome(m_GENOME_DIVERSITY_I, m_GENOME_INIT_I, rand_int_list_octet));
     }
 }
 
@@ -59,8 +62,8 @@ void Simulation::Add_individu_obj_to_grid()
             {
                 m_Pointer_array_I[ligne][colonne] = m_Liste_I[i]; // assignation faite
                 //* Enregistrer les coordonnées de l'humain dans ses attributs
-                m_Liste_I[i]->SetXH(ligne);
-                m_Liste_I[i]->SetYH(colonne);
+                m_Liste_I[i]->SetXI(ligne);
+                m_Liste_I[i]->SetYI(colonne);
                 break;
             }
         }

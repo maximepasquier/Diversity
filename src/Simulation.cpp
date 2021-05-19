@@ -13,7 +13,7 @@ Simulation::Simulation()
 {
 }
 
-Simulation::Simulation(string configuration_file_path, bool immunity, bool natural_resistance) : m_configuration_file_path(configuration_file_path), m_nombre_contamine(0), m_immunity(immunity), m_natural_resistance(natural_resistance)
+Simulation::Simulation(string configuration_file_path) : m_configuration_file_path(configuration_file_path), m_nombre_contamine(0)
 {
     int time_metrique = 1000000;
 
@@ -123,5 +123,6 @@ void Simulation::Model_init()
     Generate_genome_diversity();
     //* Ajouter des objets humain
     Add_individu_obj_to_grid();
+    //* Contaminer le premier individu
     Patient_zero();
 }

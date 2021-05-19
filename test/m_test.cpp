@@ -72,7 +72,7 @@ void Simulation::test_variables_coherence()
     }
 
     //* PUISSANCE non valide
-    if (m_PUISSANCE <= 0 || m_PUISSANCE > 20)
+    if (m_PARAMETRE_FONCTION <= 0 || m_PARAMETRE_FONCTION > 20)
     {
         cout << "Valeur de PUISSANCE non valide !" << endl;
         cout << "Les valeurs adimissibles sont comprises entre 0 et 20" << endl;
@@ -80,7 +80,7 @@ void Simulation::test_variables_coherence()
     }
 
     //* TRAINEE non valide
-    if (m_TRAINEE < 0 || m_TRAINEE > 1)
+    if (m_CELLULE_AP < 0 || m_CELLULE_AP > 1)
     {
         cout << "Valeur de TRAINEE non valide !" << endl;
         cout << "Les valeurs adimissibles sont comprises entre 0 et 1" << endl;
@@ -125,7 +125,7 @@ void Simulation::test_diversity_genome()
     for (int i = 0; i < m_NOMBRE_INDIVIDUS; i++)
     {
         //* La divergence des génomes par rapport à l'initial vaut la valeur de diversité
-        if (hammingDistance(m_Liste_I[i]->GetgenomeH(), m_GENOME_INIT_I) != m_GENOME_DIVERSITY_I)
+        if (hammingDistance(m_Liste_I[i]->GetgenomeI(), m_GENOME_INIT_I) != m_GENOME_DIVERSITY_I)
         {
             cout << "La génération de génomes pour les humains a rencontré une erreur !" << endl;
             exit(EXIT_FAILURE);
@@ -138,15 +138,15 @@ void Simulation::test_humain_coords_conflits()
     //! Erreur avec cette fonction : temps exponentiel pour exécution
     for (int i = 0; i < m_NOMBRE_INDIVIDUS; i++)
     {
-        int x = m_Liste_I[i]->GetXH();
-        int y = m_Liste_I[i]->GetYH();
+        int x = m_Liste_I[i]->GetXI();
+        int y = m_Liste_I[i]->GetYI();
         for (int j = 0; j < m_NOMBRE_INDIVIDUS; j++)
         {
             //* Deux individus sur la même ligne
-            if(i != j && x == m_Liste_I[j]->GetXH())
+            if(i != j && x == m_Liste_I[j]->GetXI())
             {
                 //* Deux individus sur la même colonne
-                if(y == m_Liste_I[j]->GetYH())
+                if(y == m_Liste_I[j]->GetYI())
                 {
                     cout << "Un collision s'est produite entre deux humains !" << endl;
                     cout << "Deux individus semblent se trouver sur la même cellule" << endl;

@@ -20,7 +20,7 @@ class Simulation
 public:
     //* Méthodes du fichier "Simulation.cpp"
     Simulation();
-    Simulation(std::string configuration_file_path, bool immunity, bool natural_resistance);
+    Simulation(std::string configuration_file_path);
     ~Simulation();
     void Init();
     void Read();
@@ -85,17 +85,19 @@ public:
 
 private:
     //* Variables issues du fichier config
-    int m_TAILLE_SYSTEME;          // largeur de la grille
-    int m_NOMBRE_INDIVIDUS;        // nombre de personnes initialement (densité)
-    int m_ITERATIONS;              // nombre d'itérations de la simulation
-    unsigned int m_GENOME_INIT_I;  // unsigned char pour le génome humain initial
-    int m_GENOME_DIVERSITY_I;      // diversité des génomes humains
-    unsigned int m_GENOME_INIT_AP; // unsigned char pour le génome AP initial
-    float m_VITESSE_MUTATIONS_AP;  // définit la vitesse à laquelle les pathogènes mutent
-    float m_CHARGE_VIRALE;         // charge virale (niveau de contagion)
-    unsigned int m_PUISSANCE;      // puissance des termes dans la fonction de génome match
-    float m_TRAINEE;               // détermine la probabilité de contaminer une cellule
-    float m_SURVIE_AP;             // probabilité que le pathogène contaminant une cellule reste en vie
+    int m_TAILLE_SYSTEME;              // largeur de la grille
+    int m_NOMBRE_INDIVIDUS;            // nombre de personnes initialement (densité)
+    int m_ITERATIONS;                  // nombre d'itérations de la simulation
+    unsigned int m_GENOME_INIT_I;      // unsigned char pour le génome humain initial
+    int m_GENOME_DIVERSITY_I;          // diversité des génomes humains
+    unsigned int m_GENOME_INIT_AP;     // unsigned char pour le génome AP initial
+    float m_VITESSE_MUTATIONS_AP;      // définit la vitesse à laquelle les pathogènes mutent
+    float m_CHARGE_VIRALE;             // charge virale (niveau de contagion)
+    unsigned int m_PARAMETRE_FONCTION; // puissance des termes dans la fonction de génome match
+    float m_CELLULE_AP;                // détermine la probabilité de contaminer une cellule
+    float m_SURVIE_AP;                 // probabilité que le pathogène contaminant une cellule reste en vie
+    int m_NOMBRE_MOUVEMENT;            // nombre de mouvements par itération
+    int m_TEMPS_AVANT_IMMUNITE;        // temps minimal pour considérer une immunité et non une résistance naturelle
 
     //* Variables pour les mesures de la simulation
     int m_nombre_contamine; // compteur du nombre d'individus contaminés à chaque itération
@@ -129,10 +131,6 @@ private:
     unsigned long long int m_Mesures_time = 0;
     unsigned long long int m_End_time = 0;
     unsigned long long int m_Total_time = 0;
-
-    //* Pramètres pour activer le mécanisme d'immunité ainsi que celui de résistance naturelle
-    bool m_immunity;
-    bool m_natural_resistance;
 };
 
 #endif

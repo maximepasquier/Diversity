@@ -43,17 +43,25 @@ void Simulation::Assign_variables()
         {
             m_CHARGE_VIRALE = stof(value);
         }
-        else if (key == "PUISSANCE")
+        else if (key == "PARAMETRE_FONCTION")
         {
-            m_PUISSANCE = stoul(value);
+            m_PARAMETRE_FONCTION = stoul(value);
         }
-        else if (key == "TRAINEE")
+        else if (key == "CELLULE_AP")
         {
-            m_TRAINEE = stof(value);
+            m_CELLULE_AP = stof(value);
         }
         else if (key == "SURVIE_AP")
         {
             m_SURVIE_AP = stof(value);
+        }
+        else if (key == "NOMBRE_MOUVEMENT")
+        {
+            m_NOMBRE_MOUVEMENT = stof(value);
+        }
+        else if (key == "TEMPS_AVANT_IMMUNITE")
+        {
+            m_TEMPS_AVANT_IMMUNITE = stof(value);
         }
     }
 }

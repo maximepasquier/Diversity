@@ -23,20 +23,23 @@ public:
     ~Individu();
     bool Getcontamine();
     void Setcontamine(bool contamine);
-    unsigned int GetgenomeH();
-    void SetgenomeH(unsigned int genomeH);
+    unsigned int GetgenomeI();
+    void SetgenomeI(unsigned int genomeH);
     unsigned int GetgenomeAP();
     void Setimmune(unsigned int genome);
     std::vector<unsigned int> Getimmune();
     void SetgenomeAP(unsigned int genomeAP);
-    int GetXH();
-    void SetXH(int x);
-    int GetYH();
-    void SetYH(int y);
+    int GetXI();
+    void SetXI(int x);
+    int GetYI();
+    void SetYI(int y);
     int GetHamming();
     void SetHamming(int distance);
     int GetNombreDeFoisContamine();
     void IncrNombreDeFoisContamine();
+    int GetTempsContamine();
+    void SetTempsContamine(int temps);
+    void IncrTempsContamine();
 
 private:
     bool m_contamine;
@@ -47,6 +50,7 @@ private:
     int m_Y;
     int m_hamming_distance;
     int m_nombre_de_fois_contamine;
+    int m_temps_contamine;
 };
 
 #endif
