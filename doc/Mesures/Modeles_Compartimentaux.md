@@ -14,9 +14,76 @@ Le modèle SI est le modèle épidémiologique le plus simple. Nous avons deux c
 
 Initialement tous les individus sont dans le compartiment $S$ car tout le monde est sain. Pour lancer la simulation, nous infectons un individus. Par conséquent il passe dans le second compartiment $I$. Il s'agit ensuite d'étudier l'évolution du système.
 
+Le modèle SI est décrit mathématiques par les équations différentielles ordinaires suivantes :
+$$
+\frac{dS}{dt}=-\frac{\beta S I}{N}\\
+\frac{dI}{dt}=\frac{\beta S I}{N}
+$$
+La variable $N$ comptabilise tout la population d'individus de tous les compartiments confondus, par conséquent $N=S+I$. Le facteur $\beta$ est une valeur définie entre $0$ et $1$ et déterminant le taux d'infection du modèle. 
+
+Les équations différentielles s'implémentent dans python de la manière suivante :
+
+```python
+S, I = S - beta * ((S * I / N)), I + beta * ((S * I) / N)
+```
+
+Python intègre un moyen de modifier simultanément plusieurs variables utilisé ci-dessus. Le compartiment $S$ du modèle ne fait que décroître et au contraire le compartiment $I$ ne fait qu'augmenter afin de conserver le total $N=S+I$. La modification du nombre d'individus par compartiment s'effectue en un certain nombre de pas représentant un écoulement dans le temps. Dans notre simulation ce sont les itérations qui font office de représentation temporelle.
+
+Un modèle SI avec une population de $100$ individus, $99$ dans le compartiment $S$ et $1$ dans le compartiment $I$ avec un taux $\beta = 0.3$  et déroulé sur $40$ étapes, nous obtenons le graphique suivant.![SI_model](/home/maxime/Documents/Automate_Cellulaire/Diversity/Python/SI_model.png)
+
+### Modèle SIR
+
+Les modèles compartimentaux SIR sont comparables aux modèles SI sauf qu'ils ont un compartiment supplémentaire $R$ incluant tous les individus guéris. Initialement les individus commencent dans le compartiment $S$ et passent dans le compartiment $I$ si ils sont contaminés. Après une certaine période étant contaminés ils peuvent développer une immunité au pathogène et guérir. Tout individus développant une immunité à la maladie passe dans le dernier compartiment $R$. Ce modèle possède les même paramètres que le modèle SI avec l'ajout d'une variable $\gamma$ comprise entre $0$ et $1$ et définissant le taux de guérison.
+
+Le modèle ayant trois compartiments, il est décrit par trois équations différentielles ordinaires.
+$$
+\frac{dS}{dt}=-\frac{\beta S I}{N}\\
+\frac{dI}{dt}=\frac{\beta S I}{N} - \gamma I\\
+\frac{dR}{dt}=\gamma I
+$$
+Le modèle mathématique est très similaire au précédent. La différence vient du fait que certains individus du compartiment $I$ migrent vers $R$ avec une certaine probabilité. Par conséquent, une quantité est tronquée à l'ajout du compartiment $I$ pour le compartiment $R$.
+
+Comme pour le point précédent, python implémente les trois équations différentielles de la manière suivante :
+
+```python
+S, I, R = S - beta * ((S * I) / N), I + beta * ((S * I) / N) - gamma * I, R + gamma * I 
+```
+
+Les trois compartiments sont mis à jour à chaque pas de l'algorithme et ceci simultanément.
+
+Une représentation graphique sur $100$ étapes avec les paramètres : $N = 100, S = 99, I = 1, R = 0, \beta = 0.3, \gamma = 0.1$
+
+![SIR_model](/home/maxime/Documents/Automate_Cellulaire/Diversity/Python/SIR_model.png)
+
+### Simulations de références
+
+Les modèles SI et SIR ont été prouvés par le passé et ont par conséquent une certaine validité. L'objectif ici est de valider notre modèle en le comparant aux résultats des modèles SI et SIR. Il s'agit donc de paramétrer notre modèle afin de le faire correspondre aux courbes des modèles valides déjà existant. 
+
+Notre modèle paramétré et validé par SI et SIR peut servir de référentiel pour des analyses. Cette simulation de base nous permettrait de quantifier les différences dans les résultats avec d'autres simulations paramétrées différemment. En effet la simulation crée son propre monde par conséquent un résultat seul ne révèle aucune information. Pour déduire des résultats de simulations il faut les comparer entre eux. C'est la raison pour laquelle nous établissons une simulation de référence validée par SI et SIR.
+
+Afin d'établir une référence nous pouvons paramétrer les modèles SI et SIR directement ainsi que les paramètres de notre modèle. Les paramètres de notre modèles doivent être cohérent et les plus globaux possible. 
+
 #### Simulation de référence SI
 
 La simulation de référence est un point de départ aux analyses. On définit les paramètres du modèle afin que le système se comporte comme un modèle SI. Cette simulation servira de référence pour celles qui vont suivre afin d'étudier l'impacte des modification de paramètres par rapport à cette référence.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 Les paramètres de références sont les suivants :
 
