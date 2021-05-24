@@ -7,7 +7,7 @@
 
 using namespace std;
 
-extern default_random_engine generator;
+//extern default_random_engine generator;
 
 //* Contamination du premier individu
 void Simulation::Patient_zero()
@@ -33,7 +33,7 @@ void Simulation::Generate_genome_diversity()
         int rand_int_list_octet[m_GENOME_DIVERSITY_I]; // indices des génomes à complémenter
         for (int j = 0; j < m_GENOME_DIVERSITY_I; j++)
         {
-            rand_int_list_octet[j] = rand_int_size(generator); // générer aléatoirement des indices
+            rand_int_list_octet[j] = rand_int_size(m_generator); // générer aléatoirement des indices
         }
         m_Liste_I[i]->SetgenomeI(Generate_Genome(m_GENOME_DIVERSITY_I, m_GENOME_INIT_I, rand_int_list_octet));
     }
@@ -54,8 +54,8 @@ void Simulation::Add_individu_obj_to_grid()
         while (1)
         {
             int ligne, colonne;
-            ligne = rand_int_taille_systeme(generator);
-            colonne = rand_int_taille_systeme(generator);
+            ligne = rand_int_taille_systeme(m_generator);
+            colonne = rand_int_taille_systeme(m_generator);
             //* Assigner un pointeur à chaque humain
             if (m_Pointer_array_I[ligne][colonne] == NULL) // pointeur libre
             {

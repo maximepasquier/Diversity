@@ -9,7 +9,7 @@
 
 using namespace std;
 
-extern default_random_engine generator;
+//extern default_random_engine generator;
 
 //* Ensemble de toutes les itérations de la simulation
 void Simulation::Iterations()
@@ -44,7 +44,7 @@ void Simulation::One_iteration(int iteration)
 
     //* Construire la permutations de la liste d'individus
     int *permuted_liste = new int[m_NOMBRE_INDIVIDUS];
-    Permutation(permuted_liste, m_NOMBRE_INDIVIDUS);
+    Permutation(permuted_liste, m_NOMBRE_INDIVIDUS, m_generator);
 
     //* Parcours du domaine (liste agents pathogènes)
     Update_all_AP();
@@ -63,7 +63,7 @@ void Simulation::Update_all_AP()
     AP_linked_list_node *tmp = m_Liste_AP.Get_head();
     while (tmp != NULL)
     {
-        float rand_f = rand_float(generator);
+        float rand_f = rand_float(m_generator);
         if (rand_f > m_SURVIE_AP)
         {
             //* Destruction de l'agent pathogène
@@ -114,7 +114,7 @@ void Simulation::Mouvement(int coords[4][2], int x, int y)
 {
     uniform_int_distribution<int> randInt(0, 3);
     //* Choix d'une case voisine
-    int choix = randInt(generator);
+    int choix = randInt(m_generator);
     if (m_Pointer_array_I[coords[choix][0]][coords[choix][1]] == NULL) // cellule libre
     {
         Moving(coords, x, y, choix);
@@ -148,7 +148,7 @@ void Simulation::Contaminate_cell(int x, int y)
 {
     uniform_real_distribution<float> rand_float(0.0, 1.0);
     //* Déterminer si l'humain contamine la cellule qu'il quitte
-    float rand_f = rand_float(generator);
+    float rand_f = rand_float(m_generator);
     if (rand_f < m_CELLULE_AP)
     {
         //* Cellule contaminée (avant de bouger)
@@ -211,7 +211,7 @@ void Simulation::Analyse_voisinage(int coords[4][2], int index_I)
         {
             if (m_Pointer_array_I[coords[i][0]][coords[i][1]]->Getcontamine()) // ce voisin est contaminé
             {
-                float rand_f = rand_float(generator);
+                float rand_f = rand_float(m_generator);
                 if (rand_f < m_CHARGE_VIRALE) // charge virale
                 {
                     if (!Is_immune(index_I, m_Pointer_array_I[coords[i][0]][coords[i][1]]->GetgenomeAP()))
@@ -239,7 +239,7 @@ void Simulation::Collision_I_AP(int x, int y, int index_I)
     uniform_real_distribution<float> rand_float(0.0, 1.0);
     if (m_Pointer_array_AP[x][y] != NULL)
     {
-        float rand_f = rand_float(generator);
+        float rand_f = rand_float(m_generator);
         if (rand_f < m_CHARGE_VIRALE)
         {
             if (!Is_immune(index_I, m_Pointer_array_AP[x][y]->AP.GetgenomeAP()))
@@ -272,11 +272,11 @@ void Simulation::Individu_hote(int index_I)
     //* Déterminer la probabilité de s'immuniser à ce tour (en fonction des génomes)
     float chance = Genome_Match(m_Liste_I[index_I]->GetHamming(), sizeof(m_Liste_I[index_I]->GetgenomeI()), m_PARAMETRE_FONCTION);
     uniform_real_distribution<float> rand_float(0.0, 1.0);
-    float rand_f = rand_float(generator);
-    if (rand_f < chance) // on se débarrasse du pathogène
+    float rand_f = rand_float(m_generator);
+    if (rand_f < chance && (m_RESISTANCE_MECANISME || m_IMMUNITE_MECANISME)) // on se débarrasse du pathogène
     {
         //* Déterminer si l'individu s'immunise ou est naturellement résistant
-        if (m_Liste_I[index_I]->GetTempsContamine() < m_TEMPS_AVANT_IMMUNITE)
+        if (m_Liste_I[index_I]->GetTempsContamine() < m_TEMPS_AVANT_IMMUNITE && m_RESISTANCE_MECANISME)
         {
             if (m_RESISTANCE_MECANISME)
             {
@@ -327,10 +327,10 @@ void Simulation::AP_mutation(int index_I)
     uniform_real_distribution<float> rand_float(0.0, 1.0);
     uniform_int_distribution<int> rand_int_size(0, 31);
     //* Le pathogène mute
-    float rand_f = rand_float(generator);
+    float rand_f = rand_float(m_generator);
     if (rand_f < m_VITESSE_MUTATIONS_AP)
     {
-        int index = rand_int_size(generator);
+        int index = rand_int_size(m_generator);
         m_Liste_I[index_I]->SetgenomeAP(Mutations_AP(m_Liste_I[index_I]->GetgenomeAP(), index));
     }
 }

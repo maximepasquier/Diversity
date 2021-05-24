@@ -61,7 +61,7 @@ Le travail complet est disponible sur un dépositoire GitHub et est accessible l
 
 ### Modèle
 
-Le modèle cherche à simuler la propagation de pandémies dans une population. Le système inclut donc des **acteurs** qui peuvent faire des actions ainsi qu'un **espace physique** sur lequel les acteurs peuvent se déplacer. Les acteurs sont des organismes vivants qui se déclinent en deux espèces distinctes. La première groupe fait partie des organismes victimes de l'épidémie et le second groupe est responsables de l'infection. Par conséquent nous sommes dans une situation ou une espèce en attaque une autre. Par contre dans le fonctionnement du modèle, il y a des restrictions sur la nature de l'espèce attaquante. Nous parlons ici d'organismes capables de contaminer un hôte. 
+Le modèle cherche à simuler la propagation de pandémies dans une population. Le système inclut des **acteurs** qui peuvent faire des actions ainsi qu'un **espace physique** sur lequel les acteurs peuvent se déplacer. Les acteurs sont des organismes vivants qui se déclinent en deux espèces distinctes. Le premier groupe fait partie des organismes victimes de l'épidémie et le second groupe est responsables de l'infection. Par conséquent nous sommes dans une situation ou une espèce en attaque une autre. Par contre dans le fonctionnement du modèle, il y a des restrictions sur la nature de l'espèce attaquante. Nous parlons ici d'organismes capables de contaminer un hôte. 
 
 Les organismes évoluent dans une monde plat et parfaitement géométrique en deux dimensions. L'espace est comparable à un échiquier avec les acteurs étant des pions.
 
@@ -70,9 +70,9 @@ Les organismes évoluent dans une monde plat et parfaitement géométrique en de
 Il existe exclusivement deux espèces d'organismes dans le système : 
 
 - Les **agents pathogènes** sont les agents infectieux responsable de l'épidémie.
-- Les **hôtes potentiels**, constituant la population victime de l'épidémie.
+- Les **hôtes potentiels**, éléments de la population victime de l'épidémie.
 
-La classe "agents pathogènes" ne fait pas référence à une espèce en particulier mais peut reflète des organismes avec le pouvoir d'infecter une autre espèce. Il peut s'agir de virus, bactéries ou encore parasites. La caractéristique de ce groupe est qu'il a le pouvoir de rendre malade un hôte et donc d'affecter une espèce par une maladie qu'il génère. Il peut s'agir de maladies touchant des humain ou de zoonoses suivant la nature des espèces du système. Le terme "pathogène" est aussi utilisé pour caractériser cette classe.
+La classe "agents pathogènes" ne fait pas référence à une espèce en particulier mais reflète des organismes avec le pouvoir d'infecter une autre espèce. Il peut s'agir de virus, bactéries ou encore parasites. La caractéristique de ce groupe est qu'il a le pouvoir de rendre malade un hôte et donc d'affecter une espèce par une maladie qu'il génère. Il peut s'agir de maladies touchant des humain ou de zoonoses suivant la nature des espèces du système. Le terme "pathogène" est aussi utilisé pour caractériser cette classe.
 
 Les "hôtes potentiels" sont les organismes susceptible de développer la maladie suite à la contamination par un agent pathogène. Il peut s'agir d'humains tout comme d'animaux ou de plantes. La restriction est que cette espèce doit être affectée par les agents pathogènes ainsi que par la maladie. Le terme "hôte potentiel" signifie que l'organisme peut devenir l'hôte de l'agent pathogène. Nous parlons de "hôte du pathogène" ou de "hôte contaminé" lorsque l'organisme est contaminé et porteur de l'agent pathogène. Le travail utilise souvent le mot "individu" et ceci pour représenter un acteur de ce groupe. Le fait que l'individu soit sain ou contaminé est toujours précisé.
 
@@ -83,7 +83,7 @@ Un hôte potentiel peut se présenter sous deux formes :
 -  <img src="/home/maxime/Documents/Inkscape/humain_sain.png" alt="humain_sain" style="zoom:2%;" /> : hôte potentiel sain ne portant pas le pathogène.
 - <img src="/home/maxime/Documents/Inkscape/humain_infecte.png" alt="humain_infecte" style="zoom:2%;" /> : hôte infecté par un agent pathogène.
 
-Dans le premier cas, l'illustration représente un hôte potentiel qui n'est pas contaminé par un agent pathogène et donc n'est pas touché par la maladie. Contrairement à ce que l'on pourrait penser, l'illustration ne fait pas forcément référence à un humain mais à un individu potentiellement vulnérable à la classe des agents pathogènes.
+Dans le premier cas, l'illustration représente un hôte potentiel qui n'est pas contaminé par un agent pathogène et donc n'est pas touché par la maladie. Contrairement à ce que l'on pourrait penser, l'illustration ne fait pas référence à un humain mais à un individu potentiellement vulnérable à la classe des agents pathogènes.
 
 Le second cas fait référence à la même espèce mais cette fois ci, l'individu est contaminé par un agent pathogène. Le modèle ne fait pas la distinction entre malade et porteur du virus. Par conséquent, un hôte porteur du pathogène est d'office considéré comme malade. De plus, le modèle définit un taux de contagion qui est paramétrable. Le niveau de contagion est donc constant pour tous les organismes contaminés et ceci tout du long de la simulation. Un hôte infecté par un agent pathogène est donc contagieux, ce qui signifie qu'il a la pouvoir de transmettre l'agent pathogène à d'autres individus de la même espèce. Tout comme pour le point précédent, l'illustration ne fait pas forcément référence à un humain.
 
@@ -101,6 +101,8 @@ Le second cas indique qu'une surface physique est contaminée par un agent patho
 #### Espace physique
 
 L'espace physique est une surface plane sur laquelle on peut placer et déplacer des acteurs. La surface se présente sous la forme d'une grille régulière tel un échiquier. Cette grille contient des cellules dans lesquelles on peut y placer un acteur. Cet espace bidimensionnel est la seule représentation spatiale du modèle. Chaque acteur a des coordonnées dans cet espace qui définissent sa position. Par conséquent, chaque cellule de la grille est indexée par une paire d'entiers. 
+
+##### Cellule
 
 Dans la représentation du modèle, une cellule n'a que $6$ états possibles, c'est-à-dire que chaque cellule de la grille ne peut se retrouver que dans $6$ configurations différentes. L'état d'une cellule fait référence à l'acteur ou aux acteurs qui se trouvent dessus. Concrètement une cellule est simplement une surface carrée mais nous associons les acteurs se trouvant sur la cellule à cette dernière et ceci décrit son état. Les $6$ états possibles d'une cellule sont listés ci-dessous.
 
@@ -128,7 +130,7 @@ Un hôte potentiel sain se trouve sur une cellule contaminée par un agent patho
 
 Un hôte contaminé se trouve sur une cellule déjà contaminée par un agent pathogène.
 
-Le cas $5$ et $6$ sont les deux seuls cas ou deux acteurs se trouvent simultanément sur la même cellule. Il est pas conséquent impossible que deux individus se retrouvent sur la même cellule au même moment.
+Le cas $5$ et $6$ sont les deux seuls cas ou deux acteurs se trouvent simultanément sur la même cellule. Il est par conséquent impossible que deux individus se retrouvent sur la même cellule au même moment.
 
 ##### Grille régulière
 
@@ -303,13 +305,115 @@ La mutation d'un agent pathogène se caractérise par la modification de son gé
 
 Tous les agents pathogènes ne peuvent muter. Il est nécessaire que l'agent pathogène soit dans un hôte afin de muter. Par conséquent, un pathogène contaminant une cellule ne peut pas muter. Sans un hôte il est impossible pour un agent pathogène de muter. Les agents pathogènes contenus dans des hôtes peuvent muter à chaque itération mais ont une certaine probabilité de le faire. Cette est déterminée par un paramètre fixe du modèle.
 
-### Mort de l'individu
+### Construction du modèle
 
-Pour chaque individu contaminé du système et pour chaque itération, trois issues sont possibles lors de la mise à jour des états. Un individu contaminé a donc trois issues possibles. La première est qu'il s'immunise et donc se débarrasse de son agent pathogène. La seconde est que l'agent pathogène reste dans sont hôte et mute éventuellement. La troisième est que l'agent pathogène tue son hôte ou que l'individu meurt de la maladie provoquée par le pathogène. 
+Le modèle se construit sur différents niveaux d’abstractions. L'exécution d'une simulation s'effectue en plusieurs étapes, du plus général au plus détaillé.
 
-La mort de l'individu contaminé peut survenir lorsque l'agent pathogène a une très forte compatibilité avec son hôte. Généralement, lorsqu'un agent pathogène est fortement compatible avec son hôte, il se contente de rester dans l'individu mais en cas de très forte compatibilité il se peut que l'hôte meurt. La probabilité que l'individu meurt en cas de très forte compatibilité est déterminée par un paramètre fixe du modèle.
+#### Main
 
-Quand un hôte meurt, il n'a plus la possibilité de contaminer des individus sains et est directement retiré du système.
+Le main est la structure du plus haut niveau du modèle est sert d'interface pour l'utilisateur. A ce niveau, il est possible d'instancier plusieurs simulations avec des paramètres choisis. Afin de pouvoir exécuter une simulation il est nécessaire d'y ajouter un fichier de configuration contenant les paramètres de la simulation ainsi que de lui fournir un générateur de nombres aléatoires.
+
+Par conséquent, chaque simulation demande deux arguments pour se lancer. Le premier est un chemin vers un dossier dans lequel se trouve le fichier de configuration. Le deuxième argument est générateur pseudo-aléatoire permettant la génération de nombres aléatoires indispensables à la simulation. 
+
+Le chemin vers le dossier est la racine de la simulation. Dans ce dossier racine doit se trouver le fichier de configuration. Le fichier de configuration doit avoir le nom suivant : **config.txt**.  A la fin de la simulation, le programme écrit les résultats dans un sous-dossier à la racine. Ces résultats sont des fichiers CSV contenant des informations sur la simulation.
+
+L'avantage de dédier un générateur pseudo-aléatoire à chaque simulation est de permettre de ré-exécuter les simulations en obtenant toujours les mêmes résultats, ce qui confère à l'algorithme la propriété d'idempotence.
+
+Un ficher de configuration est un ficher texte contenant des lignes formées de mots clefs accompagnée de leur valeur. Un analyseur syntaxique parse le fichier puis les tokens sont analysés par un analyseur lexical qui s'occupe d'assigner les variables du modèles avec les valeurs lues dans le fichier de configuration. 
+
+La syntaxe du fichier de configuration doit être respectée. Les valeurs peuvent être modifiées par contre les noms doivent être identiques. L'analyseur lexicale n'est pas sensible aux espaces insérés entre les noms, le "=" ainsi que les valeurs.
+
+```c++
+TAILLE_SYSTEME = 200
+NOMBRE_INDIVIDUS = 5000
+ITERATIONS = 125
+GENOME_INIT_I = 65535
+GENOME_DIVERSITY_I = 0
+GENOME_INIT_AP = 0
+VITESSE_MUTATIONS_AP = 0
+CHARGE_VIRALE = 1
+PARAMETRE_FONCTION = 4
+CELLULE_AP = 0
+SURVIE_AP = 0
+NOMBRE_MOUVEMENT = 5000
+TEMPS_AVANT_IMMUNITE = 1
+IMMUNITE_MECANISME = true
+RESISTANCE_MECANISME = false
+```
+
+Voici la structure d'un fichier de configuration. Chaque ligne est composée d'un paramètre avec une valeur associée. 
+
+#### Paramètres du modèle
+
+Le premier paramètre est "TAILLE_SYSTEME" et définit la taille d'un côté de la grille carrée sur laquelle les acteurs évoluent. Le nombre d'individus de la simulation est déterminé par le paramètre "NOMBRE_INDIVIDUS" et le nombre d'itérations de la simulation est défini par "ITERATIONS". 
+
+...
+
+...
+
+...
+
+#### Initialisation
+
+La phase d'initialisation prépare le système pour une simulation. La première étape est de lire le fichier de configuration et d'assigner les valeurs lues aux variables de la simulation. Ensuite il faut allouer de la mémoire pour tous les objets du système. Un objet du système est un acteur donc il s'agit soit d'un individu, soit d'un pathogène. Le nombre d'individus du système est déterminé par le paramètre "NOMBRE_INDIVIDUS" et une liste de pointeurs sur ces individus est créée. Cette liste est de taille fixe et contient tous les individus du système. Contrairement aux individus, les agents pathogènes ne sont pas contenus dans une liste fixe à cause de leur nombre pouvant changer. En effet, un agent pathogène est un objet à part entière si et seulement si il contamine une cellule. Nous utilisons donc une liste doublement chaînée pour stocker ces objets. Cette structure permet de supprimer un élément au milieu de la liste sans créer de trou. 
+
+Le paramètre "TAILLE_SYSTEME" nous indique la taille de la grille. La grille allouée est une matrice de pointeurs pouvant pointer sur les acteurs qui sont les objets du système. 
+
+![MatricesPointeurs](./Images/MatricesPointeurs.png)
+
+Après avoir créé les structures de données il faut générer les génomes des individus. Le génome initial de référence est donnée par le paramètre "GENOME_INIT_I". Ce dernier sert de base pour la génération des génomes des individus. Le paramètre "GENOME_DIVERSITY_I" détermine le niveau de déviation par rapport aux génome de référence. Par conséquent, pour attribuer des génomes aux individus on part du génome de référence et modifions aléatoirement un nombre de bits déterminé par le paramètre "GENOME_DIVERSITY_I". Par exemple, avec GENOME_DIVERSITY_I = 1, tous les individus auront le génome de référence avec un bits choisi aléatoirement dans la séquence qui sera modifié. Ce mécanisme permet d'obtenir des génomes avec un certain degré de proximité à une certaine valeur choisie. Le modèle n'intègre pas de mécanise pour générer des génomes pour les agents pathogènes car la simulation ne commence qu'avec un seul agent pathogène qui porte le génome défini par "GENOME_INIT_AP".
+
+L'étape suivante est de disposer tous les individus sur la grille et ceci aléatoirement. Finalement il faut contaminer un premier individu avec la premier pathogène défini par le paramètre "GENOME_INIT_AP". 
+
+#### Exécution de la simulation
+
+Une grande partie des calculs de la simulation se font à cette étape. Cette phase s'effectue un nombre de fois équivalent à la valeur du paramètre "ITERATIONS". Chaque itération sert à actualiser, à un moment donné le système en entier. La première partie de cette étape est la prise de mesures et l'écriture des mesures dans les fichier CSV. Les données récoltées sont le nombre de contaminés, le nombre d'agents pathogènes différents ainsi que le nombre d'individus ayant au moins une immunité. Toutes les mesures du systèmes qui doivent s'effectuer à chaque itération se font à cette étape. Faire des mesures au fur et à mesure de la simulation nous évite de devoir sauvegarder toutes les données. 
+
+La prochaine étape est la construction d'une permutation des indices de la liste contenant les individus. Pour que le système soit aléatoire il est important de ne pas actualiser tous les individus dans le même ordre à chaque itération. C'est la raison pour laquelle nous permutons les indices de la liste des individus à chaque itération et la parcourons en suivant les indices permutés. Ceci permet d'actualiser tous les individus du système dans un ordre aléatoire. 
+
+Vient ensuite les phases de mise à jour et actions des acteurs du système. Le type d'acteur le plus simple est les agents pathogènes contaminant des cellules. Ces derniers sont détachés des individus et sont donc des objets à part entière. L'actualisation de ces agents pathogène s'effectue en une seule étape. Nous parcourons tous les agents pathogènes contaminant des cellules (l'ordre ici n'est pas important) et déterminons si les pathogènes survivent à cette itération. La probabilité de survie d'un tel agent pathogène est déterminé par le paramètre "SURVIE_AP". Ce facteur donne la probabilité qu'un agent pathogène contaminant une cellule survive à cette itération.
+
+Finalement, la dernière étape de la phase est l'actualisation de tous les individus du système. Cette étape est de loin la plus coûteuse en temps. En premier il s'agit de parcourir un à un tous les individus en respectant les indices permutés. L'actualisation d'un individu se fait en deux étapes. La première étape consiste à calculer les interactions et mettre à jour son état interne. La seconde est d'effectuer un déplacement. 
+
+La première chose à faire lorsque nous souhaitons actualiser un individu est de regarder si cet individu est contaminé. Si l'individu est déjà contaminé il est inutile de calculer les interactions avec ses voisins étant donnée qu'il est hôte d'un pathogène. Il nous reste donc à actualiser son état interne. Dans cette situation, notre individu n'a que trois issues. La première est d'être naturellement résistant au pathogène. La seconde est de l'immuniser au pathogène et la troisième est de conserver le pathogène. La distinction entre résistance naturelle et immunisation n'est qu'une question de temps. Il s'agit en réalité exactement du même mécanisme mais à partir d'un certain temps en étant contaminé, nous déterminons que l'individu s'immunise. Chaque individu compte le nombre d'itération depuis lequel il est contaminé. Si l'individu à une certaine itération se débarrasse du pathogène, le compteur déterminera si il s'agit d'une immunité ou d'une résistance naturelle. 
+
+Le paramètre booléen "IMMUNITE_MECANISME" détermine si le mécanisme d'immunisation est actif ou non. Il en est de même pour le paramètre booléen "RESISTANCE_MECANISME". Désactiver ces mécaniques permet de simuler des systèmes ou l'immunisation est impossible pour quelques raisons. Il est aussi possible de déterminer le seuil temporelle différenciant la résistance naturelle de l'immunisation avec le paramètre "TEMPS_AVANT_IMMUNITE". C'est-à-dire que cette variable détermine le temps minimal nécessaire pour que le rejet du pathogène soit considéré comme immunité. 
+
+Pour déterminer si un hôte contaminé rejette ou non son agent pathogène à une certaine itération, nous utilisons une fonction calculant la compatibilité entre le pathogène et l'individu. La première étape pour calculer la compatibilité entre deux organismes est d'évaluer la distance de Hamming entre les deux séquences de génomes. L'entier résultant doit ensuite être converti en probabilité car l'individu a une certaine probabilité de se débarrasser du pathogène à cette itération. La conversion s'effectue par une fonction dont une variable est définie par le paramètre du modèle "PARAMETRE_FONCTION".
+$$
+f(d) = \frac{d^{PARAMETRE\_FONCTION}}{32^{PARAMETRE\_FONCTION}} = (\frac{d}{32})^{PARAMETRE\_FONCTION}
+$$
+Le paramètre $d$ est la distance de Hamming entre les deux génomes des acteurs. Cette fonction traduit la distance de Hamming en une probabilité car $d$ ne peut varier que entre $[0,32]$. Par conséquent les images de notre formules sont bornées entre $[0,1]$. Le paramètre de fonction permet de modifier l'allure de la courbe sans modifier les bornes. Une petite valeur "PARAMETRE_FONCTION" traduit de grandes probabilités d'immuniser l'individu et inversement une grande valeur du paramètre traduit en de faibles probabilités d'immunisation.
+
+<img src="/home/maxime/Documents/Automate_Cellulaire/Diversity/doc/Images/fonction_1.png" alt="fonction_1" style="zoom: 33%;" />
+
+<img src="/home/maxime/Documents/Automate_Cellulaire/Diversity/doc/Images/fonction_2.png" alt="fonction_2" style="zoom:33%;" />
+
+<img src="/home/maxime/Documents/Automate_Cellulaire/Diversity/doc/Images/fonction_4.png" alt="fonction_4" style="zoom:33%;" />
+
+<img src="/home/maxime/Documents/Automate_Cellulaire/Diversity/doc/Images/fonction_8.png" alt="fonction_8" style="zoom:33%;" />
+
+Lorsqu'un individu est décrété naturellement résistant à un pathogène, il se contente uniquement de s'en débarrasser. Par contre si l'individu s'immunise au pathogène, le génome de ce dernier est enregistré dans les attributs de l'individu. 
+
+Comme expliqué ci-dessus, à chaque itération, chaque individu contaminé a une chance de se débarrasser de son pathogène. Si l'hôte contaminé n'y parvient pas, alors le pathogène a la possibilité de muter. Le facteur de mutation de la simulation est donné par le paramètre "VITESSE_MUTATIONS_AP". Ce paramètre borné borné entre $[0,1]$ détermine la probabilité qu'a un pathogène de muter dans un individu. En cas de mutation, un agent pathogène complémente aléatoirement un seul bit de sa séquence de génome. 
+
+Le processus de mise à jour pour les individus non contaminés est bien différent. Ces derniers n'intègrent pas de pathogène par conséquent nous nous intéressons aux interactions avec les autres acteurs. Un individu sain est soumis à deux types d'interactions, la première est l'interaction avec des agents pathogènes contaminant des cellules de la grille et la seconde est l’interaction avec des individus dans le voisinage.
+
+Les deux types d'interactions suivent la même méthodologie. La première étape de toutes interactions est donné par le paramètre "CHARGE_VIRALE". Le paramètre borné entre $[0,1]$ détermine la probabilité qu'une interaction se produise entre deux acteurs en contact. La deuxième étape est la vérification des immunités. En effet, si l'individu est déjà immunisé au pathogène le contaminant, rien ne se produit. Sans protection l'individu devient contaminé par le pathogène.
+
+L'actualisation d'un individu se termine par une série de mouvements dans l'espace. A chaque itération un individu peut se déplacer un nombre de fois égal au paramètre "NOMBRE_MOUVEMENT". Par conséquent un individu peut se déplacer de une cellule le nombre de fois décrit par le paramètre. Le choix de la direction du déplacement est déterminé avant la vérification des cellules disponibles. En cas d'échec de déplacement dû à la non disponibilité de la cellule destination, le mouvement non effectué est tout de même comptabilisé. Cela signifie que si le paramètre de mouvement est défini à $10$, les individus se déplacent à chaque itération d'un nombre de cellules variant entre $[0,10]$ en fonction de la disponibilité. 
+
+Un individu contaminé se déplaçant a une chance de contaminer l'espace qu'il quitte. La probabilité de réaliser cet événement est donnée par le paramètre "CELLULE_AP" borné de $[0,1]$. En cas de contamination de cellule un nouvel objet agent pathogène est créé et porte le génome du pathogène de l'individu contaminé. 
+
+#### Prises de mesures
+
+La phase des mesures s'effectue après le déroulement de la simulation. Toutes les mesures nécessitant que la simulation ait abouti s'exécutent dans cette section. Comme vu dans la partie précédente, certaines mesures doivent s'effectuer au fil de la simulation. 
+
+La seule mesure du modèle de cette catégorie est le calcul du nombre de fois que les individus ont été contaminés. Chaque individu du système compte le nombre de fois ou il a été contaminé par des agents pathogènes différents. Est compté comme contamination tout cycle débutant par la contraction du pathogène jusqu'à l'immunisation à ce dernier. 
+
+#### Fermeture
+
+La phase de fermeture de la simulation effectue deux actions. La première est de fermer tous les fichier CSV et la seconde est de libérer tous les espaces mémoires alloués par la simulation.
 
 ## Objectifs
 

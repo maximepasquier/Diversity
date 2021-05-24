@@ -7,10 +7,10 @@
 
 using namespace std;
 
-extern default_random_engine generator;
+//extern default_random_engine generator;
 
 //* Algirithme de shuffle
-void Knuth_Shuffle(int *liste, int taille)
+void Knuth_Shuffle(int *liste, int taille, default_random_engine generator)
 {
     /**
      * Effectue un Knuth shuffle sur une liste passée par référence.
@@ -27,7 +27,7 @@ void Knuth_Shuffle(int *liste, int taille)
 }
 
 //* Permutation de liste
-void Permutation(int *liste, int taille)
+void Permutation(int *liste, int taille, default_random_engine generator)
 {
     /**
      * Initialise une liste passée par référence et le prépare
@@ -37,7 +37,7 @@ void Permutation(int *liste, int taille)
     {
         liste[i] = i;
     }
-    Knuth_Shuffle(liste, taille);
+    Knuth_Shuffle(liste, taille, generator);
 }
 
 //* Caclul de distance de Hamming
@@ -174,20 +174,4 @@ void Print_ASCII_grid(int taille_sys, Individu ***Pointer_array_I, AP_linked_lis
         }
         cout << endl;
     }
-}
-
-//* Récupère les corrdonnées des 4 voisins directs
-void Get_coords_voisins(vector<pair<int, int>> &coords, int taille_sys, int x, int y)
-{
-    /**
-     * Push dans un vecteur les corrdonnées des voisins directs.
-     * Utilise la référence d'un vecteur, la taille du système pour inclure les
-     * bords périodiques ainsi que les coordonnées de l'objet étudié.
-     * Nous voulons donc les coordonnées des 4 cellules avoisinantes à
-     * notre objet. 
-     */
-    coords[0] = make_pair(x, (y - 1 + taille_sys) % taille_sys);
-    coords[1] = make_pair(x, (y + 1) % taille_sys);
-    coords[2] = make_pair((x - 1 + taille_sys) % taille_sys, y);
-    coords[3] = make_pair((x + 1) % taille_sys, y);
 }

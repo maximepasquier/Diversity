@@ -3,6 +3,7 @@
 
 #include <fstream>
 #include <vector>
+#include <random>
 #include "Individu.h"
 #include "Agent_Pathogene.h"
 #include "AP_linked_list_node.h"
@@ -20,7 +21,7 @@ class Simulation
 public:
     //* Méthodes du fichier "Simulation.cpp"
     Simulation();
-    Simulation(std::string configuration_file_path);
+    Simulation(std::string configuration_file_path, std::default_random_engine generator);
     ~Simulation();
     void Init();
     void Read();
@@ -84,6 +85,9 @@ public:
     void test_humain_coords_conflits();
 
 private:
+    //* Générateur de nombres aléatoires
+    std::default_random_engine m_generator;
+
     //* Variables issues du fichier config
     int m_TAILLE_SYSTEME;              // largeur de la grille
     int m_NOMBRE_INDIVIDUS;            // nombre de personnes initialement (densité)

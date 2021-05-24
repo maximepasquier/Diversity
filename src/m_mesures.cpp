@@ -8,7 +8,7 @@
 
 using namespace std;
 
-extern default_random_engine generator;
+//extern default_random_engine generator;
 
 //* Compte le nombre de fois que les individus ont été contaminés
 void Simulation::Nombre_de_fois_contamine()

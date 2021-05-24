@@ -7,13 +7,13 @@
 
 using namespace std;
 
-extern default_random_engine generator;
+//extern default_random_engine generator;
 
 Simulation::Simulation()
 {
 }
 
-Simulation::Simulation(string configuration_file_path) : m_configuration_file_path(configuration_file_path), m_nombre_contamine(0)
+Simulation::Simulation(string configuration_file_path, std::default_random_engine generator) : m_configuration_file_path(configuration_file_path), m_nombre_contamine(0), m_generator(generator)
 {
     int time_metrique = 1000000;
 
