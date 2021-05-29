@@ -48,7 +48,7 @@ void Simulation::One_iteration(int iteration)
 
     //* Parcours du domaine (liste agents pathogènes)
     Update_all_AP();
-    //* Parcours du domaine (liste humains)
+    //* Parcours du domaine (liste individus)
     Update_all_I(permuted_liste);
     //* Sleep (FPS)
     //this_thread::sleep_for(chrono::seconds(1));
@@ -79,6 +79,14 @@ void Simulation::Update_all_AP()
 //* Mise à jour de tous les individus
 void Simulation::Update_all_I(int *permuted_liste)
 {
+    //* Mouvements mélange parfait
+    if(m_PERFECT_MIX)
+    {
+        Pointer_array_to_NULL();
+        Add_individu_obj_to_grid();
+    }
+
+    //* Parcourt des individus du système
     for (int i = 0; i < m_NOMBRE_INDIVIDUS; i++)
     {
         int index_I = permuted_liste[i];
@@ -89,23 +97,27 @@ void Simulation::Update_all_I(int *permuted_liste)
 //* Mise à jour de l'individu indexé à index_I
 void Simulation::Update_one_I(int index_I)
 {
-    bool RunOnce = true;
-    for (int i = 0; i < m_NOMBRE_MOUVEMENT; i++)
+    //* Get coords de l'individu
+    int x = m_Liste_I[index_I]->GetXI();
+    int y = m_Liste_I[index_I]->GetYI();
+    int coords[4][2] = {{x, (y - 1 + m_TAILLE_SYSTEME) % m_TAILLE_SYSTEME}, {x, (y + 1) % m_TAILLE_SYSTEME}, {(x - 1 + m_TAILLE_SYSTEME) % m_TAILLE_SYSTEME, y}, {(x + 1) % m_TAILLE_SYSTEME, y}};
+
+    //* Mise à jour de l'état de l'individu
+    Contamination_cases(coords, x, y, index_I);
+
+    //* Déterminer le mode de mouvement
+    if (!m_PERFECT_MIX)
     {
-        //* Get coords de l'individu
-        int x = m_Liste_I[index_I]->GetXI();
-        int y = m_Liste_I[index_I]->GetYI();
-        int coords[4][2] = {{x, (y - 1 + m_TAILLE_SYSTEME) % m_TAILLE_SYSTEME}, {x, (y + 1) % m_TAILLE_SYSTEME}, {(x - 1 + m_TAILLE_SYSTEME) % m_TAILLE_SYSTEME, y}, {(x + 1) % m_TAILLE_SYSTEME, y}};
-
-        //* Mise à jour de l'état de l'individu
-        if (RunOnce)
+        for (int i = 0; i < m_NOMBRE_MOUVEMENT; i++)
         {
-            Contamination_cases(coords, x, y, index_I);
-            RunOnce = false;
-        }
+            //* Get coords de l'individu
+            int x = m_Liste_I[index_I]->GetXI();
+            int y = m_Liste_I[index_I]->GetYI();
+            int coords[4][2] = {{x, (y - 1 + m_TAILLE_SYSTEME) % m_TAILLE_SYSTEME}, {x, (y + 1) % m_TAILLE_SYSTEME}, {(x - 1 + m_TAILLE_SYSTEME) % m_TAILLE_SYSTEME, y}, {(x + 1) % m_TAILLE_SYSTEME, y}};
 
-        //* Mouvements
-        Mouvement(coords, x, y);
+            //* Mouvements
+            Mouvement(coords, x, y);
+        }
     }
 }
 

@@ -64,6 +64,17 @@ void Simulation::Assign_variables()
         {
             m_TEMPS_AVANT_IMMUNITE = stoi(value);
         }
+        else if (key == "PERFECT_MIX")
+        {
+            if(value.compare("true") == 0)
+            {
+                m_PERFECT_MIX = true;
+            }
+            if(value.compare("false") == 0)
+            {
+                m_PERFECT_MIX = false;
+            }
+        }
         else if (key == "IMMUNITE_MECANISME")
         {
             if(value.compare("true") == 0)

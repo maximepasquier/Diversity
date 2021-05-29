@@ -21,18 +21,29 @@ int main(int argc, char const *argv[])
     auto start = std::chrono::steady_clock::now();
 
     std::vector<std::thread> threads;
-      
+    
     //* SI
-    threads.push_back(std::thread(thread_function, "./Simulations/SI_Reference/1"));
-    threads.push_back(std::thread(thread_function, "./Simulations/SI_Reference/2"));
-    threads.push_back(std::thread(thread_function, "./Simulations/SI_Reference/3"));
-    threads.push_back(std::thread(thread_function, "./Simulations/SI_Reference/4"));
+    //threads.push_back(std::thread(thread_function, "./Simulations/SI_Reference/5000mouvements/1"));
+    //threads.push_back(std::thread(thread_function, "./Simulations/SI_Reference/5000mouvements/2"));
+    //threads.push_back(std::thread(thread_function, "./Simulations/SI_Reference/5000mouvements/3"));
+    //threads.push_back(std::thread(thread_function, "./Simulations/SI_Reference/5000mouvements/4"));
+
+    threads.push_back(std::thread(thread_function, "./Simulations/SI_Reference/perfect_mix/1"));
+    threads.push_back(std::thread(thread_function, "./Simulations/SI_Reference/perfect_mix/2"));
+    threads.push_back(std::thread(thread_function, "./Simulations/SI_Reference/perfect_mix/3"));
+    threads.push_back(std::thread(thread_function, "./Simulations/SI_Reference/perfect_mix/4"));
        
     //* SIR
-    threads.push_back(std::thread(thread_function, "./Simulations/SIR_Reference/1"));
-    threads.push_back(std::thread(thread_function, "./Simulations/SIR_Reference/2"));
-    threads.push_back(std::thread(thread_function, "./Simulations/SIR_Reference/3"));
-    threads.push_back(std::thread(thread_function, "./Simulations/SIR_Reference/4"));
+    //threads.push_back(std::thread(thread_function, "./Simulations/SIR_Reference/5000mouvements/1"));
+    //threads.push_back(std::thread(thread_function, "./Simulations/SIR_Reference/5000mouvements/2"));
+    //threads.push_back(std::thread(thread_function, "./Simulations/SIR_Reference/5000mouvements/3"));
+    //threads.push_back(std::thread(thread_function, "./Simulations/SIR_Reference/5000mouvements/4"));
+
+    threads.push_back(std::thread(thread_function, "./Simulations/SIR_Reference/perfect_mix/1"));
+    threads.push_back(std::thread(thread_function, "./Simulations/SIR_Reference/perfect_mix/2"));
+    threads.push_back(std::thread(thread_function, "./Simulations/SIR_Reference/perfect_mix/3"));
+    threads.push_back(std::thread(thread_function, "./Simulations/SIR_Reference/perfect_mix/4"));
+    
     
     for (auto &t : threads)
     {

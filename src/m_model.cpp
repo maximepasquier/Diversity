@@ -56,11 +56,11 @@ void Simulation::Add_individu_obj_to_grid()
             int ligne, colonne;
             ligne = rand_int_taille_systeme(m_generator);
             colonne = rand_int_taille_systeme(m_generator);
-            //* Assigner un pointeur à chaque humain
+            //* Assigner un pointeur à chaque individu
             if (m_Pointer_array_I[ligne][colonne] == NULL) // pointeur libre
             {
                 m_Pointer_array_I[ligne][colonne] = m_Liste_I[i]; // assignation faite
-                //* Enregistrer les coordonnées de l'humain dans ses attributs
+                //* Enregistrer les coordonnées de l'individu dans ses attributs
                 m_Liste_I[i]->SetXI(ligne);
                 m_Liste_I[i]->SetYI(colonne);
                 break;

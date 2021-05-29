@@ -104,6 +104,7 @@ private:
     int m_TEMPS_AVANT_IMMUNITE;        // temps minimal pour considérer une immunité et non une résistance naturelle
     bool m_IMMUNITE_MECANISME; 
     bool m_RESISTANCE_MECANISME;
+    bool m_PERFECT_MIX;
 
     //* Variables pour les mesures de la simulation
     int m_nombre_contamine; // compteur du nombre d'individus contaminés à chaque itération
