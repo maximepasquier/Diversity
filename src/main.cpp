@@ -23,26 +23,56 @@ int main(int argc, char const *argv[])
     std::vector<std::thread> threads;
     
     //* SI
-    //threads.push_back(std::thread(thread_function, "./Simulations/SI_Reference/5000mouvements/1"));
-    //threads.push_back(std::thread(thread_function, "./Simulations/SI_Reference/5000mouvements/2"));
-    //threads.push_back(std::thread(thread_function, "./Simulations/SI_Reference/5000mouvements/3"));
-    //threads.push_back(std::thread(thread_function, "./Simulations/SI_Reference/5000mouvements/4"));
+    //threads.push_back(std::thread(thread_function, "./Simulations/SI/Reference/5000mouvements/1"));
+    //threads.push_back(std::thread(thread_function, "./Simulations/SI/Reference/5000mouvements/2"));
+    //threads.push_back(std::thread(thread_function, "./Simulations/SI/Reference/5000mouvements/3"));
+    //threads.push_back(std::thread(thread_function, "./Simulations/SI/Reference/5000mouvements/4"));
 
-    threads.push_back(std::thread(thread_function, "./Simulations/SI_Reference/perfect_mix/1"));
-    threads.push_back(std::thread(thread_function, "./Simulations/SI_Reference/perfect_mix/2"));
-    threads.push_back(std::thread(thread_function, "./Simulations/SI_Reference/perfect_mix/3"));
-    threads.push_back(std::thread(thread_function, "./Simulations/SI_Reference/perfect_mix/4"));
+    threads.push_back(std::thread(thread_function, "./Simulations/SI/Reference/perfect_mix/1"));
+    threads.push_back(std::thread(thread_function, "./Simulations/SI/Reference/perfect_mix/2"));
+    threads.push_back(std::thread(thread_function, "./Simulations/SI/Reference/perfect_mix/3"));
+    threads.push_back(std::thread(thread_function, "./Simulations/SI/Reference/perfect_mix/4"));
        
     //* SIR
-    //threads.push_back(std::thread(thread_function, "./Simulations/SIR_Reference/5000mouvements/1"));
-    //threads.push_back(std::thread(thread_function, "./Simulations/SIR_Reference/5000mouvements/2"));
-    //threads.push_back(std::thread(thread_function, "./Simulations/SIR_Reference/5000mouvements/3"));
-    //threads.push_back(std::thread(thread_function, "./Simulations/SIR_Reference/5000mouvements/4"));
+    //threads.push_back(std::thread(thread_function, "./Simulations/SIR/Reference/5000mouvements/1"));
+    //threads.push_back(std::thread(thread_function, "./Simulations/SIR/Reference/5000mouvements/2"));
+    //threads.push_back(std::thread(thread_function, "./Simulations/SIR/Reference/5000mouvements/3"));
+    //threads.push_back(std::thread(thread_function, "./Simulations/SIR/Reference/5000mouvements/4"));
 
-    threads.push_back(std::thread(thread_function, "./Simulations/SIR_Reference/perfect_mix/1"));
-    threads.push_back(std::thread(thread_function, "./Simulations/SIR_Reference/perfect_mix/2"));
-    threads.push_back(std::thread(thread_function, "./Simulations/SIR_Reference/perfect_mix/3"));
-    threads.push_back(std::thread(thread_function, "./Simulations/SIR_Reference/perfect_mix/4"));
+    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Reference/perfect_mix/1"));
+    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Reference/perfect_mix/2"));
+    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Reference/perfect_mix/3"));
+    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Reference/perfect_mix/4"));
+
+    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Diversite/perfect_mix/lowCompatibility/1"));
+    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Diversite/perfect_mix/lowCompatibility/2"));
+    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Diversite/perfect_mix/lowCompatibility/3"));
+    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Diversite/perfect_mix/lowCompatibility/4"));
+
+    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Diversite/perfect_mix/mediumCompatibility/1"));
+    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Diversite/perfect_mix/mediumCompatibility/2"));
+    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Diversite/perfect_mix/mediumCompatibility/3"));
+    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Diversite/perfect_mix/mediumCompatibility/4"));
+
+    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Diversite/perfect_mix/highCompatibility/1"));
+    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Diversite/perfect_mix/highCompatibility/2"));
+    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Diversite/perfect_mix/highCompatibility/3"));
+    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Diversite/perfect_mix/highCompatibility/4"));
+
+    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Mutation/perfect_mix/lowCompatibility/1"));
+    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Mutation/perfect_mix/lowCompatibility/2"));
+    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Mutation/perfect_mix/lowCompatibility/3"));
+    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Mutation/perfect_mix/lowCompatibility/4"));
+
+    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Mutation/perfect_mix/mediumCompatibility/1"));
+    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Mutation/perfect_mix/mediumCompatibility/2"));
+    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Mutation/perfect_mix/mediumCompatibility/3"));
+    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Mutation/perfect_mix/mediumCompatibility/4"));
+
+    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Mutation/perfect_mix/highCompatibility/1"));
+    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Mutation/perfect_mix/highCompatibility/2"));
+    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Mutation/perfect_mix/highCompatibility/3"));
+    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Mutation/perfect_mix/highCompatibility/4"));
     
     
     for (auto &t : threads)

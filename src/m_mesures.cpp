@@ -68,7 +68,7 @@ int Simulation::SIR_recovered()
     int recovered = 0;
     for (int i = 0; i < m_NOMBRE_INDIVIDUS; i++)
     {
-        if (m_Liste_I[i]->Getimmune().size() > 0)
+        if (m_Liste_I[i]->Getimmune().size() > 0 && m_Liste_I[i]->Getcontamine() == false)
         {
             recovered += 1;
         }

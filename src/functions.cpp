@@ -128,7 +128,7 @@ void Print_progression(int current_iteration, int total)
     cout.flush();
     if (current_iteration == total - 1)
     {
-        cout << endl;
+        cout << '\n';
     }
 }
 
