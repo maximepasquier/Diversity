@@ -19,9 +19,14 @@ void Simulation::Iterations()
     {
         //* Print les itérations (avancement)
         Print_progression(iteration, m_ITERATIONS);
-        //* Print ASCII grid to screen
+        //* Print ASCII grid to screen (small systems)
         //Print_ASCII_grid(m_TAILLE_SYSTEME, m_Pointer_array_H, m_Pointer_array_AP);
         One_iteration(iteration);
+        //* Vérifier que des individus soient contaminés
+        if(m_nombre_contamine == 0){
+            m_iteration_fin = iteration;
+            break;
+        }
     }
 }
 

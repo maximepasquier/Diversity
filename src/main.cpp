@@ -23,56 +23,112 @@ int main(int argc, char const *argv[])
     std::vector<std::thread> threads;
     
     //* SI
-    //threads.push_back(std::thread(thread_function, "./Simulations/SI/Reference/5000mouvements/1"));
-    //threads.push_back(std::thread(thread_function, "./Simulations/SI/Reference/5000mouvements/2"));
-    //threads.push_back(std::thread(thread_function, "./Simulations/SI/Reference/5000mouvements/3"));
-    //threads.push_back(std::thread(thread_function, "./Simulations/SI/Reference/5000mouvements/4"));
+    // 5000 mouvements
+    threads.push_back(std::thread(thread_function, "./Simulations/SI/Reference/5000mouvements/densite1sur2/population5000"));
+    threads.push_back(std::thread(thread_function, "./Simulations/SI/Reference/5000mouvements/densite1sur2/population20000"));
+    threads.push_back(std::thread(thread_function, "./Simulations/SI/Reference/5000mouvements/densite1sur2/population50000"));
+    threads.push_back(std::thread(thread_function, "./Simulations/SI/Reference/5000mouvements/densite1sur2/population100000"));
 
-    threads.push_back(std::thread(thread_function, "./Simulations/SI/Reference/perfect_mix/1"));
-    threads.push_back(std::thread(thread_function, "./Simulations/SI/Reference/perfect_mix/2"));
-    threads.push_back(std::thread(thread_function, "./Simulations/SI/Reference/perfect_mix/3"));
-    threads.push_back(std::thread(thread_function, "./Simulations/SI/Reference/perfect_mix/4"));
+    threads.push_back(std::thread(thread_function, "./Simulations/SI/Reference/5000mouvements/densite1sur4/population5000"));
+    threads.push_back(std::thread(thread_function, "./Simulations/SI/Reference/5000mouvements/densite1sur4/population20000"));
+    threads.push_back(std::thread(thread_function, "./Simulations/SI/Reference/5000mouvements/densite1sur4/population50000"));
+    threads.push_back(std::thread(thread_function, "./Simulations/SI/Reference/5000mouvements/densite1sur4/population100000"));
+
+    threads.push_back(std::thread(thread_function, "./Simulations/SI/Reference/5000mouvements/densite1sur8/population5000"));
+    threads.push_back(std::thread(thread_function, "./Simulations/SI/Reference/5000mouvements/densite1sur8/population20000"));
+    threads.push_back(std::thread(thread_function, "./Simulations/SI/Reference/5000mouvements/densite1sur8/population50000"));
+    threads.push_back(std::thread(thread_function, "./Simulations/SI/Reference/5000mouvements/densite1sur8/population100000"));
+
+    threads.push_back(std::thread(thread_function, "./Simulations/SI/Reference/5000mouvements/densite1sur16/population5000"));
+    threads.push_back(std::thread(thread_function, "./Simulations/SI/Reference/5000mouvements/densite1sur16/population20000"));
+    threads.push_back(std::thread(thread_function, "./Simulations/SI/Reference/5000mouvements/densite1sur16/population50000"));
+    threads.push_back(std::thread(thread_function, "./Simulations/SI/Reference/5000mouvements/densite1sur16/population100000"));
+
+    // Mélange parfait
+    threads.push_back(std::thread(thread_function, "./Simulations/SI/Reference/perfect_mix/densite1sur2/population5000"));
+    threads.push_back(std::thread(thread_function, "./Simulations/SI/Reference/perfect_mix/densite1sur2/population20000"));
+    threads.push_back(std::thread(thread_function, "./Simulations/SI/Reference/perfect_mix/densite1sur2/population50000"));
+    threads.push_back(std::thread(thread_function, "./Simulations/SI/Reference/perfect_mix/densite1sur2/population100000"));
+
+    threads.push_back(std::thread(thread_function, "./Simulations/SI/Reference/perfect_mix/densite1sur4/population5000"));
+    threads.push_back(std::thread(thread_function, "./Simulations/SI/Reference/perfect_mix/densite1sur4/population20000"));
+    threads.push_back(std::thread(thread_function, "./Simulations/SI/Reference/perfect_mix/densite1sur4/population50000"));
+    threads.push_back(std::thread(thread_function, "./Simulations/SI/Reference/perfect_mix/densite1sur4/population100000"));
+
+    threads.push_back(std::thread(thread_function, "./Simulations/SI/Reference/perfect_mix/densite1sur8/population5000"));
+    threads.push_back(std::thread(thread_function, "./Simulations/SI/Reference/perfect_mix/densite1sur8/population20000"));
+    threads.push_back(std::thread(thread_function, "./Simulations/SI/Reference/perfect_mix/densite1sur8/population50000"));
+    threads.push_back(std::thread(thread_function, "./Simulations/SI/Reference/perfect_mix/densite1sur8/population100000"));
+
+    threads.push_back(std::thread(thread_function, "./Simulations/SI/Reference/perfect_mix/densite1sur16/population5000"));
+    threads.push_back(std::thread(thread_function, "./Simulations/SI/Reference/perfect_mix/densite1sur16/population20000"));
+    threads.push_back(std::thread(thread_function, "./Simulations/SI/Reference/perfect_mix/densite1sur16/population50000"));
+    threads.push_back(std::thread(thread_function, "./Simulations/SI/Reference/perfect_mix/densite1sur16/population100000"));
        
     //* SIR
-    //threads.push_back(std::thread(thread_function, "./Simulations/SIR/Reference/5000mouvements/1"));
-    //threads.push_back(std::thread(thread_function, "./Simulations/SIR/Reference/5000mouvements/2"));
-    //threads.push_back(std::thread(thread_function, "./Simulations/SIR/Reference/5000mouvements/3"));
-    //threads.push_back(std::thread(thread_function, "./Simulations/SIR/Reference/5000mouvements/4"));
+    // 5000 mouvements
+    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Reference/5000mouvements/densite1sur2/population5000"));
+    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Reference/5000mouvements/densite1sur2/population20000"));
+    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Reference/5000mouvements/densite1sur2/population50000"));
+    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Reference/5000mouvements/densite1sur2/population100000"));
 
-    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Reference/perfect_mix/1"));
-    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Reference/perfect_mix/2"));
-    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Reference/perfect_mix/3"));
-    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Reference/perfect_mix/4"));
+    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Reference/5000mouvements/densite1sur4/population5000"));
+    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Reference/5000mouvements/densite1sur4/population20000"));
+    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Reference/5000mouvements/densite1sur4/population50000"));
+    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Reference/5000mouvements/densite1sur4/population100000"));
 
-    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Diversite/perfect_mix/lowCompatibility/1"));
-    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Diversite/perfect_mix/lowCompatibility/2"));
-    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Diversite/perfect_mix/lowCompatibility/3"));
-    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Diversite/perfect_mix/lowCompatibility/4"));
+    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Reference/5000mouvements/densite1sur8/population5000"));
+    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Reference/5000mouvements/densite1sur8/population20000"));
+    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Reference/5000mouvements/densite1sur8/population50000"));
+    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Reference/5000mouvements/densite1sur8/population100000"));
 
-    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Diversite/perfect_mix/mediumCompatibility/1"));
-    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Diversite/perfect_mix/mediumCompatibility/2"));
-    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Diversite/perfect_mix/mediumCompatibility/3"));
-    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Diversite/perfect_mix/mediumCompatibility/4"));
+    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Reference/5000mouvements/densite1sur16/population5000"));
+    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Reference/5000mouvements/densite1sur16/population20000"));
+    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Reference/5000mouvements/densite1sur16/population50000"));
+    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Reference/5000mouvements/densite1sur16/population100000"));
 
-    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Diversite/perfect_mix/highCompatibility/1"));
-    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Diversite/perfect_mix/highCompatibility/2"));
-    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Diversite/perfect_mix/highCompatibility/3"));
-    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Diversite/perfect_mix/highCompatibility/4"));
+    // Mélange parfait
+    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Reference/perfect_mix/densite1sur2/population5000"));
+    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Reference/perfect_mix/densite1sur2/population20000"));
+    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Reference/perfect_mix/densite1sur2/population50000"));
+    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Reference/perfect_mix/densite1sur2/population100000"));
 
-    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Mutation/perfect_mix/lowCompatibility/1"));
-    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Mutation/perfect_mix/lowCompatibility/2"));
-    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Mutation/perfect_mix/lowCompatibility/3"));
-    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Mutation/perfect_mix/lowCompatibility/4"));
+    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Reference/perfect_mix/densite1sur4/population5000"));
+    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Reference/perfect_mix/densite1sur4/population20000"));
+    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Reference/perfect_mix/densite1sur4/population50000"));
+    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Reference/perfect_mix/densite1sur4/population100000"));
 
-    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Mutation/perfect_mix/mediumCompatibility/1"));
-    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Mutation/perfect_mix/mediumCompatibility/2"));
-    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Mutation/perfect_mix/mediumCompatibility/3"));
-    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Mutation/perfect_mix/mediumCompatibility/4"));
+    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Reference/perfect_mix/densite1sur8/population5000"));
+    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Reference/perfect_mix/densite1sur8/population20000"));
+    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Reference/perfect_mix/densite1sur8/population50000"));
+    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Reference/perfect_mix/densite1sur8/population100000"));
 
-    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Mutation/perfect_mix/highCompatibility/1"));
-    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Mutation/perfect_mix/highCompatibility/2"));
-    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Mutation/perfect_mix/highCompatibility/3"));
-    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Mutation/perfect_mix/highCompatibility/4"));
+    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Reference/perfect_mix/densite1sur16/population5000"));
+    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Reference/perfect_mix/densite1sur16/population20000"));
+    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Reference/perfect_mix/densite1sur16/population50000"));
+    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Reference/perfect_mix/densite1sur16/population100000"));
+
+    // Diversité
+    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Diversite/perfect_mix/mediumCompatibility/diversite5"));
+    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Diversite/perfect_mix/mediumCompatibility/diversite10"));
+    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Diversite/perfect_mix/mediumCompatibility/diversite15"));
+    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Diversite/perfect_mix/mediumCompatibility/diversite20"));
+
+    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Diversite/perfect_mix/highCompatibility/diversite5"));
+    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Diversite/perfect_mix/highCompatibility/diversite10"));
+    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Diversite/perfect_mix/highCompatibility/diversite15"));
+    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Diversite/perfect_mix/highCompatibility/diversite20"));
+
+    // Mutation
+    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Mutation/perfect_mix/mediumCompatibility/mutation3"));
+    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Mutation/perfect_mix/mediumCompatibility/mutation4"));
+    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Mutation/perfect_mix/mediumCompatibility/mutation5"));
+    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Mutation/perfect_mix/mediumCompatibility/mutation6"));
+
+    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Mutation/perfect_mix/highCompatibility/mutation3"));
+    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Mutation/perfect_mix/highCompatibility/mutation4"));
+    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Mutation/perfect_mix/highCompatibility/mutation5"));
+    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Mutation/perfect_mix/highCompatibility/mutation6"));
     
     
     for (auto &t : threads)

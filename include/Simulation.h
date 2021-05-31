@@ -105,10 +105,13 @@ private:
     bool m_IMMUNITE_MECANISME; 
     bool m_RESISTANCE_MECANISME;
     bool m_PERFECT_MIX;
+    int m_FAIL_SEUIL;
+    int m_RERUN_LIMIT;
 
     //* Variables pour les mesures de la simulation
     int m_nombre_contamine; // compteur du nombre d'individus contaminés à chaque itération
     int m_nombre_AP_diff;   // compteur du nombre d'agents pathogènes à chaque itération
+    int m_iteration_fin; // nombre d'itération final
 
     //* Path du fichier config
     std::string m_configuration_file_path;

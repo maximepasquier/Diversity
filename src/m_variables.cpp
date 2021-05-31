@@ -64,6 +64,14 @@ void Simulation::Assign_variables()
         {
             m_TEMPS_AVANT_IMMUNITE = stoi(value);
         }
+        else if (key == "RERUN_LIMIT")
+        {
+            m_RERUN_LIMIT = stoi(value);
+        }
+        else if (key == "FAIL_SEUIL")
+        {
+            m_FAIL_SEUIL = stoi(value);
+        }
         else if (key == "PERFECT_MIX")
         {
             if(value.compare("true") == 0)

@@ -19,29 +19,41 @@ Simulation::Simulation(string configuration_file_path, std::default_random_engin
 
     auto start = chrono::steady_clock::now();
 
-    auto Init_start = chrono::steady_clock::now();
-    Init();
-    auto Init_end = chrono::steady_clock::now();
-    auto Init_diff = Init_end - Init_start;
-    m_Init_time = chrono::duration<double, nano>(Init_diff).count();
+    //* Rerun la simulation en cas d'échec de la pandémie
+    for (int i = 0; i <= m_RERUN_LIMIT; i++)
+    {
+        m_iteration_fin = -1;
 
-    auto Run_start = chrono::steady_clock::now();
-    Run();
-    auto Run_end = chrono::steady_clock::now();
-    auto Run_diff = Run_end - Run_start;
-    m_Run_time = chrono::duration<double, nano>(Run_diff).count();
+        auto Init_start = chrono::steady_clock::now();
+        Init();
+        auto Init_end = chrono::steady_clock::now();
+        auto Init_diff = Init_end - Init_start;
+        m_Init_time = chrono::duration<double, nano>(Init_diff).count();
 
-    auto Mesures_start = chrono::steady_clock::now();
-    Mesures();
-    auto Mesures_end = chrono::steady_clock::now();
-    auto Mesures_diff = Mesures_end - Mesures_start;
-    m_Mesures_time = chrono::duration<double, nano>(Mesures_diff).count();
+        auto Run_start = chrono::steady_clock::now();
+        Run();
+        auto Run_end = chrono::steady_clock::now();
+        auto Run_diff = Run_end - Run_start;
+        m_Run_time = chrono::duration<double, nano>(Run_diff).count();
 
-    auto End_start = chrono::steady_clock::now();
-    End();
-    auto End_end = chrono::steady_clock::now();
-    auto End_diff = End_end - End_start;
-    m_End_time = chrono::duration<double, nano>(End_diff).count();
+        auto Mesures_start = chrono::steady_clock::now();
+        Mesures();
+        auto Mesures_end = chrono::steady_clock::now();
+        auto Mesures_diff = Mesures_end - Mesures_start;
+        m_Mesures_time = chrono::duration<double, nano>(Mesures_diff).count();
+
+        auto End_start = chrono::steady_clock::now();
+        End();
+        auto End_end = chrono::steady_clock::now();
+        auto End_diff = End_end - End_start;
+        m_End_time = chrono::duration<double, nano>(End_diff).count();
+
+        //* Vérifier que le Run() ait abouti sur une pandémie
+        if(m_iteration_fin > m_FAIL_SEUIL || m_iteration_fin == -1)
+        {
+            break;
+        }
+    }
 
     auto end = chrono::steady_clock::now();
     auto diff = end - start;
