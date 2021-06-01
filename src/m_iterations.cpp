@@ -23,7 +23,8 @@ void Simulation::Iterations()
         //Print_ASCII_grid(m_TAILLE_SYSTEME, m_Pointer_array_H, m_Pointer_array_AP);
         One_iteration(iteration);
         //* Vérifier que des individus soient contaminés
-        if(m_nombre_contamine == 0){
+        if (m_nombre_contamine == 0)
+        {
             m_iteration_fin = iteration;
             break;
         }
@@ -55,8 +56,6 @@ void Simulation::One_iteration(int iteration)
     Update_all_AP();
     //* Parcours du domaine (liste individus)
     Update_all_I(permuted_liste);
-    //* Contamine les individus 
-    Pre_contamine_to_contamine();
     //* Sleep (FPS)
     //this_thread::sleep_for(chrono::seconds(1));
     //* Supprimer la permutation
@@ -86,18 +85,39 @@ void Simulation::Update_all_AP()
 //* Mise à jour de tous les individus
 void Simulation::Update_all_I(int *permuted_liste)
 {
-    //* Mouvements mélange parfait
-    if(m_PERFECT_MIX)
-    {
-        Pointer_array_to_NULL();
-        Add_individu_obj_to_grid();
-    }
-
-    //* Parcourt des individus du système
+    //* Parcourt des individus du système pour les mises à jour
     for (int i = 0; i < m_NOMBRE_INDIVIDUS; i++)
     {
         int index_I = permuted_liste[i];
         Update_one_I(index_I);
+    }
+
+    //* Contamine les individus
+    Pre_contamine_to_contamine();
+
+    //* if mouvements mélange parfait
+    if (m_PERFECT_MIX)
+    {
+        Pointer_array_to_NULL();
+        Add_individu_obj_to_grid();
+    }
+    else
+    {
+        //* Parcourt des individus du système pour les mouvements
+        for (int i = 0; i < m_NOMBRE_INDIVIDUS; i++)
+        {
+            int index_I = permuted_liste[i];
+            for (int i = 0; i < m_NOMBRE_MOUVEMENT; i++)
+            {
+                //* Get coords de l'individu
+                int x = m_Liste_I[index_I]->GetXI();
+                int y = m_Liste_I[index_I]->GetYI();
+                int coords[4][2] = {{x, (y - 1 + m_TAILLE_SYSTEME) % m_TAILLE_SYSTEME}, {x, (y + 1) % m_TAILLE_SYSTEME}, {(x - 1 + m_TAILLE_SYSTEME) % m_TAILLE_SYSTEME, y}, {(x + 1) % m_TAILLE_SYSTEME, y}};
+
+                //* Mouvements
+                Mouvement(coords, x, y);
+            }
+        }
     }
 }
 
@@ -111,21 +131,6 @@ void Simulation::Update_one_I(int index_I)
 
     //* Mise à jour de l'état de l'individu
     Contamination_cases(coords, x, y, index_I);
-
-    //* Déterminer le mode de mouvement
-    if (!m_PERFECT_MIX)
-    {
-        for (int i = 0; i < m_NOMBRE_MOUVEMENT; i++)
-        {
-            //* Get coords de l'individu
-            int x = m_Liste_I[index_I]->GetXI();
-            int y = m_Liste_I[index_I]->GetYI();
-            int coords[4][2] = {{x, (y - 1 + m_TAILLE_SYSTEME) % m_TAILLE_SYSTEME}, {x, (y + 1) % m_TAILLE_SYSTEME}, {(x - 1 + m_TAILLE_SYSTEME) % m_TAILLE_SYSTEME, y}, {(x + 1) % m_TAILLE_SYSTEME, y}};
-
-            //* Mouvements
-            Mouvement(coords, x, y);
-        }
-    }
 }
 
 //* Permet de déplacer un individu
@@ -251,7 +256,7 @@ void Simulation::Pre_contamine_to_contamine()
 {
     for (int i = 0; i < m_NOMBRE_INDIVIDUS; i++)
     {
-        if(m_Liste_I[i]->Getprecontamine()) // individu contaminé à cette itération
+        if (m_Liste_I[i]->Getprecontamine()) // individu contaminé à cette itération
         {
             // on le définit donc comme réellement contaminé
             m_Liste_I[i]->Setcontamine(true);
@@ -259,7 +264,6 @@ void Simulation::Pre_contamine_to_contamine()
             m_Liste_I[i]->Setprecontamine(false);
         }
     }
-    
 }
 
 //* Individu sain sur la même cellule qu'un pathogène
