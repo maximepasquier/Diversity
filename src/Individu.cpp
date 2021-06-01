@@ -1,6 +1,6 @@
 #include "Individu.h"
 
-Individu::Individu() : m_contamine(false), m_nombre_de_fois_contamine(0), m_temps_contamine(0)
+Individu::Individu() : m_contamine(false), m_pre_contamine(false), m_nombre_de_fois_contamine(0), m_temps_contamine(0)
 {
 }
 
@@ -16,6 +16,16 @@ bool Individu::Getcontamine()
 void Individu::Setcontamine(bool contamine)
 {
     m_contamine = contamine;
+}
+
+bool Individu::Getprecontamine()
+{
+    return m_pre_contamine;
+}
+
+void Individu::Setprecontamine(bool pre_contamine)
+{
+    m_pre_contamine = pre_contamine;
 }
 
 unsigned int Individu::GetgenomeI()

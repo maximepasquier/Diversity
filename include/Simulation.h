@@ -65,6 +65,7 @@ public:
     void Update_all_I(int *permuted_liste);
     void Update_one_I(int index_I);
     void Contamination_cases(int coords[4][2] , int x, int y, int index_I);
+    void Pre_contamine_to_contamine();
     void Individu_hote(int index_I);
     void Collision_I_AP(int x, int y, int index_I);
     void Analyse_voisinage(int coords[4][2], int index_I);

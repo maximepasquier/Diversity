@@ -23,6 +23,8 @@ public:
     ~Individu();
     bool Getcontamine();
     void Setcontamine(bool contamine);
+    bool Getprecontamine();
+    void Setprecontamine(bool contamine);
     unsigned int GetgenomeI();
     void SetgenomeI(unsigned int genomeH);
     unsigned int GetgenomeAP();
@@ -43,6 +45,7 @@ public:
 
 private:
     bool m_contamine;
+    bool m_pre_contamine;
     unsigned int m_genome_I;
     unsigned int m_genome_AP;
     std::vector<unsigned int> m_immune;

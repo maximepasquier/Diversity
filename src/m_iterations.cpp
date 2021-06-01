@@ -55,6 +55,8 @@ void Simulation::One_iteration(int iteration)
     Update_all_AP();
     //* Parcours du domaine (liste individus)
     Update_all_I(permuted_liste);
+    //* Contamine les individus 
+    Pre_contamine_to_contamine();
     //* Sleep (FPS)
     //this_thread::sleep_for(chrono::seconds(1));
     //* Supprimer la permutation
@@ -234,7 +236,7 @@ void Simulation::Analyse_voisinage(int coords[4][2], int index_I)
                     if (!Is_immune(index_I, m_Pointer_array_I[coords[i][0]][coords[i][1]]->GetgenomeAP()))
                     {
                         //* Notre humain a été infecté par ce voisin
-                        m_Liste_I[index_I]->Setcontamine(true);
+                        m_Liste_I[index_I]->Setprecontamine(true);
                         m_Liste_I[index_I]->SetgenomeAP(m_Pointer_array_I[coords[i][0]][coords[i][1]]->GetgenomeAP());
                         m_Liste_I[index_I]->SetHamming(hammingDistance(m_Liste_I[index_I]->GetgenomeI(), m_Liste_I[index_I]->GetgenomeAP()));
                     }
@@ -242,6 +244,22 @@ void Simulation::Analyse_voisinage(int coords[4][2], int index_I)
             }
         }
     }
+}
+
+//* Converti tous les individus qui sont pré contaminé en contaminés véritable
+void Simulation::Pre_contamine_to_contamine()
+{
+    for (int i = 0; i < m_NOMBRE_INDIVIDUS; i++)
+    {
+        if(m_Liste_I[i]->Getprecontamine()) // individu contaminé à cette itération
+        {
+            // on le définit donc comme réellement contaminé
+            m_Liste_I[i]->Setcontamine(true);
+            // réinitialise la variable provisoire pré contamine
+            m_Liste_I[i]->Setprecontamine(false);
+        }
+    }
+    
 }
 
 //* Individu sain sur la même cellule qu'un pathogène
