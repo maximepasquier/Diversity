@@ -109,26 +109,31 @@ int main(int argc, char const *argv[])
     threads.push_back(std::thread(thread_function, "./Simulations/SIR/Reference/perfect_mix/densite1sur16/population100000"));
 
     // Diversité
-    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Diversite/perfect_mix/mediumCompatibility/diversite5"));
-    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Diversite/perfect_mix/mediumCompatibility/diversite10"));
-    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Diversite/perfect_mix/mediumCompatibility/diversite15"));
-    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Diversite/perfect_mix/mediumCompatibility/diversite20"));
+    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Diversite/perfect_mix/distanceHamming0/diversite5"));
+    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Diversite/perfect_mix/distanceHamming0/diversite10"));
+    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Diversite/perfect_mix/distanceHamming0/diversite15"));
+    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Diversite/perfect_mix/distanceHamming0/diversite20"));
 
-    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Diversite/perfect_mix/highCompatibility/diversite5"));
-    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Diversite/perfect_mix/highCompatibility/diversite10"));
-    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Diversite/perfect_mix/highCompatibility/diversite15"));
-    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Diversite/perfect_mix/highCompatibility/diversite20"));
+    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Diversite/perfect_mix/distanceHamming8/diversite5"));
+    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Diversite/perfect_mix/distanceHamming8/diversite10"));
+    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Diversite/perfect_mix/distanceHamming8/diversite15"));
+    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Diversite/perfect_mix/distanceHamming8/diversite20"));
+
+    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Diversite/perfect_mix/distanceHamming16/diversite5"));
+    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Diversite/perfect_mix/distanceHamming16/diversite10"));
+    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Diversite/perfect_mix/distanceHamming16/diversite15"));
+    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Diversite/perfect_mix/distanceHamming16/diversite20"));
 
     // Mutation
-    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Mutation/perfect_mix/mediumCompatibility/mutation3"));
-    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Mutation/perfect_mix/mediumCompatibility/mutation4"));
-    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Mutation/perfect_mix/mediumCompatibility/mutation5"));
-    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Mutation/perfect_mix/mediumCompatibility/mutation6"));
+    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Mutation/perfect_mix/distanceHamming16/mutation3"));
+    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Mutation/perfect_mix/distanceHamming16/mutation4"));
+    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Mutation/perfect_mix/distanceHamming16/mutation5"));
+    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Mutation/perfect_mix/distanceHamming16/mutation6"));
 
-    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Mutation/perfect_mix/highCompatibility/mutation3"));
-    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Mutation/perfect_mix/highCompatibility/mutation4"));
-    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Mutation/perfect_mix/highCompatibility/mutation5"));
-    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Mutation/perfect_mix/highCompatibility/mutation6"));
+    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Mutation/perfect_mix/distanceHamming24/mutation3"));
+    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Mutation/perfect_mix/distanceHamming24/mutation4"));
+    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Mutation/perfect_mix/distanceHamming24/mutation5"));
+    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Mutation/perfect_mix/distanceHamming24/mutation6"));
     
     
     for (auto &t : threads)
