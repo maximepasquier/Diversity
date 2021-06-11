@@ -22,6 +22,10 @@ int main(int argc, char const *argv[])
 
     std::vector<std::thread> threads;
     
+    //threads.push_back(std::thread(thread_function, "./Simulations/SIR/Reference/5000mouvements/densite1sur8/population5000"));
+    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Reference/perfect_mix/densite1sur8/population5000"));
+
+    /*
     //* SI
     // 5000 mouvements
     threads.push_back(std::thread(thread_function, "./Simulations/SI/Reference/5000mouvements/densite1sur2/population5000"));
@@ -134,7 +138,7 @@ int main(int argc, char const *argv[])
     threads.push_back(std::thread(thread_function, "./Simulations/SIR/Mutation/perfect_mix/distanceHamming24/mutation4"));
     threads.push_back(std::thread(thread_function, "./Simulations/SIR/Mutation/perfect_mix/distanceHamming24/mutation5"));
     threads.push_back(std::thread(thread_function, "./Simulations/SIR/Mutation/perfect_mix/distanceHamming24/mutation6"));
-    
+    */
     
     for (auto &t : threads)
     {

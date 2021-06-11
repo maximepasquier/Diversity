@@ -15,7 +15,7 @@ Simulation::Simulation()
 
 Simulation::Simulation(string configuration_file_path, std::default_random_engine generator) : m_configuration_file_path(configuration_file_path), m_nombre_contamine(0), m_generator(generator)
 {
-    int time_metrique = 1000000;
+    int time_metrique = 1000;
 
     auto start = chrono::steady_clock::now();
 
@@ -28,25 +28,25 @@ Simulation::Simulation(string configuration_file_path, std::default_random_engin
         Init();
         auto Init_end = chrono::steady_clock::now();
         auto Init_diff = Init_end - Init_start;
-        m_Init_time = chrono::duration<double, nano>(Init_diff).count();
+        m_Init_time = chrono::duration<double, micro>(Init_diff).count();
 
         auto Run_start = chrono::steady_clock::now();
         Run();
         auto Run_end = chrono::steady_clock::now();
         auto Run_diff = Run_end - Run_start;
-        m_Run_time = chrono::duration<double, nano>(Run_diff).count();
+        m_Run_time = chrono::duration<double, micro>(Run_diff).count();
 
         auto Mesures_start = chrono::steady_clock::now();
         Mesures();
         auto Mesures_end = chrono::steady_clock::now();
         auto Mesures_diff = Mesures_end - Mesures_start;
-        m_Mesures_time = chrono::duration<double, nano>(Mesures_diff).count();
+        m_Mesures_time = chrono::duration<double, micro>(Mesures_diff).count();
 
         auto End_start = chrono::steady_clock::now();
         End();
         auto End_end = chrono::steady_clock::now();
         auto End_diff = End_end - End_start;
-        m_End_time = chrono::duration<double, nano>(End_diff).count();
+        m_End_time = chrono::duration<double, micro>(End_diff).count();
 
         //* Vérifier que le Run() ait abouti sur une pandémie
         if(m_iteration_fin > m_FAIL_SEUIL || m_iteration_fin == -1)
@@ -57,7 +57,7 @@ Simulation::Simulation(string configuration_file_path, std::default_random_engin
 
     auto end = chrono::steady_clock::now();
     auto diff = end - start;
-    m_Total_time = chrono::duration<double, nano>(diff).count();
+    m_Total_time = chrono::duration<double, micro>(diff).count();
 
     string path_copy = m_configuration_file_path;
     path_copy.append("/data_csv");

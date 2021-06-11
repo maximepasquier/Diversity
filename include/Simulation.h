@@ -75,6 +75,7 @@ public:
     void Contaminate_cell(int x, int y);
     void Pointer_move_update(int coords[4][2], int x, int y, int choix);
     int SIR_recovered();
+    void Position_Image();
     //* Méthodes du fichier "m_model.cpp"
     void Patient_zero();
     void Add_individu_obj_to_grid();
@@ -134,7 +135,7 @@ private:
     std::ofstream m_Humain_contamine, m_Humain_genomeAP, m_Humain_genomeH, m_Humain_hx, m_Humain_hy, m_Humain_immune, m_times, m_HammingDistance;
 
     //* Fichier csv pour la prise des données essentielles
-    std::ofstream m_nombre_contamine_file, m_nombre_de_fois_contamine_file, m_nombre_AP_diff_file, m_SIR_recovered_file;
+    std::ofstream m_nombre_contamine_file, m_nombre_de_fois_contamine_file, m_nombre_AP_diff_file, m_SIR_recovered_file, m_X_mouvements_time, m_IX, m_IY;
 
     //* Variables pour calculer les temps d'exécution du programme
     unsigned long long int m_Init_time = 0;

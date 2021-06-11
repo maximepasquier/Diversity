@@ -44,6 +44,9 @@ void Simulation::One_iteration(int iteration)
     //Update_csv_all_data(iteration);
     Update_csv();
 
+    //* Image des positions des individus
+    Position_Image();
+
     //* Compter le nombre de recovered pour le modèle SIR
     m_SIR_recovered_file << '\n'
                          << SIR_recovered();
@@ -103,6 +106,7 @@ void Simulation::Update_all_I(int *permuted_liste)
     }
     else
     {
+        auto start = std::chrono::steady_clock::now();
         //* Parcourt des individus du système pour les mouvements
         for (int i = 0; i < m_NOMBRE_INDIVIDUS; i++)
         {
@@ -118,6 +122,12 @@ void Simulation::Update_all_I(int *permuted_liste)
                 Mouvement(coords, x, y);
             }
         }
+        auto end = std::chrono::steady_clock::now();
+        auto diff = end - start;
+        unsigned long long int time_X_mouvements = chrono::duration<double, micro>(diff).count();
+        string path_copy = m_configuration_file_path;
+        path_copy.append("/data_csv");
+        m_X_mouvements_time << time_X_mouvements/m_NOMBRE_INDIVIDUS << '\n';
     }
 }
 
@@ -390,4 +400,9 @@ bool Simulation::Is_immune(int index_I, unsigned int genome_AP)
         }
     }
     return false;
+}
+
+void Simulation::Position_Image()
+{
+
 }

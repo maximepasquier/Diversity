@@ -59,6 +59,9 @@ void Simulation::Close_files()
     m_nombre_AP_diff_file.close();
     m_times.close();
     m_SIR_recovered_file.close();
+    m_X_mouvements_time.close();
+    m_IX.close();
+    m_IY.close();
 }
 
 void Simulation::File_init_all_data()
@@ -101,6 +104,9 @@ void Simulation::Open_append_mode_csv()
     m_nombre_contamine_file.open(path_copy + "/m_nombre_contamine.csv", std::ios::app);
     m_nombre_AP_diff_file.open(path_copy + "/m_nombre_AP.csv", std::ios::app);
     m_SIR_recovered_file.open(path_copy + "/m_SIR_recovered_file.csv", std::ios::app);
+    m_X_mouvements_time.open(path_copy + "/X_mouvements_time.csv", std::ios::app);
+    m_IX.open(path_copy + "/IX.csv", std::ios::app);
+    m_IY.open(path_copy + "/IY.csv", std::ios::app);
 }
 
 void Simulation::Create_and_initialize_csv_all_data()
@@ -183,11 +189,23 @@ void Simulation::Create_and_initialize_csv()
     m_nombre_AP_diff_file.open(path_copy + "/m_nombre_AP.csv");
     m_times.open(path_copy + "/times.csv");
     m_SIR_recovered_file.open(path_copy + "/m_SIR_recovered_file.csv");
+    m_X_mouvements_time.open(path_copy + "/X_mouvements_time.csv");
+    m_IX.open(path_copy + "/IX.csv");
+    m_IY.open(path_copy + "/IY.csv");
 
     //* Init colonne names
     m_nombre_contamine_file << "Nombre de contaminés";
     m_nombre_AP_diff_file << "Nombre AP";
     m_SIR_recovered_file << "Recovered";
+    m_X_mouvements_time << "X_mouvements";
+
+    m_IX << "Individu_0";
+    m_IY << "Individu_0";
+    for (int i = 1; i < m_NOMBRE_INDIVIDUS; i++)
+    {
+        m_IX << ',' << "Individu_" << i;
+        m_IY << ',' << "Individu_" << i;
+    }
 
     //* Write to times.csv file
     m_times << "Init" << ',';
@@ -261,4 +279,25 @@ void Simulation::Update_csv()
                             << m_nombre_contamine;
     m_nombre_AP_diff_file << '\n'
                           << m_nombre_AP_diff;
+
+    // Vérifier si la personne est contaminé ou non
+    int sign = 1;
+    if (m_Liste_I[0]->Getcontamine())
+    {
+        sign = -1;
+    }
+    m_IX << '\n'
+         << sign * (m_Liste_I[0]->GetXI() + 1);
+    m_IY << '\n'
+         << sign * (m_Liste_I[0]->GetYI() + 1);
+    for (int i = 1; i < m_NOMBRE_INDIVIDUS; i++)
+    {
+        sign = 1;
+        if (m_Liste_I[i]->Getcontamine())
+        {
+            sign = -1;
+        }
+        m_IX << ',' << sign * (m_Liste_I[i]->GetXI() + 1);
+        m_IY << ',' << sign * (m_Liste_I[i]->GetYI() + 1);
+    }
 }
