@@ -44,9 +44,6 @@ void Simulation::One_iteration(int iteration)
     //Update_csv_all_data(iteration);
     Update_csv();
 
-    //* Image des positions des individus
-    Position_Image();
-
     //* Compter le nombre de recovered pour le modèle SIR
     m_SIR_recovered_file << '\n'
                          << SIR_recovered();
@@ -116,10 +113,8 @@ void Simulation::Update_all_I(int *permuted_liste)
                 //* Get coords de l'individu
                 int x = m_Liste_I[index_I]->GetXI();
                 int y = m_Liste_I[index_I]->GetYI();
-                int coords[4][2] = {{x, (y - 1 + m_TAILLE_SYSTEME) % m_TAILLE_SYSTEME}, {x, (y + 1) % m_TAILLE_SYSTEME}, {(x - 1 + m_TAILLE_SYSTEME) % m_TAILLE_SYSTEME, y}, {(x + 1) % m_TAILLE_SYSTEME, y}};
-
                 //* Mouvements
-                Mouvement(coords, x, y);
+                Mouvement(x, y);
             }
         }
         auto end = std::chrono::steady_clock::now();
@@ -144,8 +139,9 @@ void Simulation::Update_one_I(int index_I)
 }
 
 //* Permet de déplacer un individu
-void Simulation::Mouvement(int coords[4][2], int x, int y)
+void Simulation::Mouvement(int x, int y)
 {
+    int coords[4][2] = {{x, (y - 1 + m_TAILLE_SYSTEME) % m_TAILLE_SYSTEME}, {x, (y + 1) % m_TAILLE_SYSTEME}, {(x - 1 + m_TAILLE_SYSTEME) % m_TAILLE_SYSTEME, y}, {(x + 1) % m_TAILLE_SYSTEME, y}};
     uniform_int_distribution<int> randInt(0, 3);
     //* Choix d'une case voisine
     int choix = randInt(m_generator);
@@ -156,7 +152,7 @@ void Simulation::Mouvement(int coords[4][2], int x, int y)
 }
 
 //* Déplace un individu
-void Simulation::Moving(int coords[4][2], int x, int y, int choix)
+void Simulation::Moving(int coords[][2], int x, int y, int choix)
 {
     //* Si l'individu est contaminé
     if (m_Pointer_array_I[x][y]->Getcontamine())
@@ -167,7 +163,7 @@ void Simulation::Moving(int coords[4][2], int x, int y, int choix)
 }
 
 //* Modifier coordonnées individu
-void Simulation::Pointer_move_update(int coords[4][2], int x, int y, int choix)
+void Simulation::Pointer_move_update(int coords[][2], int x, int y, int choix)
 {
     //* Mise à jour des coordonnées de l'individu
     m_Pointer_array_I[x][y]->SetXI(coords[choix][0]);
@@ -209,7 +205,7 @@ void Simulation::Add_AP_to_cell(int x, int y)
 }
 
 //* Mise à jour de l'état de l'individu
-void Simulation::Contamination_cases(int coords[4][2], int x, int y, int index_I)
+void Simulation::Contamination_cases(int coords[][2], int x, int y, int index_I)
 {
     //* Déterminer les cas
     if (m_Liste_I[index_I]->Getcontamine()) //* contaminé
@@ -229,7 +225,7 @@ void Simulation::Contamination_cases(int coords[4][2], int x, int y, int index_I
 }
 
 //* Interactions avec le voisinage
-void Simulation::Analyse_voisinage(int coords[4][2], int index_I)
+void Simulation::Analyse_voisinage(int coords[][2], int index_I)
 {
     /**
      * Regarder les 4 cellules voisines
@@ -400,9 +396,4 @@ bool Simulation::Is_immune(int index_I, unsigned int genome_AP)
         }
     }
     return false;
-}
-
-void Simulation::Position_Image()
-{
-
 }
