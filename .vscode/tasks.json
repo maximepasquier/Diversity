@@ -10,6 +10,7 @@
                 "${workspaceFolder}/test/*.cpp",
                 "-I",
                 "${workspaceFolder}/include",
+                "-pthread",
                 "-o",
                 "${workspaceFolder}/bin/${fileBasenameNoExtension}"
             ],
