@@ -42,16 +42,11 @@ public:
     void Nombre_de_fois_contamine();
     int Update_infected_number();
     //* Méthodes du fichier "m_file_functions.cpp"
-    void File_init_all_data();
     void File_init();
     void Read_Configuration_file();
-    void Close_files_all_data();
     void Close_files();
-    void Create_and_initialize_csv_all_data();
     void Create_and_initialize_csv();
-    void Open_append_mode_csv_all_data();
     void Open_append_mode_csv();
-    void Update_csv_all_data(int iteration);
     void Update_csv();
     //* Méthodes du fichier "m_iterations.cpp"
     void Iterations();
@@ -79,11 +74,6 @@ public:
     void Patient_zero();
     void Add_individu_obj_to_grid();
     void Generate_genome_diversity();
-    //* Méthodes du fichier "test.cpp"
-    void test_variables_coherence();
-    void test_is_Pointer_array_to_null();
-    void test_diversity_genome();
-    void test_humain_coords_conflits();
 
 private:
     //* Générateur de nombres aléatoires
@@ -130,11 +120,8 @@ private:
     //* Liste de pointeurs contenant les objets individus
     Individu **m_Liste_I;
 
-    //* Fichiers csv pour stocker toutes les données de la simulation
-    std::ofstream m_Humain_contamine, m_Humain_genomeAP, m_Humain_genomeH, m_Humain_hx, m_Humain_hy, m_Humain_immune, m_times, m_HammingDistance;
-
     //* Fichier csv pour la prise des données essentielles
-    std::ofstream m_nombre_contamine_file, m_nombre_de_fois_contamine_file, m_nombre_AP_diff_file, m_SIR_recovered_file, m_X_mouvements_time, m_IX, m_IY;
+    std::ofstream m_nombre_contamine_file, m_nombre_de_fois_contamine_file, m_nombre_AP_diff_file, m_SIR_recovered_file, m_X_mouvements_time, m_IX, m_IY, m_times;
 
     //* Variables pour calculer les temps d'exécution du programme
     unsigned long long int m_Init_time = 0;

@@ -40,18 +40,6 @@ void Simulation::Read_Configuration_file()
     }
 }
 
-void Simulation::Close_files_all_data()
-{
-    m_Humain_contamine.close();
-    m_Humain_genomeAP.close();
-    m_Humain_genomeH.close();
-    m_Humain_hx.close();
-    m_Humain_hy.close();
-    m_Humain_immune.close();
-    m_times.close();
-    m_HammingDistance.close();
-}
-
 //* Ferme les fichiers csv
 void Simulation::Close_files()
 {
@@ -64,14 +52,6 @@ void Simulation::Close_files()
     m_IY.close();
 }
 
-void Simulation::File_init_all_data()
-{
-    //* Initialiser les fichier .csv
-    Create_and_initialize_csv_all_data();
-    //* Open .csv files to append
-    Open_append_mode_csv_all_data();
-}
-
 //* Initialise les fichiers csv
 void Simulation::File_init()
 {
@@ -79,20 +59,6 @@ void Simulation::File_init()
     Create_and_initialize_csv();
     //* Open .csv files to append
     Open_append_mode_csv();
-}
-
-void Simulation::Open_append_mode_csv_all_data()
-{
-    string path_copy = m_configuration_file_path;
-    path_copy.append("/data_csv");
-
-    m_Humain_contamine.open(path_copy + "/Humain_contamine.csv", std::ios::app);
-    m_Humain_genomeAP.open(path_copy + "/Humain_genomeAP.csv", std::ios::app);
-    m_Humain_genomeH.open(path_copy + "/Humain_genomeH.csv", std::ios::app);
-    m_Humain_hx.open(path_copy + "/Humain_hx.csv", std::ios::app);
-    m_Humain_hy.open(path_copy + "/Humain_hy.csv", std::ios::app);
-    m_Humain_immune.open(path_copy + "/Humain_immune.csv", std::ios::app);
-    m_HammingDistance.open(path_copy + "/HammingDistance.csv", std::ios::app);
 }
 
 //* Ouvre les fichier en mode append
@@ -107,69 +73,6 @@ void Simulation::Open_append_mode_csv()
     m_X_mouvements_time.open(path_copy + "/X_mouvements_time.csv", std::ios::app);
     m_IX.open(path_copy + "/IX.csv", std::ios::app);
     m_IY.open(path_copy + "/IY.csv", std::ios::app);
-}
-
-void Simulation::Create_and_initialize_csv_all_data()
-{
-    string path_copy = m_configuration_file_path;
-    path_copy.append("/data_csv");
-    const char *file_path = path_copy.c_str();
-    int directory_fd = mkdir(file_path, 0777);
-
-    m_Humain_contamine.open(path_copy + "/Humain_contamine.csv");
-    m_Humain_genomeAP.open(path_copy + "/Humain_genomeAP.csv");
-    m_Humain_genomeH.open(path_copy + "/Humain_genomeH.csv");
-    m_Humain_hx.open(path_copy + "/Humain_hx.csv");
-    m_Humain_hy.open(path_copy + "/Humain_hy.csv");
-    m_Humain_immune.open(path_copy + "/Humain_immune.csv");
-    m_times.open(path_copy + "/times.csv");
-    m_HammingDistance.open(path_copy + "/HammingDistance.csv");
-
-    for (int i = 0; i < m_NOMBRE_INDIVIDUS; i++)
-    {
-        m_Humain_contamine << "Humain_" << i;
-        m_Humain_genomeAP << "Humain_" << i;
-        m_Humain_genomeH << "Humain_" << i;
-        m_Humain_hx << "Humain_" << i;
-        m_Humain_hy << "Humain_" << i;
-        m_Humain_immune << "Humain_" << i;
-        m_HammingDistance << "Humain_" << i;
-
-        if (i != m_NOMBRE_INDIVIDUS - 1)
-        {
-            m_Humain_contamine << ',';
-            m_Humain_genomeAP << ',';
-            m_Humain_genomeH << ',';
-            m_Humain_hx << ',';
-            m_Humain_hy << ',';
-            m_Humain_immune << ',';
-            m_HammingDistance << ',';
-        }
-    }
-    //* Write to times.csv file
-
-    m_times << "Init" << ',';
-    m_times << "Run" << ',';
-    m_times << "Iterations" << ',';
-    m_times << "Update_csv" << ',';
-    m_times << "Permutations" << ',';
-    m_times << "Update_AP" << ',';
-    m_times << "Update_H" << ',';
-    m_times << "Coords" << ',';
-    m_times << "Contamination_cases" << ',';
-    m_times << "Mouvement" << ',';
-    m_times << "Total" << ',';
-    m_times << '\n';
-
-    m_Humain_contamine << '\n';
-    m_Humain_genomeAP << '\n';
-    m_Humain_genomeH << '\n';
-    m_Humain_hx << '\n';
-    m_Humain_hy << '\n';
-    m_Humain_immune << '\n';
-    m_HammingDistance << '\n';
-
-    Close_files_all_data();
 }
 
 //* Crée les fichiers csv et les initialise
@@ -219,58 +122,6 @@ void Simulation::Create_and_initialize_csv()
     Close_files();
 }
 
-void Simulation::Update_csv_all_data(int iteration)
-{
-    for (int i = 0; i < m_NOMBRE_INDIVIDUS; i++)
-    {
-        m_Humain_contamine << m_Liste_I[i]->Getcontamine();
-        if (m_Liste_I[i]->Getcontamine())
-        {
-            m_Humain_genomeAP << m_Liste_I[i]->GetgenomeAP();
-            m_HammingDistance << m_Liste_I[i]->GetHamming();
-        }
-        else
-        {
-            m_Humain_genomeAP << NAN;
-            m_HammingDistance << NAN;
-        }
-        m_Humain_genomeH << m_Liste_I[i]->GetgenomeI();
-        m_Humain_hx << m_Liste_I[i]->GetXI();
-        m_Humain_hy << m_Liste_I[i]->GetYI();
-
-        vector<unsigned int> liste_immunite = m_Liste_I[i]->Getimmune();
-        int vsize = m_Liste_I[i]->Getimmune().size();
-        for (int j = 0; j < vsize; j++)
-        {
-            m_Humain_immune << liste_immunite[j] << ' ';
-        }
-        if (vsize == 0)
-        {
-            m_Humain_immune << NAN;
-        }
-
-        if (i != m_NOMBRE_INDIVIDUS - 1)
-        {
-            m_Humain_contamine << ',';
-            m_Humain_genomeAP << ',';
-            m_Humain_genomeH << ',';
-            m_Humain_hx << ',';
-            m_Humain_hy << ',';
-            m_Humain_immune << ',';
-            m_HammingDistance << ',';
-        }
-    }
-    if (iteration != m_ITERATIONS - 1)
-    {
-        m_Humain_contamine << '\n';
-        m_Humain_genomeAP << '\n';
-        m_Humain_genomeH << '\n';
-        m_Humain_hx << '\n';
-        m_Humain_hy << '\n';
-        m_Humain_immune << '\n';
-        m_HammingDistance << '\n';
-    }
-}
 
 //* Mise à jour des fichiers csv à chaque itération
 void Simulation::Update_csv()
