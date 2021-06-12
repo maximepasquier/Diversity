@@ -122,7 +122,7 @@ void Simulation::Update_all_I(int *permuted_liste)
         unsigned long long int time_X_mouvements = chrono::duration<double, micro>(diff).count();
         string path_copy = m_configuration_file_path;
         path_copy.append("/data_csv");
-        m_X_mouvements_time << time_X_mouvements/m_NOMBRE_INDIVIDUS << '\n';
+        m_X_mouvements_time  << '\n' << time_X_mouvements/m_NOMBRE_INDIVIDUS;
     }
 }
 

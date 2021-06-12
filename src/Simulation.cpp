@@ -1,5 +1,7 @@
 #include <chrono>
 #include <random>
+#include <thread>
+#include <mutex>
 #include "Individu.h"
 #include "Agent_Pathogene.h"
 #include "AP_linked_list.h"
@@ -8,6 +10,7 @@
 using namespace std;
 
 //extern default_random_engine generator;
+extern std::vector<std::mutex> verrous;
 
 Simulation::Simulation()
 {
@@ -15,8 +18,28 @@ Simulation::Simulation()
 
 Simulation::Simulation(string configuration_file_path, std::default_random_engine generator) : m_configuration_file_path(configuration_file_path), m_nombre_contamine(0), m_generator(generator)
 {
-    int time_metrique = 1000;
+    //* Attente active
+    while (1)
+    {
+        for (auto &v : verrous)
+        {
+            if (v.try_lock()) // lock disponible
+            {
+                Execution();
+                v.unlock();
+                return;
+            }
+        }
+        this_thread::sleep_for(chrono::seconds(10));
+    }
+}
 
+Simulation::~Simulation() // déconstructeur
+{
+}
+
+void Simulation::Execution()
+{
     auto start = chrono::steady_clock::now();
 
     //* Rerun la simulation en cas d'échec de la pandémie
@@ -49,7 +72,7 @@ Simulation::Simulation(string configuration_file_path, std::default_random_engin
         m_End_time = chrono::duration<double, micro>(End_diff).count();
 
         //* Vérifier que le Run() ait abouti sur une pandémie
-        if(m_iteration_fin > m_FAIL_SEUIL || m_iteration_fin == -1)
+        if (m_iteration_fin > m_FAIL_SEUIL || m_iteration_fin == -1)
         {
             break;
         }
@@ -58,6 +81,8 @@ Simulation::Simulation(string configuration_file_path, std::default_random_engin
     auto end = chrono::steady_clock::now();
     auto diff = end - start;
     m_Total_time = chrono::duration<double, micro>(diff).count();
+
+    int time_metrique = 1000;
 
     string path_copy = m_configuration_file_path;
     path_copy.append("/data_csv");
@@ -68,10 +93,6 @@ Simulation::Simulation(string configuration_file_path, std::default_random_engin
             << m_End_time / time_metrique << ','
             << m_Total_time / time_metrique;
     m_times.close();
-}
-
-Simulation::~Simulation() // déconstructeur
-{
 }
 
 //* Phase d'initalisation de la simulation

@@ -23,6 +23,7 @@ public:
     Simulation();
     Simulation(std::string configuration_file_path, std::default_random_engine generator);
     ~Simulation();
+    void Execution();
     void Init();
     void Read();
     void Set();
