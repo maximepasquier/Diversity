@@ -26,6 +26,7 @@ int main(int argc, char const *argv[])
 
     std::vector<std::thread> threads;
 
+    /*
     //* SI
     // 5000 mouvements
     threads.push_back(std::thread(thread_function, "./Simulations/SI/Reference/5000mouvements/densite1sur2/population5000"));
@@ -138,6 +139,21 @@ int main(int argc, char const *argv[])
     threads.push_back(std::thread(thread_function, "./Simulations/SIR/Mutation/perfect_mix/distanceHamming24/mutation4"));
     threads.push_back(std::thread(thread_function, "./Simulations/SIR/Mutation/perfect_mix/distanceHamming24/mutation5"));
     threads.push_back(std::thread(thread_function, "./Simulations/SIR/Mutation/perfect_mix/distanceHamming24/mutation6"));
+    */
+
+    //* SIR mouvements
+    // perfect mix référence
+    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Mouvements/perfect_mix"));
+    // mouvements
+    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Mouvements/1mouvement"));
+    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Mouvements/10mouvements"));
+    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Mouvements/50mouvements"));
+    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Mouvements/100mouvements"));
+    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Mouvements/200mouvements"));
+    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Mouvements/400mouvements"));
+    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Mouvements/600mouvements"));
+    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Mouvements/800mouvements"));
+    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Mouvements/1000mouvements"));
     
     for (auto &t : threads)
     {

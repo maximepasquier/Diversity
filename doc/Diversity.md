@@ -1,14 +1,3 @@
----
-@media print {
-  @page {
-  	margin: 20mm 16mm 20mm 16mm; 
-	}
-}
-
-header: test test test test test test test test test test test
-footer:  No. ${pageNo} / ${pageCount}
----
-
 # Diversity
 
 ### Résumé
@@ -446,7 +435,7 @@ Le dernier objectif de la recherche est de pouvoir faire de la prédiction expli
 
 
 
-# Modèles compartimentaux
+## Modèles compartimentaux
 
 Les modèles compartimentaux sont une catégorie de modèles mathématiques permettant de représenter l'évolution de maladies infectieuses au sein d'une population. Ces modèles épidémiologiques se basent sur la notion de classes épidémiologiques et de transitions entre ces différentes classes. Nous appelons ces classes des **compartiments** et les transitions entre les classes les **règles**. Un compartiment est un état possible dans lequel les acteurs du système peuvent se trouver. Chaque acteur du système se trouve à tous moment dans un compartiment et ce dernier définit son état. Une règle est une fonction de transition entre les compartiments. Les acteurs changent de compartiments lorsque leur état change. Nous pouvons donc définir des règles permettant de changer de compartiment.
 
