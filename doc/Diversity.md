@@ -520,8 +520,6 @@ TRAINEE=0
 SURVIE_AP=0
 ```
 
-La taille du système est de $500\times 500$ avec $25'000$ individus. Les itérations sont adaptées en fonction de la simulation afin d'observer tous les phénomènes, c'est-à-dire que  la simulation est arrêtée lorsque le système est dans une situation stable. Il n'y a aucune diversité dans cette simulation de référence, tous les génomes des individus sont les mêmes. Le premier agent pathogène possède le même génome que tous les individus par conséquent il a une forte compatibilité sur les individus. La vitesse de mutation est réduite à $0$ afin que les pathogènes ne mutent pas. La charge virale est définie à $1$, par conséquent le niveau de contagion lors de contactes entre individus est maximal. Finalement les individus contaminés ne peuvent pas contaminer de cellules à cause du paramètre TRAINEE qui vaut $0$.
-
 ##### Résultats et analyses
 
 Nous voyons ici les singes d'un modèle SI. La courbe orange représente le nombre d'individus dans le compartiment $S$ et la courbe bleue exprime le nombre d'individus dans le compartiment $I$. Étant donné qu'il n'existe que deux compartiments, la somme des individus de $S$ et $I$ donne le total des individus de la simulation.
