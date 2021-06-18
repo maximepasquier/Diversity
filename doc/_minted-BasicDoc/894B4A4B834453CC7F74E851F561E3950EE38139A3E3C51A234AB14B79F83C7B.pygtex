@@ -1,0 +1,11 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{n}{TAILLE\PYGZus{}SYSTEME} \PYG{o}{=} \PYG{l+m+mi}{200}
+\PYG{n}{NOMBRE\PYGZus{}INDIVIDUS} \PYG{o}{=} \PYG{l+m+mi}{5000}
+\PYG{n}{ITERATIONS} \PYG{o}{=} \PYG{l+m+mi}{150}
+\PYG{n}{CHARGE\PYGZus{}VIRALE} \PYG{o}{=} \PYG{l+m+mi}{1}
+\PYG{n}{CELLULE\PYGZus{}AP} \PYG{o}{=} \PYG{l+m+mi}{0}
+\PYG{n}{NOMBRE\PYGZus{}MOUVEMENT} \PYG{o}{=} \PYG{l+m+mi}{5000}
+\PYG{n}{PERFECT\PYGZus{}MIX} \PYG{o}{=} \PYG{n+nb}{false}
+\PYG{n}{IMMUNITE\PYGZus{}MECANISME} \PYG{o}{=} \PYG{n+nb}{false}
+\PYG{n}{RESISTANCE\PYGZus{}MECANISME} \PYG{o}{=} \PYG{n+nb}{false}
+\end{Verbatim}

@@ -1,0 +1,4 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{n}{IMMUNITE\PYGZus{}MECANISME} \PYG{o}{=} \PYG{n+nb}{false}
+\PYG{n}{RESISTANCE\PYGZus{}MECANISME} \PYG{o}{=} \PYG{n+nb}{false}
+\end{Verbatim}
