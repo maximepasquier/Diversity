@@ -66,6 +66,8 @@ Malgré des observations déjà analysées, nous obsevons des oscillations sur l
 
 \section{Analyses}
 
+\subsection{Mean Absolute Error}
+
 \begin{table}[H]
 	\centering
 	\captionsetup{justification=centering}
@@ -74,13 +76,92 @@ Malgré des observations déjà analysées, nous obsevons des oscillations sur l
 	 & 5000 & 20000 & 50000 & 100000\\ 
 	\midrule
 	\midrule
-	1/2 & $6.2\mathrm{e}{-4}$ & $6.4\mathrm{e}{-4}$ & $6.4\mathrm{e}{-4}$ & $7.3\mathrm{e}{-4}$\\
+	1/2 & $4.3\mathrm{e}{-3}$ & $2.1\mathrm{e}{-3}$ & $2.7\mathrm{e}{-3}$ & $2.5\mathrm{e}{-3}$\\
 	\midrule
-	1/4 & $9.0\mathrm{e}{-4}$ & $7.9\mathrm{e}{-4}$ & $7.7\mathrm{e}{-4}$ & $9.5\mathrm{e}{-4}$\\
+	1/4 & $3.8\mathrm{e}{-3}$ & $3.0\mathrm{e}{-3}$ & $2.1\mathrm{e}{-3}$ & $2.6\mathrm{e}{-3}$\\
 	\midrule
-	1/8 & $3.2\mathrm{e}{-3}$ & $1.9\mathrm{e}{-3}$ & $2.8\mathrm{e}{-3}$ & $2.0\mathrm{e}{-3}$\\
+	1/8 & $9.6\mathrm{e}{-3}$ & $2.8\mathrm{e}{-3}$ & $1.9\mathrm{e}{-3}$ & $2.3\mathrm{e}{-3}$\\
 	\midrule
-	1/16 & $4.2\mathrm{e}{-3}$ & $4.6\mathrm{e}{-3}$ & $4.2\mathrm{e}{-3}$ & $4.6\mathrm{e}{-3}$\\
+	1/16 & $8.5\mathrm{e}{-3}$ & $3.2\mathrm{e}{-3}$ & $6.2\mathrm{e}{-3}$ & $7.2\mathrm{e}{-3}$\\
 	\bottomrule
 	\end{tabular}
 	\end{table}
+
+\subsection{Positions des individus}
+
+plot pour le mélange parfait
+
+\begin{figure}[h]
+	\centering
+	\captionsetup{justification=centering}
+	\includegraphics[width=.7\textwidth]{Images/SIR_position_8_20_perfect_mix.png}
+	\caption{test}
+\end{figure}
+
+explications
+
+\newpage
+
+\begin{figure}[h]
+	\centering
+	\captionsetup{justification=centering}
+	\includegraphics[width=.4\textwidth]{Images/SIR_position_2_20.png}
+	\includegraphics[width=.4\textwidth]{Images/SIR_position_4_20.png}
+	\includegraphics[width=.4\textwidth]{Images/SIR_position_8_20.png}
+	\includegraphics[width=.4\textwidth]{Images/SIR_position_16_20.png}
+	\caption{test}
+\end{figure}
+
+explications
+
+\newpage
+
+\subsection{Variations aléatoires}
+
+\begin{wrapfigure}{r}{0.5\textwidth}
+    \centering
+    \captionsetup{justification=centering}
+    \includegraphics[width=0.5\textwidth]{Images/SIR_divergence_8_1000.png}
+    \includegraphics[width=0.5\textwidth]{Images/SIR_divergence_8_mix.png}
+    \includegraphics[width=0.5\textwidth]{Images/SIR_divergence_16_1000.png}
+    \includegraphics[width=0.5\textwidth]{Images/SIR_divergence_16_mix.png}
+    \caption{Divergences SI}
+\end{wrapfigure}
+
+explications
+
+\begin{table}[H]
+	\centering
+	\captionsetup{justification=centering}
+	\caption[Variations : SIR]{Voisinage : modèle SIR\label{tab:grid}}
+	\begin{tabular}{@{\extracolsep{\fill} } c|| c| c| c| c|}
+	 & \multicolumn{2}{|c|}{1000 mouvements} & \multicolumn{2}{|c|}{Mélange parfait} \\
+	\midrule
+	\midrule
+	densité & 1/8 & 1/16 & 1/8 & 1/16\\
+	\midrule
+	min & $24$ & $42$ & $22$ & $41$\\
+	\midrule
+	max & $32$ & $64$ & $37$ & $55$\\
+	\midrule
+	mean & $26.9$ & $50.15$ & $25.1$ & $47.7$\\
+	\midrule
+	std & $2.52$ & $5.81$ & $3.27$ & $4.63$\\
+	\bottomrule
+	\end{tabular}
+	\end{table}
+
+\subsection{Latence des simulations}
+
+\subsection{Mouvements variable}
+
+\begin{figure}[h]
+	\centering
+	\captionsetup{justification=centering}
+	\includegraphics[width=.7\textwidth]{Images/SIR_mouvements_variables.png}
+	\caption{test}
+\end{figure}
+
+\subsection{Comparaison 1000 mouvements}
+
+
