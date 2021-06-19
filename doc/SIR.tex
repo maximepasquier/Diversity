@@ -68,6 +68,8 @@ Malgré des observations déjà analysées, nous obsevons des oscillations sur l
 
 \subsection{Mean Absolute Error}
 
+Le mean absolute error permet de quantifier les différences entre les simulations et le modèle mathématique SIR. Les calculs suivants ont été effectués sur les simulations au mélnage parfait. Contrairement au modèle SI, le modèle SIR contient trois courbes différentes par conséquent chacune de ces courbes a sont propre MAE. Le tableau ci-dessous donne la moyenne de ces trois résultats et ceci pour toutes les simulations SIR.
+
 \begin{table}[H]
 	\centering
 	\captionsetup{justification=centering}
@@ -87,9 +89,15 @@ Malgré des observations déjà analysées, nous obsevons des oscillations sur l
 	\end{tabular}
 	\end{table}
 
+Les tésultats pour le modèle SIR sont généralement moins précis que pour le modèle SI. Certains résultats sont intéressant par exemple les courbes de densité $\frac{1}{8}$ avec $5000$ individus. L'erreur sur cette courbe est élevée car la simulation souffre de latence, par conséquent le déclanchement de l'événement se fait tardivement. C'est également la raison pour laquelle la simulation au $1000$ mouvement évolue plus rapidement que la simulation au mélange parfait.\\
+
+En densité $frac{1}{16}$ d'avantage d'erreurs apparaissent. Premièrement, une plus grande erreur de la simulation à $5000$ individus et due aux oscillations causées par le peu d'événements du système, donc les systèmes peu denses ont une plus grande erreur. Deuxièmement les simulations à faible densité prennent du temps déclancher un événement, ce qui engendre un temps de latence. Ce temps de latence est innexistant dans le modèle SIR, par conséquent notre modèle ne se comporte plus exactement comme un modèle mathématique SIR.
+
 \subsection{Positions des individus}
 
-plot pour le mélange parfait
+Cette section a pour but de visualiser l'impacte de la densité des systèmes sur les déplacements des individus et donc sur la qualité du mélange. Les figures suivantes montrent les positions géographiques de tous les individus à une certaine itération. En vert sont affichés les individus sains et en rouge les individus contaminés.\\
+
+L'image ci-dessous montre les positions des individus pour une simulation au mélange parfait à l'itération $20$. Le mode de mélange parfait redistribue tous les individus dans l'espace à chaque itération, par conséquent les individus contaminés sont parfaitement répartis dans l'espace.
 
 \begin{figure}[h]
 	\centering
@@ -98,7 +106,7 @@ plot pour le mélange parfait
 	\caption{test}
 \end{figure}
 
-explications
+Sur les figures qui suivent, nous effectuons la même mesure mais cette fois-ci sur des simulations aux $1000$ mouvements. L'idée est de pouvoir observer la qualité du mélange de population en fonction de la densité du système.
 
 \newpage
 
@@ -112,23 +120,23 @@ explications
 	\caption{test}
 \end{figure}
 
-explications
+Modifications à effectuer...
 
 \newpage
 
 \subsection{Variations aléatoires}
 
-\begin{wrapfigure}{r}{0.5\textwidth}
-    \centering
-    \captionsetup{justification=centering}
-    \includegraphics[width=0.5\textwidth]{Images/SIR_divergence_8_1000.png}
-    \includegraphics[width=0.5\textwidth]{Images/SIR_divergence_8_mix.png}
-    \includegraphics[width=0.5\textwidth]{Images/SIR_divergence_16_1000.png}
-    \includegraphics[width=0.5\textwidth]{Images/SIR_divergence_16_mix.png}
-    \caption{Divergences SI}
-\end{wrapfigure}
+Tout comme pour les simulations SI, nous calculons les variations d'une simulation à une autre et ceci pour des paramètres identiques. Les mesures sont faites sur un ensemble de simulations de densité $\frac{1}{8}$ ainsi que $\frac{1}{16}$ avec une population de $20000$ individus.
 
-explications
+\begin{figure}[h]
+	\centering
+	\captionsetup{justification=centering}
+	\includegraphics[width=.4\textwidth]{Images/SIR_divergence_8_1000.png}
+	\includegraphics[width=.4\textwidth]{Images/SIR_divergence_8_mix.png}
+	\includegraphics[width=.4\textwidth]{Images/SIR_divergence_16_1000.png}
+	\includegraphics[width=.4\textwidth]{Images/SIR_divergence_16_mix.png}
+	\caption{test}
+\end{figure}
 
 \begin{table}[H]
 	\centering
@@ -140,13 +148,13 @@ explications
 	\midrule
 	densité & 1/8 & 1/16 & 1/8 & 1/16\\
 	\midrule
-	min & $24$ & $42$ & $22$ & $41$\\
+	min & $33$ & $62$ & $29$ & $59$\\
 	\midrule
-	max & $32$ & $64$ & $37$ & $55$\\
+	max & $41$ & $93$ & $38$ & $87$\\
 	\midrule
-	mean & $26.9$ & $50.15$ & $25.1$ & $47.7$\\
+	mean & $35.35$ & $72.85$ & $33.2$ & $69.35$\\
 	\midrule
-	std & $2.52$ & $5.81$ & $3.27$ & $4.63$\\
+	std & $2.10$ & $7.28$ & $2.58$ & $6.77$\\
 	\bottomrule
 	\end{tabular}
 	\end{table}
