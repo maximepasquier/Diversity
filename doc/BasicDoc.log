@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2021.6.17)  20 JUN 2021 11:21
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2021.6.17)  20 JUN 2021 13:41
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -3203,36 +3203,35 @@ Underfull \hbox (badness 10000) in paragraph at lines 182--183
 
  []
 
-<Images/SIR_position_8_20_perfect_mix.png, id=504, 894.2208pt x 878.8032pt>
-File: Images/SIR_position_8_20_perfect_mix.png Graphic file (type png)
-<use Images/SIR_position_8_20_perfect_mix.png>
-Package pdftex.def Info: Images/SIR_position_8_20_perfect_mix.png  used on inpu
-t line 189.
+<Images/SI_positions_14k_mix.png, id=504, 894.2208pt x 878.8032pt>
+File: Images/SI_positions_14k_mix.png Graphic file (type png)
+<use Images/SI_positions_14k_mix.png>
+Package pdftex.def Info: Images/SI_positions_14k_mix.png  used on input line 18
+9.
 (pdftex.def)             Requested size: 292.7776pt x 287.72635pt.
-[43 <./Images/SIR_position_8_20_perfect_mix.png>]
-<Images/SIR_position_2_20.png, id=510, 894.2208pt x 878.8032pt>
-File: Images/SIR_position_2_20.png Graphic file (type png)
-<use Images/SIR_position_2_20.png>
-Package pdftex.def Info: Images/SIR_position_2_20.png  used on input line 200.
-(pdftex.def)             Requested size: 167.29967pt x 164.41313pt.
-<Images/SIR_position_4_20.png, id=511, 894.2208pt x 878.8032pt>
-File: Images/SIR_position_4_20.png Graphic file (type png)
-<use Images/SIR_position_4_20.png>
-Package pdftex.def Info: Images/SIR_position_4_20.png  used on input line 201.
-(pdftex.def)             Requested size: 167.29967pt x 164.41313pt.
-<Images/SIR_position_8_20.png, id=512, 894.2208pt x 878.8032pt>
-File: Images/SIR_position_8_20.png Graphic file (type png)
-<use Images/SIR_position_8_20.png>
-Package pdftex.def Info: Images/SIR_position_8_20.png  used on input line 202.
-(pdftex.def)             Requested size: 167.29967pt x 164.41313pt.
-<Images/SIR_position_16_20.png, id=513, 894.2208pt x 878.8032pt>
-File: Images/SIR_position_16_20.png Graphic file (type png)
-<use Images/SIR_position_16_20.png>
-Package pdftex.def Info: Images/SIR_position_16_20.png  used on input line 203.
-
-(pdftex.def)             Requested size: 167.29967pt x 164.41313pt.
-) [44 <./Images/SIR_position_2_20.png> <./Images/SIR_position_4_20.png> <./Imag
-es/SIR_position_8_20.png> <./Images/SIR_position_16_20.png>]
+[43 <./Images/SI_positions_14k_mix.png>]
+<Images/SI_positions_10k.png, id=510, 894.2208pt x 878.3214pt>
+File: Images/SI_positions_10k.png Graphic file (type png)
+<use Images/SI_positions_10k.png>
+Package pdftex.def Info: Images/SI_positions_10k.png  used on input line 200.
+(pdftex.def)             Requested size: 167.29967pt x 164.323pt.
+<Images/SI_positions_14k.png, id=511, 894.2208pt x 878.3214pt>
+File: Images/SI_positions_14k.png Graphic file (type png)
+<use Images/SI_positions_14k.png>
+Package pdftex.def Info: Images/SI_positions_14k.png  used on input line 201.
+(pdftex.def)             Requested size: 167.29967pt x 164.323pt.
+<Images/SI_positions_17k.png, id=512, 894.2208pt x 878.3214pt>
+File: Images/SI_positions_17k.png Graphic file (type png)
+<use Images/SI_positions_17k.png>
+Package pdftex.def Info: Images/SI_positions_17k.png  used on input line 202.
+(pdftex.def)             Requested size: 167.29967pt x 164.323pt.
+<Images/SI_positions_20k.png, id=513, 894.2208pt x 878.3214pt>
+File: Images/SI_positions_20k.png Graphic file (type png)
+<use Images/SI_positions_20k.png>
+Package pdftex.def Info: Images/SI_positions_20k.png  used on input line 203.
+(pdftex.def)             Requested size: 167.29967pt x 164.323pt.
+) [44 <./Images/SI_positions_10k.png> <./Images/SI_positions_14k.png> <./Images
+/SI_positions_17k.png> <./Images/SI_positions_20k.png>]
 \openout2 = `SIR.aux'.
 
  (./SIR.tex
@@ -3408,13 +3407,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 171--172
 
  []
 
-
-Overfull \hbox (61.09982pt too wide) in paragraph at lines 173--174
-\T1/ppl/m/n/10.95 (-20) mélange par-fait et $\OT1/ppl/m/n/10.95 (-20) 9$ \T1/pp
-l/m/n/10.95 (-20) fois avec un nom-bre de mou-ve-ments vari-able : $\OT1/ppl/m/
-n/10.95 (-20) 1, 10, 50, 100, 200, 400, 600, 800, 1000$
- []
-
 <Images/SIR_mouvements_variables.png, id=592, 906.9885pt x 878.8032pt>
 File: Images/SIR_mouvements_variables.png Graphic file (type png)
 <use Images/SIR_mouvements_variables.png>
@@ -3424,8 +3416,8 @@ e 178.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-) [52] [53 <./Images/SIR_latence_8_5.png> <./Images/SIR_mouvements_variables.pn
-g>]
+) [52] [53 <./Images/SIR_latence_8_5.png>] [54 <./Images/SIR_mouvements_variabl
+es.png>]
 
 LaTeX Warning: Empty bibliography on input line 83.
 
@@ -3449,8 +3441,8 @@ Package logreq Info: Writing requests to 'BasicDoc.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 53667 strings out of 481239
- 1195020 string characters out of 5920377
+ 53668 strings out of 481239
+ 1194943 string characters out of 5920377
  2113804 words of memory out of 5000000
  67473 multiletter control sequences out of 15000+600000
  581165 words of font info for 222 fonts, out of 8000000 for 9000
@@ -3465,10 +3457,10 @@ xmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/share/texlive/texmf-dist/fon
 ts/type1/urw/palatino/uplr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw
 /palatino/uplr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/up
 lri8a.pfb>
-Output written on BasicDoc.pdf (62 pages, 25041523 bytes).
+Output written on BasicDoc.pdf (63 pages, 23568529 bytes).
 PDF statistics:
- 864 PDF objects out of 1000 (max. 8388607)
- 665 compressed objects within 7 object streams
- 174 named destinations out of 1000 (max. 500000)
+ 869 PDF objects out of 1000 (max. 8388607)
+ 669 compressed objects within 7 object streams
+ 175 named destinations out of 1000 (max. 500000)
  25393 words of extra memory for PDF output out of 29859 (max. 10000000)
 

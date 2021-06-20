@@ -27,6 +27,14 @@ int main(int argc, char const *argv[])
 
     std::vector<std::thread> threads;
 
+    //* Positions SI
+    //threads.push_back(std::thread(thread_function, "./Simulations/SI/Positions/1000mouvements/10000"));
+    //threads.push_back(std::thread(thread_function, "./Simulations/SI/Positions/1000mouvements/14000"));
+    //threads.push_back(std::thread(thread_function, "./Simulations/SI/Positions/1000mouvements/17000"));
+    //threads.push_back(std::thread(thread_function, "./Simulations/SI/Positions/1000mouvements/20000"));
+    threads.push_back(std::thread(thread_function, "./Simulations/SI/Positions/perfect_mix"));
+
+
     //* Divergence
     /*
     // SI mouvements
@@ -114,7 +122,7 @@ int main(int argc, char const *argv[])
     threads.push_back(std::thread(thread_function, "./Simulations/Random_Divergence/SI/Reference/perfect_mix/densite1sur16/17"));
     threads.push_back(std::thread(thread_function, "./Simulations/Random_Divergence/SI/Reference/perfect_mix/densite1sur16/18"));
     threads.push_back(std::thread(thread_function, "./Simulations/Random_Divergence/SI/Reference/perfect_mix/densite1sur16/19"));
-    */
+    
 
     // SIR mouvements
     threads.push_back(std::thread(thread_function, "./Simulations/Random_Divergence/SIR/Reference/1000mouvements/densite1sur8/0"));
@@ -201,7 +209,7 @@ int main(int argc, char const *argv[])
     threads.push_back(std::thread(thread_function, "./Simulations/Random_Divergence/SIR/Reference/perfect_mix/densite1sur16/17"));
     threads.push_back(std::thread(thread_function, "./Simulations/Random_Divergence/SIR/Reference/perfect_mix/densite1sur16/18"));
     threads.push_back(std::thread(thread_function, "./Simulations/Random_Divergence/SIR/Reference/perfect_mix/densite1sur16/19"));
-    
+    */
 
     /*
     //* SI
