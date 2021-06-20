@@ -75,52 +75,23 @@ Le mean absolute error permet de quantifier les différences entre les simulatio
 	\captionsetup{justification=centering}
 	\caption[Mean Aboslute Error Normalized : SI]{Mean Aboslute Error Normalized : modèle SIR, mélange parfait \label{tab:grid}}
 	\begin{tabular}{@{\extracolsep{\fill} } c|| c| c| c| c|}
-	 & 5000 & 20000 & 50000 & 100000\\ 
-	\midrule
-	\midrule
-	1/2 & $4.3\mathrm{e}{-3}$ & $2.1\mathrm{e}{-3}$ & $2.7\mathrm{e}{-3}$ & $2.5\mathrm{e}{-3}$\\
-	\midrule
-	1/4 & $3.8\mathrm{e}{-3}$ & $3.0\mathrm{e}{-3}$ & $2.1\mathrm{e}{-3}$ & $2.6\mathrm{e}{-3}$\\
-	\midrule
-	1/8 & $9.6\mathrm{e}{-3}$ & $2.8\mathrm{e}{-3}$ & $1.9\mathrm{e}{-3}$ & $2.3\mathrm{e}{-3}$\\
-	\midrule
-	1/16 & $8.5\mathrm{e}{-3}$ & $3.2\mathrm{e}{-3}$ & $6.2\mathrm{e}{-3}$ & $7.2\mathrm{e}{-3}$\\
-	\bottomrule
+		     & 5000                & 20000               & 50000               & 100000              \\
+		\midrule
+		\midrule
+		1/2  & $4.3\mathrm{e}{-3}$ & $2.1\mathrm{e}{-3}$ & $2.7\mathrm{e}{-3}$ & $2.5\mathrm{e}{-3}$ \\
+		\midrule
+		1/4  & $3.8\mathrm{e}{-3}$ & $3.0\mathrm{e}{-3}$ & $2.1\mathrm{e}{-3}$ & $2.6\mathrm{e}{-3}$ \\
+		\midrule
+		1/8  & $9.6\mathrm{e}{-3}$ & $2.8\mathrm{e}{-3}$ & $1.9\mathrm{e}{-3}$ & $2.3\mathrm{e}{-3}$ \\
+		\midrule
+		1/16 & $8.5\mathrm{e}{-3}$ & $3.2\mathrm{e}{-3}$ & $6.2\mathrm{e}{-3}$ & $7.2\mathrm{e}{-3}$ \\
+		\bottomrule
 	\end{tabular}
-	\end{table}
+\end{table}
 
 Les tésultats pour le modèle SIR sont généralement moins précis que pour le modèle SI. Certains résultats sont intéressant par exemple les courbes de densité $\frac{1}{8}$ avec $5000$ individus. L'erreur sur cette courbe est élevée car la simulation souffre de latence, par conséquent le déclanchement de l'événement se fait tardivement. C'est également la raison pour laquelle la simulation au $1000$ mouvement évolue plus rapidement que la simulation au mélange parfait.\\
 
 En densité $frac{1}{16}$ d'avantage d'erreurs apparaissent. Premièrement, une plus grande erreur de la simulation à $5000$ individus et due aux oscillations causées par le peu d'événements du système, donc les systèmes peu denses ont une plus grande erreur. Deuxièmement les simulations à faible densité prennent du temps déclancher un événement, ce qui engendre un temps de latence. Ce temps de latence est innexistant dans le modèle SIR, par conséquent notre modèle ne se comporte plus exactement comme un modèle mathématique SIR.
-
-\subsection{Positions des individus}
-
-Cette section a pour but de visualiser l'impacte de la densité des systèmes sur les déplacements des individus et donc sur la qualité du mélange. Les figures suivantes montrent les positions géographiques de tous les individus à une certaine itération. En vert sont affichés les individus sains et en rouge les individus contaminés.\\
-
-L'image ci-dessous montre les positions des individus pour une simulation au mélange parfait à l'itération $20$. Le mode de mélange parfait redistribue tous les individus dans l'espace à chaque itération, par conséquent les individus contaminés sont parfaitement répartis dans l'espace.
-
-\begin{figure}[h]
-	\centering
-	\captionsetup{justification=centering}
-	\includegraphics[width=.7\textwidth]{Images/SIR_position_8_20_perfect_mix.png}
-	\caption{test}
-\end{figure}
-
-Sur les figures qui suivent, nous effectuons la même mesure mais cette fois-ci sur des simulations aux $1000$ mouvements. L'idée est de pouvoir observer la qualité du mélange de population en fonction de la densité du système.
-
-\newpage
-
-\begin{figure}[h]
-	\centering
-	\captionsetup{justification=centering}
-	\includegraphics[width=.4\textwidth]{Images/SIR_position_2_20.png}
-	\includegraphics[width=.4\textwidth]{Images/SIR_position_4_20.png}
-	\includegraphics[width=.4\textwidth]{Images/SIR_position_8_20.png}
-	\includegraphics[width=.4\textwidth]{Images/SIR_position_16_20.png}
-	\caption{test}
-\end{figure}
-
-Modifications à effectuer...
 
 \newpage
 
@@ -138,30 +109,68 @@ Tout comme pour les simulations SI, nous calculons les variations d'une simulati
 	\caption{test}
 \end{figure}
 
+Idem aux simulations SI, nous pouvons observer de grandes variations d'une simulation à une autre. A nouveau, ce sont les systèmes peu denses qui sont victimes de plus grandes variations. La mesure de la variation n'est pas la même que pour le modèle SI. Ici nous mesurons l'itération du pic de contaminés simultanés, c'est-à-dire l'itération de la valeur maximale des courbes du compartiment $Infected$.\\
+
+Les analyses permettent de calculer la moyenne ainsi que la moyenne des écarts. 
+
 \begin{table}[H]
 	\centering
 	\captionsetup{justification=centering}
 	\caption[Variations : SIR]{Voisinage : modèle SIR\label{tab:grid}}
 	\begin{tabular}{@{\extracolsep{\fill} } c|| c| c| c| c|}
-	 & \multicolumn{2}{|c|}{1000 mouvements} & \multicolumn{2}{|c|}{Mélange parfait} \\
-	\midrule
-	\midrule
-	densité & 1/8 & 1/16 & 1/8 & 1/16\\
-	\midrule
-	min & $33$ & $62$ & $29$ & $59$\\
-	\midrule
-	max & $41$ & $93$ & $38$ & $87$\\
-	\midrule
-	mean & $35.35$ & $72.85$ & $33.2$ & $69.35$\\
-	\midrule
-	std & $2.10$ & $7.28$ & $2.58$ & $6.77$\\
-	\bottomrule
+		        & \multicolumn{2}{|c|}{1000 mouvements} & \multicolumn{2}{|c|}{Mélange parfait}                    \\
+		\midrule
+		\midrule
+		densité & 1/8                                   & 1/16                                  & 1/8    & 1/16    \\
+		\midrule
+		min     & $33$                                  & $62$                                  & $29$   & $59$    \\
+		\midrule
+		max     & $41$                                  & $93$                                  & $38$   & $87$    \\
+		\midrule
+		mean    & $35.35$                               & $72.85$                               & $33.2$ & $69.35$ \\
+		\midrule
+		std     & $2.10$                                & $7.28$                                & $2.58$ & $6.77$  \\
+		\bottomrule
 	\end{tabular}
-	\end{table}
+\end{table}
+
+Le tableau confirme plusieurs attentes du modèle. Premièrement, les simulations au mélange parfait sont plus rapides que les simulations aux $1000$ mouvements et ceci pour les dexu densités étudiées. Deuxièmement, la moyenne des déviations est plus grande sur des systèmes moins denses, ce qui confirme nos hypothèses.
 
 \subsection{Latence des simulations}
 
+Certaines simulations du modèle implémenté divergent du modèle SIR. Une des hypothèse expliquant ce phénomène est que les simulations peuvent nécessiter un certain temps de latence avant que la pandémie apparaisse, unn période durant laquelle la situation n'évolue pas. Cette latence est théoriquement possible dans le modèle par contre elle est inexistante dans le modèle mathématique SIR.\\
+
+L'objectif de cette section est de déterminer l'impacte de la latence sur le "mean absolute error" entre les simulations et le modèle mathématique SIR. Pour ce faire nous utilisons une simulation qui subit de la latence. De toutes les simulations du document, peu d'entre elle montrent des signes de latence. Ceci est compréhensible car la latence croît avec la diminution de la denstié des système mais décrôit en même temps. Un système à faible densité a une certaine latence à cause du manque d'événements mais en même temps le manque d'événements réduit la latence car la progression de la pandémie en sera ralentie et donc SIR s'adaptera mieux à la simulation.\\
+
+Par conséquent, la latence est généralement peu présente dans les simulations car le phénomène est auto-compensé. La simulation ci-dessous est l'exemple le plus explicite du comportement. La densité de cette simulation est de $\frac{1}{8}$ ce qui semble être une densité qui révèle de la latence. Tous les systèmes plus ou moins denses du document n'ont pas donné autant de latence.
+
+\newpage
+
+\begin{figure}[h]
+	\centering
+	\captionsetup{justification=centering}
+	\includegraphics[width=.6\textwidth]{Images/SIR_ref_8_5.png}
+	\caption{test}
+\end{figure}
+
+Pour confirmer la théorie de la latence, nous ajoutons une latence artificielle au modèle SIR et regardons l'impacte sur le "mean absolute error". En effet, si la simulation a quelques itérations de latence, nous devrions pouvoir ajouter de la latence au modèle SIR et observer des améliorations sur le MAE.
+
+\begin{figure}[h]
+	\centering
+	\captionsetup{justification=centering}
+	\includegraphics[width=.6\textwidth]{Images/SIR_latence_8_5.png}
+	\caption{test}
+\end{figure}
+
+La figure ci-dessus montre la valeur du MAE en ajoutant de la latence au modèle SIR. Sur les abscisses nous avons le nombre d'itérations de latence ajoutée à SIR et sur l'axe des ordonnées nous avons le calcul du MAE entre le modèle mathématique et la simulation.\\
+
+La valeur minimale de MAE est atteinte avec une latence artificielle sur SIR de $7$ itérations. Ce qui veut dire que notre simulation a subit une latence de environ $7$ itéraitons.
+
 \subsection{Mouvements variable}
+
+Jusqu'à présent, toutes les simulations ont utilisé une des deux méthodes de déplacement : mélange parfait ou $1000$ mouvements. Nous sommes partis de l'hypothèse que plus le nombre de mouvements est grand, plus le modèle tend vers la méthode du mélange parfait.\\
+
+Ce paragraphe est destiné à visualiser l'impacte du nombre de mouvements sur le déroulement d'une simulation. La même simulation est exécutée $1$ fois avec le mode de mélange parfait et $9$ fois avec un nombre de mouvements variable : $1$, $10$, $50$ ,$100$, $200$, $400$, $600$, $800$, $1000$ mouvements.
 
 \begin{figure}[h]
 	\centering
@@ -169,6 +178,8 @@ Tout comme pour les simulations SI, nous calculons les variations d'une simulati
 	\includegraphics[width=.7\textwidth]{Images/SIR_mouvements_variables.png}
 	\caption{test}
 \end{figure}
+
+Les résultats suivent notre intuition. Plus le mélange est efficace, plus la pandémie est rapide. Par conséquent, le nombre de mouvements a un impact direct sur la propagation de pandémies et cici significativement. 
 
 \subsection{Comparaison 1000 mouvements}
 
