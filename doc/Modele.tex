@@ -75,7 +75,7 @@ La représentation spatiale permet de situer tous les acteurs du système relati
 \centering
 \captionsetup{justification=centering}
 \includegraphics[scale=0.5]{Images/voisinage.png}
-\caption{grille régulière}
+\caption{voisinage}
 \end{figure}
 
 Le voisinage de la cellule contenant un acteur est les $4$ cellules avoisinantes directes en plus de la cellule centrale. Par conséquent notre humain dans cette cellule ne pourra interagir qu'avec d'autres acteurs dans les cellules voisines (en cyan) ou avec un autre acteur sur sa cellule. Le reste du système lui est hors de portée et donc invisible. Par conséquent, les actions et les états d'un acteur du système ne sont influencés que par l'état actuel de l'acteur ainsi que les autres acteurs se trouvant dans son voisinage. Toutes les autres cellules ainsi que leurs acteurs n'ont aucun impacte sur l'individu étudié.
@@ -111,7 +111,7 @@ La phase de mouvement permet simplement aux acteurs du système de physiquement 
 \centering
 \captionsetup{justification=centering}
 \includegraphics[scale=0.5]{Images/move_available.png}
-\caption{grille régulière}
+\caption{mouvements}
 \end{figure}
 
 Sur cet exemple, l'individu sur la cellule centrale souhaite se déplacer. Sur les $4$ cases possible pour un déplacement à cette itération, $3$ sont libres et $1$ occupée. Par conséquent notre humain ne peut pas se déplacer vers la droite. Le choix de l'individu pour le déplacement est aléatoire.\\

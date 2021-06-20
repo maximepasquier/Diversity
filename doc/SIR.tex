@@ -13,7 +13,7 @@ Les mesures ainsi que les méthodologie sont les mêmes que pour le modèle SI, 
 	\includegraphics[width=.4\textwidth]{Images/SIR_ref_2_20.png}
 	\includegraphics[width=.4\textwidth]{Images/SIR_ref_2_50.png}
 	\includegraphics[width=.4\textwidth]{Images/SIR_ref_2_100.png}
-	\caption{test}
+	\caption{Simulations de SI, densité 1/2}
 \end{figure}
 
 Pour les systèmes de forte densité, les simulations aux $1000$ mouvements peinent à se mélanger. Par conséquent, les événements sont plus tardifs. Nous pouvons observer les mêmes comportements que pour les simulations SI.
@@ -27,7 +27,7 @@ Pour les systèmes de forte densité, les simulations aux $1000$ mouvements pein
 	\includegraphics[width=.4\textwidth]{Images/SIR_ref_4_20.png}
 	\includegraphics[width=.4\textwidth]{Images/SIR_ref_4_50.png}
 	\includegraphics[width=.4\textwidth]{Images/SIR_ref_4_100.png}
-	\caption{test}
+	\caption{Simulations de SI, densité 1/4}
 \end{figure}
 
 En densité $\frac{1}{4}$ les simulations des $1000$ mouvements tendent d'avantage vers le mélange parfait. Les courbes sont toujours plus progressives et donc les événements plus lents.
@@ -41,7 +41,7 @@ En densité $\frac{1}{4}$ les simulations des $1000$ mouvements tendent d'avanta
 	\includegraphics[width=.4\textwidth]{Images/SIR_ref_8_20.png}
 	\includegraphics[width=.4\textwidth]{Images/SIR_ref_8_50.png}
 	\includegraphics[width=.4\textwidth]{Images/SIR_ref_8_100.png}
-	\caption{test}
+	\caption{Simulations de SI, densité 1/8}
 \end{figure}
 
 En plus de retrouver les mêmes comportements qu'observés précédemment, il y a un nouveau phénomène que nous pouvons observer ici. Ce phénomène est particulièrement présent dans les simulations à $5000$, $20000$ et $100000$ individus. Nous remarquons que la croissance des courbes pour les simulations de mélange parfait sont plus rapides que le modèle mathématique SIR. Ce comportement est dû au fait que nos simulations peuvent nécessiter d'un temps de latence avant l'émergence d'un événement. Alors que au contraire le modèle SIR n'est pas victime de cette latence.\\
@@ -57,7 +57,7 @@ Par conséquent, pour joindre le modèle SIR aux simulations il faut prendre en 
 	\includegraphics[width=.4\textwidth]{Images/SIR_ref_16_20.png}
 	\includegraphics[width=.4\textwidth]{Images/SIR_ref_16_50.png}
 	\includegraphics[width=.4\textwidth]{Images/SIR_ref_16_100.png}
-	\caption{test}
+	\caption{Simulations de SI, densité 1/16}
 \end{figure}
 
 Tout comme pour le modèle SI, les simulations aux $1000$ mouvements sont ralenties par les systèmes de grande taille car le mouvement des individus est réduit par rapport à la taille du système. C'est la raison pour laquelle les courbes au $1000$ mouvements sont retardées.\\
@@ -91,7 +91,7 @@ Le mean absolute error permet de quantifier les différences entre les simulatio
 
 Les tésultats pour le modèle SIR sont généralement moins précis que pour le modèle SI. Certains résultats sont intéressant par exemple les courbes de densité $\frac{1}{8}$ avec $5000$ individus. L'erreur sur cette courbe est élevée car la simulation souffre de latence, par conséquent le déclanchement de l'événement se fait tardivement. C'est également la raison pour laquelle la simulation au $1000$ mouvement évolue plus rapidement que la simulation au mélange parfait.\\
 
-En densité $frac{1}{16}$ d'avantage d'erreurs apparaissent. Premièrement, une plus grande erreur de la simulation à $5000$ individus et due aux oscillations causées par le peu d'événements du système, donc les systèmes peu denses ont une plus grande erreur. Deuxièmement les simulations à faible densité prennent du temps déclancher un événement, ce qui engendre un temps de latence. Ce temps de latence est innexistant dans le modèle SIR, par conséquent notre modèle ne se comporte plus exactement comme un modèle mathématique SIR.
+En densité $\frac{1}{16}$ d'avantage d'erreurs apparaissent. Premièrement, une plus grande erreur de la simulation à $5000$ individus et due aux oscillations causées par le peu d'événements du système, donc les systèmes peu denses ont une plus grande erreur. Deuxièmement les simulations à faible densité prennent du temps déclancher un événement, ce qui engendre un temps de latence. Ce temps de latence est innexistant dans le modèle SIR, par conséquent notre modèle ne se comporte plus exactement comme un modèle mathématique SIR.
 
 \newpage
 
@@ -106,7 +106,7 @@ Tout comme pour les simulations SI, nous calculons les variations d'une simulati
 	\includegraphics[width=.4\textwidth]{Images/SIR_divergence_8_mix.png}
 	\includegraphics[width=.4\textwidth]{Images/SIR_divergence_16_1000.png}
 	\includegraphics[width=.4\textwidth]{Images/SIR_divergence_16_mix.png}
-	\caption{test}
+	\caption{Variations SIR}
 \end{figure}
 
 Idem aux simulations SI, nous pouvons observer de grandes variations d'une simulation à une autre. A nouveau, ce sont les systèmes peu denses qui sont victimes de plus grandes variations. La mesure de la variation n'est pas la même que pour le modèle SI. Ici nous mesurons l'itération du pic de contaminés simultanés, c'est-à-dire l'itération de la valeur maximale des courbes du compartiment $Infected$.\\
@@ -116,7 +116,7 @@ Les analyses permettent de calculer la moyenne ainsi que la moyenne des écarts.
 \begin{table}[H]
 	\centering
 	\captionsetup{justification=centering}
-	\caption[Variations : SIR]{Voisinage : modèle SIR\label{tab:grid}}
+	\caption[Variations : SIR]{Variations : modèle SIR\label{tab:grid}}
 	\begin{tabular}{@{\extracolsep{\fill} } c|| c| c| c| c|}
 		        & \multicolumn{2}{|c|}{1000 mouvements} & \multicolumn{2}{|c|}{Mélange parfait}                    \\
 		\midrule
@@ -150,21 +150,23 @@ Par conséquent, la latence est généralement peu présente dans les simulation
 	\centering
 	\captionsetup{justification=centering}
 	\includegraphics[width=.6\textwidth]{Images/SIR_ref_8_5.png}
-	\caption{test}
+	\caption{Simulation SIR}
 \end{figure}
 
-Pour confirmer la théorie de la latence, nous ajoutons une latence artificielle au modèle SIR et regardons l'impacte sur le "mean absolute error". En effet, si la simulation a quelques itérations de latence, nous devrions pouvoir ajouter de la latence au modèle SIR et observer des améliorations sur le MAE.
+Pour confirmer la théorie de la latence, nous ajoutons une latence artificielle au modèle SIR et regardons l'impacte sur le "mean absolute error". En effet, si la simulation a quelques itérations de latence, nous devrions pouvoir ajouter de la latence au modèle SIR et observer des améliorations sur le MAE.\\
 
-\begin{figure}[h]
-	\centering
+\begin{wrapfigure}{r}{0.5\textwidth}
+    \centering
 	\captionsetup{justification=centering}
-	\includegraphics[width=.6\textwidth]{Images/SIR_latence_8_5.png}
-	\caption{test}
-\end{figure}
+	\includegraphics[width=.5\textwidth]{Images/SIR_latence_8_5.png}
+	\caption{latence SIR}
+\end{wrapfigure}
 
 La figure ci-dessus montre la valeur du MAE en ajoutant de la latence au modèle SIR. Sur les abscisses nous avons le nombre d'itérations de latence ajoutée à SIR et sur l'axe des ordonnées nous avons le calcul du MAE entre le modèle mathématique et la simulation.\\
 
 La valeur minimale de MAE est atteinte avec une latence artificielle sur SIR de $7$ itérations. Ce qui veut dire que notre simulation a subit une latence de environ $7$ itéraitons.
+
+\newpage
 
 \subsection{Mouvements variable}
 
@@ -176,12 +178,16 @@ Ce paragraphe est destiné à visualiser l'impacte du nombre de mouvements sur l
 	\centering
 	\captionsetup{justification=centering}
 	\includegraphics[width=.7\textwidth]{Images/SIR_mouvements_variables.png}
-	\caption{test}
+	\caption{Mouvements variable}
 \end{figure}
 
 Les résultats suivent notre intuition. Plus le mélange est efficace, plus la pandémie est rapide. Par conséquent, le nombre de mouvements a un impact direct sur la propagation de pandémies et cici significativement. 
 
+\newpage
+
 \subsection{Comparaison 1000 mouvements}
+
+Afin d'étudier la scalabilité du modèle sur de grandes simulations, nous comparons des simulations aux mêmes paramètres et même densité mais de taille différente. Le but est d'observer les différences entre des simulations presque identiques mais de taille différente. Pour pouvoir comparer des simulations de population différente il faut normaliser les résultats, c'est-à-dire diviser les valeurs par le nombre d'individus.
 
 \begin{figure}[h]
 	\centering
@@ -190,7 +196,9 @@ Les résultats suivent notre intuition. Plus le mélange est efficace, plus la p
 	\includegraphics[width=.4\textwidth]{Images/SIR_1000_4.png}
 	\includegraphics[width=.4\textwidth]{Images/SIR_1000_8.png}
 	\includegraphics[width=.4\textwidth]{Images/SIR_1000_16.png}
-	\caption{test}
+	\caption{Comparaison 1000 mouvements}
 \end{figure}
 
+Nous pouvons observer deux phénomènes. Le premier est le fait que plus le nombre d'individus est élevé, plus la pandémie prend du temps à se propager, ce qui paraît assez logique car il faut contaminer d'avantage d'individus. Le deuxième phénomène est le fait que le pic d'infectés décroît lorsque nous augmentons le nombre d'individus. Mais cette décroissance n'est pas constante sur les quatre densités testées. En effet il semblerait que plus la densité soit élevée, plus les variations entre les pics sont grands.\\
 
+Ce dernier phénomène est conforme à ce que nous avons étudié précédemment. Les systèmes à forte densité peinent à se mouvoir et propager une pandémie. Par conséquent le rayon de propagation de la pandémie est fixe pour une certaine densité et ne dépend pas du nombre d'individus. Nous avons donc les systèmes à forte densité et grande taille qui peinent à contaminer la population, ce qui produit des événement plus progressif et donc avec un pic de contaminés moins élevé. Par contre les simulations moins denses pénalisent moins les grands systèmes car le mélange s'effectue mieux. Avec un bon mélange, le nombre de personne n'impacte pas la vitesse de propagation. Cette situation est comparable à concaténer plusieurs simulations de plus petite taille pour en obtenir une grande. Dans cette configuration, les $N$ simulations constituant la grande ne prennent pas $N$ fois plus de temps que l'exécution d'une seule.

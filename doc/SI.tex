@@ -67,7 +67,7 @@ Un comportement intrigue sur la simulation à $20000$ individus. La courbe des $
     \includegraphics[width=0.5\textwidth]{Images/SI_ref_16_20k.png}
     \includegraphics[width=0.5\textwidth]{Images/SI_ref_16_50k.png}
     \includegraphics[width=0.5\textwidth]{Images/SI_ref_16_100k.png}
-    \caption{Simulations de SI, densité 1/8}
+    \caption{Simulations de SI, densité 1/16}
 \end{wrapfigure}
 
 Finalement les simulations en densité $\frac{1}{16}$ donnent aussi de bons résultats. Les mêmes comportements sont observés sur ces simulations mais la simulation à $50000$ individus montre un nouveau comportement pas encore observé sur les autres simulations. L'effet ici est assez faible mais on peut distinguer que la courbe du mélange parfait croît plus rapidement que le modèle mathématique SI. Nous avons donc une simulation qui évolue plus rapidement que le modèle SI. Cet effet n'est pas du au fait que le modèle implémenté est plus rapide mais uniquement au temps qu'il a fallu pour la pandémie se déclare. En effet le modèle SI n'a aucun temps de latence et commence donc à l'itération $0$. Les mesures prisent sur SI souffrent peu de de phénomène contrairement à certaines simulations par la suite. \\
@@ -148,7 +148,7 @@ L'objectif de cette section est de mesures cette variation sur des simulations �
     \includegraphics[width=0.5\textwidth]{Images/SI_divergence_8_mix.png}
     \includegraphics[width=0.5\textwidth]{Images/SI_divergence_16_1000.png}
     \includegraphics[width=0.5\textwidth]{Images/SI_divergence_16_mix.png}
-    \caption{Divergences SI}
+    \caption{Variations SI}
 \end{wrapfigure}
 
 Sur chacune des figure sont représentées les $20$ simulations aux mêmes paramètres. Les mesures effectuées sur les simulations permettent de mettre ces courbes en relations les unes avec les autres. L'intérêt des mesures est de calculer les décalages sur l'axe des abscisses. Pour ce faire nous mesurons à quelle itération la moitié du système est contaminé. Les simulations ont toutes un nombre d'individus de $20000$ par conséquent nous mesurons à quelle itérations les simulations ont atteint $10000$ infectés. C'est à cet endroit que les déviations sont les plus grandes. En effectuant la même mesure en calculant l'itération des $20000$ infectés, nous obtenons des variations moins importantes.\\
@@ -158,7 +158,7 @@ Avec les mesures nous pouvons calculer l'itération minimale ainsi que l'itérat
 \begin{table}[H]
 \centering
 \captionsetup{justification=centering}
-\caption[Variations : SI]{Voisinage : modèle SI\label{tab:grid}}
+\caption[Variations : SI]{Variations : modèle SI\label{tab:grid}}
 \begin{tabular}{@{\extracolsep{\fill} } c|| c| c| c| c|}
  & \multicolumn{2}{|c|}{1000 mouvements} & \multicolumn{2}{|c|}{Mélange parfait} \\
 \midrule
@@ -182,18 +182,18 @@ Plus les systèmes sont grands et plus les variations sont grandes comme on peut
 
 Cette section a pour but de visualiser l'impacte de la densité des systèmes sur les déplacements des individus et donc sur la qualité du mélange. Les figures suivantes montrent les positions géographiques de tous les individus à une certaine itération. En vert sont affichés les individus sains et en rouge les individus contaminés.\\
 
-L'image ci-dessous montre les positions des individus pour une simulation au mélange parfait à l'itération $20$. Le mode de mélange parfait redistribue tous les individus dans l'espace à chaque itération, par conséquent les individus contaminés sont parfaitement répartis dans l'espace.
+L'image ci-dessous montre les positions des individus pour une simulation au mélange parfait à l'itération $7$. Le mode de mélange parfait redistribue tous les individus dans l'espace à chaque itération, par conséquent les individus contaminés sont parfaitement répartis dans l'espace.
 
 \begin{figure}[h]
 	\centering
 	\captionsetup{justification=centering}
 	\includegraphics[width=.7\textwidth]{Images/SI_positions_14k_mix.png}
-	\caption{test}
+	\caption{positions, mélange parfait}
 \end{figure}
 
-Sur les figures qui suivent, nous effectuons la même mesure mais cette fois-ci sur des simulations aux $1000$ mouvements. L'idée est de pouvoir observer la qualité du mélange de population en fonction de la densité du système.
-
 \newpage
+
+Sur les figures qui suivent, nous effectuons la même mesure mais cette fois-ci sur des simulations aux $1000$ mouvements. Le nombre d'individus est de $10000$, $14000$, $17000$ et $20000$ nous onvons donc quatre simulations aux densité différentes mais paramétrées de manière identique. L'idée est de pouvoir observer la qualité du mélange de la population en fonction de la densité du système.
 
 \begin{figure}[h]
 	\centering
@@ -202,7 +202,9 @@ Sur les figures qui suivent, nous effectuons la même mesure mais cette fois-ci 
 	\includegraphics[width=.4\textwidth]{Images/SI_positions_14k.png}
 	\includegraphics[width=.4\textwidth]{Images/SI_positions_17k.png}
 	\includegraphics[width=.4\textwidth]{Images/SI_positions_20k.png}
-	\caption{test}
+	\caption{positions, 1000 mouvements}
 \end{figure}
 
-Modifications à effectuer...
+Afin de pouvoir comparer les simulations, nous avons fixé la taille du système à $200 \times 200$ et faisons varier uniquement le nombre d'individus. La dispersion des individus confime le fait que les mouvements sont entravés dans les simulations aux $1000$ mouvements. Pour rappel, en mode $1000$ mouvements, un individu essaie de se déplacer $1000$ fois par itération mais si le passage est obstrué, l'individu ne se déplace pas et ceci est compatibilisé comme mouvement.\\
+
+Par conséquent, le diamètre de propagation croit avec la diminution de la densité du système. 

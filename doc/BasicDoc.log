@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2021.6.17)  20 JUN 2021 17:45
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2021.6.17)  20 JUN 2021 23:00
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -2035,48 +2035,7 @@ File: ts1ppl.fd 2001/06/04 font definitions for TS1/ppl.
 Package tocbasic Info: character protrusion at lot deactivated on input line 28
 .
 
-(./BasicDoc.lot
-
-Package tocbasic Warning: number width of table toc entries should be increased
-!
-(tocbasic)                Currently used number width = 50.73077pt,
-(tocbasic)                Wanted number separation    = 4.37993pt,
-(tocbasic)                Reserved number width       = 0.0pt on input line 11.
-
-
-
-Package tocbasic Warning: number width of table toc entries should be increased
-!
-(tocbasic)                Currently used number width = 50.73077pt,
-(tocbasic)                Wanted number separation    = 4.37993pt,
-(tocbasic)                Reserved number width       = 0.0pt on input line 12.
-
-
-
-Package tocbasic Warning: number width of table toc entries should be increased
-!
-(tocbasic)                Currently used number width = 50.73077pt,
-(tocbasic)                Wanted number separation    = 4.37993pt,
-(tocbasic)                Reserved number width       = 0.0pt on input line 13.
-
-
-
-Package tocbasic Warning: number width of table toc entries should be increased
-!
-(tocbasic)                Currently used number width = 50.73077pt,
-(tocbasic)                Wanted number separation    = 4.37993pt,
-(tocbasic)                Reserved number width       = 0.0pt on input line 15.
-
-
-
-Package tocbasic Warning: number width of table toc entries should be increased
-!
-(tocbasic)                Currently used number width = 50.73077pt,
-(tocbasic)                Wanted number separation    = 4.37993pt,
-(tocbasic)                Reserved number width       = 0.0pt on input line 16.
-
-
-)
+(./BasicDoc.lot)
 \tf@lot=\write9
 \openout9 = `BasicDoc.lot'.
 
@@ -2085,229 +2044,7 @@ Package tocbasic Warning: number width of table toc entries should be increased
 ]
 Package tocbasic Info: character protrusion at lof deactivated on input line 31
 .
- (./BasicDoc.lof
-
-Package tocbasic Warning: number width of figure toc entries should be increase
-d!
-(tocbasic)                Currently used number width = 56.1621pt,
-(tocbasic)                Wanted number separation    = 4.37993pt,
-(tocbasic)                Reserved number width       = 0.0pt on input line 7.
-
-
-Package tocbasic Warning: number width of figure toc entries should be increase
-d!
-(tocbasic)                Currently used number width = 56.1621pt,
-(tocbasic)                Wanted number separation    = 4.37993pt,
-(tocbasic)                Reserved number width       = 0.0pt on input line 8.
-
-
-Package tocbasic Warning: number width of figure toc entries should be increase
-d!
-(tocbasic)                Currently used number width = 56.1621pt,
-(tocbasic)                Wanted number separation    = 4.37993pt,
-(tocbasic)                Reserved number width       = 0.0pt on input line 9.
-
-
-Package tocbasic Warning: number width of figure toc entries should be increase
-d!
-(tocbasic)                Currently used number width = 56.1621pt,
-(tocbasic)                Wanted number separation    = 4.37993pt,
-(tocbasic)                Reserved number width       = 0.0pt on input line 10.
-
-
-
-Package tocbasic Warning: number width of figure toc entries should be increase
-d!
-(tocbasic)                Currently used number width = 56.1621pt,
-(tocbasic)                Wanted number separation    = 4.37993pt,
-(tocbasic)                Reserved number width       = 0.0pt on input line 11.
-
-
-
-Package tocbasic Warning: number width of figure toc entries should be increase
-d!
-(tocbasic)                Currently used number width = 56.1621pt,
-(tocbasic)                Wanted number separation    = 4.37993pt,
-(tocbasic)                Reserved number width       = 0.0pt on input line 13.
-
-
-
-Package tocbasic Warning: number width of figure toc entries should be increase
-d!
-(tocbasic)                Currently used number width = 56.1621pt,
-(tocbasic)                Wanted number separation    = 4.37993pt,
-(tocbasic)                Reserved number width       = 0.0pt on input line 14.
-
-
-
-Package tocbasic Warning: number width of figure toc entries should be increase
-d!
-(tocbasic)                Currently used number width = 56.1621pt,
-(tocbasic)                Wanted number separation    = 4.37993pt,
-(tocbasic)                Reserved number width       = 0.0pt on input line 15.
-
-
-
-Package tocbasic Warning: number width of figure toc entries should be increase
-d!
-(tocbasic)                Currently used number width = 56.1621pt,
-(tocbasic)                Wanted number separation    = 4.37993pt,
-(tocbasic)                Reserved number width       = 0.0pt on input line 16.
-
-
-
-Package tocbasic Warning: number width of figure toc entries should be increase
-d!
-(tocbasic)                Currently used number width = 56.1621pt,
-(tocbasic)                Wanted number separation    = 4.37993pt,
-(tocbasic)                Reserved number width       = 0.0pt on input line 17.
-
-
-
-Package tocbasic Warning: number width of figure toc entries should be increase
-d!
-(tocbasic)                Currently used number width = 56.1621pt,
-(tocbasic)                Wanted number separation    = 4.37993pt,
-(tocbasic)                Reserved number width       = 0.0pt on input line 20.
-
-
-
-Package tocbasic Warning: number width of figure toc entries should be increase
-d!
-(tocbasic)                Currently used number width = 56.1621pt,
-(tocbasic)                Wanted number separation    = 4.37993pt,
-(tocbasic)                Reserved number width       = 0.0pt on input line 21.
-
-
-
-Package tocbasic Warning: number width of figure toc entries should be increase
-d!
-(tocbasic)                Currently used number width = 56.1621pt,
-(tocbasic)                Wanted number separation    = 4.37993pt,
-(tocbasic)                Reserved number width       = 0.0pt on input line 23.
-
-
-
-Package tocbasic Warning: number width of figure toc entries should be increase
-d!
-(tocbasic)                Currently used number width = 56.1621pt,
-(tocbasic)                Wanted number separation    = 4.37993pt,
-(tocbasic)                Reserved number width       = 0.0pt on input line 24.
-
-
-
-Package tocbasic Warning: number width of figure toc entries should be increase
-d!
-(tocbasic)                Currently used number width = 56.1621pt,
-(tocbasic)                Wanted number separation    = 4.37993pt,
-(tocbasic)                Reserved number width       = 0.0pt on input line 25.
-
-
-
-Package tocbasic Warning: number width of figure toc entries should be increase
-d!
-(tocbasic)                Currently used number width = 56.1621pt,
-(tocbasic)                Wanted number separation    = 4.37993pt,
-(tocbasic)                Reserved number width       = 0.0pt on input line 26.
-
-
-
-Package tocbasic Warning: number width of figure toc entries should be increase
-d!
-(tocbasic)                Currently used number width = 56.1621pt,
-(tocbasic)                Wanted number separation    = 4.37993pt,
-(tocbasic)                Reserved number width       = 0.0pt on input line 27.
-
-
-
-Package tocbasic Warning: number width of figure toc entries should be increase
-d!
-(tocbasic)                Currently used number width = 56.1621pt,
-(tocbasic)                Wanted number separation    = 4.37993pt,
-(tocbasic)                Reserved number width       = 0.0pt on input line 28.
-
-
-
-Package tocbasic Warning: number width of figure toc entries should be increase
-d!
-(tocbasic)                Currently used number width = 56.1621pt,
-(tocbasic)                Wanted number separation    = 4.37993pt,
-(tocbasic)                Reserved number width       = 0.0pt on input line 29.
-
-
-
-Package tocbasic Warning: number width of figure toc entries should be increase
-d!
-(tocbasic)                Currently used number width = 56.1621pt,
-(tocbasic)                Wanted number separation    = 4.37993pt,
-(tocbasic)                Reserved number width       = 0.0pt on input line 31.
-
-
-
-Package tocbasic Warning: number width of figure toc entries should be increase
-d!
-(tocbasic)                Currently used number width = 56.1621pt,
-(tocbasic)                Wanted number separation    = 4.37993pt,
-(tocbasic)                Reserved number width       = 0.0pt on input line 32.
-
-
-
-Package tocbasic Warning: number width of figure toc entries should be increase
-d!
-(tocbasic)                Currently used number width = 56.1621pt,
-(tocbasic)                Wanted number separation    = 4.37993pt,
-(tocbasic)                Reserved number width       = 0.0pt on input line 33.
-
-
-
-Package tocbasic Warning: number width of figure toc entries should be increase
-d!
-(tocbasic)                Currently used number width = 56.1621pt,
-(tocbasic)                Wanted number separation    = 4.37993pt,
-(tocbasic)                Reserved number width       = 0.0pt on input line 34.
-
-
-
-Package tocbasic Warning: number width of figure toc entries should be increase
-d!
-(tocbasic)                Currently used number width = 56.1621pt,
-(tocbasic)                Wanted number separation    = 4.37993pt,
-(tocbasic)                Reserved number width       = 0.0pt on input line 35.
-
-
-
-Package tocbasic Warning: number width of figure toc entries should be increase
-d!
-(tocbasic)                Currently used number width = 56.1621pt,
-(tocbasic)                Wanted number separation    = 4.37993pt,
-(tocbasic)                Reserved number width       = 0.0pt on input line 36.
-
-
-
-Package tocbasic Warning: number width of figure toc entries should be increase
-d!
-(tocbasic)                Currently used number width = 56.1621pt,
-(tocbasic)                Wanted number separation    = 4.37993pt,
-(tocbasic)                Reserved number width       = 0.0pt on input line 37.
-
-
-
-Package tocbasic Warning: number width of figure toc entries should be increase
-d!
-(tocbasic)                Currently used number width = 56.1621pt,
-(tocbasic)                Wanted number separation    = 4.37993pt,
-(tocbasic)                Reserved number width       = 0.0pt on input line 38.
-
-
-
-Package tocbasic Warning: number width of figure toc entries should be increase
-d!
-(tocbasic)                Currently used number width = 56.1621pt,
-(tocbasic)                Wanted number separation    = 4.37993pt,
-(tocbasic)                Reserved number width       = 0.0pt on input line 39.
-
-
-)
+ (./BasicDoc.lof)
 \tf@lof=\write10
 \openout10 = `BasicDoc.lof'.
 
@@ -2334,22 +2071,22 @@ Class scrreprt Warning: \float@addtolists detected!
 (scrreprt)              deprecated \float@addtolist interface .
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4--5
+Underfull \hbox (badness 10000) in paragraph at lines 3--4
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 6--7
+Underfull \hbox (badness 10000) in paragraph at lines 5--6
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 8--9
+Underfull \hbox (badness 10000) in paragraph at lines 7--8
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 10--11
+Underfull \hbox (badness 10000) in paragraph at lines 9--10
 
  []
 
@@ -2362,17 +2099,17 @@ Underfull \hbox (badness 10000) in paragraph at lines 10--11
  (./Introduction.tex
 chapter 2.
 
-Underfull \hbox (badness 10000) in paragraph at lines 9--10
+Underfull \hbox (badness 10000) in paragraph at lines 3--4
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 11--12
+Underfull \hbox (badness 10000) in paragraph at lines 5--6
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 13--14
+Underfull \hbox (badness 10000) in paragraph at lines 7--8
 
  []
 
@@ -2483,7 +2220,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 57--58
 
  []
 
-<Images/grid.png, id=261, 501.072pt x 501.072pt>
+<Images/grid.png, id=257, 501.072pt x 501.072pt>
 File: Images/grid.png Graphic file (type png)
 <use Images/grid.png>
 Package pdftex.def Info: Images/grid.png  used on input line 62.
@@ -2493,7 +2230,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 72--73
 
  []
 
-<Images/voisinage.png, id=267, 408.3255pt x 399.1713pt>
+<Images/voisinage.png, id=263, 408.3255pt x 399.1713pt>
 File: Images/voisinage.png Graphic file (type png)
 <use Images/voisinage.png>
 Package pdftex.def Info: Images/voisinage.png  used on input line 77.
@@ -2503,7 +2240,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 85--86
 
  []
 
-<Images/configuration_initiale.png, id=268, 501.072pt x 501.072pt>
+<Images/configuration_initiale.png, id=264, 501.072pt x 501.072pt>
 File: Images/configuration_initiale.png Graphic file (type png)
 <use Images/configuration_initiale.png>
 Package pdftex.def Info: Images/configuration_initiale.png  used on input line 
@@ -2529,7 +2266,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 108--109
 
  []
 
-<Images/move_available.png, id=279, 408.3255pt x 498.1812pt>
+<Images/move_available.png, id=275, 408.3255pt x 498.1812pt>
 File: Images/move_available.png Graphic file (type png)
 <use Images/move_available.png>
 Package pdftex.def Info: Images/move_available.png  used on input line 113.
@@ -2579,7 +2316,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 172--173
 
  []
 
-<Images/hamming.png, id=303, 161.6439pt x 71.5473pt>
+<Images/hamming.png, id=299, 161.6439pt x 71.5473pt>
 File: Images/hamming.png Graphic file (type png)
 <use Images/hamming.png>
 Package pdftex.def Info: Images/hamming.png  used on input line 177.
@@ -2708,7 +2445,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 56--57
 
  []
 
-<Images/MatricesPointeurs.png, id=330, 859.21pt x 502.87875pt>
+<Images/MatricesPointeurs.png, id=326, 859.21pt x 502.87875pt>
 File: Images/MatricesPointeurs.png Graphic file (type png)
 <use Images/MatricesPointeurs.png>
 Package pdftex.def Info: Images/MatricesPointeurs.png  used on input line 61.
@@ -2757,22 +2494,22 @@ Underfull \hbox (badness 10000) in paragraph at lines 83--84
  []
 
 [22]
-<Images/fonction_1.png, id=345, 803.0pt x 803.0pt>
+<Images/fonction_1.png, id=341, 803.0pt x 803.0pt>
 File: Images/fonction_1.png Graphic file (type png)
 <use Images/fonction_1.png>
 Package pdftex.def Info: Images/fonction_1.png  used on input line 93.
 (pdftex.def)             Requested size: 167.29967pt x 167.29942pt.
-<Images/fonction_2.png, id=346, 803.0pt x 803.0pt>
+<Images/fonction_2.png, id=342, 803.0pt x 803.0pt>
 File: Images/fonction_2.png Graphic file (type png)
 <use Images/fonction_2.png>
 Package pdftex.def Info: Images/fonction_2.png  used on input line 98.
 (pdftex.def)             Requested size: 167.29967pt x 167.29942pt.
-<Images/fonction_4.png, id=347, 803.0pt x 803.0pt>
+<Images/fonction_4.png, id=343, 803.0pt x 803.0pt>
 File: Images/fonction_4.png Graphic file (type png)
 <use Images/fonction_4.png>
 Package pdftex.def Info: Images/fonction_4.png  used on input line 107.
 (pdftex.def)             Requested size: 167.29967pt x 167.29942pt.
-<Images/fonction_8.png, id=348, 803.0pt x 803.0pt>
+<Images/fonction_8.png, id=344, 803.0pt x 803.0pt>
 File: Images/fonction_8.png Graphic file (type png)
 <use Images/fonction_8.png>
 Package pdftex.def Info: Images/fonction_8.png  used on input line 112.
@@ -2901,7 +2638,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 39--40
  []
 
 [29]
-<Images/SI_exemple.png, id=385, 1177.5192pt x 605.3817pt>
+<Images/SI_exemple.png, id=381, 1177.5192pt x 605.3817pt>
 File: Images/SI_exemple.png Graphic file (type png)
 <use Images/SI_exemple.png>
 Package pdftex.def Info: Images/SI_exemple.png  used on input line 48.
@@ -2921,7 +2658,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 63--64
 [30 <./Images/SI_exemple.png>]
 (./_minted-BasicDoc/941D6DDD5877B1595EB42DEC30E36AA0A3D82C6D8696E4BA6BF476E288E
 3F5D1.pygtex)
-<Images/SIR_exemple.png, id=394, 900.7251pt x 300.6432pt>
+<Images/SIR_exemple.png, id=390, 900.7251pt x 300.6432pt>
 File: Images/SIR_exemple.png Graphic file (type png)
 <use Images/SIR_exemple.png>
 Package pdftex.def Info: Images/SIR_exemple.png  used on input line 87.
@@ -2951,11 +2688,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 103--104
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 105--106
-
- []
-
 \openout3 = `BasicDoc.pyg'.
 
 
@@ -2976,15 +2708,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 105--106
 
 (./_minted-BasicDoc/460E2649D1B96323D7820A176A7F8AE80EE38139A3E3C51A234AB14B79F
 83C7B.pygtex)
-Underfull \hbox (badness 10000) in paragraph at lines 198--199
-
- []
-
 \openout3 = `BasicDoc.pyg'.
 
-[33]
+
 (./_minted-BasicDoc/6EF1F629AF442F56965A69D60FA71FF20EE38139A3E3C51A234AB14B79F
-83C7B.pygtex)
+83C7B.pygtex) [33]
 \openout3 = `BasicDoc.pyg'.
 
 
@@ -2999,22 +2727,22 @@ chapter 8.
 
 
 ]
-<Images/SI_ref_2_5k.png, id=417, 1161.6198pt x 605.8635pt>
+<Images/SI_ref_2_5k.png, id=413, 1161.6198pt x 605.8635pt>
 File: Images/SI_ref_2_5k.png Graphic file (type png)
 <use Images/SI_ref_2_5k.png>
 Package pdftex.def Info: Images/SI_ref_2_5k.png  used on input line 14.
 (pdftex.def)             Requested size: 209.12778pt x 109.06921pt.
-<Images/SI_ref_2_20k.png, id=418, 1177.5192pt x 605.8635pt>
+<Images/SI_ref_2_20k.png, id=414, 1177.5192pt x 605.8635pt>
 File: Images/SI_ref_2_20k.png Graphic file (type png)
 <use Images/SI_ref_2_20k.png>
 Package pdftex.def Info: Images/SI_ref_2_20k.png  used on input line 15.
 (pdftex.def)             Requested size: 209.12778pt x 107.59929pt.
-<Images/SI_ref_2_50k.png, id=419, 1161.6198pt x 605.8635pt>
+<Images/SI_ref_2_50k.png, id=415, 1161.6198pt x 605.8635pt>
 File: Images/SI_ref_2_50k.png Graphic file (type png)
 <use Images/SI_ref_2_50k.png>
 Package pdftex.def Info: Images/SI_ref_2_50k.png  used on input line 16.
 (pdftex.def)             Requested size: 209.12778pt x 109.06921pt.
-<Images/SI_ref_2_100k.png, id=420, 1171.2558pt x 605.8635pt>
+<Images/SI_ref_2_100k.png, id=416, 1171.2558pt x 605.8635pt>
 File: Images/SI_ref_2_100k.png Graphic file (type png)
 <use Images/SI_ref_2_100k.png>
 Package pdftex.def Info: Images/SI_ref_2_100k.png  used on input line 17.
@@ -3111,22 +2839,22 @@ Underfull \hbox (badness 10000) in paragraph at lines 25--26
 
 [36 <./Images/SI_ref_2_5k.png> <./Images/SI_ref_2_20k.png> <./Images/SI_ref_2_5
 0k.png> <./Images/SI_ref_2_100k.png>]
-<Images/SI_ref_4_5k.png, id=429, 1167.8832pt x 605.8635pt>
+<Images/SI_ref_4_5k.png, id=425, 1167.8832pt x 605.8635pt>
 File: Images/SI_ref_4_5k.png Graphic file (type png)
 <use Images/SI_ref_4_5k.png>
 Package pdftex.def Info: Images/SI_ref_4_5k.png  used on input line 32.
 (pdftex.def)             Requested size: 209.12778pt x 108.48679pt.
-<Images/SI_ref_4_20k.png, id=430, 1184.0235pt x 605.8635pt>
+<Images/SI_ref_4_20k.png, id=426, 1184.0235pt x 605.8635pt>
 File: Images/SI_ref_4_20k.png Graphic file (type png)
 <use Images/SI_ref_4_20k.png>
 Package pdftex.def Info: Images/SI_ref_4_20k.png  used on input line 33.
 (pdftex.def)             Requested size: 209.12778pt x 107.00763pt.
-<Images/SI_ref_4_50k.png, id=431, 1167.8832pt x 605.8635pt>
+<Images/SI_ref_4_50k.png, id=427, 1167.8832pt x 605.8635pt>
 File: Images/SI_ref_4_50k.png Graphic file (type png)
 <use Images/SI_ref_4_50k.png>
 Package pdftex.def Info: Images/SI_ref_4_50k.png  used on input line 34.
 (pdftex.def)             Requested size: 209.12778pt x 108.48679pt.
-<Images/SI_ref_4_100k.png, id=432, 1177.5192pt x 605.8635pt>
+<Images/SI_ref_4_100k.png, id=428, 1177.5192pt x 605.8635pt>
 File: Images/SI_ref_4_100k.png Graphic file (type png)
 <use Images/SI_ref_4_100k.png>
 Package pdftex.def Info: Images/SI_ref_4_100k.png  used on input line 35.
@@ -3143,22 +2871,22 @@ Underfull \hbox (badness 10000) in paragraph at lines 41--42
 
 [37 <./Images/SI_ref_4_5k.png> <./Images/SI_ref_4_20k.png> <./Images/SI_ref_4_5
 0k.png> <./Images/SI_ref_4_100k.png>]
-<Images/SI_ref_8_5k.png, id=443, 1161.6198pt x 605.8635pt>
+<Images/SI_ref_8_5k.png, id=438, 1161.6198pt x 605.8635pt>
 File: Images/SI_ref_8_5k.png Graphic file (type png)
 <use Images/SI_ref_8_5k.png>
 Package pdftex.def Info: Images/SI_ref_8_5k.png  used on input line 50.
 (pdftex.def)             Requested size: 209.12778pt x 109.06921pt.
-<Images/SI_ref_8_20k.png, id=444, 1177.5192pt x 605.8635pt>
+<Images/SI_ref_8_20k.png, id=439, 1177.5192pt x 605.8635pt>
 File: Images/SI_ref_8_20k.png Graphic file (type png)
 <use Images/SI_ref_8_20k.png>
 Package pdftex.def Info: Images/SI_ref_8_20k.png  used on input line 51.
 (pdftex.def)             Requested size: 209.12778pt x 107.59929pt.
-<Images/SI_ref_8_50k.png, id=445, 1161.6198pt x 605.8635pt>
+<Images/SI_ref_8_50k.png, id=440, 1161.6198pt x 605.8635pt>
 File: Images/SI_ref_8_50k.png Graphic file (type png)
 <use Images/SI_ref_8_50k.png>
 Package pdftex.def Info: Images/SI_ref_8_50k.png  used on input line 52.
 (pdftex.def)             Requested size: 209.12778pt x 109.06921pt.
-<Images/SI_ref_8_100k.png, id=446, 1171.2558pt x 605.8635pt>
+<Images/SI_ref_8_100k.png, id=441, 1171.2558pt x 605.8635pt>
 File: Images/SI_ref_8_100k.png Graphic file (type png)
 <use Images/SI_ref_8_100k.png>
 Package pdftex.def Info: Images/SI_ref_8_100k.png  used on input line 53.
@@ -3232,22 +2960,22 @@ Underfull \hbox (badness 10000) in paragraph at lines 57--58
 
 [38 <./Images/SI_ref_8_5k.png> <./Images/SI_ref_8_20k.png> <./Images/SI_ref_8_5
 0k.png> <./Images/SI_ref_8_100k.png>]
-<Images/SI_ref_16_5k.png, id=455, 1161.6198pt x 605.8635pt>
+<Images/SI_ref_16_5k.png, id=451, 1161.6198pt x 605.8635pt>
 File: Images/SI_ref_16_5k.png Graphic file (type png)
 <use Images/SI_ref_16_5k.png>
 Package pdftex.def Info: Images/SI_ref_16_5k.png  used on input line 66.
 (pdftex.def)             Requested size: 209.12778pt x 109.06921pt.
-<Images/SI_ref_16_20k.png, id=456, 1177.5192pt x 605.8635pt>
+<Images/SI_ref_16_20k.png, id=452, 1177.5192pt x 605.8635pt>
 File: Images/SI_ref_16_20k.png Graphic file (type png)
 <use Images/SI_ref_16_20k.png>
 Package pdftex.def Info: Images/SI_ref_16_20k.png  used on input line 67.
 (pdftex.def)             Requested size: 209.12778pt x 107.59929pt.
-<Images/SI_ref_16_50k.png, id=457, 1161.6198pt x 605.8635pt>
+<Images/SI_ref_16_50k.png, id=453, 1161.6198pt x 605.8635pt>
 File: Images/SI_ref_16_50k.png Graphic file (type png)
 <use Images/SI_ref_16_50k.png>
 Package pdftex.def Info: Images/SI_ref_16_50k.png  used on input line 68.
 (pdftex.def)             Requested size: 209.12778pt x 109.06921pt.
-<Images/SI_ref_16_100k.png, id=458, 1171.2558pt x 605.8635pt>
+<Images/SI_ref_16_100k.png, id=454, 1171.2558pt x 605.8635pt>
 File: Images/SI_ref_16_100k.png Graphic file (type png)
 <use Images/SI_ref_16_100k.png>
 Package pdftex.def Info: Images/SI_ref_16_100k.png  used on input line 69.
@@ -3361,25 +3089,25 @@ Underfull \hbox (badness 10000) in paragraph at lines 138--139
  []
 
 [41]
-<Images/SI_divergence_8_1000.png, id=475, 1184.0235pt x 605.3817pt>
+<Images/SI_divergence_8_1000.png, id=471, 1184.0235pt x 605.3817pt>
 File: Images/SI_divergence_8_1000.png Graphic file (type png)
 <use Images/SI_divergence_8_1000.png>
 Package pdftex.def Info: Images/SI_divergence_8_1000.png  used on input line 14
 7.
 (pdftex.def)             Requested size: 209.12778pt x 106.92255pt.
-<Images/SI_divergence_8_mix.png, id=476, 1184.0235pt x 605.3817pt>
+<Images/SI_divergence_8_mix.png, id=472, 1184.0235pt x 605.3817pt>
 File: Images/SI_divergence_8_mix.png Graphic file (type png)
 <use Images/SI_divergence_8_mix.png>
 Package pdftex.def Info: Images/SI_divergence_8_mix.png  used on input line 148
 .
 (pdftex.def)             Requested size: 209.12778pt x 106.92255pt.
-<Images/SI_divergence_16_1000.png, id=477, 1187.1552pt x 605.3817pt>
+<Images/SI_divergence_16_1000.png, id=473, 1187.1552pt x 605.3817pt>
 File: Images/SI_divergence_16_1000.png Graphic file (type png)
 <use Images/SI_divergence_16_1000.png>
 Package pdftex.def Info: Images/SI_divergence_16_1000.png  used on input line 1
 49.
 (pdftex.def)             Requested size: 209.12778pt x 106.63618pt.
-<Images/SI_divergence_16_mix.png, id=478, 1187.1552pt x 605.3817pt>
+<Images/SI_divergence_16_mix.png, id=474, 1187.1552pt x 605.3817pt>
 File: Images/SI_divergence_16_mix.png Graphic file (type png)
 <use Images/SI_divergence_16_mix.png>
 Package pdftex.def Info: Images/SI_divergence_16_mix.png  used on input line 15
@@ -3468,55 +3196,60 @@ Underfull \hbox (badness 10000) in paragraph at lines 183--184
 
  []
 
-<Images/SI_positions_14k_mix.png, id=487, 894.2208pt x 878.8032pt>
+<Images/SI_positions_14k_mix.png, id=483, 894.2208pt x 878.8032pt>
 File: Images/SI_positions_14k_mix.png Graphic file (type png)
 <use Images/SI_positions_14k_mix.png>
 Package pdftex.def Info: Images/SI_positions_14k_mix.png  used on input line 19
 0.
 (pdftex.def)             Requested size: 292.7776pt x 287.72635pt.
 [43 <./Images/SI_positions_14k_mix.png>]
-<Images/SI_positions_10k.png, id=494, 894.2208pt x 878.3214pt>
+<Images/SI_positions_10k.png, id=490, 894.2208pt x 878.3214pt>
 File: Images/SI_positions_10k.png Graphic file (type png)
 <use Images/SI_positions_10k.png>
 Package pdftex.def Info: Images/SI_positions_10k.png  used on input line 201.
 (pdftex.def)             Requested size: 167.29967pt x 164.323pt.
-<Images/SI_positions_14k.png, id=495, 894.2208pt x 878.3214pt>
+<Images/SI_positions_14k.png, id=491, 894.2208pt x 878.3214pt>
 File: Images/SI_positions_14k.png Graphic file (type png)
 <use Images/SI_positions_14k.png>
 Package pdftex.def Info: Images/SI_positions_14k.png  used on input line 202.
 (pdftex.def)             Requested size: 167.29967pt x 164.323pt.
-<Images/SI_positions_17k.png, id=496, 894.2208pt x 878.3214pt>
+<Images/SI_positions_17k.png, id=492, 894.2208pt x 878.3214pt>
 File: Images/SI_positions_17k.png Graphic file (type png)
 <use Images/SI_positions_17k.png>
 Package pdftex.def Info: Images/SI_positions_17k.png  used on input line 203.
 (pdftex.def)             Requested size: 167.29967pt x 164.323pt.
-<Images/SI_positions_20k.png, id=497, 894.2208pt x 878.3214pt>
+<Images/SI_positions_20k.png, id=493, 894.2208pt x 878.3214pt>
 File: Images/SI_positions_20k.png Graphic file (type png)
 <use Images/SI_positions_20k.png>
 Package pdftex.def Info: Images/SI_positions_20k.png  used on input line 204.
 (pdftex.def)             Requested size: 167.29967pt x 164.323pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 208--209
+
+ []
+
 ) [44 <./Images/SI_positions_10k.png> <./Images/SI_positions_14k.png> <./Images
 /SI_positions_17k.png> <./Images/SI_positions_20k.png>]
 \openout2 = `SIR.aux'.
 
  (./SIR.tex
 chapter 9.
-<Images/SIR_ref_2_5.png, id=506, 891.0891pt x 878.8032pt>
+<Images/SIR_ref_2_5.png, id=502, 891.0891pt x 878.8032pt>
 File: Images/SIR_ref_2_5.png Graphic file (type png)
 <use Images/SIR_ref_2_5.png>
 Package pdftex.def Info: Images/SIR_ref_2_5.png  used on input line 12.
 (pdftex.def)             Requested size: 167.29967pt x 164.98975pt.
-<Images/SIR_ref_2_20.png, id=507, 897.5934pt x 878.8032pt>
+<Images/SIR_ref_2_20.png, id=503, 897.5934pt x 878.8032pt>
 File: Images/SIR_ref_2_20.png Graphic file (type png)
 <use Images/SIR_ref_2_20.png>
 Package pdftex.def Info: Images/SIR_ref_2_20.png  used on input line 13.
 (pdftex.def)             Requested size: 167.29967pt x 163.79631pt.
-<Images/SIR_ref_2_50.png, id=508, 891.0891pt x 878.8032pt>
+<Images/SIR_ref_2_50.png, id=504, 891.0891pt x 878.8032pt>
 File: Images/SIR_ref_2_50.png Graphic file (type png)
 <use Images/SIR_ref_2_50.png>
 Package pdftex.def Info: Images/SIR_ref_2_50.png  used on input line 14.
 (pdftex.def)             Requested size: 167.29967pt x 164.98975pt.
-<Images/SIR_ref_2_100.png, id=509, 900.7251pt x 878.8032pt>
+<Images/SIR_ref_2_100.png, id=505, 900.7251pt x 878.8032pt>
 File: Images/SIR_ref_2_100.png Graphic file (type png)
 <use Images/SIR_ref_2_100.png>
 Package pdftex.def Info: Images/SIR_ref_2_100.png  used on input line 15.
@@ -3527,44 +3260,44 @@ Package pdftex.def Info: Images/SIR_ref_2_100.png  used on input line 15.
 
  <./Images/SIR_ref_2_5.png> <./Images/SIR_ref_2_20.png> <./Images/SIR_ref_2_50.
 png> <./Images/SIR_ref_2_100.png>]
-<Images/SIR_ref_4_5.png, id=518, 900.7251pt x 878.8032pt>
+<Images/SIR_ref_4_5.png, id=514, 900.7251pt x 878.8032pt>
 File: Images/SIR_ref_4_5.png Graphic file (type png)
 <use Images/SIR_ref_4_5.png>
 Package pdftex.def Info: Images/SIR_ref_4_5.png  used on input line 26.
 (pdftex.def)             Requested size: 167.29967pt x 163.2197pt.
-<Images/SIR_ref_4_20.png, id=519, 906.9885pt x 878.8032pt>
+<Images/SIR_ref_4_20.png, id=515, 906.9885pt x 878.8032pt>
 File: Images/SIR_ref_4_20.png Graphic file (type png)
 <use Images/SIR_ref_4_20.png>
 Package pdftex.def Info: Images/SIR_ref_4_20.png  used on input line 27.
 (pdftex.def)             Requested size: 167.29967pt x 162.0933pt.
-<Images/SIR_ref_4_50.png, id=520, 900.7251pt x 878.8032pt>
+<Images/SIR_ref_4_50.png, id=516, 900.7251pt x 878.8032pt>
 File: Images/SIR_ref_4_50.png Graphic file (type png)
 <use Images/SIR_ref_4_50.png>
 Package pdftex.def Info: Images/SIR_ref_4_50.png  used on input line 28.
 (pdftex.def)             Requested size: 167.29967pt x 163.2197pt.
-<Images/SIR_ref_4_100.png, id=521, 900.7251pt x 878.8032pt>
+<Images/SIR_ref_4_100.png, id=517, 900.7251pt x 878.8032pt>
 File: Images/SIR_ref_4_100.png Graphic file (type png)
 <use Images/SIR_ref_4_100.png>
 Package pdftex.def Info: Images/SIR_ref_4_100.png  used on input line 29.
 (pdftex.def)             Requested size: 167.29967pt x 163.2197pt.
  [46 <./Images/SIR_ref_4_5.png> <./Images/SIR_ref_4_20.png> <./Images/SIR_ref_4
 _50.png> <./Images/SIR_ref_4_100.png>]
-<Images/SIR_ref_8_5.png, id=530, 900.7251pt x 878.8032pt>
+<Images/SIR_ref_8_5.png, id=526, 900.7251pt x 878.8032pt>
 File: Images/SIR_ref_8_5.png Graphic file (type png)
 <use Images/SIR_ref_8_5.png>
 Package pdftex.def Info: Images/SIR_ref_8_5.png  used on input line 40.
 (pdftex.def)             Requested size: 167.29967pt x 163.2197pt.
-<Images/SIR_ref_8_20.png, id=531, 906.9885pt x 878.8032pt>
+<Images/SIR_ref_8_20.png, id=527, 906.9885pt x 878.8032pt>
 File: Images/SIR_ref_8_20.png Graphic file (type png)
 <use Images/SIR_ref_8_20.png>
 Package pdftex.def Info: Images/SIR_ref_8_20.png  used on input line 41.
 (pdftex.def)             Requested size: 167.29967pt x 162.0933pt.
-<Images/SIR_ref_8_50.png, id=532, 900.7251pt x 878.8032pt>
+<Images/SIR_ref_8_50.png, id=528, 900.7251pt x 878.8032pt>
 File: Images/SIR_ref_8_50.png Graphic file (type png)
 <use Images/SIR_ref_8_50.png>
 Package pdftex.def Info: Images/SIR_ref_8_50.png  used on input line 42.
 (pdftex.def)             Requested size: 167.29967pt x 163.2197pt.
-<Images/SIR_ref_8_100.png, id=533, 900.7251pt x 878.8032pt>
+<Images/SIR_ref_8_100.png, id=529, 900.7251pt x 878.8032pt>
 File: Images/SIR_ref_8_100.png Graphic file (type png)
 <use Images/SIR_ref_8_100.png>
 Package pdftex.def Info: Images/SIR_ref_8_100.png  used on input line 43.
@@ -3576,22 +3309,22 @@ Underfull \hbox (badness 10000) in paragraph at lines 47--48
 
 [47 <./Images/SIR_ref_8_5.png> <./Images/SIR_ref_8_20.png> <./Images/SIR_ref_8_
 50.png> <./Images/SIR_ref_8_100.png>]
-<Images/SIR_ref_16_5.png, id=542, 906.9885pt x 878.8032pt>
+<Images/SIR_ref_16_5.png, id=538, 906.9885pt x 878.8032pt>
 File: Images/SIR_ref_16_5.png Graphic file (type png)
 <use Images/SIR_ref_16_5.png>
 Package pdftex.def Info: Images/SIR_ref_16_5.png  used on input line 56.
 (pdftex.def)             Requested size: 167.29967pt x 162.0933pt.
-<Images/SIR_ref_16_20.png, id=543, 906.9885pt x 878.8032pt>
+<Images/SIR_ref_16_20.png, id=539, 906.9885pt x 878.8032pt>
 File: Images/SIR_ref_16_20.png Graphic file (type png)
 <use Images/SIR_ref_16_20.png>
 Package pdftex.def Info: Images/SIR_ref_16_20.png  used on input line 57.
 (pdftex.def)             Requested size: 167.29967pt x 162.0933pt.
-<Images/SIR_ref_16_50.png, id=544, 906.9885pt x 878.8032pt>
+<Images/SIR_ref_16_50.png, id=540, 906.9885pt x 878.8032pt>
 File: Images/SIR_ref_16_50.png Graphic file (type png)
 <use Images/SIR_ref_16_50.png>
 Package pdftex.def Info: Images/SIR_ref_16_50.png  used on input line 58.
 (pdftex.def)             Requested size: 167.29967pt x 162.0933pt.
-<Images/SIR_ref_16_100.png, id=545, 900.7251pt x 878.8032pt>
+<Images/SIR_ref_16_100.png, id=541, 900.7251pt x 878.8032pt>
 File: Images/SIR_ref_16_100.png Graphic file (type png)
 <use Images/SIR_ref_16_100.png>
 Package pdftex.def Info: Images/SIR_ref_16_100.png  used on input line 59.
@@ -3608,25 +3341,25 @@ Underfull \hbox (badness 10000) in paragraph at lines 92--93
  []
 
 [49]
-<Images/SIR_divergence_8_1000.png, id=559, 897.5934pt x 1260.6297pt>
+<Images/SIR_divergence_8_1000.png, id=555, 897.5934pt x 1260.6297pt>
 File: Images/SIR_divergence_8_1000.png Graphic file (type png)
 <use Images/SIR_divergence_8_1000.png>
 Package pdftex.def Info: Images/SIR_divergence_8_1000.png  used on input line 1
 05.
 (pdftex.def)             Requested size: 167.29967pt x 234.96329pt.
-<Images/SIR_divergence_8_mix.png, id=560, 897.5934pt x 1260.6297pt>
+<Images/SIR_divergence_8_mix.png, id=556, 897.5934pt x 1260.6297pt>
 File: Images/SIR_divergence_8_mix.png Graphic file (type png)
 <use Images/SIR_divergence_8_mix.png>
 Package pdftex.def Info: Images/SIR_divergence_8_mix.png  used on input line 10
 6.
 (pdftex.def)             Requested size: 167.29967pt x 234.96329pt.
-<Images/SIR_divergence_16_1000.png, id=561, 897.5934pt x 1260.6297pt>
+<Images/SIR_divergence_16_1000.png, id=557, 897.5934pt x 1260.6297pt>
 File: Images/SIR_divergence_16_1000.png Graphic file (type png)
 <use Images/SIR_divergence_16_1000.png>
 Package pdftex.def Info: Images/SIR_divergence_16_1000.png  used on input line 
 107.
 (pdftex.def)             Requested size: 167.29967pt x 234.96329pt.
-<Images/SIR_divergence_16_mix.png, id=562, 897.5934pt x 1260.6297pt>
+<Images/SIR_divergence_16_mix.png, id=558, 897.5934pt x 1260.6297pt>
 File: Images/SIR_divergence_16_mix.png Graphic file (type png)
 <use Images/SIR_divergence_16_mix.png>
 Package pdftex.def Info: Images/SIR_divergence_16_mix.png  used on input line 1
@@ -3653,61 +3386,70 @@ File: Images/SIR_ref_8_5.png Graphic file (type png)
 <use Images/SIR_ref_8_5.png>
 Package pdftex.def Info: Images/SIR_ref_8_5.png  used on input line 152.
 (pdftex.def)             Requested size: 250.95587pt x 244.84296pt.
-<Images/SIR_latence_8_5.png, id=575, 623.931pt x 605.3817pt>
+
+Underfull \hbox (badness 10000) in paragraph at lines 156--157
+
+ []
+
+<Images/SIR_latence_8_5.png, id=571, 623.931pt x 605.3817pt>
 File: Images/SIR_latence_8_5.png Graphic file (type png)
 <use Images/SIR_latence_8_5.png>
 Package pdftex.def Info: Images/SIR_latence_8_5.png  used on input line 161.
-(pdftex.def)             Requested size: 250.95587pt x 243.49704pt.
+(pdftex.def)             Requested size: 209.12778pt x 202.90804pt.
+
+Underfull \hbox (badness 1215) in paragraph at lines 165--166
+\T1/ppl/m/n/10.95 (+20) tée à SIR et sur l'axe des or-don-nées
+ []
 
 
-LaTeX Warning: `h' float specifier changed to `ht'.
+Underfull \hbox (badness 2142) in paragraph at lines 165--166
+\T1/ppl/m/n/10.95 (+20) nous avons le cal-cul du MAE entre
+ []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 165--166
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 171--172
+[52 <./Images/SIR_latence_8_5.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 173--174
 
  []
 
-<Images/SIR_mouvements_variables.png, id=576, 906.9885pt x 878.8032pt>
+<Images/SIR_mouvements_variables.png, id=577, 906.9885pt x 878.8032pt>
 File: Images/SIR_mouvements_variables.png Graphic file (type png)
 <use Images/SIR_mouvements_variables.png>
 Package pdftex.def Info: Images/SIR_mouvements_variables.png  used on input lin
-e 178.
+e 180.
 (pdftex.def)             Requested size: 292.7776pt x 283.6767pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<Images/SIR_1000_2.png, id=577, 900.7251pt x 878.8032pt>
+[53 <./Images/SIR_mouvements_variables.png>]
+<Images/SIR_1000_2.png, id=583, 900.7251pt x 878.8032pt>
 File: Images/SIR_1000_2.png Graphic file (type png)
 <use Images/SIR_1000_2.png>
-Package pdftex.def Info: Images/SIR_1000_2.png  used on input line 189.
+Package pdftex.def Info: Images/SIR_1000_2.png  used on input line 195.
 (pdftex.def)             Requested size: 167.29967pt x 163.2197pt.
-<Images/SIR_1000_4.png, id=578, 900.7251pt x 878.8032pt>
+<Images/SIR_1000_4.png, id=584, 900.7251pt x 878.8032pt>
 File: Images/SIR_1000_4.png Graphic file (type png)
 <use Images/SIR_1000_4.png>
-Package pdftex.def Info: Images/SIR_1000_4.png  used on input line 190.
+Package pdftex.def Info: Images/SIR_1000_4.png  used on input line 196.
 (pdftex.def)             Requested size: 167.29967pt x 163.2197pt.
-<Images/SIR_1000_8.png, id=579, 900.7251pt x 878.8032pt>
+<Images/SIR_1000_8.png, id=585, 900.7251pt x 878.8032pt>
 File: Images/SIR_1000_8.png Graphic file (type png)
 <use Images/SIR_1000_8.png>
-Package pdftex.def Info: Images/SIR_1000_8.png  used on input line 191.
+Package pdftex.def Info: Images/SIR_1000_8.png  used on input line 197.
 (pdftex.def)             Requested size: 167.29967pt x 163.2197pt.
-<Images/SIR_1000_16.png, id=580, 891.0891pt x 878.8032pt>
+<Images/SIR_1000_16.png, id=586, 891.0891pt x 878.8032pt>
 File: Images/SIR_1000_16.png Graphic file (type png)
 <use Images/SIR_1000_16.png>
-Package pdftex.def Info: Images/SIR_1000_16.png  used on input line 192.
+Package pdftex.def Info: Images/SIR_1000_16.png  used on input line 198.
 (pdftex.def)             Requested size: 167.29967pt x 164.98975pt.
-[52]
 
-LaTeX Warning: `h' float specifier changed to `ht'.
+Underfull \hbox (badness 10000) in paragraph at lines 202--203
 
-) [53 <./Images/SIR_latence_8_5.png>] [54 <./Images/SIR_mouvements_variables.pn
-g> <./Images/SIR_1000_2.png> <./Images/SIR_1000_4.png> <./Images/SIR_1000_8.png
-> <./Images/SIR_1000_16.png>]
+ []
+
+) [54 <./Images/SIR_1000_2.png> <./Images/SIR_1000_4.png> <./Images/SIR_1000_8.
+png> <./Images/SIR_1000_16.png>] [55]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 56.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 56.
  (./BasicDoc.aux (./Resume.aux)
@@ -3728,11 +3470,11 @@ Package logreq Info: Writing requests to 'BasicDoc.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 54441 strings out of 481239
- 1206815 string characters out of 5920377
- 2124485 words of memory out of 5000000
- 68232 multiletter control sequences out of 15000+600000
- 584051 words of font info for 232 fonts, out of 8000000 for 9000
+ 54439 strings out of 481239
+ 1206792 string characters out of 5920377
+ 2124561 words of memory out of 5000000
+ 68228 multiletter control sequences out of 15000+600000
+ 584200 words of font info for 234 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  76i,12n,105p,10124b,3703s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}{/usr/share/texmf/
@@ -3744,10 +3486,10 @@ xmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/share/texlive/texmf-dist/fon
 ts/type1/urw/palatino/uplr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw
 /palatino/uplr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/up
 lri8a.pfb>
-Output written on BasicDoc.pdf (60 pages, 25707056 bytes).
+Output written on BasicDoc.pdf (61 pages, 25709477 bytes).
 PDF statistics:
- 850 PDF objects out of 1000 (max. 8388607)
- 645 compressed objects within 7 object streams
- 170 named destinations out of 1000 (max. 500000)
- 29485 words of extra memory for PDF output out of 29859 (max. 10000000)
+ 845 PDF objects out of 1000 (max. 8388607)
+ 639 compressed objects within 7 object streams
+ 169 named destinations out of 1000 (max. 500000)
+ 29469 words of extra memory for PDF output out of 29859 (max. 10000000)
 

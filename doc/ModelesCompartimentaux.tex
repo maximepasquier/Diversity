@@ -102,8 +102,6 @@ Dans ce chapitre nous essayons de simuler des situations décrites par le modèl
 
 Les modèles compartimentaux n'ont pas de notion d'espace, c'est-à-dire que les individus du système n'ont pas de position géographiques. Ces modèles considèrent tous les individus sont en contact les uns avec les autres et ceci atténué par le facteur $\beta$. Étant donné que le modèle implémenté possède une notion d'espace, il a fallu l'adapter afin qu'il satisfasse les conditions des modèles comparatimentaux. Deux solutions ont été trouvées pour palier à ce problème. La première est de désactiver la fonction de mouvement chez les individus et de la remplacer par une redistribution complète et aléatoire de toute la population. De ce fait nous redistribuons tous les individus et obtenons un mélange parfait. Cette méthode est appelée "perfect\_mix". La seconde méthode est de permettre aux individus du système de se déplacer d'avantage. Nous pouvons en effet simuler un mélange parfait en déplacant un grand nombre de fois les individus à chaque itération. Initialement le modèle était conçu pour permettre à chaque itération à chaque individu de se déplacer de une cellule. Mais un paramètre permet de déterminer le nombre de mouvements effectué par un individu à chaque itération. Pour simuler le modèle SI avec le plus de précision possible il fallait un grand nombre de déplacements. Ce nombre a été fixé à $5000$ ce qui signifie que un individu a le potentiel de se déplacer de $5000$ cellules en une seule itération.\\
 
-ADD recherche de paramètre optimaux !\\
-
 Le modèle doit être paramétré spécifiquement pour adopter les mêmes comportements qu'un modèle SI. Un exemple de paramètres est donné si-dessous : 
 
 \begin{minted}
@@ -194,8 +192,6 @@ Il reste ensuite à paramétrer la taille de la grille, le nombre d'individus, l
 
 
 \subsection{Simulations de SIR}
-
-ADD recherche de paramètre optimaux !\\
 
 Pour modéliser une situation reflétant un modèle SIR il faut un mécanisme d'immunités chez les individus. Notre modèle fournit un paramètre permettant d'activer ou de désactiver les processus d'immunités.
 

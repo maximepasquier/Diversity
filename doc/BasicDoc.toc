@@ -3,9 +3,7 @@
 \contentsline {chapter}{\nonumberline Liste des tableaux}{IV}{chapter*.3}%
 \contentsline {chapter}{\nonumberline Table des figures}{V}{chapter*.4}%
 \contentsline {chapter}{\numberline {1}Résumé}{1}{chapter.1}%
-\contentsline {section}{\numberline {1.1}first section}{1}{section.1.1}%
 \contentsline {chapter}{\numberline {2}Introduction}{2}{chapter.2}%
-\contentsline {section}{\numberline {2.1}first section}{2}{section.2.1}%
 \contentsline {chapter}{\numberline {3}Approche du problème, méthodes, outils utilisés}{3}{chapter.3}%
 \contentsline {section}{\numberline {3.1}Code génétique}{3}{section.3.1}%
 \contentsline {section}{\numberline {3.2}Compatibilité entre individus et agents pathogènes}{3}{section.3.2}%
@@ -58,5 +56,5 @@
 \contentsline {subsection}{\numberline {9.3.1}Mean Absolute Error}{48}{subsection.9.3.1}%
 \contentsline {subsection}{\numberline {9.3.2}Variations aléatoires}{50}{subsection.9.3.2}%
 \contentsline {subsection}{\numberline {9.3.3}Latence des simulations}{51}{subsection.9.3.3}%
-\contentsline {subsection}{\numberline {9.3.4}Mouvements variable}{52}{subsection.9.3.4}%
-\contentsline {subsection}{\numberline {9.3.5}Comparaison 1000 mouvements}{53}{subsection.9.3.5}%
+\contentsline {subsection}{\numberline {9.3.4}Mouvements variable}{53}{subsection.9.3.4}%
+\contentsline {subsection}{\numberline {9.3.5}Comparaison 1000 mouvements}{54}{subsection.9.3.5}%
