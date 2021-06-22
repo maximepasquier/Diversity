@@ -1,5 +1,6 @@
 #include <chrono>
 #include <random>
+#include <math.h>
 #include <iostream>
 #include "Individu.h"
 #include "AP_linked_list_node.h"
@@ -18,7 +19,11 @@ void Simulation::Iterations()
     for (int iteration = 0; iteration < m_ITERATIONS; iteration++)
     {
         //* Print les itérations (avancement)
-        Print_progression(iteration, m_ITERATIONS);
+        int seuil = ceil(m_ITERATIONS/100);
+        if (iteration % seuil == 0)
+        {
+            Print_progression(iteration, m_ITERATIONS);
+        }
         //* Print ASCII grid to screen (small systems)
         //Print_ASCII_grid(m_TAILLE_SYSTEME, m_Pointer_array_H, m_Pointer_array_AP);
         One_iteration(iteration);
@@ -122,7 +127,8 @@ void Simulation::Update_all_I(int *permuted_liste)
         unsigned long long int time_X_mouvements = chrono::duration<double, micro>(diff).count();
         string path_copy = m_configuration_file_path;
         path_copy.append("/data_csv");
-        m_X_mouvements_time  << '\n' << time_X_mouvements/m_NOMBRE_INDIVIDUS;
+        m_X_mouvements_time << '\n'
+                            << time_X_mouvements / m_NOMBRE_INDIVIDUS;
     }
 }
 

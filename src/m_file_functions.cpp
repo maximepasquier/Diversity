@@ -122,7 +122,6 @@ void Simulation::Create_and_initialize_csv()
     Close_files();
 }
 
-
 //* Mise à jour des fichiers csv à chaque itération
 void Simulation::Update_csv()
 {
@@ -131,6 +130,7 @@ void Simulation::Update_csv()
     m_nombre_AP_diff_file << '\n'
                           << m_nombre_AP_diff;
 
+#if (0)
     // Vérifier si la personne est contaminé ou non
     int sign = 1;
     if (m_Liste_I[0]->Getcontamine())
@@ -151,4 +151,5 @@ void Simulation::Update_csv()
         m_IX << ',' << sign * (m_Liste_I[i]->GetXI() + 1);
         m_IY << ',' << sign * (m_Liste_I[i]->GetYI() + 1);
     }
+#endif
 }

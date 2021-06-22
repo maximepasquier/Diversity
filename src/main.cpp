@@ -32,7 +32,7 @@ int main(int argc, char const *argv[])
     //threads.push_back(std::thread(thread_function, "./Simulations/SI/Positions/1000mouvements/14000"));
     //threads.push_back(std::thread(thread_function, "./Simulations/SI/Positions/1000mouvements/17000"));
     //threads.push_back(std::thread(thread_function, "./Simulations/SI/Positions/1000mouvements/20000"));
-    threads.push_back(std::thread(thread_function, "./Simulations/SI/Positions/perfect_mix"));
+    //threads.push_back(std::thread(thread_function, "./Simulations/SI/Positions/perfect_mix"));
 
 
     //* Divergence
@@ -299,23 +299,36 @@ int main(int argc, char const *argv[])
     threads.push_back(std::thread(thread_function, "./Simulations/SIR/Reference/perfect_mix/densite1sur16/population100000"));
     */
 
-    /*
+    
     // Diversité
-    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Diversite/perfect_mix/distanceHamming0/diversite5"));
-    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Diversite/perfect_mix/distanceHamming0/diversite10"));
-    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Diversite/perfect_mix/distanceHamming0/diversite15"));
-    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Diversite/perfect_mix/distanceHamming0/diversite20"));
+    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Diversite/perfect_mix/diversite5"));
+    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Diversite/perfect_mix/diversite10"));
+    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Diversite/perfect_mix/diversite15"));
+    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Diversite/perfect_mix/diversite20"));
 
-    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Diversite/perfect_mix/distanceHamming8/diversite5"));
-    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Diversite/perfect_mix/distanceHamming8/diversite10"));
-    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Diversite/perfect_mix/distanceHamming8/diversite15"));
-    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Diversite/perfect_mix/distanceHamming8/diversite20"));
+    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Diversite/1mouvement/diversite5"));
+    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Diversite/1mouvement/diversite10"));
+    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Diversite/1mouvement/diversite15"));
+    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Diversite/1mouvement/diversite20"));
 
-    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Diversite/perfect_mix/distanceHamming16/diversite5"));
-    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Diversite/perfect_mix/distanceHamming16/diversite10"));
-    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Diversite/perfect_mix/distanceHamming16/diversite15"));
-    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Diversite/perfect_mix/distanceHamming16/diversite20"));
+    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Diversite/10mouvements/diversite5"));
+    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Diversite/10mouvements/diversite10"));
+    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Diversite/10mouvements/diversite15"));
+    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Diversite/10mouvements/diversite20"));
 
+    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Diversite/50mouvements/diversite5"));
+    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Diversite/50mouvements/diversite10"));
+    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Diversite/50mouvements/diversite15"));
+    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Diversite/50mouvements/diversite20"));
+
+    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Diversite/100mouvements/diversite5"));
+    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Diversite/100mouvements/diversite10"));
+    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Diversite/100mouvements/diversite15"));
+    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Diversite/100mouvements/diversite20"));
+
+
+
+    /*
     // Mutation
     threads.push_back(std::thread(thread_function, "./Simulations/SIR/Mutation/perfect_mix/distanceHamming16/mutation3"));
     threads.push_back(std::thread(thread_function, "./Simulations/SIR/Mutation/perfect_mix/distanceHamming16/mutation4"));
