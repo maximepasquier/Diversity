@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2021.6.17)  21 JUN 2021 10:41
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2021.6.17)  22 JUN 2021 15:58
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -2035,48 +2035,7 @@ File: ts1ppl.fd 2001/06/04 font definitions for TS1/ppl.
 Package tocbasic Info: character protrusion at lot deactivated on input line 28
 .
 
-(./BasicDoc.lot
-
-Package tocbasic Warning: number width of table toc entries should be increased
-!
-(tocbasic)                Currently used number width = 50.73077pt,
-(tocbasic)                Wanted number separation    = 4.37993pt,
-(tocbasic)                Reserved number width       = 0.0pt on input line 11.
-
-
-
-Package tocbasic Warning: number width of table toc entries should be increased
-!
-(tocbasic)                Currently used number width = 50.73077pt,
-(tocbasic)                Wanted number separation    = 4.37993pt,
-(tocbasic)                Reserved number width       = 0.0pt on input line 12.
-
-
-
-Package tocbasic Warning: number width of table toc entries should be increased
-!
-(tocbasic)                Currently used number width = 50.73077pt,
-(tocbasic)                Wanted number separation    = 4.37993pt,
-(tocbasic)                Reserved number width       = 0.0pt on input line 13.
-
-
-
-Package tocbasic Warning: number width of table toc entries should be increased
-!
-(tocbasic)                Currently used number width = 50.73077pt,
-(tocbasic)                Wanted number separation    = 4.37993pt,
-(tocbasic)                Reserved number width       = 0.0pt on input line 15.
-
-
-
-Package tocbasic Warning: number width of table toc entries should be increased
-!
-(tocbasic)                Currently used number width = 50.73077pt,
-(tocbasic)                Wanted number separation    = 4.37993pt,
-(tocbasic)                Reserved number width       = 0.0pt on input line 16.
-
-
-)
+(./BasicDoc.lot)
 \tf@lot=\write9
 \openout9 = `BasicDoc.lot'.
 
@@ -2085,229 +2044,7 @@ Package tocbasic Warning: number width of table toc entries should be increased
 ]
 Package tocbasic Info: character protrusion at lof deactivated on input line 31
 .
- (./BasicDoc.lof
-
-Package tocbasic Warning: number width of figure toc entries should be increase
-d!
-(tocbasic)                Currently used number width = 56.1621pt,
-(tocbasic)                Wanted number separation    = 4.37993pt,
-(tocbasic)                Reserved number width       = 0.0pt on input line 7.
-
-
-Package tocbasic Warning: number width of figure toc entries should be increase
-d!
-(tocbasic)                Currently used number width = 56.1621pt,
-(tocbasic)                Wanted number separation    = 4.37993pt,
-(tocbasic)                Reserved number width       = 0.0pt on input line 8.
-
-
-Package tocbasic Warning: number width of figure toc entries should be increase
-d!
-(tocbasic)                Currently used number width = 56.1621pt,
-(tocbasic)                Wanted number separation    = 4.37993pt,
-(tocbasic)                Reserved number width       = 0.0pt on input line 9.
-
-
-Package tocbasic Warning: number width of figure toc entries should be increase
-d!
-(tocbasic)                Currently used number width = 56.1621pt,
-(tocbasic)                Wanted number separation    = 4.37993pt,
-(tocbasic)                Reserved number width       = 0.0pt on input line 10.
-
-
-
-Package tocbasic Warning: number width of figure toc entries should be increase
-d!
-(tocbasic)                Currently used number width = 56.1621pt,
-(tocbasic)                Wanted number separation    = 4.37993pt,
-(tocbasic)                Reserved number width       = 0.0pt on input line 11.
-
-
-
-Package tocbasic Warning: number width of figure toc entries should be increase
-d!
-(tocbasic)                Currently used number width = 56.1621pt,
-(tocbasic)                Wanted number separation    = 4.37993pt,
-(tocbasic)                Reserved number width       = 0.0pt on input line 13.
-
-
-
-Package tocbasic Warning: number width of figure toc entries should be increase
-d!
-(tocbasic)                Currently used number width = 56.1621pt,
-(tocbasic)                Wanted number separation    = 4.37993pt,
-(tocbasic)                Reserved number width       = 0.0pt on input line 14.
-
-
-
-Package tocbasic Warning: number width of figure toc entries should be increase
-d!
-(tocbasic)                Currently used number width = 56.1621pt,
-(tocbasic)                Wanted number separation    = 4.37993pt,
-(tocbasic)                Reserved number width       = 0.0pt on input line 15.
-
-
-
-Package tocbasic Warning: number width of figure toc entries should be increase
-d!
-(tocbasic)                Currently used number width = 56.1621pt,
-(tocbasic)                Wanted number separation    = 4.37993pt,
-(tocbasic)                Reserved number width       = 0.0pt on input line 16.
-
-
-
-Package tocbasic Warning: number width of figure toc entries should be increase
-d!
-(tocbasic)                Currently used number width = 56.1621pt,
-(tocbasic)                Wanted number separation    = 4.37993pt,
-(tocbasic)                Reserved number width       = 0.0pt on input line 17.
-
-
-
-Package tocbasic Warning: number width of figure toc entries should be increase
-d!
-(tocbasic)                Currently used number width = 56.1621pt,
-(tocbasic)                Wanted number separation    = 4.37993pt,
-(tocbasic)                Reserved number width       = 0.0pt on input line 20.
-
-
-
-Package tocbasic Warning: number width of figure toc entries should be increase
-d!
-(tocbasic)                Currently used number width = 56.1621pt,
-(tocbasic)                Wanted number separation    = 4.37993pt,
-(tocbasic)                Reserved number width       = 0.0pt on input line 21.
-
-
-
-Package tocbasic Warning: number width of figure toc entries should be increase
-d!
-(tocbasic)                Currently used number width = 56.1621pt,
-(tocbasic)                Wanted number separation    = 4.37993pt,
-(tocbasic)                Reserved number width       = 0.0pt on input line 23.
-
-
-
-Package tocbasic Warning: number width of figure toc entries should be increase
-d!
-(tocbasic)                Currently used number width = 56.1621pt,
-(tocbasic)                Wanted number separation    = 4.37993pt,
-(tocbasic)                Reserved number width       = 0.0pt on input line 24.
-
-
-
-Package tocbasic Warning: number width of figure toc entries should be increase
-d!
-(tocbasic)                Currently used number width = 56.1621pt,
-(tocbasic)                Wanted number separation    = 4.37993pt,
-(tocbasic)                Reserved number width       = 0.0pt on input line 25.
-
-
-
-Package tocbasic Warning: number width of figure toc entries should be increase
-d!
-(tocbasic)                Currently used number width = 56.1621pt,
-(tocbasic)                Wanted number separation    = 4.37993pt,
-(tocbasic)                Reserved number width       = 0.0pt on input line 26.
-
-
-
-Package tocbasic Warning: number width of figure toc entries should be increase
-d!
-(tocbasic)                Currently used number width = 56.1621pt,
-(tocbasic)                Wanted number separation    = 4.37993pt,
-(tocbasic)                Reserved number width       = 0.0pt on input line 27.
-
-
-
-Package tocbasic Warning: number width of figure toc entries should be increase
-d!
-(tocbasic)                Currently used number width = 56.1621pt,
-(tocbasic)                Wanted number separation    = 4.37993pt,
-(tocbasic)                Reserved number width       = 0.0pt on input line 28.
-
-
-
-Package tocbasic Warning: number width of figure toc entries should be increase
-d!
-(tocbasic)                Currently used number width = 56.1621pt,
-(tocbasic)                Wanted number separation    = 4.37993pt,
-(tocbasic)                Reserved number width       = 0.0pt on input line 29.
-
-
-
-Package tocbasic Warning: number width of figure toc entries should be increase
-d!
-(tocbasic)                Currently used number width = 56.1621pt,
-(tocbasic)                Wanted number separation    = 4.37993pt,
-(tocbasic)                Reserved number width       = 0.0pt on input line 31.
-
-
-
-Package tocbasic Warning: number width of figure toc entries should be increase
-d!
-(tocbasic)                Currently used number width = 56.1621pt,
-(tocbasic)                Wanted number separation    = 4.37993pt,
-(tocbasic)                Reserved number width       = 0.0pt on input line 32.
-
-
-
-Package tocbasic Warning: number width of figure toc entries should be increase
-d!
-(tocbasic)                Currently used number width = 56.1621pt,
-(tocbasic)                Wanted number separation    = 4.37993pt,
-(tocbasic)                Reserved number width       = 0.0pt on input line 33.
-
-
-
-Package tocbasic Warning: number width of figure toc entries should be increase
-d!
-(tocbasic)                Currently used number width = 56.1621pt,
-(tocbasic)                Wanted number separation    = 4.37993pt,
-(tocbasic)                Reserved number width       = 0.0pt on input line 34.
-
-
-
-Package tocbasic Warning: number width of figure toc entries should be increase
-d!
-(tocbasic)                Currently used number width = 56.1621pt,
-(tocbasic)                Wanted number separation    = 4.37993pt,
-(tocbasic)                Reserved number width       = 0.0pt on input line 35.
-
-
-
-Package tocbasic Warning: number width of figure toc entries should be increase
-d!
-(tocbasic)                Currently used number width = 56.1621pt,
-(tocbasic)                Wanted number separation    = 4.37993pt,
-(tocbasic)                Reserved number width       = 0.0pt on input line 36.
-
-
-
-Package tocbasic Warning: number width of figure toc entries should be increase
-d!
-(tocbasic)                Currently used number width = 56.1621pt,
-(tocbasic)                Wanted number separation    = 4.37993pt,
-(tocbasic)                Reserved number width       = 0.0pt on input line 37.
-
-
-
-Package tocbasic Warning: number width of figure toc entries should be increase
-d!
-(tocbasic)                Currently used number width = 56.1621pt,
-(tocbasic)                Wanted number separation    = 4.37993pt,
-(tocbasic)                Reserved number width       = 0.0pt on input line 38.
-
-
-
-Package tocbasic Warning: number width of figure toc entries should be increase
-d!
-(tocbasic)                Currently used number width = 56.1621pt,
-(tocbasic)                Wanted number separation    = 4.37993pt,
-(tocbasic)                Reserved number width       = 0.0pt on input line 39.
-
-
-)
+ (./BasicDoc.lof)
 \tf@lof=\write10
 \openout10 = `BasicDoc.lof'.
 
@@ -3002,22 +2739,22 @@ chapter 8.
 
 
 ]
-<Images/SI_ref_2_5k.pdf, id=483, 1445.4pt x 722.7pt>
+<Images/SI_ref_2_5k.pdf, id=485, 1445.4pt x 722.7pt>
 File: Images/SI_ref_2_5k.pdf Graphic file (type pdf)
 <use Images/SI_ref_2_5k.pdf>
 Package pdftex.def Info: Images/SI_ref_2_5k.pdf  used on input line 14.
 (pdftex.def)             Requested size: 209.12778pt x 104.56274pt.
-<Images/SI_ref_2_20k.pdf, id=484, 1445.4pt x 722.7pt>
+<Images/SI_ref_2_20k.pdf, id=486, 1445.4pt x 722.7pt>
 File: Images/SI_ref_2_20k.pdf Graphic file (type pdf)
 <use Images/SI_ref_2_20k.pdf>
 Package pdftex.def Info: Images/SI_ref_2_20k.pdf  used on input line 15.
 (pdftex.def)             Requested size: 209.12778pt x 104.56274pt.
-<Images/SI_ref_2_50k.pdf, id=485, 1445.4pt x 722.7pt>
+<Images/SI_ref_2_50k.pdf, id=487, 1445.4pt x 722.7pt>
 File: Images/SI_ref_2_50k.pdf Graphic file (type pdf)
 <use Images/SI_ref_2_50k.pdf>
 Package pdftex.def Info: Images/SI_ref_2_50k.pdf  used on input line 16.
 (pdftex.def)             Requested size: 209.12778pt x 104.56274pt.
-<Images/SI_ref_2_100k.pdf, id=486, 1445.4pt x 722.7pt>
+<Images/SI_ref_2_100k.pdf, id=488, 1445.4pt x 722.7pt>
 File: Images/SI_ref_2_100k.pdf Graphic file (type pdf)
 <use Images/SI_ref_2_100k.pdf>
 Package pdftex.def Info: Images/SI_ref_2_100k.pdf  used on input line 17.
@@ -3125,22 +2862,22 @@ ple pdfs with page group included in a single page
 pdfTeX warning: pdflatex (file ./Images/SI_ref_2_100k.pdf): PDF inclusion: mult
 iple pdfs with page group included in a single page
 >]
-<Images/SI_ref_4_5k.pdf, id=641, 1445.4pt x 722.7pt>
+<Images/SI_ref_4_5k.pdf, id=643, 1445.4pt x 722.7pt>
 File: Images/SI_ref_4_5k.pdf Graphic file (type pdf)
 <use Images/SI_ref_4_5k.pdf>
 Package pdftex.def Info: Images/SI_ref_4_5k.pdf  used on input line 32.
 (pdftex.def)             Requested size: 209.12778pt x 104.56274pt.
-<Images/SI_ref_4_20k.pdf, id=642, 1445.4pt x 722.7pt>
+<Images/SI_ref_4_20k.pdf, id=644, 1445.4pt x 722.7pt>
 File: Images/SI_ref_4_20k.pdf Graphic file (type pdf)
 <use Images/SI_ref_4_20k.pdf>
 Package pdftex.def Info: Images/SI_ref_4_20k.pdf  used on input line 33.
 (pdftex.def)             Requested size: 209.12778pt x 104.56274pt.
-<Images/SI_ref_4_50k.pdf, id=643, 1445.4pt x 722.7pt>
+<Images/SI_ref_4_50k.pdf, id=645, 1445.4pt x 722.7pt>
 File: Images/SI_ref_4_50k.pdf Graphic file (type pdf)
 <use Images/SI_ref_4_50k.pdf>
 Package pdftex.def Info: Images/SI_ref_4_50k.pdf  used on input line 34.
 (pdftex.def)             Requested size: 209.12778pt x 104.56274pt.
-<Images/SI_ref_4_100k.pdf, id=644, 1445.4pt x 722.7pt>
+<Images/SI_ref_4_100k.pdf, id=646, 1445.4pt x 722.7pt>
 File: Images/SI_ref_4_100k.pdf Graphic file (type pdf)
 <use Images/SI_ref_4_100k.pdf>
 Package pdftex.def Info: Images/SI_ref_4_100k.pdf  used on input line 35.
@@ -3168,22 +2905,22 @@ ple pdfs with page group included in a single page
 pdfTeX warning: pdflatex (file ./Images/SI_ref_4_100k.pdf): PDF inclusion: mult
 iple pdfs with page group included in a single page
 >]
-<Images/SI_ref_8_5k.pdf, id=796, 1445.4pt x 722.7pt>
+<Images/SI_ref_8_5k.pdf, id=798, 1445.4pt x 722.7pt>
 File: Images/SI_ref_8_5k.pdf Graphic file (type pdf)
 <use Images/SI_ref_8_5k.pdf>
 Package pdftex.def Info: Images/SI_ref_8_5k.pdf  used on input line 50.
 (pdftex.def)             Requested size: 209.12778pt x 104.56274pt.
-<Images/SI_ref_8_20k.pdf, id=797, 1445.4pt x 722.7pt>
+<Images/SI_ref_8_20k.pdf, id=799, 1445.4pt x 722.7pt>
 File: Images/SI_ref_8_20k.pdf Graphic file (type pdf)
 <use Images/SI_ref_8_20k.pdf>
 Package pdftex.def Info: Images/SI_ref_8_20k.pdf  used on input line 51.
 (pdftex.def)             Requested size: 209.12778pt x 104.56274pt.
-<Images/SI_ref_8_50k.pdf, id=798, 1445.4pt x 722.7pt>
+<Images/SI_ref_8_50k.pdf, id=800, 1445.4pt x 722.7pt>
 File: Images/SI_ref_8_50k.pdf Graphic file (type pdf)
 <use Images/SI_ref_8_50k.pdf>
 Package pdftex.def Info: Images/SI_ref_8_50k.pdf  used on input line 52.
 (pdftex.def)             Requested size: 209.12778pt x 104.56274pt.
-<Images/SI_ref_8_100k.pdf, id=799, 1445.4pt x 722.7pt>
+<Images/SI_ref_8_100k.pdf, id=801, 1445.4pt x 722.7pt>
 File: Images/SI_ref_8_100k.pdf Graphic file (type pdf)
 <use Images/SI_ref_8_100k.pdf>
 Package pdftex.def Info: Images/SI_ref_8_100k.pdf  used on input line 53.
@@ -3268,22 +3005,22 @@ ple pdfs with page group included in a single page
 pdfTeX warning: pdflatex (file ./Images/SI_ref_8_100k.pdf): PDF inclusion: mult
 iple pdfs with page group included in a single page
 >]
-<Images/SI_ref_16_5k.pdf, id=956, 1445.4pt x 722.7pt>
+<Images/SI_ref_16_5k.pdf, id=958, 1445.4pt x 722.7pt>
 File: Images/SI_ref_16_5k.pdf Graphic file (type pdf)
 <use Images/SI_ref_16_5k.pdf>
 Package pdftex.def Info: Images/SI_ref_16_5k.pdf  used on input line 66.
 (pdftex.def)             Requested size: 209.12778pt x 104.56274pt.
-<Images/SI_ref_16_20k.pdf, id=957, 1445.4pt x 722.7pt>
+<Images/SI_ref_16_20k.pdf, id=959, 1445.4pt x 722.7pt>
 File: Images/SI_ref_16_20k.pdf Graphic file (type pdf)
 <use Images/SI_ref_16_20k.pdf>
 Package pdftex.def Info: Images/SI_ref_16_20k.pdf  used on input line 67.
 (pdftex.def)             Requested size: 209.12778pt x 104.56274pt.
-<Images/SI_ref_16_50k.pdf, id=958, 1445.4pt x 722.7pt>
+<Images/SI_ref_16_50k.pdf, id=960, 1445.4pt x 722.7pt>
 File: Images/SI_ref_16_50k.pdf Graphic file (type pdf)
 <use Images/SI_ref_16_50k.pdf>
 Package pdftex.def Info: Images/SI_ref_16_50k.pdf  used on input line 68.
 (pdftex.def)             Requested size: 209.12778pt x 104.56274pt.
-<Images/SI_ref_16_100k.pdf, id=959, 1445.4pt x 722.7pt>
+<Images/SI_ref_16_100k.pdf, id=961, 1445.4pt x 722.7pt>
 File: Images/SI_ref_16_100k.pdf Graphic file (type pdf)
 <use Images/SI_ref_16_100k.pdf>
 Package pdftex.def Info: Images/SI_ref_16_100k.pdf  used on input line 69.
@@ -3408,25 +3145,25 @@ Underfull \hbox (badness 10000) in paragraph at lines 138--139
  []
 
 [41]
-<Images/SI_divergence_8_1000.pdf, id=1123, 1445.4pt x 722.7pt>
+<Images/SI_divergence_8_1000.pdf, id=1125, 1445.4pt x 722.7pt>
 File: Images/SI_divergence_8_1000.pdf Graphic file (type pdf)
 <use Images/SI_divergence_8_1000.pdf>
 Package pdftex.def Info: Images/SI_divergence_8_1000.pdf  used on input line 14
 7.
 (pdftex.def)             Requested size: 209.12778pt x 104.56274pt.
-<Images/SI_divergence_8_mix.pdf, id=1124, 1445.4pt x 722.7pt>
+<Images/SI_divergence_8_mix.pdf, id=1126, 1445.4pt x 722.7pt>
 File: Images/SI_divergence_8_mix.pdf Graphic file (type pdf)
 <use Images/SI_divergence_8_mix.pdf>
 Package pdftex.def Info: Images/SI_divergence_8_mix.pdf  used on input line 148
 .
 (pdftex.def)             Requested size: 209.12778pt x 104.56274pt.
-<Images/SI_divergence_16_1000.pdf, id=1125, 1445.4pt x 722.7pt>
+<Images/SI_divergence_16_1000.pdf, id=1127, 1445.4pt x 722.7pt>
 File: Images/SI_divergence_16_1000.pdf Graphic file (type pdf)
 <use Images/SI_divergence_16_1000.pdf>
 Package pdftex.def Info: Images/SI_divergence_16_1000.pdf  used on input line 1
 49.
 (pdftex.def)             Requested size: 209.12778pt x 104.56274pt.
-<Images/SI_divergence_16_mix.pdf, id=1126, 1445.4pt x 722.7pt>
+<Images/SI_divergence_16_mix.pdf, id=1128, 1445.4pt x 722.7pt>
 File: Images/SI_divergence_16_mix.pdf Graphic file (type pdf)
 <use Images/SI_divergence_16_mix.pdf>
 Package pdftex.def Info: Images/SI_divergence_16_mix.pdf  used on input line 15
@@ -3526,29 +3263,29 @@ Underfull \hbox (badness 10000) in paragraph at lines 183--184
 
  []
 
-<Images/SI_positions_14k_mix.pdf, id=1302, 1084.05pt x 1084.05pt>
+<Images/SI_positions_14k_mix.pdf, id=1284, 1084.05pt x 1084.05pt>
 File: Images/SI_positions_14k_mix.pdf Graphic file (type pdf)
 <use Images/SI_positions_14k_mix.pdf>
 Package pdftex.def Info: Images/SI_positions_14k_mix.pdf  used on input line 19
 0.
 (pdftex.def)             Requested size: 292.7776pt x 292.78012pt.
 [43 <./Images/SI_positions_14k_mix.pdf>]
-<Images/SI_positions_10k.pdf, id=1344, 1084.05pt x 1084.05pt>
+<Images/SI_positions_10k.pdf, id=1326, 1084.05pt x 1084.05pt>
 File: Images/SI_positions_10k.pdf Graphic file (type pdf)
 <use Images/SI_positions_10k.pdf>
 Package pdftex.def Info: Images/SI_positions_10k.pdf  used on input line 201.
 (pdftex.def)             Requested size: 167.29967pt x 167.2982pt.
-<Images/SI_positions_14k.pdf, id=1345, 1084.05pt x 1084.05pt>
+<Images/SI_positions_14k.pdf, id=1327, 1084.05pt x 1084.05pt>
 File: Images/SI_positions_14k.pdf Graphic file (type pdf)
 <use Images/SI_positions_14k.pdf>
 Package pdftex.def Info: Images/SI_positions_14k.pdf  used on input line 202.
 (pdftex.def)             Requested size: 167.29967pt x 167.2982pt.
-<Images/SI_positions_17k.pdf, id=1346, 1084.05pt x 1084.05pt>
+<Images/SI_positions_17k.pdf, id=1328, 1084.05pt x 1084.05pt>
 File: Images/SI_positions_17k.pdf Graphic file (type pdf)
 <use Images/SI_positions_17k.pdf>
 Package pdftex.def Info: Images/SI_positions_17k.pdf  used on input line 203.
 (pdftex.def)             Requested size: 167.29967pt x 167.2982pt.
-<Images/SI_positions_20k.pdf, id=1347, 1084.05pt x 1084.05pt>
+<Images/SI_positions_20k.pdf, id=1329, 1084.05pt x 1084.05pt>
 File: Images/SI_positions_20k.pdf Graphic file (type pdf)
 <use Images/SI_positions_20k.pdf>
 Package pdftex.def Info: Images/SI_positions_20k.pdf  used on input line 204.
@@ -3575,22 +3312,22 @@ ultiple pdfs with page group included in a single page
 
  (./SIR.tex
 chapter 9.
-<Images/SIR_ref_2_5.pdf, id=1470, 1084.05pt x 1084.05pt>
+<Images/SIR_ref_2_5.pdf, id=1452, 1084.05pt x 1084.05pt>
 File: Images/SIR_ref_2_5.pdf Graphic file (type pdf)
 <use Images/SIR_ref_2_5.pdf>
 Package pdftex.def Info: Images/SIR_ref_2_5.pdf  used on input line 12.
 (pdftex.def)             Requested size: 167.29967pt x 167.2982pt.
-<Images/SIR_ref_2_20.pdf, id=1471, 1084.05pt x 1084.05pt>
+<Images/SIR_ref_2_20.pdf, id=1453, 1084.05pt x 1084.05pt>
 File: Images/SIR_ref_2_20.pdf Graphic file (type pdf)
 <use Images/SIR_ref_2_20.pdf>
 Package pdftex.def Info: Images/SIR_ref_2_20.pdf  used on input line 13.
 (pdftex.def)             Requested size: 167.29967pt x 167.2982pt.
-<Images/SIR_ref_2_50.pdf, id=1472, 1084.05pt x 1084.05pt>
+<Images/SIR_ref_2_50.pdf, id=1454, 1084.05pt x 1084.05pt>
 File: Images/SIR_ref_2_50.pdf Graphic file (type pdf)
 <use Images/SIR_ref_2_50.pdf>
 Package pdftex.def Info: Images/SIR_ref_2_50.pdf  used on input line 14.
 (pdftex.def)             Requested size: 167.29967pt x 167.2982pt.
-<Images/SIR_ref_2_100.pdf, id=1473, 1084.05pt x 1084.05pt>
+<Images/SIR_ref_2_100.pdf, id=1455, 1084.05pt x 1084.05pt>
 File: Images/SIR_ref_2_100.pdf Graphic file (type pdf)
 <use Images/SIR_ref_2_100.pdf>
 Package pdftex.def Info: Images/SIR_ref_2_100.pdf  used on input line 15.
@@ -3612,22 +3349,22 @@ ple pdfs with page group included in a single page
 pdfTeX warning: pdflatex (file ./Images/SIR_ref_2_100.pdf): PDF inclusion: mult
 iple pdfs with page group included in a single page
 >]
-<Images/SIR_ref_4_5.pdf, id=1653, 1084.05pt x 1084.05pt>
+<Images/SIR_ref_4_5.pdf, id=1631, 1084.05pt x 1084.05pt>
 File: Images/SIR_ref_4_5.pdf Graphic file (type pdf)
 <use Images/SIR_ref_4_5.pdf>
 Package pdftex.def Info: Images/SIR_ref_4_5.pdf  used on input line 26.
 (pdftex.def)             Requested size: 167.29967pt x 167.2982pt.
-<Images/SIR_ref_4_20.pdf, id=1654, 1084.05pt x 1084.05pt>
+<Images/SIR_ref_4_20.pdf, id=1632, 1084.05pt x 1084.05pt>
 File: Images/SIR_ref_4_20.pdf Graphic file (type pdf)
 <use Images/SIR_ref_4_20.pdf>
 Package pdftex.def Info: Images/SIR_ref_4_20.pdf  used on input line 27.
 (pdftex.def)             Requested size: 167.29967pt x 167.2982pt.
-<Images/SIR_ref_4_50.pdf, id=1655, 1084.05pt x 1084.05pt>
+<Images/SIR_ref_4_50.pdf, id=1633, 1084.05pt x 1084.05pt>
 File: Images/SIR_ref_4_50.pdf Graphic file (type pdf)
 <use Images/SIR_ref_4_50.pdf>
 Package pdftex.def Info: Images/SIR_ref_4_50.pdf  used on input line 28.
 (pdftex.def)             Requested size: 167.29967pt x 167.2982pt.
-<Images/SIR_ref_4_100.pdf, id=1656, 1084.05pt x 1084.05pt>
+<Images/SIR_ref_4_100.pdf, id=1634, 1084.05pt x 1084.05pt>
 File: Images/SIR_ref_4_100.pdf Graphic file (type pdf)
 <use Images/SIR_ref_4_100.pdf>
 Package pdftex.def Info: Images/SIR_ref_4_100.pdf  used on input line 29.
@@ -3645,22 +3382,22 @@ ple pdfs with page group included in a single page
 pdfTeX warning: pdflatex (file ./Images/SIR_ref_4_100.pdf): PDF inclusion: mult
 iple pdfs with page group included in a single page
 >]
-<Images/SIR_ref_8_5.pdf, id=1839, 1084.05pt x 1084.05pt>
+<Images/SIR_ref_8_5.pdf, id=1809, 1084.05pt x 1084.05pt>
 File: Images/SIR_ref_8_5.pdf Graphic file (type pdf)
 <use Images/SIR_ref_8_5.pdf>
 Package pdftex.def Info: Images/SIR_ref_8_5.pdf  used on input line 40.
 (pdftex.def)             Requested size: 167.29967pt x 167.2982pt.
-<Images/SIR_ref_8_20.pdf, id=1840, 1084.05pt x 1084.05pt>
+<Images/SIR_ref_8_20.pdf, id=1810, 1084.05pt x 1084.05pt>
 File: Images/SIR_ref_8_20.pdf Graphic file (type pdf)
 <use Images/SIR_ref_8_20.pdf>
 Package pdftex.def Info: Images/SIR_ref_8_20.pdf  used on input line 41.
 (pdftex.def)             Requested size: 167.29967pt x 167.2982pt.
-<Images/SIR_ref_8_50.pdf, id=1841, 1084.05pt x 1084.05pt>
+<Images/SIR_ref_8_50.pdf, id=1811, 1084.05pt x 1084.05pt>
 File: Images/SIR_ref_8_50.pdf Graphic file (type pdf)
 <use Images/SIR_ref_8_50.pdf>
 Package pdftex.def Info: Images/SIR_ref_8_50.pdf  used on input line 42.
 (pdftex.def)             Requested size: 167.29967pt x 167.2982pt.
-<Images/SIR_ref_8_100.pdf, id=1842, 1084.05pt x 1084.05pt>
+<Images/SIR_ref_8_100.pdf, id=1812, 1084.05pt x 1084.05pt>
 File: Images/SIR_ref_8_100.pdf Graphic file (type pdf)
 <use Images/SIR_ref_8_100.pdf>
 Package pdftex.def Info: Images/SIR_ref_8_100.pdf  used on input line 43.
@@ -3683,22 +3420,22 @@ ple pdfs with page group included in a single page
 pdfTeX warning: pdflatex (file ./Images/SIR_ref_8_100.pdf): PDF inclusion: mult
 iple pdfs with page group included in a single page
 >]
-<Images/SIR_ref_16_5.pdf, id=2024, 1084.05pt x 1084.05pt>
+<Images/SIR_ref_16_5.pdf, id=1989, 1084.05pt x 1084.05pt>
 File: Images/SIR_ref_16_5.pdf Graphic file (type pdf)
 <use Images/SIR_ref_16_5.pdf>
 Package pdftex.def Info: Images/SIR_ref_16_5.pdf  used on input line 56.
 (pdftex.def)             Requested size: 167.29967pt x 167.2982pt.
-<Images/SIR_ref_16_20.pdf, id=2025, 1084.05pt x 1084.05pt>
+<Images/SIR_ref_16_20.pdf, id=1990, 1084.05pt x 1084.05pt>
 File: Images/SIR_ref_16_20.pdf Graphic file (type pdf)
 <use Images/SIR_ref_16_20.pdf>
 Package pdftex.def Info: Images/SIR_ref_16_20.pdf  used on input line 57.
 (pdftex.def)             Requested size: 167.29967pt x 167.2982pt.
-<Images/SIR_ref_16_50.pdf, id=2026, 1084.05pt x 1084.05pt>
+<Images/SIR_ref_16_50.pdf, id=1991, 1084.05pt x 1084.05pt>
 File: Images/SIR_ref_16_50.pdf Graphic file (type pdf)
 <use Images/SIR_ref_16_50.pdf>
 Package pdftex.def Info: Images/SIR_ref_16_50.pdf  used on input line 58.
 (pdftex.def)             Requested size: 167.29967pt x 167.2982pt.
-<Images/SIR_ref_16_100.pdf, id=2027, 1084.05pt x 1084.05pt>
+<Images/SIR_ref_16_100.pdf, id=1992, 1084.05pt x 1084.05pt>
 File: Images/SIR_ref_16_100.pdf Graphic file (type pdf)
 <use Images/SIR_ref_16_100.pdf>
 Package pdftex.def Info: Images/SIR_ref_16_100.pdf  used on input line 59.
@@ -3726,25 +3463,25 @@ Underfull \hbox (badness 10000) in paragraph at lines 92--93
  []
 
 [49]
-<Images/SIR_divergence_8_1000.pdf, id=2216, 1084.05pt x 1589.94pt>
+<Images/SIR_divergence_8_1000.pdf, id=2174, 1084.05pt x 1589.94pt>
 File: Images/SIR_divergence_8_1000.pdf Graphic file (type pdf)
 <use Images/SIR_divergence_8_1000.pdf>
 Package pdftex.def Info: Images/SIR_divergence_8_1000.pdf  used on input line 1
 05.
 (pdftex.def)             Requested size: 167.29967pt x 245.37068pt.
-<Images/SIR_divergence_8_mix.pdf, id=2217, 1084.05pt x 1589.94pt>
+<Images/SIR_divergence_8_mix.pdf, id=2175, 1084.05pt x 1589.94pt>
 File: Images/SIR_divergence_8_mix.pdf Graphic file (type pdf)
 <use Images/SIR_divergence_8_mix.pdf>
 Package pdftex.def Info: Images/SIR_divergence_8_mix.pdf  used on input line 10
 6.
 (pdftex.def)             Requested size: 167.29967pt x 245.37068pt.
-<Images/SIR_divergence_16_1000.pdf, id=2218, 1084.05pt x 1589.94pt>
+<Images/SIR_divergence_16_1000.pdf, id=2176, 1084.05pt x 1589.94pt>
 File: Images/SIR_divergence_16_1000.pdf Graphic file (type pdf)
 <use Images/SIR_divergence_16_1000.pdf>
 Package pdftex.def Info: Images/SIR_divergence_16_1000.pdf  used on input line 
 107.
 (pdftex.def)             Requested size: 167.29967pt x 245.37068pt.
-<Images/SIR_divergence_16_mix.pdf, id=2219, 1084.05pt x 1589.94pt>
+<Images/SIR_divergence_16_mix.pdf, id=2177, 1084.05pt x 1589.94pt>
 File: Images/SIR_divergence_16_mix.pdf Graphic file (type pdf)
 <use Images/SIR_divergence_16_mix.pdf>
 Package pdftex.def Info: Images/SIR_divergence_16_mix.pdf  used on input line 1
@@ -3787,11 +3524,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 156--157
 
  []
 
-<Images/SIR_latence_8_5.pdf, id=2408, 722.7pt x 722.7pt>
+<Images/SIR_latence_8_5.pdf, id=2344, 670.20076pt x 640.03178pt>
 File: Images/SIR_latence_8_5.pdf Graphic file (type pdf)
 <use Images/SIR_latence_8_5.pdf>
 Package pdftex.def Info: Images/SIR_latence_8_5.pdf  used on input line 161.
-(pdftex.def)             Requested size: 209.12778pt x 209.1255pt.
+(pdftex.def)             Requested size: 209.12778pt x 199.71646pt.
 
 Underfull \hbox (badness 1215) in paragraph at lines 165--166
 \T1/ppl/m/n/10.95 (+20) tée à SIR et sur l'axe des or-don-nées
@@ -3812,29 +3549,29 @@ Underfull \hbox (badness 10000) in paragraph at lines 173--174
 
  []
 
-<Images/SIR_mouvements_variables.pdf, id=2445, 1084.05pt x 1084.05pt>
+<Images/SIR_mouvements_variables.pdf, id=2381, 1171.74016pt x 992.35115pt>
 File: Images/SIR_mouvements_variables.pdf Graphic file (type pdf)
 <use Images/SIR_mouvements_variables.pdf>
 Package pdftex.def Info: Images/SIR_mouvements_variables.pdf  used on input lin
 e 180.
-(pdftex.def)             Requested size: 292.7776pt x 292.78012pt.
+(pdftex.def)             Requested size: 292.7776pt x 247.9509pt.
 [53 <./Images/SIR_mouvements_variables.pdf>]
-<Images/SIR_1000_2.pdf, id=2495, 1084.05pt x 1084.05pt>
+<Images/SIR_1000_2.pdf, id=2429, 1084.05pt x 1084.05pt>
 File: Images/SIR_1000_2.pdf Graphic file (type pdf)
 <use Images/SIR_1000_2.pdf>
 Package pdftex.def Info: Images/SIR_1000_2.pdf  used on input line 195.
 (pdftex.def)             Requested size: 167.29967pt x 167.2982pt.
-<Images/SIR_1000_4.pdf, id=2496, 1084.05pt x 1084.05pt>
+<Images/SIR_1000_4.pdf, id=2430, 1084.05pt x 1084.05pt>
 File: Images/SIR_1000_4.pdf Graphic file (type pdf)
 <use Images/SIR_1000_4.pdf>
 Package pdftex.def Info: Images/SIR_1000_4.pdf  used on input line 196.
 (pdftex.def)             Requested size: 167.29967pt x 167.2982pt.
-<Images/SIR_1000_8.pdf, id=2497, 1084.05pt x 1084.05pt>
+<Images/SIR_1000_8.pdf, id=2431, 1084.05pt x 1084.05pt>
 File: Images/SIR_1000_8.pdf Graphic file (type pdf)
 <use Images/SIR_1000_8.pdf>
 Package pdftex.def Info: Images/SIR_1000_8.pdf  used on input line 197.
 (pdftex.def)             Requested size: 167.29967pt x 167.2982pt.
-<Images/SIR_1000_16.pdf, id=2498, 1084.05pt x 1084.05pt>
+<Images/SIR_1000_16.pdf, id=2432, 1084.05pt x 1084.05pt>
 File: Images/SIR_1000_16.pdf Graphic file (type pdf)
 <use Images/SIR_1000_16.pdf>
 Package pdftex.def Info: Images/SIR_1000_16.pdf  used on input line 198.
@@ -3879,7 +3616,7 @@ Package logreq Info: Writing requests to 'BasicDoc.run.xml'.
 Here is how much of TeX's memory you used:
  54442 strings out of 481239
  1208091 string characters out of 5920377
- 2124485 words of memory out of 5000000
+ 2124561 words of memory out of 5000000
  68228 multiletter control sequences out of 15000+600000
  584349 words of font info for 236 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -3893,9 +3630,9 @@ xmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/share/texlive/texmf-dist/fon
 ts/type1/urw/palatino/uplr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw
 /palatino/uplr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/up
 lri8a.pfb>
-Output written on BasicDoc.pdf (61 pages, 2130821 bytes).
+Output written on BasicDoc.pdf (61 pages, 2084609 bytes).
 PDF statistics:
- 2932 PDF objects out of 2984 (max. 8388607)
+ 2856 PDF objects out of 2984 (max. 8388607)
  921 compressed objects within 10 object streams
  169 named destinations out of 1000 (max. 500000)
  29469 words of extra memory for PDF output out of 29859 (max. 10000000)
