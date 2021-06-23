@@ -42,6 +42,8 @@ void Simulation::Execution()
 {
     auto start = chrono::steady_clock::now();
 
+    int rerun_times = m_RERUN_LIMIT;
+
     //* Rerun la simulation en cas d'échec de la pandémie
     for (int i = 0; i <= m_RERUN_LIMIT; i++)
     {
@@ -71,9 +73,10 @@ void Simulation::Execution()
         auto End_diff = End_end - End_start;
         m_End_time = chrono::duration<double, micro>(End_diff).count();
 
-        //* Vérifier que le Run() ait abouti sur une pandémie
+        //* Vérifier que le Run() ait abouti sur un événement
         if (m_iteration_fin > m_FAIL_SEUIL || m_iteration_fin == -1)
         {
+            rerun_times = i;
             break;
         }
     }
@@ -93,6 +96,10 @@ void Simulation::Execution()
             << m_End_time / time_metrique << ','
             << m_Total_time / time_metrique;
     m_times.close();
+
+    m_rerun.open(path_copy + "/rerun.csv");
+    m_rerun << "Nombre de rerun" << '\n' << rerun_times;
+    m_rerun.close();
 }
 
 //* Phase d'initalisation de la simulation

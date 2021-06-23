@@ -122,7 +122,7 @@ private:
     Individu **m_Liste_I;
 
     //* Fichier csv pour la prise des données essentielles
-    std::ofstream m_nombre_contamine_file, m_nombre_de_fois_contamine_file, m_nombre_AP_diff_file, m_SIR_recovered_file, m_X_mouvements_time, m_IX, m_IY, m_times;
+    std::ofstream m_nombre_contamine_file, m_nombre_de_fois_contamine_file, m_nombre_AP_diff_file, m_SIR_recovered_file, m_X_mouvements_time, m_IX, m_IY, m_times, m_rerun;
 
     //* Variables pour calculer les temps d'exécution du programme
     unsigned long long int m_Init_time = 0;

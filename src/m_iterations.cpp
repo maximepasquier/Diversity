@@ -20,7 +20,7 @@ void Simulation::Iterations()
     {
         //* Print les itérations (avancement)
         int seuil = ceil(m_ITERATIONS/100);
-        if (iteration % seuil == 0)
+        if (iteration % seuil == 0 || iteration == m_ITERATIONS - 1)
         {
             Print_progression(iteration, m_ITERATIONS);
         }
@@ -31,6 +31,8 @@ void Simulation::Iterations()
         if (m_nombre_contamine == 0)
         {
             m_iteration_fin = iteration;
+            Print_progression(iteration, m_ITERATIONS);
+            cout << endl;
             break;
         }
     }

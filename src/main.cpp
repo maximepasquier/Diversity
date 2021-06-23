@@ -301,30 +301,122 @@ int main(int argc, char const *argv[])
 
     
     // Diversité
-    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Diversite/perfect_mix/diversite5"));
-    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Diversite/perfect_mix/diversite10"));
-    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Diversite/perfect_mix/diversite15"));
-    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Diversite/perfect_mix/diversite20"));
+    /*
+    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Diversite/1sur8/perfect_mix/diversite5"));
+    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Diversite/1sur8/perfect_mix/diversite10"));
+    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Diversite/1sur8/perfect_mix/diversite15"));
+    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Diversite/1sur8/perfect_mix/diversite20"));
 
-    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Diversite/1mouvement/diversite5"));
-    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Diversite/1mouvement/diversite10"));
-    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Diversite/1mouvement/diversite15"));
-    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Diversite/1mouvement/diversite20"));
+    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Diversite/1sur8/1mouvement/diversite5"));
+    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Diversite/1sur8/1mouvement/diversite10"));
+    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Diversite/1sur8/1mouvement/diversite15"));
+    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Diversite/1sur8/1mouvement/diversite20"));
 
-    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Diversite/10mouvements/diversite5"));
-    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Diversite/10mouvements/diversite10"));
-    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Diversite/10mouvements/diversite15"));
-    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Diversite/10mouvements/diversite20"));
+    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Diversite/1sur8/10mouvements/diversite5"));
+    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Diversite/1sur8/10mouvements/diversite10"));
+    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Diversite/1sur8/10mouvements/diversite15"));
+    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Diversite/1sur8/10mouvements/diversite20"));
 
-    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Diversite/50mouvements/diversite5"));
-    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Diversite/50mouvements/diversite10"));
-    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Diversite/50mouvements/diversite15"));
-    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Diversite/50mouvements/diversite20"));
+    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Diversite/1sur8/50mouvements/diversite5"));
+    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Diversite/1sur8/50mouvements/diversite10"));
+    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Diversite/1sur8/50mouvements/diversite15"));
+    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Diversite/1sur8/50mouvements/diversite20"));
 
-    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Diversite/100mouvements/diversite5"));
-    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Diversite/100mouvements/diversite10"));
-    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Diversite/100mouvements/diversite15"));
-    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Diversite/100mouvements/diversite20"));
+    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Diversite/1sur8/100mouvements/diversite5"));
+    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Diversite/1sur8/100mouvements/diversite10"));
+    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Diversite/1sur8/100mouvements/diversite15"));
+    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Diversite/1sur8/100mouvements/diversite20"));
+    */
+
+    // Référence au mélange parfait
+    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Diversite/1sur16/charge_virale1/perfect_mix/diversite4"));
+    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Diversite/1sur16/charge_virale1/perfect_mix/diversite8"));
+    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Diversite/1sur16/charge_virale1/perfect_mix/diversite16"));
+    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Diversite/1sur16/charge_virale1/perfect_mix/diversite32"));
+
+    // charge virale = 1
+    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Diversite/1sur16/charge_virale1/1mouvement/diversite4"));
+    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Diversite/1sur16/charge_virale1/1mouvement/diversite8"));
+    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Diversite/1sur16/charge_virale1/1mouvement/diversite16"));
+    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Diversite/1sur16/charge_virale1/1mouvement/diversite32"));
+
+    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Diversite/1sur16/charge_virale1/10mouvements/diversite4"));
+    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Diversite/1sur16/charge_virale1/10mouvements/diversite8"));
+    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Diversite/1sur16/charge_virale1/10mouvements/diversite16"));
+    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Diversite/1sur16/charge_virale1/10mouvements/diversite32"));
+
+    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Diversite/1sur16/charge_virale1/50mouvements/diversite4"));
+    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Diversite/1sur16/charge_virale1/50mouvements/diversite8"));
+    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Diversite/1sur16/charge_virale1/50mouvements/diversite16"));
+    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Diversite/1sur16/charge_virale1/50mouvements/diversite32"));
+
+    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Diversite/1sur16/charge_virale1/100mouvements/diversite4"));
+    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Diversite/1sur16/charge_virale1/100mouvements/diversite8"));
+    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Diversite/1sur16/charge_virale1/100mouvements/diversite16"));
+    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Diversite/1sur16/charge_virale1/100mouvements/diversite32"));
+
+    // charge virale = 0.75
+    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Diversite/1sur16/charge_virale075/1mouvement/diversite4"));
+    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Diversite/1sur16/charge_virale075/1mouvement/diversite8"));
+    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Diversite/1sur16/charge_virale075/1mouvement/diversite16"));
+    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Diversite/1sur16/charge_virale075/1mouvement/diversite32"));
+
+    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Diversite/1sur16/charge_virale075/10mouvements/diversite4"));
+    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Diversite/1sur16/charge_virale075/10mouvements/diversite8"));
+    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Diversite/1sur16/charge_virale075/10mouvements/diversite16"));
+    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Diversite/1sur16/charge_virale075/10mouvements/diversite32"));
+
+    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Diversite/1sur16/charge_virale075/50mouvements/diversite4"));
+    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Diversite/1sur16/charge_virale075/50mouvements/diversite8"));
+    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Diversite/1sur16/charge_virale075/50mouvements/diversite16"));
+    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Diversite/1sur16/charge_virale075/50mouvements/diversite32"));
+
+    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Diversite/1sur16/charge_virale075/100mouvements/diversite4"));
+    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Diversite/1sur16/charge_virale075/100mouvements/diversite8"));
+    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Diversite/1sur16/charge_virale075/100mouvements/diversite16"));
+    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Diversite/1sur16/charge_virale075/100mouvements/diversite32"));
+
+    // charge virale = 0.50
+    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Diversite/1sur16/charge_virale05/1mouvement/diversite4"));
+    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Diversite/1sur16/charge_virale05/1mouvement/diversite8"));
+    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Diversite/1sur16/charge_virale05/1mouvement/diversite16"));
+    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Diversite/1sur16/charge_virale05/1mouvement/diversite32"));
+
+    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Diversite/1sur16/charge_virale05/10mouvements/diversite4"));
+    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Diversite/1sur16/charge_virale05/10mouvements/diversite8"));
+    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Diversite/1sur16/charge_virale05/10mouvements/diversite16"));
+    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Diversite/1sur16/charge_virale05/10mouvements/diversite32"));
+
+    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Diversite/1sur16/charge_virale05/50mouvements/diversite4"));
+    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Diversite/1sur16/charge_virale05/50mouvements/diversite8"));
+    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Diversite/1sur16/charge_virale05/50mouvements/diversite16"));
+    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Diversite/1sur16/charge_virale05/50mouvements/diversite32"));
+
+    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Diversite/1sur16/charge_virale05/100mouvements/diversite4"));
+    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Diversite/1sur16/charge_virale05/100mouvements/diversite8"));
+    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Diversite/1sur16/charge_virale05/100mouvements/diversite16"));
+    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Diversite/1sur16/charge_virale05/100mouvements/diversite32"));
+
+    // charge virale = 0.25
+    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Diversite/1sur16/charge_virale025/1mouvement/diversite4"));
+    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Diversite/1sur16/charge_virale025/1mouvement/diversite8"));
+    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Diversite/1sur16/charge_virale025/1mouvement/diversite16"));
+    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Diversite/1sur16/charge_virale025/1mouvement/diversite32"));
+
+    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Diversite/1sur16/charge_virale025/10mouvements/diversite4"));
+    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Diversite/1sur16/charge_virale025/10mouvements/diversite8"));
+    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Diversite/1sur16/charge_virale025/10mouvements/diversite16"));
+    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Diversite/1sur16/charge_virale025/10mouvements/diversite32"));
+
+    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Diversite/1sur16/charge_virale025/50mouvements/diversite4"));
+    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Diversite/1sur16/charge_virale025/50mouvements/diversite8"));
+    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Diversite/1sur16/charge_virale025/50mouvements/diversite16"));
+    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Diversite/1sur16/charge_virale025/50mouvements/diversite32"));
+
+    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Diversite/1sur16/charge_virale025/100mouvements/diversite4"));
+    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Diversite/1sur16/charge_virale025/100mouvements/diversite8"));
+    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Diversite/1sur16/charge_virale025/100mouvements/diversite16"));
+    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Diversite/1sur16/charge_virale025/100mouvements/diversite32"));
 
 
 
