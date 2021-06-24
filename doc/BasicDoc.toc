@@ -61,5 +61,7 @@
 \contentsline {chapter}{\numberline {10}Diversité}{56}{chapter.10}%
 \contentsline {section}{\numberline {10.1}Mesures et méthodologie}{56}{section.10.1}%
 \contentsline {section}{\numberline {10.2}Résultats}{57}{section.10.2}%
-\contentsline {section}{\numberline {10.3}Analyses}{60}{section.10.3}%
-\contentsline {chapter}{\numberline {11}Conclusion}{61}{chapter.11}%
+\contentsline {subsection}{\numberline {10.2.1}Mélange parfait}{57}{subsection.10.2.1}%
+\contentsline {subsection}{\numberline {10.2.2}Mouvements variable}{59}{subsection.10.2.2}%
+\contentsline {section}{\numberline {10.3}Analyses}{61}{section.10.3}%
+\contentsline {chapter}{\numberline {11}Conclusion}{62}{chapter.11}%

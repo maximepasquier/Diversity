@@ -51,15 +51,28 @@ Les résultats du chapitre se découpent en $5$ parties. La première sert d'exe
 
 \section{Résultats}
 
+Chaque figure est structuré de la même manière. Il y a 3 subplots pour les 3 compartiements du modèle SIR. Les quatres courbes par compartiment représentent le nombre d'infectés de simulations aux niveaux de diversité différents.
 
+\subsection{Mélange parfait}
+
+Le document ne contient qu'une seule simulation à diversité non nulle et au mélange parfait. La raison pour laquelle cette voie n'est que peu explorée est parceque le mélange parfait est trop efficace pour la propagation de pandémies. Par conséquent les propagations sont beaucoup trop rapides comparé au ralentissement qu'offre la diversité. 
 
 \begin{figure}[h]
 	\centering
 	\captionsetup{justification=centering}
 	\includegraphics[width=.7\textwidth]{Images/SIR_diversite_mix.pdf}
+	\caption{Comparaison 50 mouvements}
 \end{figure}
 
+Les résultats des simulations au mélange parfait sont très similaire aux simulations SIR et ceci est dû au fait que l'impacte de la diversité est trop faible sur cette simulation. Pour pouvoir étudier l'impact de la diversité il est nécessaire de construire des systèmes plus progressifs dans la propagation des agents pathogènes.\\
+
+Deux choses sont à noter à propos de cette figure. La première est que la propagation est beaucoup trop rapide comme nous pouvons le voir sur le compartiement $Susceptible$. Tous les individus sont déjà passés dans le compartiment $Infected$ très tôt dans la simulation. Par conséquent dans ces configurations la propagation de la pandémie est maximale car elle atteint rapidement $100\%$ de la population.\\
+
+Le deuxième élément se produit dans une deuxième phase et décrit l'immunisation des individus. Comme nous l'avons déjà dit, tout les individus finissent contaminés très vite. A partir de là, les individus s'immunisent mais leur immunisation dépend de la compatibilité qu'ils ont avec leur agent pathogène. Le compartiment $Recovered$ montre la différence de vitesse des acquisitions d'immunisation parmi la population et il est assez clair qu'un plus grand niveau de diversité inplique une immunisation générale plus rapide. Par conséquent la diversité permet une meilleure immunisation de la population.
+
 \newpage
+
+\subsection{Mouvements variable}
 
 \begin{figure}[h]
 	\centering
