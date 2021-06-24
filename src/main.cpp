@@ -350,11 +350,6 @@ int main(int argc, char const *argv[])
     threads.push_back(std::thread(thread_function, "./Simulations/SIR/Diversite/1sur16/charge_virale1/50mouvements/diversite16"));
     threads.push_back(std::thread(thread_function, "./Simulations/SIR/Diversite/1sur16/charge_virale1/50mouvements/diversite32"));
 
-    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Diversite/1sur16/charge_virale1/100mouvements/diversite4"));
-    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Diversite/1sur16/charge_virale1/100mouvements/diversite8"));
-    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Diversite/1sur16/charge_virale1/100mouvements/diversite16"));
-    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Diversite/1sur16/charge_virale1/100mouvements/diversite32"));
-
     // charge virale = 0.75
     threads.push_back(std::thread(thread_function, "./Simulations/SIR/Diversite/1sur16/charge_virale075/1mouvement/diversite4"));
     threads.push_back(std::thread(thread_function, "./Simulations/SIR/Diversite/1sur16/charge_virale075/1mouvement/diversite8"));
@@ -370,11 +365,6 @@ int main(int argc, char const *argv[])
     threads.push_back(std::thread(thread_function, "./Simulations/SIR/Diversite/1sur16/charge_virale075/50mouvements/diversite8"));
     threads.push_back(std::thread(thread_function, "./Simulations/SIR/Diversite/1sur16/charge_virale075/50mouvements/diversite16"));
     threads.push_back(std::thread(thread_function, "./Simulations/SIR/Diversite/1sur16/charge_virale075/50mouvements/diversite32"));
-
-    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Diversite/1sur16/charge_virale075/100mouvements/diversite4"));
-    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Diversite/1sur16/charge_virale075/100mouvements/diversite8"));
-    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Diversite/1sur16/charge_virale075/100mouvements/diversite16"));
-    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Diversite/1sur16/charge_virale075/100mouvements/diversite32"));
 
     // charge virale = 0.50
     threads.push_back(std::thread(thread_function, "./Simulations/SIR/Diversite/1sur16/charge_virale05/1mouvement/diversite4"));
@@ -392,11 +382,6 @@ int main(int argc, char const *argv[])
     threads.push_back(std::thread(thread_function, "./Simulations/SIR/Diversite/1sur16/charge_virale05/50mouvements/diversite16"));
     threads.push_back(std::thread(thread_function, "./Simulations/SIR/Diversite/1sur16/charge_virale05/50mouvements/diversite32"));
 
-    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Diversite/1sur16/charge_virale05/100mouvements/diversite4"));
-    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Diversite/1sur16/charge_virale05/100mouvements/diversite8"));
-    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Diversite/1sur16/charge_virale05/100mouvements/diversite16"));
-    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Diversite/1sur16/charge_virale05/100mouvements/diversite32"));
-
     // charge virale = 0.25
     threads.push_back(std::thread(thread_function, "./Simulations/SIR/Diversite/1sur16/charge_virale025/1mouvement/diversite4"));
     threads.push_back(std::thread(thread_function, "./Simulations/SIR/Diversite/1sur16/charge_virale025/1mouvement/diversite8"));
@@ -412,11 +397,6 @@ int main(int argc, char const *argv[])
     threads.push_back(std::thread(thread_function, "./Simulations/SIR/Diversite/1sur16/charge_virale025/50mouvements/diversite8"));
     threads.push_back(std::thread(thread_function, "./Simulations/SIR/Diversite/1sur16/charge_virale025/50mouvements/diversite16"));
     threads.push_back(std::thread(thread_function, "./Simulations/SIR/Diversite/1sur16/charge_virale025/50mouvements/diversite32"));
-
-    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Diversite/1sur16/charge_virale025/100mouvements/diversite4"));
-    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Diversite/1sur16/charge_virale025/100mouvements/diversite8"));
-    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Diversite/1sur16/charge_virale025/100mouvements/diversite16"));
-    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Diversite/1sur16/charge_virale025/100mouvements/diversite32"));
 
     /*
     // Mutation

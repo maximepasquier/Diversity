@@ -1,0 +1,21 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+	
+	\PYG{n}{TAILLE\PYGZus{}SYSTEME} \PYG{o}{=} \PYG{l+m+mi}{1264}
+	\PYG{n}{NOMBRE\PYGZus{}INDIVIDUS} \PYG{o}{=} \PYG{l+m+mi}{100000}
+	\PYG{n}{ITERATIONS} \PYG{o}{=} \PYG{l+m+mi}{5000}
+	\PYG{n}{RERUN\PYGZus{}LIMIT} \PYG{o}{=} \PYG{l+m+mi}{100}
+	\PYG{n}{FAIL\PYGZus{}SEUIL} \PYG{o}{=} \PYG{l+m+mi}{30}
+	\PYG{n}{GENOME\PYGZus{}INIT\PYGZus{}I} \PYG{o}{=} \PYG{l+m+mi}{0}
+	\PYG{n}{GENOME\PYGZus{}DIVERSITY\PYGZus{}I} \PYG{o}{=} \PYG{l+m+mi}{8}
+	\PYG{n}{GENOME\PYGZus{}INIT\PYGZus{}AP} \PYG{o}{=} \PYG{l+m+mi}{0}
+	\PYG{n}{VITESSE\PYGZus{}MUTATIONS\PYGZus{}AP} \PYG{o}{=} \PYG{l+m+mi}{0}
+	\PYG{n}{CHARGE\PYGZus{}VIRALE} \PYG{o}{=} \PYG{l+m+mi}{1}
+	\PYG{n}{PARAMETRE\PYGZus{}FONCTION} \PYG{o}{=} \PYG{l+m+mi}{4}
+	\PYG{n}{CELLULE\PYGZus{}AP} \PYG{o}{=} \PYG{l+m+mi}{0}
+	\PYG{n}{SURVIE\PYGZus{}AP} \PYG{o}{=} \PYG{l+m+mi}{0}
+	\PYG{n}{NOMBRE\PYGZus{}MOUVEMENT} \PYG{o}{=} \PYG{l+m+mi}{1}
+	\PYG{n}{PERFECT\PYGZus{}MIX} \PYG{o}{=} \PYG{n+nb}{true}
+	\PYG{n}{TEMPS\PYGZus{}AVANT\PYGZus{}IMMUNITE} \PYG{o}{=} \PYG{l+m+mi}{1}
+	\PYG{n}{IMMUNITE\PYGZus{}MECANISME} \PYG{o}{=} \PYG{n+nb}{true}
+	\PYG{n}{RESISTANCE\PYGZus{}MECANISME} \PYG{o}{=} \PYG{n+nb}{false}
+\end{Verbatim}
