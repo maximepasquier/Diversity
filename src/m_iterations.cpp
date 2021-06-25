@@ -10,8 +10,6 @@
 
 using namespace std;
 
-//extern default_random_engine generator;
-
 //* Ensemble de toutes les itérations de la simulation
 void Simulation::Iterations()
 {
@@ -19,12 +17,12 @@ void Simulation::Iterations()
     for (int iteration = 0; iteration < m_ITERATIONS; iteration++)
     {
         //* Print les itérations (avancement)
-        int seuil = ceil(m_ITERATIONS/100);
+        int seuil = ceil(m_ITERATIONS / 100);
         if (iteration % seuil == 0 || iteration == m_ITERATIONS - 1)
         {
             Print_progression(iteration, m_ITERATIONS);
         }
-        //* Print ASCII grid to screen (small systems)
+        //* Print ASCII grid to screen (small systems !!!)
         //Print_ASCII_grid(m_TAILLE_SYSTEME, m_Pointer_array_H, m_Pointer_array_AP);
         One_iteration(iteration);
         //* Vérifier que des individus soient contaminés
@@ -48,7 +46,6 @@ void Simulation::One_iteration(int iteration)
     m_nombre_AP_diff = Update_nombre_AP_diff();
 
     //* Write to .csv file
-    //Update_csv_all_data(iteration);
     Update_csv();
 
     //* Compter le nombre de recovered pour le modèle SIR
@@ -63,7 +60,7 @@ void Simulation::One_iteration(int iteration)
     Update_all_AP();
     //* Parcours du domaine (liste individus)
     Update_all_I(permuted_liste);
-    //* Sleep (FPS)
+    //* Sleep entre les itérations pour l'affichage graphique
     //this_thread::sleep_for(chrono::seconds(1));
     //* Supprimer la permutation
     delete[] permuted_liste;

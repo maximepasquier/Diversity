@@ -74,38 +74,37 @@ void Simulation::Assign_variables()
         }
         else if (key == "PERFECT_MIX")
         {
-            if(value.compare("true") == 0)
+            if (value.compare("true") == 0)
             {
                 m_PERFECT_MIX = true;
             }
-            if(value.compare("false") == 0)
+            if (value.compare("false") == 0)
             {
                 m_PERFECT_MIX = false;
             }
         }
         else if (key == "IMMUNITE_MECANISME")
         {
-            if(value.compare("true") == 0)
+            if (value.compare("true") == 0)
             {
                 m_IMMUNITE_MECANISME = true;
             }
-            if(value.compare("false") == 0)
+            if (value.compare("false") == 0)
             {
                 m_IMMUNITE_MECANISME = false;
             }
         }
         else if (key == "RESISTANCE_MECANISME")
         {
-            if(value.compare("true") == 0)
+            if (value.compare("true") == 0)
             {
                 m_RESISTANCE_MECANISME = true;
             }
-            if(value.compare("false") == 0)
+            if (value.compare("false") == 0)
             {
                 m_RESISTANCE_MECANISME = false;
             }
         }
-
     }
 }
 
@@ -153,7 +152,7 @@ void Simulation::Delete_obj()
             delete m_Pointer_array_AP[i][j];
         }
         delete[] m_Pointer_array_I[i];
-        delete[] m_Pointer_array_AP[i];   
+        delete[] m_Pointer_array_AP[i];
     }
     delete[] m_Pointer_array_I;
     delete[] m_Pointer_array_AP;

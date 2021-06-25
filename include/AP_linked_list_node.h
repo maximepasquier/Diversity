@@ -13,7 +13,6 @@
  * agent pathogène ainsi que un lien sur le noeud précédent 
  * ainsi qu'un autre lien sur le noeud suivant.
  */
-
 struct AP_linked_list_node
 {
     Agent_Pathogene AP;

@@ -7,8 +7,6 @@
 
 using namespace std;
 
-//extern default_random_engine generator;
-
 //* Algirithme de shuffle
 void Knuth_Shuffle(int *liste, int taille, default_random_engine generator)
 {
@@ -16,7 +14,7 @@ void Knuth_Shuffle(int *liste, int taille, default_random_engine generator)
      * Effectue un Knuth shuffle sur une liste passée par référence.
      * La liste doit être de longueur = taille. 
      */
-    uniform_int_distribution<int> rand_int(0,taille);
+    uniform_int_distribution<int> rand_int(0, taille);
     for (int i = taille - 1; i > 0; i--)
     {
         int index = rand_int(generator) % (i + 1);

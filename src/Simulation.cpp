@@ -9,7 +9,6 @@
 
 using namespace std;
 
-//extern default_random_engine generator;
 extern std::vector<std::mutex> verrous;
 
 Simulation::Simulation()
@@ -98,7 +97,8 @@ void Simulation::Execution()
     m_times.close();
 
     m_rerun.open(path_copy + "/rerun.csv");
-    m_rerun << "Nombre de rerun" << '\n' << rerun_times;
+    m_rerun << "Nombre de rerun" << '\n'
+            << rerun_times;
     m_rerun.close();
 }
 
@@ -107,7 +107,6 @@ void Simulation::Init()
 {
     Read();
     Set();
-    //File_init_all_data();
     File_init();
 }
 
@@ -126,7 +125,6 @@ void Simulation::Mesures()
 //* Phase de terminaison de la simulation
 void Simulation::End()
 {
-    //Close_files_all_data();
     Close_files();
     Delete_obj();
 }

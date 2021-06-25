@@ -7,8 +7,6 @@
 
 using namespace std;
 
-//extern default_random_engine generator;
-
 //* Contamination du premier individu
 void Simulation::Patient_zero()
 {

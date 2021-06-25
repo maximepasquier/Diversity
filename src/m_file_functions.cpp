@@ -130,6 +130,7 @@ void Simulation::Update_csv()
     m_nombre_AP_diff_file << '\n'
                           << m_nombre_AP_diff;
 
+//* Activation de la sauvegarde des coordonnées de tous les individus à chaque itération (gourmand en mémoire !!!)
 #if (0)
     // Vérifier si la personne est contaminé ou non
     int sign = 1;

@@ -6,12 +6,9 @@
 #include <random>
 #include "Simulation.h"
 
+//* Nombre de threads maximum dédiés aux simulations
 #define NB_THREADS 8
 
-//* Initialiser globalement un générateur de nombres aléatoire
-//unsigned int seed = std::chrono::system_clock::now().time_since_epoch().count();
-//default_random_engine generator(seed);
-//std::default_random_engine generator(123456789);
 std::vector<std::mutex> verrous(NB_THREADS);
 
 void thread_function(std::string path)
@@ -27,16 +24,16 @@ int main(int argc, char const *argv[])
 
     std::vector<std::thread> threads;
 
-    //* Positions SI
-    //threads.push_back(std::thread(thread_function, "./Simulations/SI/Positions/1000mouvements/10000"));
-    //threads.push_back(std::thread(thread_function, "./Simulations/SI/Positions/1000mouvements/14000"));
-    //threads.push_back(std::thread(thread_function, "./Simulations/SI/Positions/1000mouvements/17000"));
-    //threads.push_back(std::thread(thread_function, "./Simulations/SI/Positions/1000mouvements/20000"));
-    //threads.push_back(std::thread(thread_function, "./Simulations/SI/Positions/perfect_mix"));
+    /*
 
+    //* Positions SI
+    threads.push_back(std::thread(thread_function, "./Simulations/SI/Positions/1000mouvements/10000"));
+    threads.push_back(std::thread(thread_function, "./Simulations/SI/Positions/1000mouvements/14000"));
+    threads.push_back(std::thread(thread_function, "./Simulations/SI/Positions/1000mouvements/17000"));
+    threads.push_back(std::thread(thread_function, "./Simulations/SI/Positions/1000mouvements/20000"));
+    threads.push_back(std::thread(thread_function, "./Simulations/SI/Positions/perfect_mix"));
 
     //* Divergence
-    /*
     // SI mouvements
     threads.push_back(std::thread(thread_function, "./Simulations/Random_Divergence/SI/Reference/1000mouvements/densite1sur8/0"));
     threads.push_back(std::thread(thread_function, "./Simulations/Random_Divergence/SI/Reference/1000mouvements/densite1sur8/1"));
@@ -122,7 +119,6 @@ int main(int argc, char const *argv[])
     threads.push_back(std::thread(thread_function, "./Simulations/Random_Divergence/SI/Reference/perfect_mix/densite1sur16/17"));
     threads.push_back(std::thread(thread_function, "./Simulations/Random_Divergence/SI/Reference/perfect_mix/densite1sur16/18"));
     threads.push_back(std::thread(thread_function, "./Simulations/Random_Divergence/SI/Reference/perfect_mix/densite1sur16/19"));
-    
 
     // SIR mouvements
     threads.push_back(std::thread(thread_function, "./Simulations/Random_Divergence/SIR/Reference/1000mouvements/densite1sur8/0"));
@@ -209,9 +205,7 @@ int main(int argc, char const *argv[])
     threads.push_back(std::thread(thread_function, "./Simulations/Random_Divergence/SIR/Reference/perfect_mix/densite1sur16/17"));
     threads.push_back(std::thread(thread_function, "./Simulations/Random_Divergence/SIR/Reference/perfect_mix/densite1sur16/18"));
     threads.push_back(std::thread(thread_function, "./Simulations/Random_Divergence/SIR/Reference/perfect_mix/densite1sur16/19"));
-    */
 
-    /*
     //* SI
     // 1000 mouvements
     threads.push_back(std::thread(thread_function, "./Simulations/SI/Reference/1000mouvements/densite1sur2/population5000"));
@@ -254,7 +248,7 @@ int main(int argc, char const *argv[])
     threads.push_back(std::thread(thread_function, "./Simulations/SI/Reference/perfect_mix/densite1sur16/population20000"));
     threads.push_back(std::thread(thread_function, "./Simulations/SI/Reference/perfect_mix/densite1sur16/population50000"));
     threads.push_back(std::thread(thread_function, "./Simulations/SI/Reference/perfect_mix/densite1sur16/population100000"));
-       
+
     //* SIR
     // 1000 mouvements
     threads.push_back(std::thread(thread_function, "./Simulations/SIR/Reference/1000mouvements/densite1sur2/population5000"));
@@ -297,11 +291,8 @@ int main(int argc, char const *argv[])
     threads.push_back(std::thread(thread_function, "./Simulations/SIR/Reference/perfect_mix/densite1sur16/population20000"));
     threads.push_back(std::thread(thread_function, "./Simulations/SIR/Reference/perfect_mix/densite1sur16/population50000"));
     threads.push_back(std::thread(thread_function, "./Simulations/SIR/Reference/perfect_mix/densite1sur16/population100000"));
-    */
 
-    
     // Diversité
-    /*
     threads.push_back(std::thread(thread_function, "./Simulations/SIR/Diversite/1sur8/perfect_mix/diversite5"));
     threads.push_back(std::thread(thread_function, "./Simulations/SIR/Diversite/1sur8/perfect_mix/diversite10"));
     threads.push_back(std::thread(thread_function, "./Simulations/SIR/Diversite/1sur8/perfect_mix/diversite15"));
@@ -326,7 +317,6 @@ int main(int argc, char const *argv[])
     threads.push_back(std::thread(thread_function, "./Simulations/SIR/Diversite/1sur8/100mouvements/diversite10"));
     threads.push_back(std::thread(thread_function, "./Simulations/SIR/Diversite/1sur8/100mouvements/diversite15"));
     threads.push_back(std::thread(thread_function, "./Simulations/SIR/Diversite/1sur8/100mouvements/diversite20"));
-    */
 
     // Référence au mélange parfait
     threads.push_back(std::thread(thread_function, "./Simulations/SIR/Diversite/1sur16/charge_virale1/perfect_mix/diversite4"));
@@ -398,7 +388,6 @@ int main(int argc, char const *argv[])
     threads.push_back(std::thread(thread_function, "./Simulations/SIR/Diversite/1sur16/charge_virale025/50mouvements/diversite16"));
     threads.push_back(std::thread(thread_function, "./Simulations/SIR/Diversite/1sur16/charge_virale025/50mouvements/diversite32"));
 
-    /*
     // Mutation
     threads.push_back(std::thread(thread_function, "./Simulations/SIR/Mutation/perfect_mix/distanceHamming16/mutation3"));
     threads.push_back(std::thread(thread_function, "./Simulations/SIR/Mutation/perfect_mix/distanceHamming16/mutation4"));
@@ -409,7 +398,6 @@ int main(int argc, char const *argv[])
     threads.push_back(std::thread(thread_function, "./Simulations/SIR/Mutation/perfect_mix/distanceHamming24/mutation4"));
     threads.push_back(std::thread(thread_function, "./Simulations/SIR/Mutation/perfect_mix/distanceHamming24/mutation5"));
     threads.push_back(std::thread(thread_function, "./Simulations/SIR/Mutation/perfect_mix/distanceHamming24/mutation6"));
-    
 
     //* SIR mouvements
     // perfect mix référence
@@ -424,8 +412,9 @@ int main(int argc, char const *argv[])
     threads.push_back(std::thread(thread_function, "./Simulations/SIR/Mouvements/600mouvements"));
     threads.push_back(std::thread(thread_function, "./Simulations/SIR/Mouvements/800mouvements"));
     threads.push_back(std::thread(thread_function, "./Simulations/SIR/Mouvements/1000mouvements"));
+
     */
-    
+
     for (auto &t : threads)
     {
         t.join();

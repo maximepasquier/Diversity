@@ -12,7 +12,6 @@
  * possède un génome ainsi que des coordonnées sur la grille
  * définissant sa position.  
  */
-
 class Agent_Pathogene
 {
 public:

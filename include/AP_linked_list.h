@@ -17,7 +17,6 @@
  * effacer le contenu ainsi qu'une méthode pour récupérer le
  * premier élément de la chaîne.
  */
-
 class AP_linked_list
 {
 public:

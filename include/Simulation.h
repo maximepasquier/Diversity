@@ -60,13 +60,13 @@ public:
     void Update_all_AP();
     void Update_all_I(int *permuted_liste);
     void Update_one_I(int index_I);
-    void Contamination_cases(int coords[][2] , int x, int y, int index_I);
+    void Contamination_cases(int coords[][2], int x, int y, int index_I);
     void Pre_contamine_to_contamine();
     void Individu_hote(int index_I);
     void Collision_I_AP(int x, int y, int index_I);
     void Analyse_voisinage(int coords[][2], int index_I);
     void Mouvement(int x, int y);
-    void Moving(int coords[][2],int x, int y, int choix);
+    void Moving(int coords[][2], int x, int y, int choix);
     void Add_AP_to_cell(int x, int y);
     void Contaminate_cell(int x, int y);
     void Pointer_move_update(int coords[][2], int x, int y, int choix);
@@ -94,16 +94,16 @@ private:
     float m_SURVIE_AP;                 // probabilité que le pathogène contaminant une cellule reste en vie
     int m_NOMBRE_MOUVEMENT;            // nombre de mouvements par itération
     int m_TEMPS_AVANT_IMMUNITE;        // temps minimal pour considérer une immunité et non une résistance naturelle
-    bool m_IMMUNITE_MECANISME; 
-    bool m_RESISTANCE_MECANISME;
-    bool m_PERFECT_MIX;
-    int m_FAIL_SEUIL;
-    int m_RERUN_LIMIT;
+    bool m_IMMUNITE_MECANISME;         // activation ou non du mécanisme d'immunisation
+    bool m_RESISTANCE_MECANISME;       // activation ou non du mécanisme de résistance naturelle
+    bool m_PERFECT_MIX;                // mode de mouvement en mélange parfait ou en en nombre de mouvements fixés
+    int m_FAIL_SEUIL;                  // seuil au delà duquel on ne restart pas la simulation
+    int m_RERUN_LIMIT;                 // nombre maximum de restart de simulation en cas "d'échec"
 
     //* Variables pour les mesures de la simulation
     int m_nombre_contamine; // compteur du nombre d'individus contaminés à chaque itération
     int m_nombre_AP_diff;   // compteur du nombre d'agents pathogènes à chaque itération
-    int m_iteration_fin; // nombre d'itération final
+    int m_iteration_fin;    // nombre d'itération final
 
     //* Path du fichier config
     std::string m_configuration_file_path;
