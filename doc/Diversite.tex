@@ -74,6 +74,8 @@ Le deuxième élément se produit dans une deuxième phase et décrit l'immunisa
 
 \subsection{Mouvements variable}
 
+Les simulations qui suivent pour étudier la diversité des individus ont toutes été effecutée avec des mouvements variable. Les mouvements choisi sont : $1,10,50$.
+
 \begin{figure}[h]
 	\centering
 	\captionsetup{justification=centering}
@@ -81,8 +83,14 @@ Le deuxième élément se produit dans une deuxième phase et décrit l'immunisa
 	\includegraphics[width=.4\textwidth]{Images/SIR_diversite_075_50.pdf}
 	\includegraphics[width=.4\textwidth]{Images/SIR_diversite_05_50.pdf}
 	\includegraphics[width=.4\textwidth]{Images/SIR_diversite_025_50.pdf}
-	\caption{Comparaison 50 mouvements}
+	\caption{50 mouvements}
 \end{figure}
+
+La première série de graphiques est une ensemble de simulations à $50$ mouvements. Les comportements sont très semblables à la simulation de référence au mélange parfait. Très rapidement, tous les individus sortent du compartiement $Susceptible$ et donc la pandémie atteint une propagation de $100\%$. La seule action de la diversité est de permettre une immunisation plus rapide.\\
+
+Les 4 figures utilisent chacune une valeur de charge virale différente. Les valeurs choisies sont : $1,0.75,0.5,0.25$. Le facteur de charge virale est directement lié avec la propagation de l'épidémie. Sur les figures nous constatons un ralentissement de la propagation lorsque la charge virale baisse. Ce comportement est normal car le facteur réduit les contactes entre les voisins.\\
+
+Pour conclure, ces plots ne montrent que deux types de pandémies. Le premier type est une pandémie totale qui touche toute la population et le second type est une pandémie qui ne démarre pas. Les pandémies qui ne se sont pas propagées ont leur courbe coupée très tôt dans la simulation comme nous pouvons le voir dans les simulations aux charge virale de $0.5$ et $0.25$ pour les cas à diversité $32$.
 
 \newpage
 
@@ -96,6 +104,10 @@ Le deuxième élément se produit dans une deuxième phase et décrit l'immunisa
 	\caption{Comparaison 10 mouvements}
 \end{figure}
 
+Etant donné que les simulations aux $50$ mouvements sont trop rapides, nous baissons les mouvements des individus et les passons à $10$. L'objectif est de pouvoir observer des épidémies qui se propagent en partie sans que ce soit du tout ou rien.\\
+
+Les résultats ne montrent rien de nouveau. La diversité impacte la vitesse d'immunisation mais la propagation de la pandémie n'en est pas affectée. Certes les individus restent plus longtemps dans le compartiement $Susceptible$ mais finissent tous par être contaminés donc nous avons encore à faire à des pandémies aux propagations de $100\%$.
+
 \newpage
 
 \begin{figure}[h]
@@ -107,6 +119,36 @@ Le deuxième élément se produit dans une deuxième phase et décrit l'immunisa
 	\includegraphics[width=.4\textwidth]{Images/SIR_diversite_025_1.pdf}
 	\caption{Comparaison 1 mouvements}
 \end{figure}
+
+Finalement la dernière analyse de diversité effectue les mêmes mesures sur des systèmes à $1$ mouvement. Notez que l'échelle ici est passée à $5000$ sur les abscisses. Ces simulations ont un rypthme d'évolution beaucoup plus lent mais suivent les mêmes tendances. Pour toutes ces simulations les pandémies se propagent ou non, totalement ou pas du tout.
+
+\subsection{Conclusion des résultats}
+
+Les résultats permettent d'observer l'impacte de la diversité sur les systèmes. Apparemment il n'y a pas d'impacte sur la propagation de la pandémie mais uniquement sur la vitesse d'immunisation des individus. Nous cherchions à observer des pandémies qui évoluaient jusqu'à un certain point et dissparaissait ensuite mais ce comportement n'est pas présent dans les mesures.\\
+
+L'absence de ces événements est dû au fonctionnement du modèle et à la notion de diversité. Le problème est que dans le modèle, la diversité n'a aucun impacte sur le propagation de pandémie. Pour rappel, lorsqu'un individu sain est en contact avec un agent pathogène, l'individu devient contaminé et contagieux directement et ceci peu importe la diversité du système. Le seul effet de la diverstié est le fait que cet individu peut s'immuniser plus ou moins rapidement en fonction de cette diversité. Mais le problème est que la propagation se présente sous forme de vague, comme une onde. L'illustration ci-dessous illustre le phénomène.
+
+\begin{figure}[h]
+	\centering
+	\captionsetup{justification=centering}
+	\includegraphics[width=.5\textwidth]{Images/vague_propagation.png}
+	\caption{vague propagation}
+\end{figure}
+
+La figure montre la propagation d'une pandémie. En vert nous avons les individus sains, en bleu les individus immunisés et en rouge les individus contaminés. Les cercles représentent la propagation de la pandémie sous forme de vagues. Nous pourrion découper le processus en 3 zones distinctes et indépendantes. Le première est la zone centrale du cercle avec les individus immunisés. La seconde est la frontière entre les individus infectés et les sains donc la vague (cercle rouge) et finalement la troisième zone est le reste du système avec uniquement des individus sains.\\
+
+D'après les résultats des simulations, la diversité n'impacte pas la propagation de la pandémie. En effet, la diversité permet l'immunisation plus rapide de la population donc l'apparition davantages de cercles bleus sur l'image. Le problème est que cette première zone est indépendante de la deuxième qui est la vague car cette dernière est beaucoup plus rapide que l'immunisation. Un individu fraichement contaminé propagera la pandémie bien avant qu'il ne s'immunise. Par conséquent, l'ampleur des immunisation n'impacte pas la propagation de la pandémie.\\
+
+Donc la première zone n'affecte pas la vague mais qu'en est-il de la troisième zone ? En réalité la troisième zone est purement uniforme. Si une vague parvient à un moment donné à se propager dans la troisième zone alors elle le pourra jusqu'à contaminer tous les individus.\\
+
+La rélexion mène donc à expliquer que une pandémie se propage soit complètement soit pas du tout.\\
+
+En épidémiologie, le nombre de reproduction de base $R_0$ représente le nombre moyen de contaminations par un individu contaminé. Si ce taux est au dessous de $1$, cela signifie que la pandémie est mourante par contre si le taux est au dessus de $1$, la pandémie se propage.\\
+
+Dans le modèle implémenté et d'après les mesures de diversité, une simulations ne peut pas avoir un $R_0$ qui varie. Cette valeur est fixe du début à la fin. Par conséquent, toutes les simulations au $R_0 < 1$ ne montrent aucune pandémie et au contraire toutes les simulations au $R_0 > 1$ finissent par contaminer tout le monde. Dans une situation réelle, des mesures sanitaires permettent de faire varier ce taux au cours de la propagation de la pendémie. Dans le modèle ce fonctionnement est non présent. Une autre chose n'est pas présente et donc impossible dans le modèle est l'effet d'immunité collective.\\
+
+L'immunité collective est le fait le niveau d'immunité général est siffisemment élevé afin de faire passer le taux $R_0$ en dessous de $1$ et que la pandémie disparaisse. Ce phénomène peut s'obtenir par trois façons. La première est la vaccination, la seconde est l'immunité croisée et la troisième est une forme de résistance naturelle. Si nous reprenions la figure ci-dessus, l'immunité collective dans le modèle pourraient être obtenue d'une seule façon. Il faudrait pouroivr modifier l'état de la troisième zone (les parties du système non contaminés). Si au fil du temps nous pouvions vacciner des individus ou les immuniser en amont de la pandémie alors nous pourrions influencer le $R_0$ de la simulation mais le modèle n'inclut pas ces mécanismes. Par conséquent le $R_0$ reste constant dû à l'homogénéité de la troisième zone.
+
 
 \section{Analyses}
 
