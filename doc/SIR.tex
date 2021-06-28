@@ -73,7 +73,7 @@ Le mean absolute error permet de quantifier les différences entre les simulatio
 \begin{table}[H]
 	\centering
 	\captionsetup{justification=centering}
-	\caption[Mean Aboslute Error Normalized : SI]{Mean Aboslute Error Normalized : modèle SIR, mélange parfait \label{tab:grid}}
+	\caption[Mean Aboslute Error Normalized : SIR]{Mean Aboslute Error Normalized : Calcul des erreurs entre les simulations au mélange parfait et le modèle mathématique SIR sur $4$ niveaux de densités et $4$ niveaux de populations. \label{tab:grid}}
 	\begin{tabular}{@{\extracolsep{\fill} } c|| c| c| c| c|}
 		     & 5000                & 20000               & 50000               & 100000              \\
 		\midrule
@@ -116,7 +116,7 @@ Les analyses permettent de calculer la moyenne ainsi que la moyenne des écarts.
 \begin{table}[H]
 	\centering
 	\captionsetup{justification=centering}
-	\caption[Variations : SIR]{Variations : modèle SIR\label{tab:grid}}
+	\caption[Variations aléatoires : SIR]{Calcul des variations aléatoires sur $20$ simulations identiques. La mesures est prise pour les deux modes de mouvements ainsi que pour deux densités lorque les $50\%$ de contaminés surviennent. La mesure du minimum est la mesure de la simulation la plus rapide et le maximum est la plus lente. La moyenne ainsi que l'écart à la moyenne est aussi calculé.\label{tab:grid}}
 	\begin{tabular}{@{\extracolsep{\fill} } c|| c| c| c| c|}
 		        & \multicolumn{2}{|c|}{1000 mouvements} & \multicolumn{2}{|c|}{Mélange parfait}                    \\
 		\midrule
@@ -150,7 +150,7 @@ Par conséquent, la latence est généralement peu présente dans les simulation
 	\centering
 	\captionsetup{justification=centering}
 	\includegraphics[width=.6\textwidth]{Images/SIR_ref_8_5.pdf}
-	\caption{Simulation SIR}
+	\caption[Simulation SIR avec latence]{Exemple de simulation SIR avec de la latence. La courbe bleue représente le modèle mathématique, la verte, la simulations au mélnage parfait et la orange la simulations aux $1000$ mouvements. Nous nous intéressons ici au mauvais fit du modèle mathématique sur la courbe de la simulation au mélange parfait.}
 \end{figure}
 
 Pour confirmer la théorie de la latence, nous ajoutons une latence artificielle au modèle SIR et regardons l'impacte sur le "mean absolute error". En effet, si la simulation a quelques itérations de latence, nous devrions pouvoir ajouter de la latence au modèle SIR et observer des améliorations sur le MAE.\\
@@ -159,7 +159,7 @@ Pour confirmer la théorie de la latence, nous ajoutons une latence artificielle
     \centering
 	\captionsetup{justification=centering}
 	\includegraphics[width=.5\textwidth]{Images/SIR_latence_8_5.pdf}
-	\caption{latence SIR}
+	\caption[Mesures de latences SIR]{Mesure de la latence de la simulation au mélange parfait. Sur les abscisses nous avons de la latence artificielle que nous ajoutons au modèle SIR et sur les ordonnées nous avons le MAE entre le modèle mathématique et la simulation. L'idée est d'ajouter de la latence au modèle mathématique et chercher un meilleur fit.}
 \end{wrapfigure}
 
 La figure ci-dessus montre la valeur du MAE en ajoutant de la latence au modèle SIR. Sur les abscisses nous avons le nombre d'itérations de latence ajoutée à SIR et sur l'axe des ordonnées nous avons le calcul du MAE entre le modèle mathématique et la simulation.\\
@@ -178,7 +178,7 @@ Ce paragraphe est destiné à visualiser l'impacte du nombre de mouvements sur l
 	\centering
 	\captionsetup{justification=centering}
 	\includegraphics[width=.7\textwidth]{Images/SIR_mouvements_variables.pdf}
-	\caption{Mouvements variable}
+	\caption[Mouvements variable : SIR]{Comparaison de simulations aux mêmes paramètres sauf que le nombre de mouvements par individu change. Les simulations vont de un seul mouvements par itération et par individu à $1000$ mouvements. La courbe au mélange parfait est aussi présente comme référence.}
 \end{figure}
 
 Les résultats suivent notre intuition. Plus le mélange est efficace, plus la pandémie est rapide. Par conséquent, le nombre de mouvements a un impact direct sur la propagation de pandémies et cici significativement. 

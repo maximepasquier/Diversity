@@ -5,29 +5,31 @@
 \contentsline {chapter}{\numberline {1}Résumé}{1}{chapter.1}%
 \contentsline {chapter}{\numberline {2}Introduction}{2}{chapter.2}%
 \contentsline {chapter}{\numberline {3}Approche du problème, méthodes, outils utilisés}{3}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Code génétique}{3}{section.3.1}%
-\contentsline {section}{\numberline {3.2}Compatibilité entre individus et agents pathogènes}{3}{section.3.2}%
-\contentsline {section}{\numberline {3.3}Outils}{4}{section.3.3}%
-\contentsline {chapter}{\numberline {4}Modèle}{5}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Acteurs}{5}{section.4.1}%
-\contentsline {subsection}{\numberline {4.1.1}Individus}{5}{subsection.4.1.1}%
-\contentsline {subsection}{\numberline {4.1.2}Agents pathogènes}{6}{subsection.4.1.2}%
-\contentsline {section}{\numberline {4.2}Espace physique}{6}{section.4.2}%
-\contentsline {subsection}{\numberline {4.2.1}Cellule}{7}{subsection.4.2.1}%
-\contentsline {subsection}{\numberline {4.2.2}Grille régulière}{8}{subsection.4.2.2}%
-\contentsline {subsection}{\numberline {4.2.3}Voisinage}{9}{subsection.4.2.3}%
-\contentsline {section}{\numberline {4.3}Simulation}{9}{section.4.3}%
-\contentsline {subsection}{\numberline {4.3.1}Itérations}{10}{subsection.4.3.1}%
-\contentsline {subsection}{\numberline {4.3.2}Mouvements des acteurs}{11}{subsection.4.3.2}%
-\contentsline {subsection}{\numberline {4.3.3}Mise à jour des acteurs}{12}{subsection.4.3.3}%
+\contentsline {section}{\numberline {3.1}Approche du problème}{3}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Méthodes}{3}{section.3.2}%
+\contentsline {section}{\numberline {3.3}Outils}{3}{section.3.3}%
+\contentsline {chapter}{\numberline {4}Modèle}{4}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Acteurs}{4}{section.4.1}%
+\contentsline {subsection}{\numberline {4.1.1}Individus}{4}{subsection.4.1.1}%
+\contentsline {subsection}{\numberline {4.1.2}Agents pathogènes}{5}{subsection.4.1.2}%
+\contentsline {section}{\numberline {4.2}Espace physique}{5}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Cellule}{5}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.2.2}Grille régulière}{7}{subsection.4.2.2}%
+\contentsline {subsection}{\numberline {4.2.3}Voisinage}{8}{subsection.4.2.3}%
+\contentsline {section}{\numberline {4.3}Simulation}{8}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}Itérations}{9}{subsection.4.3.1}%
+\contentsline {subsection}{\numberline {4.3.2}Mouvements des acteurs}{10}{subsection.4.3.2}%
+\contentsline {subsection}{\numberline {4.3.3}Mise à jour des acteurs}{11}{subsection.4.3.3}%
+\contentsline {subsubsection}{\nonumberline Actualisation des agents pathogènes}{11}{section*.10}%
+\contentsline {subsubsection}{\nonumberline Actualisation des individus}{11}{section*.11}%
 \contentsline {section}{\numberline {4.4}Interactions}{12}{section.4.4}%
-\contentsline {subsection}{\numberline {4.4.1}Interactions sur la même cellule}{13}{subsection.4.4.1}%
-\contentsline {subsection}{\numberline {4.4.2}Interactions sur cellules voisines}{13}{subsection.4.4.2}%
-\contentsline {subsection}{\numberline {4.4.3}Contamination de cellule}{14}{subsection.4.4.3}%
-\contentsline {section}{\numberline {4.5}Diversité génétique}{14}{section.4.5}%
+\contentsline {subsection}{\numberline {4.4.1}Interactions sur la même cellule}{12}{subsection.4.4.1}%
+\contentsline {subsection}{\numberline {4.4.2}Interactions sur cellules voisines}{12}{subsection.4.4.2}%
+\contentsline {subsection}{\numberline {4.4.3}Contamination de cellule}{13}{subsection.4.4.3}%
+\contentsline {section}{\numberline {4.5}Diversité génétique}{13}{section.4.5}%
 \contentsline {subsection}{\numberline {4.5.1}Distance de Hamming}{15}{subsection.4.5.1}%
-\contentsline {section}{\numberline {4.6}Immunisation et résistance naturelle}{16}{section.4.6}%
-\contentsline {section}{\numberline {4.7}Mutations}{17}{section.4.7}%
+\contentsline {section}{\numberline {4.6}Immunisation et résistance naturelle}{17}{section.4.6}%
+\contentsline {section}{\numberline {4.7}Mutations}{18}{section.4.7}%
 \contentsline {chapter}{\numberline {5}Implémentation}{19}{chapter.5}%
 \contentsline {section}{\numberline {5.1}Main}{19}{section.5.1}%
 \contentsline {section}{\numberline {5.2}Initialisation}{20}{section.5.2}%
@@ -56,12 +58,12 @@
 \contentsline {subsection}{\numberline {9.3.1}Mean Absolute Error}{50}{subsection.9.3.1}%
 \contentsline {subsection}{\numberline {9.3.2}Variations aléatoires}{51}{subsection.9.3.2}%
 \contentsline {subsection}{\numberline {9.3.3}Latence des simulations}{52}{subsection.9.3.3}%
-\contentsline {subsection}{\numberline {9.3.4}Mouvements variable}{54}{subsection.9.3.4}%
-\contentsline {subsection}{\numberline {9.3.5}Comparaison 1000 mouvements}{55}{subsection.9.3.5}%
-\contentsline {chapter}{\numberline {10}Diversité}{57}{chapter.10}%
-\contentsline {section}{\numberline {10.1}Mesures et méthodologie}{57}{section.10.1}%
-\contentsline {section}{\numberline {10.2}Résultats}{58}{section.10.2}%
-\contentsline {subsection}{\numberline {10.2.1}Mélange parfait}{58}{subsection.10.2.1}%
-\contentsline {subsection}{\numberline {10.2.2}Mouvements variable}{60}{subsection.10.2.2}%
-\contentsline {subsection}{\numberline {10.2.3}Conclusion des résultats}{63}{subsection.10.2.3}%
-\contentsline {chapter}{\numberline {11}Conclusion}{66}{chapter.11}%
+\contentsline {subsection}{\numberline {9.3.4}Mouvements variable}{55}{subsection.9.3.4}%
+\contentsline {subsection}{\numberline {9.3.5}Comparaison 1000 mouvements}{56}{subsection.9.3.5}%
+\contentsline {chapter}{\numberline {10}Diversité}{58}{chapter.10}%
+\contentsline {section}{\numberline {10.1}Mesures et méthodologie}{58}{section.10.1}%
+\contentsline {section}{\numberline {10.2}Résultats}{59}{section.10.2}%
+\contentsline {subsection}{\numberline {10.2.1}Mélange parfait}{59}{subsection.10.2.1}%
+\contentsline {subsection}{\numberline {10.2.2}Mouvements variable}{61}{subsection.10.2.2}%
+\contentsline {subsection}{\numberline {10.2.3}Conclusion des résultats}{64}{subsection.10.2.3}%
+\contentsline {chapter}{\numberline {11}Conclusion}{67}{chapter.11}%

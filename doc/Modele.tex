@@ -1,6 +1,6 @@
 \chapter{Modèle} \label{ch:modele}
 
-Le modèle cherche à simuler la propagation de pandémies dans une population. Le système inclut des acteurs qui peuvent faire des actions ainsi qu'un espace physique sur lequel les acteurs peuvent se déplacer. Les acteurs sont des organismes vivants qui se déclinent en deux espèces distinctes. Le premier groupe fait partie des organismes victimes de l'épidémie et le second groupe est responsables de l'infection. Par conséquent nous sommes dans une situation ou une espèce en attaque une autre. Par contre dans le fonctionnement du modèle, il y a des restrictions sur la nature de l'espèce attaquante. Nous parlons ici d'organismes capables de contaminer un individu. \\
+Le modèle cherche à simuler la propagation de pandémies dans une population. Le système inclut un espace physique ainsi que des acteurs se déplacant sur cette surface. Les acteurs sont des organismes vivants qui se déclinent en deux espèces distinctes. Le premier groupe fait partie des organismes victimes de l'épidémie et le second groupe est responsables de l'infection. Par conséquent nous sommes dans une situation ou une espèce en affecte une autre. Par contre dans le fonctionnement du modèle, il y a des restrictions sur la nature de l'espèce attaquante. Nous parlons ici d'organismes capables de contaminer un individu. \\
 
 Les organismes évoluent dans une monde plat et parfaitement géométrique en deux dimensions. L'espace est comparable à un échiquier avec les acteurs étant des pions.
 
@@ -15,15 +15,15 @@ Il existe exclusivement deux espèces d'organismes dans le système :
 
 La classe "agents pathogènes" ne fait pas référence à une espèce en particulier mais reflète des organismes avec le pouvoir d'infecter une autre espèce. Il peut s'agir de virus, bactéries ou encore de parasites. La caractéristique de ce groupe est qu'il a le pouvoir de rendre malade un individu et donc d'affecter une espèce par une maladie qu'il génère. Il peut s'agir de maladies touchant des humain ou de zoonoses suivant la nature des espèces du système. Le terme "pathogène" est aussi utilisé pour caractériser cette classe.\\
 
-Les "Individus" sont les organismes susceptible de développer la maladie suite à la contamination par un agent pathogène. Il peut s'agir d'humains tout comme d'animaux ou de plantes. La restriction est que cette espèce doit être affectée par les agents pathogènes ainsi que par la maladie. Un individu est soit sain soit contaminé, son état est toujours précisé.
+Les "Individus" sont les organismes susceptible de développer la maladie suite à la contamination par un agent pathogène. Il peut s'agir d'humains tout comme d'animaux ou de plantes. La restriction est que cette espèce doit être affectée par les agents pathogènes ainsi que par la maladie.
 
 \subsection{Individus}
 
 Un individu peut se présenter sous deux formes distinctes. Il est soit sain, soit contaminé par un agent pathogène.\\
 
 \begin{enumerate}
-	\item Le premier cas représente un individu qui n'est pas contaminé par un agent pathogène et donc n'est pas touché par la maladie.
-	\item Le second cas fait référence à la même espèce mais cette fois ci, l'individu est contaminé par un agent pathogène. Le modèle ne fait pas la distinction entre malade et porteur du virus. Par conséquent, un individu porteur du pathogène est d'office considéré comme malade. De plus, le modèle définit un taux de contagion qui est paramétrable. Le niveau de contagion est donc constant pour tous les organismes contaminés et ceci tout du long de la simulation. Un individu infecté par un agent pathogène est donc contagieux, ce qui signifie qu'il a la pouvoir de transmettre l'agent pathogène à d'autres individus de la même espèce.
+	\item La première forme décrit un individu qui n'est pas contaminé par un agent pathogène et donc n'est pas touché par la maladie.
+	\item La seconde état survient lorsque l'individu est contaminé par un agent pathogène. Le modèle ne fait pas la distinction entre malade et porteur du virus, la notion de malade n'est pas prise en compte. Un individu infecté par un agent pathogène est contagieux, ce qui signifie qu'il a la pouvoir de transmettre l'agent pathogène à d'autres individus.
 \end{enumerate}
 
 \subsection{Agents pathogènes}
@@ -31,17 +31,17 @@ Un individu peut se présenter sous deux formes distinctes. Il est soit sain, so
 Un agent pathogène peut se présenter sous deux formes distinctes. Il est soit contaminant un individu, soit contaminant un espace physique.
 
 \begin{enumerate}
-\item Le premier cas est identique à celui précédemment développé mais cette fois ci, la situation est perçue du point de vue de l'agent pathogène. Quand un individu devient contaminé par un agent pathogène, ce dernier est absorbé par l'individu. C'est-à-dire que l'agent pathogène n'est plus une entité distincte mais fait partie intégrante de l'individu. Par conséquent l'individu devient un individu contaminé et non pas un individu sain associé à un agent pathogène.
+\item Le premier cas est identique à celui précédemment développé mais cette fois ci, la situation est perçue du point de vue de l'agent pathogène. Quand un individu devient contaminé par un agent pathogène, ce dernier est absorbé par l'individu. C'est-à-dire que l'agent pathogène n'est plus une entité distincte mais fait partie intégrante de l'individu. Par conséquent l'individu sain devient un individu contaminé et non pas un individu sain associé à un agent pathogène.
 \item Le second cas indique qu'une surface physique est contaminée par un agent pathogène. Un individu contaminé, en plus de contaminer d'autres individus sains, peut contaminer une surface. Si une surface est contaminée, une copie de l'agent pathogène de l'individu se dépose sur la surface. Un agent pathogène qui contamine une surface est inerte, c'est-à-dire qu'il ne peut pas se déplacer ni muter par contre il a toujours le potentiel de contaminer des individus sains qui se trouveraient sur cette surface. Un agent pathogène isolé sur une surface ainsi n'a une durée de vie que très limitée. Sa chance survie est paramétrable dans le modèle.
 \end{enumerate}
 
 \section{Espace physique}
 
-L'espace physique est une surface plane sur laquelle on peut placer et déplacer des acteurs. La surface se présente sous la forme d'une grille régulière tel un échiquier. Cette grille contient des cellules dans lesquelles on peut y placer un acteur. Cet espace bidimensionnel est la seule représentation spatiale du modèle. Chaque acteur a des coordonnées dans cet espace qui définissent sa position. Par conséquent, chaque cellule de la grille est indexée par une paire d'entiers.
+L'espace physique est une surface plane sur laquelle on peut placer et déplacer des acteurs. La surface se présente sous la forme d'une grille régulière tel un échiquier. Cette grille est constituée cellules dans lesquelles on peut y placer des acteurs. Cet espace bidimensionnel est la seule représentation spatiale du modèle. Chaque acteur a des coordonnées dans cet espace qui définissent sa position. Par conséquent, chaque cellule de la grille est indexée par une paire d'entiers.
 
 \subsection{Cellule}
 
-Dans la représentation du modèle, une cellule n'a que $6$ états possibles, c'est-à-dire que chaque cellule de la grille ne peut se retrouver que dans $6$ configurations différentes. L'état d'une cellule fait référence à l'acteur ou aux acteurs qui se trouvent dessus. Concrètement une cellule est simplement une surface carrée mais nous associons les acteurs se trouvant sur la cellule à cette dernière et ceci décrit son état. Les $6$ états possibles d'une cellule sont listés ci-dessous.
+Dans la représentation du modèle, une cellule n'a que $6$ états possibles, c'est-à-dire que chaque cellule de la grille ne peut se retrouver que dans $6$ configurations différentes. L'état d'une cellule fait référence à l'acteur ou aux acteurs qui s'y trouvent. Concrètement une cellule est simplement une surface carrée mais nous associons les acteurs se trouvant sur la cellule à cette dernière et ceci décrit son état. Les $6$ états possibles d'une cellule sont listés ci-dessous.
 
 \begin{enumerate}
 	\item La cellule est vide, aucun acteur ne l'occupe. Cette situation signifie simplement que la surface n'est occupée par aucun acteur et est libre pour en accueillir un.
@@ -65,7 +65,7 @@ Le cas $5$ et $6$ sont les deux seuls cas ou deux acteurs se trouvent simultané
 
 \subsection{Grille régulière}
 
-La grille régulière est l'espace dans lequel les acteurs évoluent. Chaque acteur est représenté au niveau spatial par ses coordonnées sur la grille. Par conséquent nous utilisons une grille contenant les acteurs du système. Cette dernière leur permet de se déplacer et d'interagir. Cet espace est la seule représentation spatiale du modèle, c'est-à-dire que les acteurs ne peuvent évoluer spatialement qu'en respectant la géométrie de la grille. L'illustration suivante semble avoir des bords fixes mais en réalité ce sont des bords périodiques. Cela signifie qu'un acteur n'est pas bloqué par un bord du système. Dans le cas ou un individu souhaite se déplacer en dehors du système nous le faisons sauter à l'opposé de la grille. Par conséquent les bords sont connectés afin d'éviter les effets de bords. \\
+La grille régulière est l'espace sur lequel les acteurs évoluent. Chaque acteur est représenté au niveau spatial par ses coordonnées sur la grille et cette dernière leur permet de se déplacer et d'interagir. Les acteurs ne peuvent évoluer spatialement qu'en respectant la géométrie de la grille. Les bords du système sont périodiques, c'est-à-dire qu'un acteur n'est pas bloqué par un bord du système. Dans le cas ou un individu souhaite se déplacer en dehors du système nous le faisons sauter à l'opposé de la grille. Les bords sont donc connectés afin d'éviter les effets de bords. \\
 
 Un exemple de système en cours de simulation est illustré ci-dessous.
 
@@ -73,7 +73,7 @@ Un exemple de système en cours de simulation est illustré ci-dessous.
 	\centering
 	\captionsetup{justification=centering}
 	\includegraphics[scale=0.5]{Images/grid.png}
-	\caption[Grille régulière]{Exemple d'une simulation en cours avec une grille de $5\times 5$, $5$ individus.}
+	\caption[Grille régulière]{Exemple d'une simulation en cours avec une grille de $5\times 5$ et $5$ individus.}
 \end{figure}
 
 L'espace bidimensionnelle permet de donner une représentation spatiale aux acteurs mais également de les faire interagir les uns avec les autres. Les interactions se font par la notion de voisinage.
@@ -91,11 +91,11 @@ La représentation spatiale permet de situer tous les acteurs du système relati
 	\caption[Voisinage d'une cellule]{Le voisinage de la cellule centrale est les $4$ cellules en contact direct ainsi que la cellule centrale.}
 \end{figure}
 
-Le voisinage de la cellule contenant un acteur est les $4$ cellules avoisinantes directes en plus de la cellule centrale. Par conséquent notre humain dans cette cellule ne pourra interagir qu'avec d'autres acteurs dans les cellules voisines (en cyan) ou avec un autre acteur sur sa cellule. Le reste du système lui est hors de portée et donc invisible. Par conséquent, les actions et les états d'un acteur du système ne sont influencés que par l'état actuel de l'acteur ainsi que les autres acteurs se trouvant dans son voisinage. Toutes les autres cellules ainsi que leurs acteurs n'ont aucun impacte sur l'individu étudié.
+Le voisinage de la cellule contenant un acteur est les $4$ cellules avoisinantes directes en plus de la cellule centrale. Par conséquent notre humain dans cette cellule ne pourra interagir qu'avec des acteurs dans les cellules voisines (en cyan) ou avec un autre acteur sur sa cellule. Le reste du système lui est hors de portée et donc invisible. Par conséquent, les actions et l'état d'un acteur ne sont influencés que par son l'état actuel ainsi que par son voisinage. Toutes les autres cellules ainsi que leurs acteurs n'ont aucun impacte sur l'individu étudié.
 
 \section{Simulation}
 
-Afin d'initialiser une simulation nous commençons par définir la taille de la grille et le nombre d'individus et nous contaminons un individu. Il existe une multitude d'autres paramètres définissant les comportements des différentes mécaniques de la simulation que nous expliquerons plus loin. Par conséquent, une situation initiale se présente toujours sous la forme ci-dessous. Notre population est saine, sauf un seul individu qui porte l'agent pathogène initial. C'est le point de départ de toute épidémie avec la contamination du premier individu. Il s'agit ensuite d'observer la propagation ou non du pathogène initial. Un exemple de configuration initiale pourrait être : \\
+Afin d'initialiser une simulation nous commençons par définir la taille de la grille et le nombre d'individus et nous contaminons un individu. Il existe une multitude d'autres paramètres définissant les comportements des différentes mécaniques de la simulation que nous expliquerons plus loin. Par conséquent, une situation initiale se présente toujours sous la forme ci-dessous. Notre population est saine, sauf un seul individu qui porte l'agent pathogène initial. C'est le point de départ de toute épidémie avec la contamination du premier individu, le patient zéro. Il s'agit ensuite d'observer la propagation ou non du pathogène initial. Un exemple de configuration initiale pourrait être : \\
 
 \begin{figure}[h]
 	\centering
@@ -108,7 +108,7 @@ Pour toutes configurations initiales, le placement des individus est aléatoire.
 
 \subsection{Itérations}
 
-Depuis une configuration, le système peut évoluer par une itération. Une itération est une transition d'un état à un autre du système. Par exemple, depuis l'état initial de la simulation, donc l'état $0$ on peut passer dans l'état $1$ par une transition qui est la première itération. Cette itération modifie les états de tous les acteurs et leur permet d'effectuer une ou plusieurs actions.\\
+Depuis une configuration, le système peut évoluer par une itération. Une itération est une transition d'un état à un autre du système. Par exemple, depuis l'état initial de la simulation, donc l'état $0$ on peut passer à l'état $1$ par une transition qui est la première itération. Cette itération modifie les états de tous les acteurs et leur permet d'effectuer une ou plusieurs actions.\\
 
 Pour être plus précis, une itération du système consiste en deux phases. La première est de mettre à jour tous les acteurs du système et la seconde est de permettre aux acteurs de se déplacer dans l'espace. La phase de mise à jour comprend l'actualisation de tous les acteurs ainsi que d'effectuer toutes les interactions entre les différents acteurs. La phase de mouvement permet uniquement aux individus de se déplacer sur la grille. Le détail de ces deux phases est explicité plus loin.\\
 
@@ -116,32 +116,44 @@ La simulation se termine après le déroulement d'un certain nombre d'itération
 
 \subsection{Mouvements des acteurs}
 
-La phase de mouvement permet simplement aux acteurs du système de physiquement se déplacer dans le domaine. Chaque acteur est sur une cellule caractérisée par des coordonnées et peut à cette phase bouger en changeant de cellule. Tous les acteurs ne peuvent pas se déplacer, seuls l'espèce "individu" peut se mouvoir. Les agents pathogènes ne peuvent pas se déplacer par eux mêmes. Par conséquent, chaque individu peut se déplacer à chaque itération et ceci d'une seule cellule. C'est-à-dire qu'un individu ne peut bouger que d'une cellule à la fois et ne peut pas se déplacer en diagonale. La portée de déplacement est illustrée ci-dessous et un individu a l'impossibilité de se déplacer sur une cellule si celle-ci est déjà occupée par un autre individu. Un paramètre du modèle permet d'effectuer plusieurs mouvement par itération, c'est-à-dire qu'un individu peut répéter $n$ fois ce processus de mouvement si le paramètre est fixé sur $n$.\\
+La phase de mouvement permet aux acteurs du système de physiquement se déplacer dans le domaine. Chaque acteur est sur une cellule caractérisée par des coordonnées et peut à cette phase bouger en changeant de cellule. Tous les acteurs ne peuvent pas se déplacer, seuls l'espèce "individu" peut se mouvoir. Les agents pathogènes ne peuvent pas se déplacer par eux mêmes. Par conséquent, chaque individu peut se déplacer à chaque itération et ceci d'une seule cellule par déplacement. C'est-à-dire qu'un individu ne peut bouger que d'une cellule à la fois et ne peut pas se déplacer en diagonale. La portée de déplacement est illustrée ci-dessous et un individu a l'impossibilité de se déplacer sur une cellule si celle-ci est déjà occupée par un autre individu. Un paramètre du modèle permet d'effectuer plusieurs mouvement par itération, c'est-à-dire qu'un individu peut répéter $n$ fois ce processus de mouvement si le paramètre est fixé sur $n$.\\
 
 \begin{figure}[h]
 	\centering
 	\captionsetup{justification=centering}
 	\includegraphics[scale=0.5]{Images/move_available.png}
-	\caption[Mouvements des individus]{Lors d'un déplacement, un individu a $4$ choix possible (cellules en jaune) et en choisi une aléatoirement. Si la cellule sur laquelle l'individu veut aller est occupée alors il ne se déplace pas. Le processus peut être répété plusieurs fois par itération.}
+	\caption[Mouvements des individus]{Lors d'un déplacement, un individu a $4$ choix possible (cellules en jaune) et en choisi un aléatoirement. Si la cellule sur laquelle l'individu veut aller est occupée alors il ne se déplace pas. Le processus peut être répété plusieurs fois par itération.}
 \end{figure}
 
 Sur cet exemple, l'individu sur la cellule centrale souhaite se déplacer. Sur les $4$ cases possible pour un déplacement à cette itération, $3$ sont libres et $1$ occupée. Par conséquent notre humain ne peut pas se déplacer vers la droite. Le choix de l'individu pour le déplacement est aléatoire.\\
 
-La procédure pour se déplacer est la suivante. Tout d'abord, l'individu choisit aléatoirement une des $4$ cellule voisine. Il vérifie ensuite que la cellule choisie soit libre. Si la cellule est libre il s'y déplace, sinon il ne bouge pas à cette itération et par conséquent reste là ou il est.
+La procédure pour se déplacer est la suivante. Tout d'abord, l'individu choisit aléatoirement une des $4$ cellule voisine. Il vérifie ensuite que la cellule choisie soit libre. Si la cellule est libre il s'y déplace, sinon il ne bouge pas à cette itération et par conséquent reste là ou il est. Une tentative non fructueuse de déplacement est quand même considérée comme déplacement, c'est-à-dire que si un individu se déplacer $5$ fois par itération mais est bloqué $2$ fois à cette itération alors il n'effectuera que $3$ réels déplacements.
 
 \subsection{Mise à jour des acteurs}
 
-La phase de mise à jour se déroule en deux étapes. La première est d'actualiser l'état interne de l'acteur et se produit dans deux situations. Le premier cas survient lorsqu'un agent pathogène contamine une cellule. Cet agent pathogène n'est dans aucun individu donc sa survie est incertaine. Par conséquent il se peut que cet agent pathogène meurt. La phase de mise à jour interne de cet acteur sert à déterminer s'il meurt à cette itération ou non. La deuxième situation ou l'actualisation de l'état interne d'un acteur est nécessaire est lorsqu'un individu est contaminé par un agent pathogène. En effet, à chaque itération les hôtes contaminées peuvent développer une immunité au pathogène les contaminant. Cette vérification s'effectue à chaque itération  et consiste à recalculer la compatibilité entre l'individu et l'agent pathogène. Si l'agent pathogène contaminant cet individu survit à l'étape précédente, il a la possibilité de muter. La deuxième étape de la mise à jour d'un acteur est l'analyse du voisinage. A chaque itération, les acteurs analysent leur voisinage et interagissent avec les acteurs à proximité. Toues les différentes interactions entre acteurs sont explicités plus loin.\\
+\subsubsection{Actualisation des agents pathogènes}
 
-Par conséquent, le système peut évoluer de deux manières différentes. Premièrement, les acteurs appartenant à l'espèce individu peuvent se déplacent à chaque itération, modifiant leur position sur la grille. Deuxièmement les états de tous les acteurs du système peut changer grâce aux interactions entre acteurs mais aussi à l'actualisation de leurs états internes.\\
+Un agent pathogène peut se trouver dans deux états distincts. La procédure de mise à jour ne se produit que dans le cas ou un agent pathogène contamine une cellule sans individu. Dans cette configuration sa survie est incertaine. Par conséquent il se peut que cet agent pathogène meurt. La phase de mise à jour de cet acteur sert à déterminer s'il meurt à cette itération ou non.
+
+\subsubsection{Actualisation des individus}
+
+La procédure de mise à jour d'un individu dépend du fait qu'il soit infecté ou non.
+\begin{enumerate}
+	\item Dans le cas ou l'individus mis à jour est sain, la seule étape à effectuer est l'analyse du voisinage. Cette phase consiste à regarder les cellules voisines et déterminer si l'individu finit contaminé ou non à cette itération. Une éventuelle contamination dépend exclusivement du voisinage. Si l'individu est contaminé alors il intègre l'agent pathogène.
+	\item Dans le cas ou l'individu est déjà contaminé il est inutile d'analyser le voisinage. Par contre cet individu met à jour son état et ses attributs et ce processus a deux issues possibles.
+	\begin{enumerate}
+		\item Dans le premier cas, l'individu se débarrasse de son agent pathogène et redevient sain.
+		\item Dans le second cas, l'individu conserve son agent pathogène ce qui lui laisse la possibilité de muter.
+	\end{enumerate} 
+\end{enumerate}
+
+Par conséquent, le système peut évoluer de deux manières différentes. Premièrement, les acteurs appartenant à l'espèce des individus peuvent se déplacent à chaque itération, modifiant leur position sur la grille. Deuxièmement les états de tous les acteurs du système peut changer grâce aux interactions entre acteurs mais aussi à l'actualisation de leurs attributs.\\
 
 Les interactions se basent sur la notion de voisinage. Un acteur ne prend en considération durant sa mise à jour que les autres acteurs dans les cases voisines.
 
 \section{Interactions}
 
-Une interaction est réaction réciproquer d'un acteur sur un autre. Les interactions se produisent entre les différents acteurs du système et permettent de faire évoluer le système. La première phase de toute interaction est la notion de charge virale. La charge virale est un paramètre fixe du modèle qui détermine la probabilité qu'une transmission soit possible entre deux acteurs. Autrement dit, il s'agit d'un facteur déterminant le niveau de contagion de l'espèce des pathogènes. Par conséquent, une faible charge virale signifie que les individus contaminés sont peu contagieux et ont donc peut de chance de transmettre leur agent pathogène. A l'opposé, une grande charge virale signifie que les hôtes contaminés sont très contagieux et risquent de contaminer d'autres individus sains rapidement.\\
-
-Si la transmission est possible entre deux acteurs, cela ne suffit pas pour contaminer un individu sain. Le deuxième facteur est le calcul de la compatibilité entre les acteurs par la notion de diversité. La notion de diversité est détaillée plus loin.
+Une interaction est réaction réciproquer d'un acteur sur un autre. Les interactions se produisent entre les différents acteurs du système et permettent de faire évoluer le système. La première barrière à toutes interactions est la charge virale. La charge virale est un paramètre fixe du modèle qui détermine la probabilité qu'une transmission soit possible entre deux acteurs. Autrement dit, il s'agit d'un facteur déterminant le niveau de contagion des agents pathogènes. Par conséquent, une faible charge virale signifie que les individus contaminés sont peu contagieux et ont donc peut de chance de transmettre leur agent pathogène en cas de contact. A l'opposé, une grande charge virale signifie que les hôtes contaminés sont très contagieux et risquent de contaminer d'autres individus sains rapidement.\\
 
 \subsection{Interactions sur la même cellule}
 
@@ -172,11 +184,21 @@ Un cas particulier peut se produire si un individu contamine un espace déjà co
 
 \section{Diversité génétique}
 
+Le travail se concentre sur la notion de diversité. Il faut donc un moyen pour représenter la diversité d'une population et les interactions entre différents acteurs en prenant en considération leur diversité. La méthode utilisée se base sur le principe de génome. On attribue un génome, qui représente le code génétique d'un être vivant à chaque acteur du système. Par conséquent, chaque individu et chaque agent pathogène possède un génome. Ce génome se présente sous la forme d'un entier codé sur $4$ octets. Nous avons dont $32$ bits disponibles afin de représenter le génome d'un acteur.\\
+
+La notion de diversité d'une population peut à présent se définir par de grandes différences dans ces valeurs sur $32$ bits d'un individu à un autre. En effet, il y a une grande diversité au sein d'une population si les génomes des individus sont différents les uns des autres. Nous pouvons donc générer des séquences pour les génomes en prenant en compte le facteur de diversité du modèle. Il est possible de construire ces génomes pour la population d'individu en complémentant un certain nombre de bits d'une séquence de référence. L'idée ici est de commencer par attribuer à tous les individus un génome fixe et identique. Dans cette configuration, nous avons une diversité nulle étant donné que tout le monde a le même code génétique. Dans le cas d'une diversité non nulle, nous modifions (complémentons) certains bits de la séquence de génome des individus. Ce processus se fait aléatoirement et le nombre de complémentation dépend du paramètre de diversité du modèle. Avec cette méthode nous finissons avec des génomes déviant plus ou moins d'un certain génome de référence.\\
+
 Le travail est orienté sur l'aspect de diversité génétique et ceci dicte l'issue des différentes interactions entre les acteurs. Pour simplifier nous nous contentons d'attribuer une valeur sous forme d'un entier à chaque acteur. Cette valeur se code sur $4$ octets donc $32$ bits et cette séquence représente le code génétique. Tous les agents du système ont un code génétique sur $4$ octets que ce soit des humains ou des agents pathogènes.\\
 
 La valeur de diversité de chaque acteur est calculé initialement au début de la simulation. Un génome est attribué à l'unique agent pathogène et tous les individus se voient attribuer des génomes en fonction de deux paramètres du système. Le premier paramètre est le génome de référence et le second est le niveau de déviation des génomes. C'est-à-dire qu'il est possible de générer les génomes de tous les individus en suivant une distribution Gaussienne avec comme base le génome de référence. Le deuxième paramètre de diversité est donc une forme de variance.\\
 
 La notion de diversité intervient lors des interactions entre les acteurs du système. En effet la charge virale permet de déterminer si la transmission du pathogène est possible mais ce n'est pas suffisant pour contaminer un individu sain. La compatibilité entre un individu sain et un pathogène est nécessaire à la contamination de l'individu. Plus généralement, le calcul et l'interprétation de la distance de Hamming est utilisé lors des interactions entre individus et agents pathogènes.
+
+Les génomes étant défini, il reste à définir la manière dont les agents pathogènes et les individus réagissent les uns avec les autres. Le problème est l'utilisation des génomes, que ce soit ceux des agent pathogènes ou ceux des individus. Comment gérer les interactions entre individus et agents pathogènes en se basant sur des génomes de $32$ bits ? La technique utilisée est basée sur la distance de Hamming entre les séquences des génomes. Cette méthode fournit une solution interprétable en cas de contact entre deux acteurs interagissants. Cette technique permet de traduire l'interaction de deux génomes en une action comme la contamination d'un individu sain.\\
+
+La distance de Hamming est une notion mathématique qui permet de calculer les différences entre deux séquences binaires par exemple. Cette technique consiste simplement à compter le nombre de symboles différents pour deux suites du même nombre de symboles. Il s'agit donc de parcourir une des séquence et pour chaque indice comparer avec le symbole correspondant de l'autre séquence. Pour chaque symbole différent, la distance de Hamming est incrémentée de $1$.\\
+
+Nous pouvons donc représenter la compatibilité entre un individu et un agent pathogène par cette distance sous forme d'un entier. Il s'agit ensuite de convertir cette valeur en une probabilité. En effet, dans notre exemple il existe uniquement $33$ valeurs possible de distance de Hamming qui caractérisent un match de génomes. Si nous appliquons une fonction de seuillage sur si peu de valeurs, les résultats vont être trop tranchés. Par conséquent nous convertissons cette distance calculé entre deux génomes en probabilité. Cette probabilité peut ensuite être évaluée ce qui détermine les actions à effectuer.\\
 
 \subsection{Distance de Hamming}
 
