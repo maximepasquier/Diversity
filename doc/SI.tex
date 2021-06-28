@@ -15,7 +15,7 @@ L'objectif de ces résultats est de valider le modèle implémenté. Toute une s
     \includegraphics[width=0.5\textwidth]{Images/SI_ref_2_20k.pdf}
     \includegraphics[width=0.5\textwidth]{Images/SI_ref_2_50k.pdf}
     \includegraphics[width=0.5\textwidth]{Images/SI_ref_2_100k.pdf}
-    \caption{Simulations de SI, densité 1/2}
+    \caption[Simulations de SI, densité 1/2]{Simulations du modèle SI sur des systèmes en densité $1/2$ avec le nombre d'individu $5000,20000,50000$ et $100000$. Les courbes courbes bleues proviennent du modèle mathématique. Les courbes vertes proviennent des simulations au mélange parfait et les courbes oranges proviennent des simulations aux $1000$ mouvements.}
 \end{wrapfigure}
 
 Le modèle est très précis pour des systèmes très denses. Les similitudes entre les courbes du modèle SI et celle du mélange parfait montrent que le modèle suit les mêmes comportements que ceux du modèle mathématique SI. Le déroulement des simulations sur des systèmes denses sont presque déterministes car elles produisent toujours les mêmes résultats sans variations apparentes. Ceci est dû au fait que pour des systèmes à forte densité, le facteur chance de déclencher un événement est plus faible que sur les systèmes moins denses. Un chapitre ultérieur est dédié à ces variations. Sur les quatre figures nous voyons sans ambiguïté que les simulations aux $1000$ mouvements (orange) déclenchent leur pandémies moins rapidement et moins brusquement. Deux phénomènes causent ces différences. \\
@@ -33,7 +33,7 @@ Le deuxième phénomène qui explique le retard croissant est que pour toutes le
     \includegraphics[width=0.5\textwidth]{Images/SI_ref_4_20k.pdf}
     \includegraphics[width=0.5\textwidth]{Images/SI_ref_4_50k.pdf}
     \includegraphics[width=0.5\textwidth]{Images/SI_ref_4_100k.pdf}
-    \caption{Simulations de SI, densité 1/4}
+    \caption[Simulations de SI, densité 1/4]{Simulations du modèle SI sur des systèmes en densité $1/4$ avec le nombre d'individu $5000,20000,50000$ et $100000$. Les courbes courbes bleues proviennent du modèle mathématique. Les courbes vertes proviennent des simulations au mélange parfait et les courbes oranges proviennent des simulations aux $1000$ mouvements.}
 \end{wrapfigure}
 
 Une densité de population de $\frac{1}{4}$ permet d'avantages de déplacement pour les individus, par conséquent le mélange pour la méthode à $1000$ mouvements est de meilleure qualité. Nous avons donc des courbes oranges qui subissent moins les blocages et elle approchent d'avantage le modèle SI.\\
@@ -51,7 +51,7 @@ De même pour cette densité, le taux de mélange de $1000$ mouvements fixe impa
     \includegraphics[width=0.5\textwidth]{Images/SI_ref_8_20k.pdf}
     \includegraphics[width=0.5\textwidth]{Images/SI_ref_8_50k.pdf}
     \includegraphics[width=0.5\textwidth]{Images/SI_ref_8_100k.pdf}
-    \caption{Simulations de SI, densité 1/8}
+    \caption[Simulations de SI, densité 1/8]{Simulations du modèle SI sur des systèmes en densité $1/8$ avec le nombre d'individu $5000,20000,50000$ et $100000$. Les courbes courbes bleues proviennent du modèle mathématique. Les courbes vertes proviennent des simulations au mélange parfait et les courbes oranges proviennent des simulations aux $1000$ mouvements.}
 \end{wrapfigure}
 
 Les mêmes comportements sont observés pour les simulations en densité $\frac{1}{8}$. La qualité du mélange décroit avec l'augmentations de la taille des sytèmes et le mélange parfait est bon comparé au modèle mathématique SI. On remarque tout de même sur les trois simulations ($5000$, $20000$, $50000$) que les courbes de mélange parfait évoluent moins vite que le modèle SI. Ce comportement est logique car en diminuant la densité du système on réduit la probabilité d'entrer en contact avec d'autres individus et par conséquent de propager la contamination. Cette baisse de contact est en partie compensée par le fait que les individus ont (par la densité faible) la liberté de se déplacement plus aisément.\\
@@ -67,7 +67,7 @@ Un comportement intrigue sur la simulation à $20000$ individus. La courbe des $
     \includegraphics[width=0.5\textwidth]{Images/SI_ref_16_20k.pdf}
     \includegraphics[width=0.5\textwidth]{Images/SI_ref_16_50k.pdf}
     \includegraphics[width=0.5\textwidth]{Images/SI_ref_16_100k.pdf}
-    \caption{Simulations de SI, densité 1/16}
+    \caption[Simulations de SI, densité 1/16]{Simulations du modèle SI sur des systèmes en densité $1/16$ avec le nombre d'individu $5000,20000,50000$ et $100000$. Les courbes courbes bleues proviennent du modèle mathématique. Les courbes vertes proviennent des simulations au mélange parfait et les courbes oranges proviennent des simulations aux $1000$ mouvements.}
 \end{wrapfigure}
 
 Finalement les simulations en densité $\frac{1}{16}$ donnent aussi de bons résultats. Les mêmes comportements sont observés sur ces simulations mais la simulation à $50000$ individus montre un nouveau comportement pas encore observé sur les autres simulations. L'effet ici est assez faible mais on peut distinguer que la courbe du mélange parfait croît plus rapidement que le modèle mathématique SI. Nous avons donc une simulation qui évolue plus rapidement que le modèle SI. Cet effet n'est pas du au fait que le modèle implémenté est plus rapide mais uniquement au temps qu'il a fallu pour la pandémie se déclare. En effet le modèle SI n'a aucun temps de latence et commence donc à l'itération $0$. Les mesures prisent sur SI souffrent peu de de phénomène contrairement à certaines simulations par la suite. \\
@@ -87,7 +87,7 @@ Les mesures qui suivent comparent le modèle mathématique SI avec les simulatio
 \begin{table}[H]
 \centering
 \captionsetup{justification=centering}
-\caption[Mean Aboslute Error Normalized : SI]{Mean Aboslute Error Normalized : modèle SI, mélange parfait \label{tab:grid}}
+\caption[Mean Aboslute Error Normalized : SI]{Mean Aboslute Error Normalized : Erreurs relevées des simulations SI pour toutes les densités et nombre d'individus. L'erreur est calculée entre les simulations au mélange parfait et le modèle mathématique. \label{tab:grid}}
 \begin{tabular}{@{\extracolsep{\fill} } c|| c| c| c| c|}
  & 5000 & 20000 & 50000 & 100000\\ 
 \midrule
@@ -119,7 +119,7 @@ Les mesures pour le système en densité $\frac{1}{8}$ ont été effectué sur $
 \begin{table}[H]
 \centering
 \captionsetup{justification=centering}
-\caption[Voisinage moyen : SI]{Voisinage moyen : modèle SI, mélange parfait, 1000 mouvements \label{tab:grid}}
+\caption[Voisinage moyen : SI]{Calcul du nombre moyen de voisin par individu pour les systèmes de densité $1/8$ et $1/16$ avec les deux méthodes de déplacement.\label{tab:grid}}
 \begin{tabular}{@{\extracolsep{\fill} } c|| c| c|}
  & 1000 & perfect\_mix\\ 
 \midrule
@@ -148,7 +148,7 @@ L'objectif de cette section est de mesures cette variation sur des simulations �
     \includegraphics[width=0.5\textwidth]{Images/SI_divergence_8_mix.pdf}
     \includegraphics[width=0.5\textwidth]{Images/SI_divergence_16_1000.pdf}
     \includegraphics[width=0.5\textwidth]{Images/SI_divergence_16_mix.pdf}
-    \caption{Variations SI}
+    \caption[Variations aléatoires : SI]{Chaque figure comporte $20$ courbes issues de simulations identiques. Les systèmes sont de densité $1/8$ pour les deux premières figures et $1/16$ pour les deux dernières. Les mesures ont été faites avec les deux modes de mouvements.}
 \end{wrapfigure}
 
 Sur chacune des figure sont représentées les $20$ simulations aux mêmes paramètres. Les mesures effectuées sur les simulations permettent de mettre ces courbes en relations les unes avec les autres. L'intérêt des mesures est de calculer les décalages sur l'axe des abscisses. Pour ce faire nous mesurons à quelle itération la moitié du système est contaminé. Les simulations ont toutes un nombre d'individus de $20000$ par conséquent nous mesurons à quelle itérations les simulations ont atteint $10000$ infectés. C'est à cet endroit que les déviations sont les plus grandes. En effectuant la même mesure en calculant l'itération des $20000$ infectés, nous obtenons des variations moins importantes.\\
@@ -158,7 +158,7 @@ Avec les mesures nous pouvons calculer l'itération minimale ainsi que l'itérat
 \begin{table}[H]
 \centering
 \captionsetup{justification=centering}
-\caption[Variations : SI]{Variations : modèle SI\label{tab:grid}}
+\caption[Variations aléatoires : SI]{Résultats sur les variations aléatoires de simulations identiques. Pour chaque densité et type de mouvements, les mesures sont les itérations à laquelle la moitié de la population est contaminée. Nous mesurons donc les simulations les plus rapides à atteinde ce $50\%$ (min), les simulations les plus lentes (max), l'itération moyenne pour atteindre le $50\%$ et finalement l'écart à la moyenne (std).\label{tab:grid}}
 \begin{tabular}{@{\extracolsep{\fill} } c|| c| c| c| c|}
  & \multicolumn{2}{|c|}{1000 mouvements} & \multicolumn{2}{|c|}{Mélange parfait} \\
 \midrule
@@ -188,7 +188,7 @@ L'image ci-dessous montre les positions des individus pour une simulation au mé
 	\centering
 	\captionsetup{justification=centering}
 	\includegraphics[width=.7\textwidth]{Images/SI_positions_14k_mix.pdf}
-	\caption{positions, mélange parfait}
+	\caption[Positions des individus : mélange parfait]{Exemple de distribution d'individus contaminés par le mélnage parfait dans un espace. La figure est une image du système à l'itération $7$. Les marques rouges sont les individus contaminés et les marques vertes sont les individus sains.}
 \end{figure}
 
 \newpage
@@ -202,7 +202,7 @@ Sur les figures qui suivent, nous effectuons la même mesure mais cette fois-ci 
 	\includegraphics[width=.4\textwidth]{Images/SI_positions_14k.pdf}
 	\includegraphics[width=.4\textwidth]{Images/SI_positions_17k.pdf}
 	\includegraphics[width=.4\textwidth]{Images/SI_positions_20k.pdf}
-	\caption{positions, 1000 mouvements}
+	\caption[Positions des individus : 1000 mouvements, densité variable]{Exemple de distibrution des individus contaminés à l'itération $7$ dans des systèmes de densités diffétentes. Les $4$ simulations ont un espace de $200 \times 200$ mais le nombre d'individus varie de $10000$ à $20000$.}
 \end{figure}
 
 Afin de pouvoir comparer les simulations, nous avons fixé la taille du système à $200 \times 200$ et faisons varier uniquement le nombre d'individus. La dispersion des individus confime le fait que les mouvements sont entravés dans les simulations aux $1000$ mouvements. Pour rappel, en mode $1000$ mouvements, un individu essaie de se déplacer $1000$ fois par itération mais si le passage est obstrué, l'individu ne se déplace pas et ceci est compatibilisé comme mouvement.\\

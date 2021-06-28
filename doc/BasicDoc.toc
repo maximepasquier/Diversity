@@ -10,11 +10,11 @@
 \contentsline {section}{\numberline {3.3}Outils}{4}{section.3.3}%
 \contentsline {chapter}{\numberline {4}Modèle}{5}{chapter.4}%
 \contentsline {section}{\numberline {4.1}Acteurs}{5}{section.4.1}%
-\contentsline {subsection}{\numberline {4.1.1}Individus}{6}{subsection.4.1.1}%
+\contentsline {subsection}{\numberline {4.1.1}Individus}{5}{subsection.4.1.1}%
 \contentsline {subsection}{\numberline {4.1.2}Agents pathogènes}{6}{subsection.4.1.2}%
-\contentsline {section}{\numberline {4.2}Espace physique}{7}{section.4.2}%
+\contentsline {section}{\numberline {4.2}Espace physique}{6}{section.4.2}%
 \contentsline {subsection}{\numberline {4.2.1}Cellule}{7}{subsection.4.2.1}%
-\contentsline {subsection}{\numberline {4.2.2}Grille régulière}{7}{subsection.4.2.2}%
+\contentsline {subsection}{\numberline {4.2.2}Grille régulière}{8}{subsection.4.2.2}%
 \contentsline {subsection}{\numberline {4.2.3}Voisinage}{9}{subsection.4.2.3}%
 \contentsline {section}{\numberline {4.3}Simulation}{9}{section.4.3}%
 \contentsline {subsection}{\numberline {4.3.1}Itérations}{10}{subsection.4.3.1}%
@@ -44,24 +44,24 @@
 \contentsline {chapter}{\numberline {8}Modèle SI}{35}{chapter.8}%
 \contentsline {section}{\numberline {8.1}Mesures et méthodologie SI}{35}{section.8.1}%
 \contentsline {section}{\numberline {8.2}Résultats}{36}{section.8.2}%
-\contentsline {section}{\numberline {8.3}Analyses}{40}{section.8.3}%
-\contentsline {subsection}{\numberline {8.3.1}Mean Absolute Error}{40}{subsection.8.3.1}%
-\contentsline {subsection}{\numberline {8.3.2}Moyenne de voisinage}{40}{subsection.8.3.2}%
-\contentsline {subsection}{\numberline {8.3.3}Variations aléatoires}{41}{subsection.8.3.3}%
-\contentsline {subsection}{\numberline {8.3.4}Positions des individus}{43}{subsection.8.3.4}%
-\contentsline {chapter}{\numberline {9}Modèle SIR}{45}{chapter.9}%
-\contentsline {section}{\numberline {9.1}Mesures et méthodologie SIR}{45}{section.9.1}%
-\contentsline {section}{\numberline {9.2}Résultats}{45}{section.9.2}%
-\contentsline {section}{\numberline {9.3}Analyses}{49}{section.9.3}%
-\contentsline {subsection}{\numberline {9.3.1}Mean Absolute Error}{49}{subsection.9.3.1}%
-\contentsline {subsection}{\numberline {9.3.2}Variations aléatoires}{50}{subsection.9.3.2}%
-\contentsline {subsection}{\numberline {9.3.3}Latence des simulations}{51}{subsection.9.3.3}%
-\contentsline {subsection}{\numberline {9.3.4}Mouvements variable}{53}{subsection.9.3.4}%
-\contentsline {subsection}{\numberline {9.3.5}Comparaison 1000 mouvements}{54}{subsection.9.3.5}%
-\contentsline {chapter}{\numberline {10}Diversité}{56}{chapter.10}%
-\contentsline {section}{\numberline {10.1}Mesures et méthodologie}{56}{section.10.1}%
-\contentsline {section}{\numberline {10.2}Résultats}{57}{section.10.2}%
-\contentsline {subsection}{\numberline {10.2.1}Mélange parfait}{57}{subsection.10.2.1}%
-\contentsline {subsection}{\numberline {10.2.2}Mouvements variable}{59}{subsection.10.2.2}%
-\contentsline {subsection}{\numberline {10.2.3}Conclusion des résultats}{62}{subsection.10.2.3}%
-\contentsline {chapter}{\numberline {11}Conclusion}{65}{chapter.11}%
+\contentsline {section}{\numberline {8.3}Analyses}{41}{section.8.3}%
+\contentsline {subsection}{\numberline {8.3.1}Mean Absolute Error}{41}{subsection.8.3.1}%
+\contentsline {subsection}{\numberline {8.3.2}Moyenne de voisinage}{41}{subsection.8.3.2}%
+\contentsline {subsection}{\numberline {8.3.3}Variations aléatoires}{42}{subsection.8.3.3}%
+\contentsline {subsection}{\numberline {8.3.4}Positions des individus}{44}{subsection.8.3.4}%
+\contentsline {chapter}{\numberline {9}Modèle SIR}{46}{chapter.9}%
+\contentsline {section}{\numberline {9.1}Mesures et méthodologie SIR}{46}{section.9.1}%
+\contentsline {section}{\numberline {9.2}Résultats}{46}{section.9.2}%
+\contentsline {section}{\numberline {9.3}Analyses}{50}{section.9.3}%
+\contentsline {subsection}{\numberline {9.3.1}Mean Absolute Error}{50}{subsection.9.3.1}%
+\contentsline {subsection}{\numberline {9.3.2}Variations aléatoires}{51}{subsection.9.3.2}%
+\contentsline {subsection}{\numberline {9.3.3}Latence des simulations}{52}{subsection.9.3.3}%
+\contentsline {subsection}{\numberline {9.3.4}Mouvements variable}{54}{subsection.9.3.4}%
+\contentsline {subsection}{\numberline {9.3.5}Comparaison 1000 mouvements}{55}{subsection.9.3.5}%
+\contentsline {chapter}{\numberline {10}Diversité}{57}{chapter.10}%
+\contentsline {section}{\numberline {10.1}Mesures et méthodologie}{57}{section.10.1}%
+\contentsline {section}{\numberline {10.2}Résultats}{58}{section.10.2}%
+\contentsline {subsection}{\numberline {10.2.1}Mélange parfait}{58}{subsection.10.2.1}%
+\contentsline {subsection}{\numberline {10.2.2}Mouvements variable}{60}{subsection.10.2.2}%
+\contentsline {subsection}{\numberline {10.2.3}Conclusion des résultats}{63}{subsection.10.2.3}%
+\contentsline {chapter}{\numberline {11}Conclusion}{66}{chapter.11}%

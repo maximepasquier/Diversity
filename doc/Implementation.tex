@@ -59,7 +59,7 @@ Le paramètre "TAILLE\_SYSTEME" nous indique la taille de la grille. La grille a
 \centering
 \captionsetup{justification=centering}
 \includegraphics[scale=0.4]{Images/MatricesPointeurs.png}
-\caption{Matrices de pointeurs}
+\caption[Matrices de pointeurs]{L'espace est représenté par deux matrices de pointeurs de la taille du système. Chacune de ces matrices pointe exclusivement sur un type d'acteurs.}
 \end{figure}
 
 Après avoir créé les structures de données il faut générer les génomes des individus. Le génome initial de référence est donnée par le paramètre "GENOME\_INIT\_I". Ce dernier sert de base pour la génération des génomes des individus. Le paramètre "GENOME\_DIVERSITY\_I" détermine le niveau de déviation par rapport aux génome de référence. Par conséquent, pour attribuer des génomes aux individus on part du génome de référence et modifions aléatoirement un nombre de bits déterminé par le paramètre "GENOME\_DIVERSITY\_I". Par exemple, avec GENOME\_DIVERSITY\_I = 1, tous les individus auront le génome de référence avec un bits choisi aléatoirement dans la séquence qui sera modifié. Ce mécanisme permet d'obtenir des génomes avec un certain degré de proximité à une certaine valeur choisie. Le modèle n'intègre pas de mécanise pour générer des génomes pour les agents pathogènes car la simulation ne commence qu'avec un seul agent pathogène qui porte le génome défini par "GENOME\_INIT\_AP".\\
@@ -91,12 +91,12 @@ Le paramètre $d$ est la distance de Hamming entre les deux génomes des acteurs
     \captionsetup{justification=centering}
   \begin{minipage}[b]{0.4\textwidth}
     \includegraphics[width=\textwidth]{Images/fonction_1.png}
-    \caption{paramètre = 1}
+    \caption[Fonction de converstion en probabilité (facteur 4)]{Fonction de conversion de la distance de Hamming en probabilité avec $PARAMETRE\_FONCTION = 1$}
   \end{minipage}
   \hfill
   \begin{minipage}[b]{0.4\textwidth}
     \includegraphics[width=\textwidth]{Images/fonction_2.png}
-    \caption{paramètre = 2}
+    \caption[Fonction de converstion en probabilité (facteur 4)]{Fonction de conversion de la distance de Hamming en probabilité avec $PARAMETRE\_FONCTION = 2$}
   \end{minipage}
 \end{figure}
 
@@ -105,12 +105,12 @@ Le paramètre $d$ est la distance de Hamming entre les deux génomes des acteurs
     \captionsetup{justification=centering}
   \begin{minipage}[b]{0.4\textwidth}
     \includegraphics[width=\textwidth]{Images/fonction_4.png}
-    \caption{paramètre = 4}
+    \caption[Fonction de converstion en probabilité (facteur 4)]{Fonction de conversion de la distance de Hamming en probabilité avec $PARAMETRE\_FONCTION = 4$}
   \end{minipage}
   \hfill
   \begin{minipage}[b]{0.4\textwidth}
     \includegraphics[width=\textwidth]{Images/fonction_8.png}
-    \caption{paramètre = 8}
+    \caption[Fonction de converstion en probabilité (facteur 4)]{Fonction de conversion de la distance de Hamming en probabilité avec $PARAMETRE\_FONCTION = 8$}
   \end{minipage}
 \end{figure}
 

@@ -4,43 +4,44 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces grille régulière\relax }}{8}{figure.caption.5}%
-\contentsline {figure}{\numberline {4.2}{\ignorespaces voisinage\relax }}{9}{figure.caption.6}%
-\contentsline {figure}{\numberline {4.3}{\ignorespaces grille régulière\relax }}{10}{figure.caption.7}%
-\contentsline {figure}{\numberline {4.4}{\ignorespaces mouvements\relax }}{11}{figure.caption.8}%
-\contentsline {figure}{\numberline {4.5}{\ignorespaces Calcul de la distance de Hamming\relax }}{15}{figure.caption.9}%
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Différents états de la cellule}}{7}{figure.caption.5}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Grille régulière}}{8}{figure.caption.6}%
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Voisinage d'une cellule}}{9}{figure.caption.7}%
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Configuration initiale}}{10}{figure.caption.8}%
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Mouvements des individus}}{11}{figure.caption.9}%
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Calcul de la distance de Hamming}}{15}{figure.caption.10}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {5.1}{\ignorespaces Matrices de pointeurs\relax }}{21}{figure.caption.10}%
-\contentsline {figure}{\numberline {5.2}{\ignorespaces paramètre = 1\relax }}{23}{figure.caption.11}%
-\contentsline {figure}{\numberline {5.3}{\ignorespaces paramètre = 2\relax }}{23}{figure.caption.11}%
-\contentsline {figure}{\numberline {5.4}{\ignorespaces paramètre = 4\relax }}{23}{figure.caption.12}%
-\contentsline {figure}{\numberline {5.5}{\ignorespaces paramètre = 8\relax }}{23}{figure.caption.12}%
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Matrices de pointeurs}}{21}{figure.caption.11}%
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Fonction de converstion en probabilité (facteur 4)}}{23}{figure.caption.12}%
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Fonction de converstion en probabilité (facteur 4)}}{23}{figure.caption.12}%
+\contentsline {figure}{\numberline {5.4}{\ignorespaces Fonction de converstion en probabilité (facteur 4)}}{24}{figure.caption.13}%
+\contentsline {figure}{\numberline {5.5}{\ignorespaces Fonction de converstion en probabilité (facteur 4)}}{24}{figure.caption.13}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {7.1}{\ignorespaces Modèle SI\relax }}{30}{figure.caption.13}%
-\contentsline {figure}{\numberline {7.2}{\ignorespaces Modèle SIR\relax }}{31}{figure.caption.14}%
+\contentsline {figure}{\numberline {7.1}{\ignorespaces Modèle mathématique SI}}{30}{figure.caption.14}%
+\contentsline {figure}{\numberline {7.2}{\ignorespaces Modèle mathématique SIR}}{31}{figure.caption.15}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {8.1}{\ignorespaces Simulations de SI, densité 1/2\relax }}{36}{figure.caption.15}%
-\contentsline {figure}{\numberline {8.2}{\ignorespaces Simulations de SI, densité 1/4\relax }}{37}{figure.caption.16}%
-\contentsline {figure}{\numberline {8.3}{\ignorespaces Simulations de SI, densité 1/8\relax }}{38}{figure.caption.17}%
-\contentsline {figure}{\numberline {8.4}{\ignorespaces Simulations de SI, densité 1/16\relax }}{39}{figure.caption.18}%
-\contentsline {figure}{\numberline {8.5}{\ignorespaces Variations SI\relax }}{42}{figure.caption.21}%
-\contentsline {figure}{\numberline {8.6}{\ignorespaces positions, mélange parfait\relax }}{43}{figure.caption.23}%
-\contentsline {figure}{\numberline {8.7}{\ignorespaces positions, 1000 mouvements\relax }}{44}{figure.caption.24}%
+\contentsline {figure}{\numberline {8.1}{\ignorespaces Simulations de SI, densité 1/2}}{36}{figure.caption.16}%
+\contentsline {figure}{\numberline {8.2}{\ignorespaces Simulations de SI, densité 1/4}}{38}{figure.caption.17}%
+\contentsline {figure}{\numberline {8.3}{\ignorespaces Simulations de SI, densité 1/8}}{39}{figure.caption.18}%
+\contentsline {figure}{\numberline {8.4}{\ignorespaces Simulations de SI, densité 1/16}}{40}{figure.caption.19}%
+\contentsline {figure}{\numberline {8.5}{\ignorespaces Variations SI\relax }}{43}{figure.caption.22}%
+\contentsline {figure}{\numberline {8.6}{\ignorespaces positions, mélange parfait\relax }}{44}{figure.caption.24}%
+\contentsline {figure}{\numberline {8.7}{\ignorespaces positions, 1000 mouvements\relax }}{45}{figure.caption.25}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {9.1}{\ignorespaces Simulations de SI, densité 1/2\relax }}{45}{figure.caption.25}%
-\contentsline {figure}{\numberline {9.2}{\ignorespaces Simulations de SI, densité 1/4\relax }}{46}{figure.caption.26}%
-\contentsline {figure}{\numberline {9.3}{\ignorespaces Simulations de SI, densité 1/8\relax }}{47}{figure.caption.27}%
-\contentsline {figure}{\numberline {9.4}{\ignorespaces Simulations de SI, densité 1/16\relax }}{48}{figure.caption.28}%
-\contentsline {figure}{\numberline {9.5}{\ignorespaces Variations SIR\relax }}{50}{figure.caption.30}%
-\contentsline {figure}{\numberline {9.6}{\ignorespaces Simulation SIR\relax }}{52}{figure.caption.32}%
-\contentsline {figure}{\numberline {9.7}{\ignorespaces latence SIR\relax }}{52}{figure.caption.33}%
-\contentsline {figure}{\numberline {9.8}{\ignorespaces Mouvements variable\relax }}{53}{figure.caption.34}%
-\contentsline {figure}{\numberline {9.9}{\ignorespaces Comparaison 1000 mouvements\relax }}{54}{figure.caption.35}%
+\contentsline {figure}{\numberline {9.1}{\ignorespaces Simulations de SI, densité 1/2\relax }}{46}{figure.caption.26}%
+\contentsline {figure}{\numberline {9.2}{\ignorespaces Simulations de SI, densité 1/4\relax }}{47}{figure.caption.27}%
+\contentsline {figure}{\numberline {9.3}{\ignorespaces Simulations de SI, densité 1/8\relax }}{48}{figure.caption.28}%
+\contentsline {figure}{\numberline {9.4}{\ignorespaces Simulations de SI, densité 1/16\relax }}{49}{figure.caption.29}%
+\contentsline {figure}{\numberline {9.5}{\ignorespaces Variations SIR\relax }}{51}{figure.caption.31}%
+\contentsline {figure}{\numberline {9.6}{\ignorespaces Simulation SIR\relax }}{53}{figure.caption.33}%
+\contentsline {figure}{\numberline {9.7}{\ignorespaces latence SIR\relax }}{53}{figure.caption.34}%
+\contentsline {figure}{\numberline {9.8}{\ignorespaces Mouvements variable\relax }}{54}{figure.caption.35}%
+\contentsline {figure}{\numberline {9.9}{\ignorespaces Comparaison 1000 mouvements\relax }}{55}{figure.caption.36}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {10.1}{\ignorespaces Comparaison 50 mouvements\relax }}{58}{figure.caption.36}%
-\contentsline {figure}{\numberline {10.2}{\ignorespaces 50 mouvements\relax }}{59}{figure.caption.37}%
-\contentsline {figure}{\numberline {10.3}{\ignorespaces Comparaison 10 mouvements\relax }}{61}{figure.caption.38}%
-\contentsline {figure}{\numberline {10.4}{\ignorespaces Comparaison 1 mouvements\relax }}{62}{figure.caption.39}%
-\contentsline {figure}{\numberline {10.5}{\ignorespaces vague propagation\relax }}{63}{figure.caption.40}%
+\contentsline {figure}{\numberline {10.1}{\ignorespaces Comparaison 50 mouvements\relax }}{59}{figure.caption.37}%
+\contentsline {figure}{\numberline {10.2}{\ignorespaces 50 mouvements\relax }}{60}{figure.caption.38}%
+\contentsline {figure}{\numberline {10.3}{\ignorespaces Comparaison 10 mouvements\relax }}{62}{figure.caption.39}%
+\contentsline {figure}{\numberline {10.4}{\ignorespaces Comparaison 1 mouvements\relax }}{63}{figure.caption.40}%
+\contentsline {figure}{\numberline {10.5}{\ignorespaces vague propagation\relax }}{64}{figure.caption.41}%
 \addvspace {10\p@ }
