@@ -2,7 +2,7 @@
 
 Automate cellulaire simulant la contamination d'une population par un agent pathogène en fonction de divers facteurs. Le travail se focalise sur l'impacte des diversités écologiques sur la propagation de pandémies.
 
-Le système se présente sous forme d'une matrice carrée de taille configurable représentant une surface. Initialement sont disposés aléatoirement des individus sur  la surface. Leur nombre, ainsi que leurs caractéristiques sont configurables. Un agent pathogène est assigné à l'un d'eux afin d'obtenir un point de départ de la propagation du pathogène.
+Le système se présente sous forme d'une matrice carrée de taille configurable représentant une surface. Initialement sont disposés aléatoirement des individus sur  la surface. Leur nombre, ainsi que leurs caractéristiques sont configurables. Un agent pathogène est assigné à l'un d'eux afin d'obtenir un point de départ à la propagation du pathogène.
 
 Les simulations évoluent par itérations et enregistrent les données dans des fichiers csv. Les résultats sont ensuite visualisables par des analyses faites en Python.
 
@@ -25,7 +25,7 @@ Cloner ou forker le projet sur votre machine.
 
 ## Initialiser des simulations
 
-Pour lancer des simulations ouvrez le fichier ./src/main.cpp et ajoutez des instances de simulations comme montré ci-dessous :
+Pour lancer des simulations ouvrez le fichier ./src/main.cpp et ajoutez une ou plusieurs instances de simulations comme montré ci-dessous :
 ```c++
 threads.push_back(std::thread(thread_function, "./path_exemple"));
 ```
