@@ -1,0 +1,3 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+  \PYG{n}{threads}\PYG{p}{.}\PYG{n}{push\PYGZus{}back}\PYG{p}{(}\PYG{n}{std}\PYG{o}{::}\PYG{k+kr}{thread}\PYG{p}{(}\PYG{n}{thread\PYGZus{}function}\PYG{p}{,} \PYG{l+s}{\PYGZdq{}./path\PYGZus{}exemple\PYGZdq{}}\PYG{p}{));}
+\end{Verbatim}

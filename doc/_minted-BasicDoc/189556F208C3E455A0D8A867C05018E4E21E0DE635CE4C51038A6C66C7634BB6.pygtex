@@ -1,0 +1,3 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+  \PYG{c+cp}{\PYGZsh{}define NB\PYGZus{}THREADS 8}
+\end{Verbatim}
