@@ -1,6 +1,6 @@
 # Diversity
 
-Automate cellulaire simulant la contamination d'une population par un agent pathogène en fonction de divers facteurs. Le travail se focalise sur l'impacte des diversités des génomes sur la propagation de pandémies.
+Automate cellulaire simulant la contamination d'une population par un agent pathogène en fonction de divers facteurs. Le travail se focalise sur l'impacte des diversités écologiques sur la propagation de pandémies.
 
 Le système se présente sous forme d'une matrice carrée de taille configurable représentant une surface. Initialement sont disposés aléatoirement des individus sur  la surface. Leur nombre, ainsi que leurs caractéristiques sont configurables. Un agent pathogène est assigné à l'un d'eux afin d'obtenir un point de départ de la propagation du pathogène.
 
