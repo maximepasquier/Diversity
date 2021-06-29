@@ -25,14 +25,14 @@ Cloner ou forker le projet sur votre machine.
 
 ## Initialiser des simulations
 
-Pour lancer des simulations ouvrez le fichier ./src/main.cpp et ajoutez des instances de simulations comme ci-dessous :
+Pour lancer des simulations ouvrez le fichier ./src/main.cpp et ajoutez des instances de simulations comme montré ci-dessous :
 ```c++
 threads.push_back(std::thread(thread_function, "./path_exemple"));
 ```
 Modifiez le chemin spécifié "./path_exemple" qui est la racine de la simulation. Un fichier de configuration dois se trouver dans ce dossier.
 
 ## Configurer les paramètres
-Dans le dossier que vous avez précisé dans l'initialisation de la simulation se trouve un fichier : **config.txt**
+Dans le dossier que vous avez précisé dans l'initialisation de la simulation, vous devez créer le fichier : **config.txt**
 
 Voici un exemple de son contenu :
 
