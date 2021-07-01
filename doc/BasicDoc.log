@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2021.6.17)  30 JUN 2021 10:38
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2021.6.17)  1 JUL 2021 11:44
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -3779,10 +3779,10 @@ Package logreq Info: Writing requests to 'BasicDoc.run.xml'.
  ) 
 Here is how much of TeX's memory you used:
  54758 strings out of 481239
- 1215564 string characters out of 5920377
+ 1215567 string characters out of 5920377
  2131673 words of memory out of 5000000
  68390 multiletter control sequences out of 15000+600000
- 606169 words of font info for 311 fonts, out of 8000000 for 9000
+ 606179 words of font info for 311 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  76i,12n,105p,10124b,3739s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-ec.enc}{/usr/share/texlive/texmf-dist
@@ -3796,7 +3796,7 @@ r/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/share/texl
 ive/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/share/texlive/texmf-di
 st/fonts/type1/urw/palatino/uplr8a.pfb></usr/share/texlive/texmf-dist/fonts/typ
 e1/urw/palatino/uplri8a.pfb>
-Output written on BasicDoc.pdf (73 pages, 2890550 bytes).
+Output written on BasicDoc.pdf (73 pages, 2890538 bytes).
 PDF statistics:
  5365 PDF objects out of 6186 (max. 8388607)
  2003 compressed objects within 21 object streams
