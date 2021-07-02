@@ -161,13 +161,13 @@ Un autre résultat important est que en moyenne les simulations au mélange parf
 
 Cette section a pour but de visualiser l'impacte de la densité des systèmes sur les déplacements des individus et donc sur la qualité du mélange. Les figures suivantes montrent les positions géographiques de tous les individus à une certaine itération. En vert sont affichés les individus sains et en rouge les individus contaminés.\\
 
-L'image ci-dessous montre les positions des individus pour une simulation au mélange parfait à l'itération $7$. Le mode de mélange parfait redistribue tous les individus dans l'espace à chaque itération, par conséquent les individus contaminés sont parfaitement répartis dans l'espace.
+Toutes les simulations de ce chapitre sont de taille $200 \times 200$ et le nombre d'individus varie de $10000$ à $20000$. De plus la mesure de position est toujours prise à l'itération $7$. L'image ci-dessous montre les positions des individus pour une simulation au mélange parfait. Le mode de mélange parfait redistribue tous les individus dans l'espace à chaque itération, par conséquent les individus contaminés sont parfaitement répartis dans l'espace.
 
 \begin{figure}[h]
 	\centering
 	\captionsetup{justification=centering}
 	\includegraphics[width=.7\textwidth]{Images/SI_positions_14k_mix.pdf}
-	\caption[Positions des individus : mélange parfait]{Exemple de distribution d'individus contaminés par le mélnage parfait dans un espace. La figure est une image du système à l'itération $7$. Les marques rouges sont les individus contaminés et les marques vertes sont les individus sains.}
+	\caption[Positions des individus : mélange parfait]{Exemple de distribution d'individus contaminés par le mélange parfait dans un espace. La figure est une image du système à l'itération $7$. Les marques rouges sont les individus contaminés et les marques vertes sont les individus sains. Les valeurs en abscisses et ordonnées décrivent les coordonnées des individus.}
 \end{figure}
 
 \newpage
@@ -181,9 +181,9 @@ Sur les figures qui suivent, nous effectuons la même mesure mais cette fois-ci 
 	\includegraphics[width=.4\textwidth]{Images/SI_positions_14k.pdf}
 	\includegraphics[width=.4\textwidth]{Images/SI_positions_17k.pdf}
 	\includegraphics[width=.4\textwidth]{Images/SI_positions_20k.pdf}
-	\caption[Positions des individus : 1000 mouvements, densité variable]{Exemple de distibrution des individus contaminés à l'itération $7$ dans des systèmes de densités diffétentes. Les $4$ simulations ont un espace de $200 \times 200$ mais le nombre d'individus varie de $10000$ à $20000$.}
+	\caption[Positions des individus : 1000 mouvements, densité variable]{Exemple de distibrution des individus contaminés à l'itération $7$ dans des systèmes aux $1000$ mouvements de densités diffétentes. Les $4$ simulations ont un espace de $200 \times 200$ avec le nombre d'individus variant de $10000$ à $20000$. Les valeurs en abscisses et ordonnées décrivent les coordonnées des individus.}
 \end{figure}
 
-Afin de pouvoir comparer les simulations, nous avons fixé la taille du système à $200 \times 200$ et faisons varier uniquement le nombre d'individus. La dispersion des individus confime le fait que les mouvements sont entravés dans les simulations aux $1000$ mouvements. Pour rappel, en mode $1000$ mouvements, un individu essaie de se déplacer $1000$ fois par itération mais si le passage est obstrué, l'individu ne se déplace pas et ceci est compatibilisé comme mouvement.\\
+Afin de pouvoir comparer les simulations, nous avons fixé la taille du système à $200 \times 200$ et faisons varier uniquement le nombre d'individus. La dispersion des individus confime le fait que les mouvements sont entravés dans les simulations aux $1000$ mouvements. Pour rappel, en mode $1000$ mouvements, un individu essaie de se déplacer $1000$ fois par itération mais si le passage est obstrué, l'individu ne se déplace pas et ceci est quand même compatibilisé comme mouvement.\\
 
 Par conséquent, le diamètre de propagation croit avec la diminution de la densité du système. 
