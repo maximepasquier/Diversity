@@ -56,17 +56,18 @@
 \contentsline {subsection}{\numberline {8.3.4}Positions des individus}{41}{subsection.8.3.4}%
 \contentsline {chapter}{\numberline {9}Modèle SIR}{43}{chapter.9}%
 \contentsline {section}{\numberline {9.1}Mesures et méthodologie SIR}{43}{section.9.1}%
-\contentsline {section}{\numberline {9.2}Résultats}{43}{section.9.2}%
+\contentsline {section}{\numberline {9.2}Résultats}{44}{section.9.2}%
 \contentsline {section}{\numberline {9.3}Analyses}{47}{section.9.3}%
 \contentsline {subsection}{\numberline {9.3.1}Mean Absolute Error}{47}{subsection.9.3.1}%
-\contentsline {subsection}{\numberline {9.3.2}Variations aléatoires}{48}{subsection.9.3.2}%
-\contentsline {subsection}{\numberline {9.3.3}Latence des simulations}{49}{subsection.9.3.3}%
-\contentsline {subsection}{\numberline {9.3.4}Mouvements variable}{52}{subsection.9.3.4}%
-\contentsline {subsection}{\numberline {9.3.5}Comparaison 1000 mouvements}{53}{subsection.9.3.5}%
-\contentsline {chapter}{\numberline {10}Diversité}{55}{chapter.10}%
-\contentsline {section}{\numberline {10.1}Mesures et méthodologie}{55}{section.10.1}%
-\contentsline {section}{\numberline {10.2}Résultats}{56}{section.10.2}%
-\contentsline {subsection}{\numberline {10.2.1}Mélange parfait}{56}{subsection.10.2.1}%
-\contentsline {subsection}{\numberline {10.2.2}Mouvements variable}{58}{subsection.10.2.2}%
-\contentsline {subsection}{\numberline {10.2.3}Conclusion des résultats}{61}{subsection.10.2.3}%
-\contentsline {chapter}{\numberline {11}Conclusion}{64}{chapter.11}%
+\contentsline {subsection}{\numberline {9.3.2}Variations aléatoires}{49}{subsection.9.3.2}%
+\contentsline {subsection}{\numberline {9.3.3}Latence des simulations}{50}{subsection.9.3.3}%
+\contentsline {subsection}{\numberline {9.3.4}Mouvements variable}{53}{subsection.9.3.4}%
+\contentsline {subsection}{\numberline {9.3.5}Comparaison 1000 mouvements}{54}{subsection.9.3.5}%
+\contentsline {chapter}{\numberline {10}Diversité}{56}{chapter.10}%
+\contentsline {section}{\numberline {10.1}Mesures et méthodologie}{56}{section.10.1}%
+\contentsline {section}{\numberline {10.2}Résultats}{58}{section.10.2}%
+\contentsline {subsection}{\numberline {10.2.1}Mélange parfait}{58}{subsection.10.2.1}%
+\contentsline {subsection}{\numberline {10.2.2}Mouvements variable}{60}{subsection.10.2.2}%
+\contentsline {subsection}{\numberline {10.2.3}Conclusion des résultats}{63}{subsection.10.2.3}%
+\contentsline {chapter}{\numberline {11}Mutations}{66}{chapter.11}%
+\contentsline {chapter}{\numberline {12}Conclusion}{67}{chapter.12}%

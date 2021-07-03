@@ -292,6 +292,8 @@ int main(int argc, char const *argv[])
     threads.push_back(std::thread(thread_function, "./Simulations/SIR/Reference/perfect_mix/densite1sur16/population50000"));
     threads.push_back(std::thread(thread_function, "./Simulations/SIR/Reference/perfect_mix/densite1sur16/population100000"));
 
+    
+
     // Diversité
     threads.push_back(std::thread(thread_function, "./Simulations/SIR/Diversite/1sur8/perfect_mix/diversite5"));
     threads.push_back(std::thread(thread_function, "./Simulations/SIR/Diversite/1sur8/perfect_mix/diversite10"));
@@ -323,6 +325,8 @@ int main(int argc, char const *argv[])
     threads.push_back(std::thread(thread_function, "./Simulations/SIR/Diversite/1sur16/charge_virale1/perfect_mix/diversite8"));
     threads.push_back(std::thread(thread_function, "./Simulations/SIR/Diversite/1sur16/charge_virale1/perfect_mix/diversite16"));
     threads.push_back(std::thread(thread_function, "./Simulations/SIR/Diversite/1sur16/charge_virale1/perfect_mix/diversite32"));
+
+    */
 
     // charge virale = 1
     threads.push_back(std::thread(thread_function, "./Simulations/SIR/Diversite/1sur16/charge_virale1/1mouvement/diversite4"));
@@ -387,7 +391,8 @@ int main(int argc, char const *argv[])
     threads.push_back(std::thread(thread_function, "./Simulations/SIR/Diversite/1sur16/charge_virale025/50mouvements/diversite8"));
     threads.push_back(std::thread(thread_function, "./Simulations/SIR/Diversite/1sur16/charge_virale025/50mouvements/diversite16"));
     threads.push_back(std::thread(thread_function, "./Simulations/SIR/Diversite/1sur16/charge_virale025/50mouvements/diversite32"));
-    */
+    
+    /*
 
     // Mutation
     threads.push_back(std::thread(thread_function, "./Simulations/SIR/Mutation/10mouvements/distanceHamming24/mutation3"));
@@ -395,7 +400,7 @@ int main(int argc, char const *argv[])
     threads.push_back(std::thread(thread_function, "./Simulations/SIR/Mutation/10mouvements/distanceHamming24/mutation5"));
     threads.push_back(std::thread(thread_function, "./Simulations/SIR/Mutation/10mouvements/distanceHamming24/mutation6"));
 
-    /*
+    
     //* SIR mouvements
     // perfect mix référence
     threads.push_back(std::thread(thread_function, "./Simulations/SIR/Mouvements/perfect_mix"));

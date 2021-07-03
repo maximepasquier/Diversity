@@ -2,6 +2,82 @@
 
 \section{Mesures et méthodologie}
 
+\begin{table}[H]
+	\centering
+	\captionsetup{justification=centering}
+	\caption[1]{2\label{tab:grid}}
+	\begin{tabular}{@{\extracolsep{\fill} } c|| c| c| c|}
+		4    & 1     & 10    & 50    \\
+		\midrule
+		\midrule
+		1    & 10/10 & 10/10 & 10/10 \\
+		\midrule
+		0.75 & 10/10 & 10/10 & 10/10 \\
+		\midrule
+		0.5  & 10/10 & 10/10 & 10/10 \\
+		\midrule
+		0.25 & 10/10 & 10/10 & 10/10 \\
+		\bottomrule
+	\end{tabular}
+\end{table}
+
+\begin{table}[H]
+	\centering
+	\captionsetup{justification=centering}
+	\caption[1]{2\label{tab:grid}}
+	\begin{tabular}{@{\extracolsep{\fill} } c|| c| c| c|}
+		8    & 1     & 10    & 50    \\
+		\midrule
+		\midrule
+		1    & 10/10 & 10/10 & 10/10 \\
+		\midrule
+		0.75 & 10/10 & 10/10 & 10/10 \\
+		\midrule
+		0.5  & 10/10 & 10/10 & 10/10 \\
+		\midrule
+		0.25 & 10/10 & 10/10 & 10/10 \\
+		\bottomrule
+	\end{tabular}
+\end{table}
+
+\begin{table}[H]
+	\centering
+	\captionsetup{justification=centering}
+	\caption[1]{2\label{tab:grid}}
+	\begin{tabular}{@{\extracolsep{\fill} } c|| c| c| c|}
+		16    & 1     & 10    & 50    \\
+		\midrule
+		\midrule
+		1    & 10/10 & 10/10 & 10/10 \\
+		\midrule
+		0.75 & 6/10 & 10/10 & 9/10 \\
+		\midrule
+		0.5  & 9/10 & 7/10 & 10/10 \\
+		\midrule
+		0.25 & 3/10 & 7/10 & 6/10 \\
+		\bottomrule
+	\end{tabular}
+\end{table}
+
+\begin{table}[H]
+	\centering
+	\captionsetup{justification=centering}
+	\caption[1]{2\label{tab:grid}}
+	\begin{tabular}{@{\extracolsep{\fill} } c|| c| c| c|}
+		32    & 1     & 10    & 50    \\
+		\midrule
+		\midrule
+		1    & 0/10 & 5/10 & 8/10 \\
+		\midrule
+		0.75 & 0/10 & 4/10 & 8/10 \\
+		\midrule
+		0.5  & 0/10 & 4/10 & 6/10 \\
+		\midrule
+		0.25 & 0/10 & 1/10 & 2/10 \\
+		\bottomrule
+	\end{tabular}
+\end{table}
+
 L'objectif du travail est de quantifier l'impacte de la diversité sur la propagation de pandémies. Cette section est dédié à la prises de mesures avec des niveaux de diversité différents et d'en constater les résultats. Afin de ne pas trop complexifier le modèle au delà des simulations SIR, nous ne modifions que le paramètre de diversité ainsi que la charge virale. D'autres paramètres du modèle pourraient être étudié mais ce chapitre ne les explore pas.\\
 
 Toutes les musures de diversité ont été effectuées sur des systèmes aux paramètres semblables. La taille des systèmes est définie à $1264\times 1264$ avec une population de $10^5$ individus, il s'agit de systèmes en densité $\frac{1}{16}$. Un exemple de fichier de configuration est donné ci-dessous.
@@ -16,7 +92,6 @@ Toutes les musures de diversité ont été effectuées sur des systèmes aux par
 	linenos
 	]
 	{c++}
-	
 	TAILLE_SYSTEME = 1264
 	NOMBRE_INDIVIDUS = 100000
 	ITERATIONS = 5000
@@ -55,7 +130,7 @@ Chaque figure est structuré de la même manière. Il y a 3 subplots pour les 3 
 
 \subsection{Mélange parfait}
 
-Le document ne contient qu'une seule simulation à diversité non nulle et au mélange parfait. La raison pour laquelle cette voie n'est que peu explorée est parceque le mélange parfait est trop efficace pour la propagation de pandémies. Par conséquent les propagations sont beaucoup trop rapides comparé au ralentissement qu'offre la diversité. 
+Le document ne contient qu'une seule simulation à diversité non nulle et au mélange parfait. La raison pour laquelle cette voie n'est que peu explorée est parceque le mélange parfait est trop efficace pour la propagation de pandémies. Par conséquent les propagations sont beaucoup trop rapides comparé au ralentissement qu'offre la diversité.
 
 \begin{figure}[h]
 	\centering

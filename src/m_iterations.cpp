@@ -34,7 +34,7 @@ void Simulation::Iterations()
             break;
         }
         //* Coupe la simulation si 50% des individus quittent le compartiment Susceptible
-        /*
+        
         if(m_nombre_contamine + SIR_recovered() > m_NOMBRE_INDIVIDUS/4)
         {
             m_iteration_fin = iteration;
@@ -42,7 +42,7 @@ void Simulation::Iterations()
             cout << endl;
             break;
         }
-        */
+        
     }
 }
 
