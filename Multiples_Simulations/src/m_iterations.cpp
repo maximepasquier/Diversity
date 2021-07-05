@@ -16,33 +16,19 @@ void Simulation::Iterations()
     //* Itère sur le nombre d'itération de la simulation
     for (int iteration = 0; iteration < m_ITERATIONS; iteration++)
     {
-        //* Print les itérations (avancement)
-        int seuil = ceil(m_ITERATIONS / 100);
-        if (iteration % seuil == 0 || iteration == m_ITERATIONS - 1)
-        {
-            Print_progression(iteration, m_ITERATIONS);
-        }
-        //* Print ASCII grid to screen (small systems !!!)
-        //Print_ASCII_grid(m_TAILLE_SYSTEME, m_Pointer_array_H, m_Pointer_array_AP);
         One_iteration(iteration);
         //* Vérifier que des individus soient contaminés
         if (m_nombre_contamine == 0)
         {
             m_iteration_fin = iteration;
-            Print_progression(iteration, m_ITERATIONS);
-            cout << endl;
             break;
         }
-        //* Coupe la simulation si 50% des individus quittent le compartiment Susceptible
-        
-        if(m_nombre_contamine + SIR_recovered() > m_NOMBRE_INDIVIDUS/4)
+        //* Coupe la simulation si 5% des individus quittent le compartiment Susceptible
+        if(m_nombre_contamine + SIR_recovered() > m_NOMBRE_INDIVIDUS/20)
         {
             m_iteration_fin = iteration;
-            Print_progression(iteration, m_ITERATIONS);
-            cout << endl;
             break;
         }
-        
     }
 }
 
@@ -52,16 +38,6 @@ void Simulation::One_iteration(int iteration)
     //* Compter le nombre de contaminés
     m_nombre_contamine = Update_infected_number();
 
-    //* Compter le nombre d'agents pathogènes différents
-    m_nombre_AP_diff = Update_nombre_AP_diff();
-
-    //* Write to .csv file
-    Update_csv();
-
-    //* Compter le nombre de recovered pour le modèle SIR
-    m_SIR_recovered_file << '\n'
-                         << SIR_recovered();
-
     //* Construire la permutations de la liste d'individus
     int *permuted_liste = new int[m_NOMBRE_INDIVIDUS];
     Permutation(permuted_liste, m_NOMBRE_INDIVIDUS, m_generator);
@@ -70,8 +46,6 @@ void Simulation::One_iteration(int iteration)
     Update_all_AP();
     //* Parcours du domaine (liste individus)
     Update_all_I(permuted_liste);
-    //* Sleep entre les itérations pour l'affichage graphique
-    //this_thread::sleep_for(chrono::seconds(1));
     //* Supprimer la permutation
     delete[] permuted_liste;
 }
@@ -117,7 +91,6 @@ void Simulation::Update_all_I(int *permuted_liste)
     }
     else
     {
-        auto start = std::chrono::steady_clock::now();
         //* Parcourt des individus du système pour les mouvements
         for (int i = 0; i < m_NOMBRE_INDIVIDUS; i++)
         {
@@ -131,13 +104,6 @@ void Simulation::Update_all_I(int *permuted_liste)
                 Mouvement(x, y);
             }
         }
-        auto end = std::chrono::steady_clock::now();
-        auto diff = end - start;
-        unsigned long long int time_X_mouvements = chrono::duration<double, micro>(diff).count();
-        string path_copy = m_configuration_file_path;
-        path_copy.append("/data_csv");
-        m_X_mouvements_time << '\n'
-                            << time_X_mouvements / m_NOMBRE_INDIVIDUS;
     }
 }
 

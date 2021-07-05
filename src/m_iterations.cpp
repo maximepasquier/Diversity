@@ -32,17 +32,7 @@ void Simulation::Iterations()
             Print_progression(iteration, m_ITERATIONS);
             cout << endl;
             break;
-        }
-        //* Coupe la simulation si 50% des individus quittent le compartiment Susceptible
-        
-        if(m_nombre_contamine + SIR_recovered() > m_NOMBRE_INDIVIDUS/4)
-        {
-            m_iteration_fin = iteration;
-            Print_progression(iteration, m_ITERATIONS);
-            cout << endl;
-            break;
-        }
-        
+        }        
     }
 }
 
