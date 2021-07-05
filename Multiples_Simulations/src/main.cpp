@@ -24,6 +24,8 @@ int main(int argc, char const *argv[])
 
     std::vector<std::thread> threads;
 
+    threads.push_back(std::thread(thread_function, "./Simulations/Diversite/1sur16/charge_virale1/50mouvements/diversite4"));
+
     /*
     //* Positions SI
     threads.push_back(std::thread(thread_function, "./Simulations/SI/Positions/1000mouvements/10000"));
