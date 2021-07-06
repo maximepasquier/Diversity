@@ -21,12 +21,13 @@ void Simulation::Iterations()
         if (m_nombre_contamine == 0)
         {
             m_iteration_fin = iteration;
+            success = false;
             break;
         }
         //* Coupe la simulation si 5% des individus quittent le compartiment Susceptible
-        if(m_nombre_contamine + SIR_recovered() > m_NOMBRE_INDIVIDUS/20)
+        if (m_nombre_contamine + SIR_recovered() > m_NOMBRE_INDIVIDUS / 20)
         {
-            m_iteration_fin = iteration;
+            success = true;
             break;
         }
     }
@@ -37,6 +38,13 @@ void Simulation::One_iteration(int iteration)
 {
     //* Compter le nombre de contaminés
     m_nombre_contamine = Update_infected_number();
+
+    //* Détermine si c'est le max de contaminés
+    if (m_nombre_contamine > m_nombre_contamine_max)
+    {
+        m_nombre_contamine_max = m_nombre_contamine;
+        m_iteration_max_contamine = iteration;
+    }
 
     //* Construire la permutations de la liste d'individus
     int *permuted_liste = new int[m_NOMBRE_INDIVIDUS];

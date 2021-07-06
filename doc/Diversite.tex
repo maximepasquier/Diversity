@@ -2,83 +2,7 @@
 
 \section{Mesures et méthodologie}
 
-\begin{table}[H]
-	\centering
-	\captionsetup{justification=centering}
-	\caption[1]{2\label{tab:grid}}
-	\begin{tabular}{@{\extracolsep{\fill} } c|| c| c| c|}
-		4    & 1     & 10    & 50    \\
-		\midrule
-		\midrule
-		1    & 10/10 & 10/10 & 10/10 \\
-		\midrule
-		0.75 & 10/10 & 10/10 & 10/10 \\
-		\midrule
-		0.5  & 10/10 & 10/10 & 10/10 \\
-		\midrule
-		0.25 & 10/10 & 10/10 & 10/10 \\
-		\bottomrule
-	\end{tabular}
-\end{table}
-
-\begin{table}[H]
-	\centering
-	\captionsetup{justification=centering}
-	\caption[1]{2\label{tab:grid}}
-	\begin{tabular}{@{\extracolsep{\fill} } c|| c| c| c|}
-		8    & 1     & 10    & 50    \\
-		\midrule
-		\midrule
-		1    & 10/10 & 10/10 & 10/10 \\
-		\midrule
-		0.75 & 10/10 & 10/10 & 10/10 \\
-		\midrule
-		0.5  & 10/10 & 10/10 & 10/10 \\
-		\midrule
-		0.25 & 10/10 & 10/10 & 10/10 \\
-		\bottomrule
-	\end{tabular}
-\end{table}
-
-\begin{table}[H]
-	\centering
-	\captionsetup{justification=centering}
-	\caption[1]{2\label{tab:grid}}
-	\begin{tabular}{@{\extracolsep{\fill} } c|| c| c| c|}
-		16    & 1     & 10    & 50    \\
-		\midrule
-		\midrule
-		1    & 10/10 & 10/10 & 10/10 \\
-		\midrule
-		0.75 & 6/10 & 10/10 & 9/10 \\
-		\midrule
-		0.5  & 9/10 & 7/10 & 10/10 \\
-		\midrule
-		0.25 & 3/10 & 7/10 & 6/10 \\
-		\bottomrule
-	\end{tabular}
-\end{table}
-
-\begin{table}[H]
-	\centering
-	\captionsetup{justification=centering}
-	\caption[1]{2\label{tab:grid}}
-	\begin{tabular}{@{\extracolsep{\fill} } c|| c| c| c|}
-		32    & 1     & 10    & 50    \\
-		\midrule
-		\midrule
-		1    & 0/10 & 5/10 & 8/10 \\
-		\midrule
-		0.75 & 0/10 & 4/10 & 8/10 \\
-		\midrule
-		0.5  & 0/10 & 4/10 & 6/10 \\
-		\midrule
-		0.25 & 0/10 & 1/10 & 2/10 \\
-		\bottomrule
-	\end{tabular}
-\end{table}
-
-L'objectif du travail est de quantifier l'impacte de la diversité sur la propagation de pandémies. Cette section est dédié à la prises de mesures avec des niveaux de diversité différents et d'en constater les résultats. Afin de ne pas trop complexifier le modèle au delà des simulations SIR, nous ne modifions que le paramètre de diversité ainsi que la charge virale. D'autres paramètres du modèle pourraient être étudié mais ce chapitre ne les explore pas.\\
+L'objectif du travail est de quantifier l'impacte de la diversité sur la propagation de pandémies. Cette section est dédié à la prises de mesures avec des niveaux de diversité différents et d'en constater les résultats. Afin de ne pas trop complexifier le modèle au delà des simulations SIR, nous ne modifions que le paramètre de diversité, nombre de mouvements ainsi que la charge virale. D'autres paramètres du modèle pourraient être étudié mais ce chapitre ne les explore pas.\\
 
 Toutes les musures de diversité ont été effectuées sur des systèmes aux paramètres semblables. La taille des systèmes est définie à $1264\times 1264$ avec une population de $10^5$ individus, il s'agit de systèmes en densité $\frac{1}{16}$. Un exemple de fichier de configuration est donné ci-dessous.
 
@@ -120,13 +44,13 @@ Premièrement, le niveau de diversité varie d'une simulation à une autre. Les 
 
 Deuxièmement, le mode de mouvement ainsi que le nombre de mouvements varie. Seule la première simulation servant d'exemple utilise le mode de mouvement au mélange parfait, toutes les autres ont un nombre de mouvements défini. Les mouvements étudiés sont : $1,10,50$.\\
 
-Finalement nous faisons varier le paramètre de charge virale (ici défini à 1). L'idée principale est ralentir la propagation de pandémies en diminuant la contagion des agents pathogènes. Les simulations sont effectuée sur $4$ niveaux de charge virale : $0.25,0.5,0.75,1$\\
+Finalement nous faisons varier le paramètre de charge virale (ici défini à 1). L'idée principale est de ralentir la propagation de pandémies en diminuant la contagion des agents pathogènes. Les simulations sont effectuée sur $4$ niveaux de charge virale : $0.25,0.5,0.75,1$\\
 
-Les résultats du chapitre se découpent en $5$ parties. La première sert d'exemple et permet d'expliquer les mécaniques derrière la diversité. Les $4$ autres parties explorent les $4$ niveaux de mouvements, les $4$ niveaux de diversité et les $4$ niveaux de charge virale.
+Un total de $64$ configurations de simulations sont étudiées et pour chacune de ces configuration nous effectuons $100$ simulations. L'exécution de $100$ simulations pour un ensemble de paramètres permet de calculer le taux d'événements pandémiques ainsi que de relever les caractéristiques des simulations qui ne font pas apparaitre de pandémie.
 
 \section{Résultats}
 
-Chaque figure est structuré de la même manière. Il y a 3 subplots pour les 3 compartiements du modèle SIR. Les quatres courbes par compartiment représentent le nombre d'infectés de simulations aux niveaux de diversité différents.
+Le premier résultat présenté est un exemple d'impacte de la diverstié sur une simulation qui déclanche une pandémie. La suite présente des statistiques sur les simulations incluant de la diversité qui n'ont pas développé de pandémie. En effet, nous nous intéressons tout particulièrement aux situations ou une pandémie est évitée. Les données relevées concernant ces simulations sont : le nombre maximum de contaminés simultanément, l'itération de ce maximum, l'itération de fin de simulations (lorsque plus aucun individu n'est contaminé) et finalement le taux de simulations qui ont développé une pandémie parmi les $100$ simulations pour chaque configuration.
 
 \subsection{Mélange parfait}
 
@@ -135,31 +59,98 @@ Le document ne contient qu'une seule simulation à diversité non nulle et au m�
 \begin{figure}[h]
 	\centering
 	\captionsetup{justification=centering}
-	\includegraphics[width=.7\textwidth]{Images/SIR_diversite_mix.pdf}
-	\caption{Comparaison 50 mouvements}
+	\includegraphics[width=.8\textwidth]{Images/SIR_diversite_mix.pdf}
+	\caption[Impacte de la diversité]{Impacte de la diversité d'une population sur une simulation au mélange parfait avec $10^5$ individus et une densité de $1/16$. La première figure montre le compartiment $I$, le second le compartiment $R$ et le dernier le compartiement $S$. Chaque couleur de courbe fait référence à une simulation avec une certaine valeur de diversité notée dans la légende.}
 \end{figure}
 
 Les résultats des simulations au mélange parfait sont très similaire aux simulations SIR et ceci est dû au fait que l'impacte de la diversité est trop faible sur cette simulation. Pour pouvoir étudier l'impact de la diversité il est nécessaire de construire des systèmes plus progressifs dans la propagation des agents pathogènes.\\
 
-Deux choses sont à noter à propos de cette figure. La première est que la propagation est beaucoup trop rapide comme nous pouvons le voir sur le compartiement $Susceptible$. Tous les individus sont déjà passés dans le compartiment $Infected$ très tôt dans la simulation. Par conséquent dans ces configurations la propagation de la pandémie est maximale car elle atteint rapidement $100\%$ de la population.\\
+Deux choses sont à noter à propos de cette figure. La première est que la propagation est beaucoup trop rapide comme nous pouvons le voir sur le compartiement $Susceptible$ qui tombe rapidement à $0$. Tous les individus sont déjà passés dans le compartiment $Infected$ très tôt dans la simulation. Par conséquent dans ces configurations la propagation de la pandémie est maximale car elle atteint rapidement $100\%$ de la population.\\
 
-Le deuxième élément se produit dans une deuxième phase et décrit l'immunisation des individus. Comme nous l'avons déjà dit, tout les individus finissent contaminés très vite. A partir de là, les individus s'immunisent mais leur immunisation dépend de la compatibilité qu'ils ont avec leur agent pathogène. Le compartiment $Recovered$ montre la différence de vitesse des acquisitions d'immunisation parmi la population et il est assez clair qu'un plus grand niveau de diversité inplique une immunisation générale plus rapide. Par conséquent la diversité permet une meilleure immunisation de la population.
+Le deuxième élément se produit dans une deuxième phase et décrit l'immunisation des individus. Comme nous l'avons déjà dit, tout les individus finissent contaminés très vite. A partir de là, les individus s'immunisent mais leur immunisation dépend de la compatibilité qu'ils ont avec leur agent pathogène. Le compartiment $Recovered$ montre la différence de vitesse des acquisitions d'immunisation parmi la population et il est assez clair qu'un plus grand niveau de diversité implique une immunisation générale plus rapide. Ceci est uiquement vrai parce que le génome initial des individu les rend très vulnérable au pathogène. Par conséquent, dans cette situation la diversité permet une meilleure immunisation de la population.
 
 \newpage
 
 \subsection{Mouvements variable}
 
-Les simulations qui suivent pour étudier la diversité des individus ont toutes été effecutée avec des mouvements variable. Les mouvements choisi sont : $1,10,50$.
-
-\begin{figure}[h]
+\begin{table}[H]
 	\centering
 	\captionsetup{justification=centering}
-	\includegraphics[width=.4\textwidth]{Images/SIR_diversite_1_50.pdf}
-	\includegraphics[width=.4\textwidth]{Images/SIR_diversite_075_50.pdf}
-	\includegraphics[width=.4\textwidth]{Images/SIR_diversite_05_50.pdf}
-	\includegraphics[width=.4\textwidth]{Images/SIR_diversite_025_50.pdf}
-	\caption{50 mouvements}
-\end{figure}
+	\caption[1]{2\label{tab:grid}}
+	\begin{tabular}{@{\extracolsep{\fill} } c|| c| c| c|}
+		4    & 1     & 10    & 50    \\
+		\midrule
+		\midrule
+		1    & $100\%$ & $99\%$  & $99\%$  \\
+		\midrule
+		0.75 & $100\%$ & $99\%$  & $100\%$ \\
+		\midrule
+		0.5  & $100\%$ & $100\%$ & $100\%$ \\
+		\midrule
+		0.25 & $100\%$ & $100\%$ & $100\%$ \\
+		\bottomrule
+	\end{tabular}
+\end{table}
+
+\begin{table}[H]
+	\centering
+	\captionsetup{justification=centering}
+	\caption[1]{2\label{tab:grid}}
+	\begin{tabular}{@{\extracolsep{\fill} } c|| c| c| c|}
+		8    & 1    & 10   & 50   \\
+		\midrule
+		\midrule
+		1    & $98\%$ & $98\%$ & $99\%$ \\
+		\midrule
+		0.75 & $96\%$ & $98\%$ & $97\%$ \\
+		\midrule
+		0.5  & $95\%$ & $95\%$ & $98\%$ \\
+		\midrule
+		0.25 & $95\%$ & $95\%$ & $97\%$ \\
+		\bottomrule
+	\end{tabular}
+\end{table}
+
+\begin{table}[H]
+	\centering
+	\captionsetup{justification=centering}
+	\caption[1]{2\label{tab:grid}}
+	\begin{tabular}{@{\extracolsep{\fill} } c|| c| c| c|}
+		16   & 1    & 10   & 50   \\
+		\midrule
+		\midrule
+		1    & $73\%$ & $92\%$ & $99\%$ \\
+		\midrule
+		0.75 & $77\%$ & $84\%$ & $88\%$ \\
+		\midrule
+		0.5  & $75\%$ & $79\%$ & $80\%$ \\
+		\midrule
+		0.25 & $1\%$ & $68\%$ & $67\%$ \\
+		\bottomrule
+	\end{tabular}
+\end{table}
+
+\begin{table}[H]
+	\centering
+	\captionsetup{justification=centering}
+	\caption[1]{2\label{tab:grid}}
+	\begin{tabular}{@{\extracolsep{\fill} } c|| c| c| c|}
+		32   & 1   & 10   & 50   \\
+		\midrule
+		\midrule
+		1    & $0\%$ & $74\%$ & $99\%$ \\
+		\midrule
+		0.75 & $0\%$ & $62\%$ & $65\%$ \\
+		\midrule
+		0.5  & $0\%$ & $48\%$ & $46\%$ \\
+		\midrule
+		0.25 & $0\%$ & $0\%$ & $18\%$ \\
+		\bottomrule
+	\end{tabular}
+\end{table}
+
+Les simulations qui suivent pour étudier la diversité des individus ont toutes été effecutée avec des mouvements variable. Les mouvements choisi sont : $1,10,50$.
+
 
 La première série de graphiques est une ensemble de simulations à $50$ mouvements. Les comportements sont très semblables à la simulation de référence au mélange parfait. Très rapidement, tous les individus sortent du compartiement $Susceptible$ et donc la pandémie atteint une propagation de $100\%$. La seule action de la diversité est de permettre une immunisation plus rapide.\\
 
@@ -167,33 +158,11 @@ Les 4 figures utilisent chacune une valeur de charge virale différente. Les val
 
 Pour conclure, ces plots ne montrent que deux types de pandémies. Le premier type est une pandémie totale qui touche toute la population et le second type est une pandémie qui ne démarre pas. Les pandémies qui ne se sont pas propagées ont leur courbe coupée très tôt dans la simulation comme nous pouvons le voir dans les simulations aux charge virale de $0.5$ et $0.25$ pour les cas à diversité $32$.
 
-\newpage
-
-\begin{figure}[h]
-	\centering
-	\captionsetup{justification=centering}
-	\includegraphics[width=.4\textwidth]{Images/SIR_diversite_1_10.pdf}
-	\includegraphics[width=.4\textwidth]{Images/SIR_diversite_075_10.pdf}
-	\includegraphics[width=.4\textwidth]{Images/SIR_diversite_05_10.pdf}
-	\includegraphics[width=.4\textwidth]{Images/SIR_diversite_025_10.pdf}
-	\caption{Comparaison 10 mouvements}
-\end{figure}
 
 Etant donné que les simulations aux $50$ mouvements sont trop rapides, nous baissons les mouvements des individus et les passons à $10$. L'objectif est de pouvoir observer des épidémies qui se propagent en partie sans que ce soit du tout ou rien.\\
 
 Les résultats ne montrent rien de nouveau. La diversité impacte la vitesse d'immunisation mais la propagation de la pandémie n'en est pas affectée. Certes les individus restent plus longtemps dans le compartiement $Susceptible$ mais finissent tous par être contaminés donc nous avons encore à faire à des pandémies aux propagations de $100\%$.
 
-\newpage
-
-\begin{figure}[h]
-	\centering
-	\captionsetup{justification=centering}
-	\includegraphics[width=.4\textwidth]{Images/SIR_diversite_1_1.pdf}
-	\includegraphics[width=.4\textwidth]{Images/SIR_diversite_075_1.pdf}
-	\includegraphics[width=.4\textwidth]{Images/SIR_diversite_05_1.pdf}
-	\includegraphics[width=.4\textwidth]{Images/SIR_diversite_025_1.pdf}
-	\caption{Comparaison 1 mouvements}
-\end{figure}
 
 Finalement la dernière analyse de diversité effectue les mêmes mesures sur des systèmes à $1$ mouvement. Notez que l'échelle ici est passée à $5000$ sur les abscisses. Ces simulations ont un rypthme d'évolution beaucoup plus lent mais suivent les mêmes tendances. Pour toutes ces simulations les pandémies se propagent ou non, totalement ou pas du tout.
 

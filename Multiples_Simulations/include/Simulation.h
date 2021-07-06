@@ -102,6 +102,8 @@ private:
     int m_nombre_contamine; // compteur du nombre d'individus contaminés à chaque itération
     int m_nombre_AP_diff;   // compteur du nombre d'agents pathogènes à chaque itération
     int m_iteration_fin;    // nombre d'itération final
+    int m_nombre_contamine_max;
+    int m_iteration_max_contamine;
 
     //* Path du fichier config
     std::string m_configuration_file_path;
@@ -129,6 +131,9 @@ private:
     unsigned long long int m_Mesures_time = 0;
     unsigned long long int m_End_time = 0;
     unsigned long long int m_Total_time = 0;
+
+    //* Variable booléenne déterminant l'écher ou le succès d'une simulation
+    bool success;
 };
 
 #endif

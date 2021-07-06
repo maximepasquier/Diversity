@@ -1,6 +1,7 @@
 #include <chrono>
 #include <random>
 #include <thread>
+#include <iostream>
 #include <mutex>
 #include "Individu.h"
 #include "Agent_Pathogene.h"
@@ -46,16 +47,35 @@ void Simulation::Execution()
     //* Init csv files
     File_init();
 
-    for (int nb = 0; nb < 1000; nb++)
+    int nombre_echecs = 0;
+
+    for (int nb = 0; nb < 100; nb++)
     {
-        //* Rerun la simulation en cas d'échec de la pandémie
-        for (int i = 0; i <= m_RERUN_LIMIT; i++)
+        m_nombre_contamine_max = 0;
+        cout << nb << endl;
+        Init();
+        Run();
+        End();
+
+        //* Récupérer les résultats de la simulation
+        if (!success) // seulement si la simulation échoue
         {
-            Init();
-            Run();
-            End();
+            nombre_echecs++;
+            m_max_contamines_file << '\n'
+                                  << m_nombre_contamine_max;
+            m_iteration_max_contamines_file << '\n'
+                                            << m_iteration_max_contamine;
+            m_iteration_fin_simulation_file << '\n'
+                                            << m_iteration_fin;
         }
     }
+
+    //* Compoter le nombre total d'échecs
+    m_nombre_echec_file << '\n'
+                        << nombre_echecs;
+
+    //* Fermer les fichiers csv
+    Close_files();
 
     auto end = chrono::steady_clock::now();
     auto diff = end - start;
@@ -77,7 +97,6 @@ void Simulation::Run()
 //* Phase de terminaison de la simulation
 void Simulation::End()
 {
-    Close_files();
     Delete_obj();
 }
 

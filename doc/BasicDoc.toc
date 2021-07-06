@@ -1,7 +1,7 @@
 \boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
 \babel@toc {french}{}
-\contentsline {chapter}{\nonumberline Liste des tableaux}{IV}{chapter*.3}%
-\contentsline {chapter}{\nonumberline Table des figures}{V}{chapter*.4}%
+\contentsline {chapter}{\nonumberline Liste des tableaux}{III}{chapter*.3}%
+\contentsline {chapter}{\nonumberline Table des figures}{IV}{chapter*.4}%
 \contentsline {chapter}{\numberline {1}Résumé}{1}{chapter.1}%
 \contentsline {chapter}{\numberline {2}Introduction}{2}{chapter.2}%
 \contentsline {chapter}{\numberline {3}Approche du problème, méthodes, outils utilisés}{3}{chapter.3}%
@@ -65,9 +65,9 @@
 \contentsline {subsection}{\numberline {9.3.5}Comparaison 1000 mouvements}{54}{subsection.9.3.5}%
 \contentsline {chapter}{\numberline {10}Diversité}{56}{chapter.10}%
 \contentsline {section}{\numberline {10.1}Mesures et méthodologie}{56}{section.10.1}%
-\contentsline {section}{\numberline {10.2}Résultats}{58}{section.10.2}%
-\contentsline {subsection}{\numberline {10.2.1}Mélange parfait}{58}{subsection.10.2.1}%
+\contentsline {section}{\numberline {10.2}Résultats}{57}{section.10.2}%
+\contentsline {subsection}{\numberline {10.2.1}Mélange parfait}{57}{subsection.10.2.1}%
 \contentsline {subsection}{\numberline {10.2.2}Mouvements variable}{60}{subsection.10.2.2}%
-\contentsline {subsection}{\numberline {10.2.3}Conclusion des résultats}{63}{subsection.10.2.3}%
-\contentsline {chapter}{\numberline {11}Mutations}{66}{chapter.11}%
-\contentsline {chapter}{\numberline {12}Conclusion}{67}{chapter.12}%
+\contentsline {subsection}{\numberline {10.2.3}Conclusion des résultats}{61}{subsection.10.2.3}%
+\contentsline {chapter}{\numberline {11}Mutations}{64}{chapter.11}%
+\contentsline {chapter}{\numberline {12}Conclusion}{65}{chapter.12}%
