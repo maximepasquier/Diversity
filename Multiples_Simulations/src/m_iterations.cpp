@@ -14,18 +14,19 @@ using namespace std;
 void Simulation::Iterations()
 {
     //* Itère sur le nombre d'itération de la simulation
-    for (int iteration = 0; iteration < m_ITERATIONS; iteration++)
+    m_iteration_fin = 0;
+    while (1)
     {
-        One_iteration(iteration);
+        One_iteration(m_iteration_fin);
+        m_iteration_fin++;
         //* Vérifier que des individus soient contaminés
         if (m_nombre_contamine == 0)
         {
-            m_iteration_fin = iteration;
             success = false;
             break;
         }
         //* Coupe la simulation si 5% des individus quittent le compartiment Susceptible
-        if (m_nombre_contamine + SIR_recovered() > m_NOMBRE_INDIVIDUS / 20)
+        if (m_nombre_contamine + m_SIR_recovered > m_NOMBRE_INDIVIDUS / 10)
         {
             success = true;
             break;
@@ -38,6 +39,7 @@ void Simulation::One_iteration(int iteration)
 {
     //* Compter le nombre de contaminés
     m_nombre_contamine = Update_infected_number();
+    m_SIR_recovered = SIR_recovered();
 
     //* Détermine si c'est le max de contaminés
     if (m_nombre_contamine > m_nombre_contamine_max)

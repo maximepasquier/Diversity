@@ -22,7 +22,9 @@ int main(int argc, char const *argv[])
 {
     auto start = std::chrono::steady_clock::now();
 
-    std::vector<std::thread> threads;    
+    std::vector<std::thread> threads;  
+    
+    /*  
 
     // charge virale = 1
     threads.push_back(std::thread(thread_function, "./Simulations/Diversite/1sur16/charge_virale1/1mouvement/diversite4"));
@@ -87,6 +89,8 @@ int main(int argc, char const *argv[])
     threads.push_back(std::thread(thread_function, "./Simulations/Diversite/1sur16/charge_virale025/50mouvements/diversite8"));
     threads.push_back(std::thread(thread_function, "./Simulations/Diversite/1sur16/charge_virale025/50mouvements/diversite16"));
     threads.push_back(std::thread(thread_function, "./Simulations/Diversite/1sur16/charge_virale025/50mouvements/diversite32"));
+
+    */
 
     for (auto &t : threads)
     {

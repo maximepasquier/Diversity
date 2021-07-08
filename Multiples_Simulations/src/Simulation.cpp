@@ -67,6 +67,8 @@ void Simulation::Execution()
                                             << m_iteration_max_contamine;
             m_iteration_fin_simulation_file << '\n'
                                             << m_iteration_fin;
+            m_taille_pandemie_file << '\n'
+                                   << m_nombre_contamine + m_SIR_recovered;
         }
     }
 

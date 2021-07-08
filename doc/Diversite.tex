@@ -42,7 +42,7 @@ Toutes les simulations qui suivent se basent sur ce fichier de configuration mai
 
 Premièrement, le niveau de diversité varie d'une simulation à une autre. Les valeurs de diversité choisie sont : $4,8,16,32$. Pour rappel, une diversité de $x$ signifie que $x$ bits des génomes des individus seront complémentés et ceci alétoirement. Sans diversité les génomes des individus sont tous identiques.\\
 
-Deuxièmement, le mode de mouvement ainsi que le nombre de mouvements varie. Seule la première simulation servant d'exemple utilise le mode de mouvement au mélange parfait, toutes les autres ont un nombre de mouvements défini. Les mouvements étudiés sont : $1,10,50$.\\
+Deuxièmement, le mode de mouvement ainsi que le nombre de mouvements varient. Seule la première simulation servant d'exemple utilise le mode de mouvement au mélange parfait, toutes les autres ont un nombre de mouvements défini. Les mouvements étudiés sont : $1,10,50$.\\
 
 Finalement nous faisons varier le paramètre de charge virale (ici défini à 1). L'idée principale est de ralentir la propagation de pandémies en diminuant la contagion des agents pathogènes. Les simulations sont effectuée sur $4$ niveaux de charge virale : $0.25,0.5,0.75,1$\\
 
@@ -56,6 +56,8 @@ Le premier résultat présenté est un exemple d'impacte de la diverstié sur un
 
 Le document ne contient qu'une seule simulation à diversité non nulle et au mélange parfait. La raison pour laquelle cette voie n'est que peu explorée est parceque le mélange parfait est trop efficace pour la propagation de pandémies. Par conséquent les propagations sont beaucoup trop rapides comparé au ralentissement qu'offre la diversité.
 
+\newpage
+
 \begin{figure}[h]
 	\centering
 	\captionsetup{justification=centering}
@@ -63,31 +65,33 @@ Le document ne contient qu'une seule simulation à diversité non nulle et au m�
 	\caption[Impacte de la diversité]{Impacte de la diversité d'une population sur une simulation au mélange parfait avec $10^5$ individus et une densité de $1/16$. La première figure montre le compartiment $I$, le second le compartiment $R$ et le dernier le compartiement $S$. Chaque couleur de courbe fait référence à une simulation avec une certaine valeur de diversité notée dans la légende.}
 \end{figure}
 
-Les résultats des simulations au mélange parfait sont très similaire aux simulations SIR et ceci est dû au fait que l'impacte de la diversité est trop faible sur cette simulation. Pour pouvoir étudier l'impact de la diversité il est nécessaire de construire des systèmes plus progressifs dans la propagation des agents pathogènes.\\
+Les résultats des simulations au mélange parfait sont très similaire aux simulations SIR et ceci est dû au fait que l'impacte de la diversité est trop faible sur ces simulations. Pour pouvoir étudier l'impact de la diversité il est nécessaire de construire des systèmes plus progressifs dans la propagation des agents pathogènes.\\
 
 Deux choses sont à noter à propos de cette figure. La première est que la propagation est beaucoup trop rapide comme nous pouvons le voir sur le compartiement $Susceptible$ qui tombe rapidement à $0$. Tous les individus sont déjà passés dans le compartiment $Infected$ très tôt dans la simulation. Par conséquent dans ces configurations la propagation de la pandémie est maximale car elle atteint rapidement $100\%$ de la population.\\
 
 Le deuxième élément se produit dans une deuxième phase et décrit l'immunisation des individus. Comme nous l'avons déjà dit, tout les individus finissent contaminés très vite. A partir de là, les individus s'immunisent mais leur immunisation dépend de la compatibilité qu'ils ont avec leur agent pathogène. Le compartiment $Recovered$ montre la différence de vitesse des acquisitions d'immunisation parmi la population et il est assez clair qu'un plus grand niveau de diversité implique une immunisation générale plus rapide. Ceci est uiquement vrai parce que le génome initial des individu les rend très vulnérable au pathogène. Par conséquent, dans cette situation la diversité permet une meilleure immunisation de la population.
 
-\newpage
-
 \subsection{Mouvements variable}
 
+\setlength{\tabcolsep}{4pt}
+
 \begin{table}[H]
 	\centering
 	\captionsetup{justification=centering}
 	\caption[1]{2\label{tab:grid}}
-	\begin{tabular}{@{\extracolsep{\fill} } c|| c| c| c|}
-		4    & 1     & 10    & 50    \\
+	\begin{tabular}{@{\extracolsep{\fill} } c|| c| c| c|| c| c| c|| c| c| c|| c| c| c|}
+		4    & \multicolumn{3}{|c||}{succès} & \multicolumn{3}{|c||}{max} & \multicolumn{3}{|c||}{it\_max} & \multicolumn{3}{|c|}{it\_fin}                                       \\
+		\midrule
+		     & 1 & 10 & 50 & 1 & 10 & 50 & 1 & 10 & 50 & 1 & 10 & 50 \\
 		\midrule
 		\midrule
-		1    & $100\%$ & $99\%$  & $99\%$  \\
+		1    & 100\%  & 99\% & 99\% & nan & 1  & 1  & nan & 0  & 0  & nan & 1  & 1  \\
 		\midrule
-		0.75 & $100\%$ & $99\%$  & $100\%$ \\
+		0.75 & 100\% & 99\% & 100\% & nan & 1  & nan  & nan & 0  & nan  & nan & 17  & nan  \\
 		\midrule
-		0.5  & $100\%$ & $100\%$ & $100\%$ \\
+		0.5  & 100\% & 100\% & 100\% & nan & nan  & nan  & nan & nan  & nan  & nan & nan  & nan  \\
 		\midrule
-		0.25 & $100\%$ & $100\%$ & $100\%$ \\
+		0.25 & 100\% & 100\% & 100\% & nan & nan  & nan  & nan & nan  & nan  & nan & nan  & nan  \\
 		\bottomrule
 	\end{tabular}
 \end{table}
@@ -96,17 +100,19 @@ Le deuxième élément se produit dans une deuxième phase et décrit l'immunisa
 	\centering
 	\captionsetup{justification=centering}
 	\caption[1]{2\label{tab:grid}}
-	\begin{tabular}{@{\extracolsep{\fill} } c|| c| c| c|}
-		8    & 1    & 10   & 50   \\
+	\begin{tabular}{@{\extracolsep{\fill} } c|| c| c| c|| c| c| c|| c| c| c|| c| c| c|}
+		8    & \multicolumn{3}{|c||}{succès} & \multicolumn{3}{|c||}{max} & \multicolumn{3}{|c||}{it\_max} & \multicolumn{3}{|c|}{it\_fin}                                       \\
+		\midrule
+		     & 1 & 10 & 50 & 1 & 10 & 50 & 1 & 10 & 50 & 1 & 10 & 50 \\
 		\midrule
 		\midrule
-		1    & $98\%$ & $98\%$ & $99\%$ \\
+		1    & 98\%  & 98\% & 99\% & 1 & 1  & 1  & 0 & 0  & 0  & 4.5 & 2  & 1  \\
 		\midrule
-		0.75 & $96\%$ & $98\%$ & $97\%$ \\
+		0.75 & 96\% & 98\% & 97\% & 1.25 & 1  & 1  & 6.25 & 0  & 0  & 21.25 & 3.5  & 6.67  \\
 		\midrule
-		0.5  & $95\%$ & $95\%$ & $98\%$ \\
+		0.5  & 95\% & 95\% & 98\% & 1.2 & 1  & 1  & 0.4 & 0  & 0  & 6.8 & 6.4  & 6.5  \\
 		\midrule
-		0.25 & $95\%$ & $95\%$ & $97\%$ \\
+		0.25 & 95\% & 95\% & 97\% & 1 & 1  & 1.34  & 0 & 0  & 5.34  & 20.4 & 17.8  & 19.67  \\
 		\bottomrule
 	\end{tabular}
 \end{table}
@@ -115,17 +121,19 @@ Le deuxième élément se produit dans une deuxième phase et décrit l'immunisa
 	\centering
 	\captionsetup{justification=centering}
 	\caption[1]{2\label{tab:grid}}
-	\begin{tabular}{@{\extracolsep{\fill} } c|| c| c| c|}
-		16   & 1    & 10   & 50   \\
+	\begin{tabular}{@{\extracolsep{\fill} } c|| c| c| c|| c| c| c|| c| c| c|| c| c| c|}
+		16    & \multicolumn{3}{|c||}{succès} & \multicolumn{3}{|c||}{max} & \multicolumn{3}{|c||}{it\_max} & \multicolumn{3}{|c|}{it\_fin}                                       \\
+		\midrule
+		     & 1 & 10 & 50 & 1 & 10 & 50 & 1 & 10 & 50 & 1 & 10 & 50 \\
 		\midrule
 		\midrule
-		1    & $73\%$ & $92\%$ & $99\%$ \\
+		1    & 73\%  & 92\% & 99\% & 1.81 & 1.25  & 1  & 6.89 & 1.38  & 0  & 27.44 & 5.75  & 1  \\
 		\midrule
-		0.75 & $77\%$ & $84\%$ & $88\%$ \\
+		0.75 & 77\% & 84\% & 88\% & 1.26 & 1.06  & 1.08  & 1 & 1.06  & 1.17  & 13.96 & 8.31  & 6.08  \\
 		\midrule
-		0.5  & $75\%$ & $79\%$ & $80\%$ \\
+		0.5  & 65\% & 79\% & 80\% & 2.86 & 1.19  & 1.25  & 30.14 & 1.43  & 1.2  & 155.51 & 11.28  & 12.6  \\
 		\midrule
-		0.25 & $1\%$ & $68\%$ & $67\%$ \\
+		0.25 & 1\% & 68\% & 67\% & 24.92 & 1.53  & 1.09  & 728.27 & 5.38  & 2.12  & 633.56 & 22.63  & 10.88  \\
 		\bottomrule
 	\end{tabular}
 \end{table}
@@ -134,37 +142,22 @@ Le deuxième élément se produit dans une deuxième phase et décrit l'immunisa
 	\centering
 	\captionsetup{justification=centering}
 	\caption[1]{2\label{tab:grid}}
-	\begin{tabular}{@{\extracolsep{\fill} } c|| c| c| c|}
-		32   & 1   & 10   & 50   \\
+	\begin{tabular}{@{\extracolsep{\fill} } c|| c| c| c|| c| c| c|| c| c| c|| c| c| c|}
+		32    & \multicolumn{3}{|c||}{succès} & \multicolumn{3}{|c||}{max} & \multicolumn{3}{|c||}{it\_max} & \multicolumn{3}{|c|}{it\_fin}                                       \\
+		\midrule
+		     & 1 & 10 & 50 & 1 & 10 & 50 & 1 & 10 & 50 & 1 & 10 & 50 \\
 		\midrule
 		\midrule
-		1    & $0\%$ & $74\%$ & $99\%$ \\
+		1    & 0\%  & 74\% & 99\% & 5.02 & 1.38  & 1  & 46.71 & 3.46  & 0  & 125.91 & 8.08  & 1  \\
 		\midrule
-		0.75 & $0\%$ & $62\%$ & $65\%$ \\
+		0.75 & 0\% & 62\% & 65\% & 4.05 & 1.42  & 1.23  & 25.06 & 1.89  & 1.23  & 98.96 & 8.97  & 5.69  \\
 		\midrule
-		0.5  & $0\%$ & $48\%$ & $46\%$ \\
+		0.5  & 0\% & 48\% & 56\% & 2.63 & 1.92  & 1.27  & 16.89 & 4.98  & 1.27  & 55.72 & 16.63  & 7.5  \\
 		\midrule
-		0.25 & $0\%$ & $0\%$ & $18\%$ \\
+		0.25 & 0\% & 0\% & 18\% & 2.64 & 5.76  & 2.37  & 29.4 & 68.39  & 11.45  & 66.28 & 170.05  & 31.18  \\
 		\bottomrule
 	\end{tabular}
 \end{table}
-
-Les simulations qui suivent pour étudier la diversité des individus ont toutes été effecutée avec des mouvements variable. Les mouvements choisi sont : $1,10,50$.
-
-
-La première série de graphiques est une ensemble de simulations à $50$ mouvements. Les comportements sont très semblables à la simulation de référence au mélange parfait. Très rapidement, tous les individus sortent du compartiement $Susceptible$ et donc la pandémie atteint une propagation de $100\%$. La seule action de la diversité est de permettre une immunisation plus rapide.\\
-
-Les 4 figures utilisent chacune une valeur de charge virale différente. Les valeurs choisies sont : $1,0.75,0.5,0.25$. Le facteur de charge virale est directement lié avec la propagation de l'épidémie. Sur les figures nous constatons un ralentissement de la propagation lorsque la charge virale baisse. Ce comportement est normal car le facteur réduit les contactes entre les voisins.\\
-
-Pour conclure, ces plots ne montrent que deux types de pandémies. Le premier type est une pandémie totale qui touche toute la population et le second type est une pandémie qui ne démarre pas. Les pandémies qui ne se sont pas propagées ont leur courbe coupée très tôt dans la simulation comme nous pouvons le voir dans les simulations aux charge virale de $0.5$ et $0.25$ pour les cas à diversité $32$.
-
-
-Etant donné que les simulations aux $50$ mouvements sont trop rapides, nous baissons les mouvements des individus et les passons à $10$. L'objectif est de pouvoir observer des épidémies qui se propagent en partie sans que ce soit du tout ou rien.\\
-
-Les résultats ne montrent rien de nouveau. La diversité impacte la vitesse d'immunisation mais la propagation de la pandémie n'en est pas affectée. Certes les individus restent plus longtemps dans le compartiement $Susceptible$ mais finissent tous par être contaminés donc nous avons encore à faire à des pandémies aux propagations de $100\%$.
-
-
-Finalement la dernière analyse de diversité effectue les mêmes mesures sur des systèmes à $1$ mouvement. Notez que l'échelle ici est passée à $5000$ sur les abscisses. Ces simulations ont un rypthme d'évolution beaucoup plus lent mais suivent les mêmes tendances. Pour toutes ces simulations les pandémies se propagent ou non, totalement ou pas du tout.
 
 \subsection{Conclusion des résultats}
 

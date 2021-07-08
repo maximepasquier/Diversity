@@ -32,7 +32,11 @@ void Simulation::Iterations()
             Print_progression(iteration, m_ITERATIONS);
             cout << endl;
             break;
-        }        
+        } 
+        if(m_nombre_contamine + SIR_recovered() == m_NOMBRE_INDIVIDUS)
+        {
+            break;
+        }       
     }
 }
 

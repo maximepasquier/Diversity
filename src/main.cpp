@@ -311,13 +311,13 @@ int main(int argc, char const *argv[])
     threads.push_back(std::thread(thread_function, "./Simulations/SIR/Mutation/10mouvements/distanceHamming24/mutation5"));
     threads.push_back(std::thread(thread_function, "./Simulations/SIR/Mutation/10mouvements/distanceHamming24/mutation6"));
 
+    */
+
     // Référence au mélange parfait
     threads.push_back(std::thread(thread_function, "./Simulations/SIR/Diversite/1sur16/charge_virale1/perfect_mix/diversite4"));
     threads.push_back(std::thread(thread_function, "./Simulations/SIR/Diversite/1sur16/charge_virale1/perfect_mix/diversite8"));
     threads.push_back(std::thread(thread_function, "./Simulations/SIR/Diversite/1sur16/charge_virale1/perfect_mix/diversite16"));
     threads.push_back(std::thread(thread_function, "./Simulations/SIR/Diversite/1sur16/charge_virale1/perfect_mix/diversite32"));
-
-    */
 
     for (auto &t : threads)
     {
