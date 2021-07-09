@@ -67,6 +67,17 @@ float Genome_Match(int distance, int genome_size, unsigned int puissance)
     return pow(distance, puissance) / pow(genome_size * 8, puissance);
 }
 
+//* Détermine le double match entre deux génomes d'agents pathogènes
+float Double_Match(int distance, int genome_size, unsigned int puissance)
+{
+    /**
+     * Détermine la compatibilité entre deux génomes d'agents pathogènes en fonction
+     * de la distance de hamming, de la taille des génomes en bits ainsi
+     * que d'un facteur puissance qui influence la sortie de la fonction. 
+     */
+    return pow((distance-32), puissance) / pow(genome_size * 8, puissance);
+}
+
 //* Génération de génomes pour les individus
 unsigned int Generate_Genome(int deviation, unsigned int init, int *rand_int_list_octet)
 {

@@ -51,24 +51,44 @@ void Simulation::Execution()
 
     for (int nb = 0; nb < 100; nb++)
     {
-        m_nombre_contamine_max = 0;
-        cout << nb << endl;
-        Init();
-        Run();
-        End();
-
-        //* Récupérer les résultats de la simulation
-        if (!success) // seulement si la simulation échoue
+        for (int i = 0; i <= m_RERUN_LIMIT; i++)
         {
-            nombre_echecs++;
-            m_max_contamines_file << '\n'
-                                  << m_nombre_contamine_max;
-            m_iteration_max_contamines_file << '\n'
-                                            << m_iteration_max_contamine;
-            m_iteration_fin_simulation_file << '\n'
-                                            << m_iteration_fin;
-            m_taille_pandemie_file << '\n'
-                                   << m_nombre_contamine + m_SIR_recovered;
+            m_iteration_fin = -1;
+            m_nombre_contamine_max = 0;
+            cout << nb << endl;
+            Init();
+            Run();
+            End();
+
+            //* Vérifier que le Run() ait abouti sur un événement
+            if (m_iteration_fin > m_FAIL_SEUIL || m_iteration_fin == -1)
+            {
+                m_max_contamines_file << '\n'
+                                      << m_nombre_contamine_max;
+                m_iteration_max_contamines_file << '\n'
+                                                << m_iteration_max_contamine;
+                m_iteration_fin_simulation_file << '\n'
+                                                << m_iteration_fin;
+                m_taille_pandemie_file << '\n'
+                                       << m_nombre_contamine + m_SIR_recovered;
+                break;
+            }
+
+            /*
+            //* Récupérer les résultats de la simulation
+            if (!success) // seulement si la simulation échoue
+            {
+                nombre_echecs++;
+                m_max_contamines_file << '\n'
+                                      << m_nombre_contamine_max;
+                m_iteration_max_contamines_file << '\n'
+                                                << m_iteration_max_contamine;
+                m_iteration_fin_simulation_file << '\n'
+                                                << m_iteration_fin;
+                m_taille_pandemie_file << '\n'
+                                       << m_nombre_contamine + m_SIR_recovered;
+            }
+            */
         }
     }
 

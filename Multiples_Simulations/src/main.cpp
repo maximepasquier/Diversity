@@ -22,7 +22,22 @@ int main(int argc, char const *argv[])
 {
     auto start = std::chrono::steady_clock::now();
 
-    std::vector<std::thread> threads;  
+    std::vector<std::thread> threads;
+
+    threads.push_back(std::thread(thread_function, "./Simulations/Diversite/PandemiePartielle/perfect_mix/charge_virale1/diversite4"));
+    threads.push_back(std::thread(thread_function, "./Simulations/Diversite/PandemiePartielle/perfect_mix/charge_virale1/diversite8"));
+    threads.push_back(std::thread(thread_function, "./Simulations/Diversite/PandemiePartielle/perfect_mix/charge_virale1/diversite16"));
+    threads.push_back(std::thread(thread_function, "./Simulations/Diversite/PandemiePartielle/perfect_mix/charge_virale1/diversite32"));
+
+    threads.push_back(std::thread(thread_function, "./Simulations/Diversite/PandemiePartielle/perfect_mix/charge_virale075/diversite4"));
+    threads.push_back(std::thread(thread_function, "./Simulations/Diversite/PandemiePartielle/perfect_mix/charge_virale075/diversite8"));
+    threads.push_back(std::thread(thread_function, "./Simulations/Diversite/PandemiePartielle/perfect_mix/charge_virale075/diversite16"));
+    threads.push_back(std::thread(thread_function, "./Simulations/Diversite/PandemiePartielle/perfect_mix/charge_virale075/diversite32"));
+
+    threads.push_back(std::thread(thread_function, "./Simulations/Diversite/PandemiePartielle/perfect_mix/charge_virale05/diversite4"));
+    threads.push_back(std::thread(thread_function, "./Simulations/Diversite/PandemiePartielle/perfect_mix/charge_virale05/diversite8"));
+    threads.push_back(std::thread(thread_function, "./Simulations/Diversite/PandemiePartielle/perfect_mix/charge_virale05/diversite16"));
+    threads.push_back(std::thread(thread_function, "./Simulations/Diversite/PandemiePartielle/perfect_mix/charge_virale05/diversite32"));
     
     /*  
 

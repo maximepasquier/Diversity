@@ -14,23 +14,28 @@ using namespace std;
 void Simulation::Iterations()
 {
     //* Itère sur le nombre d'itération de la simulation
-    m_iteration_fin = 0;
-    while (1)
+    //m_iteration_fin = 0;
+    //while (1)
+    for (int iteration = 0; iteration < 2000; iteration++)
     {
-        One_iteration(m_iteration_fin);
-        m_iteration_fin++;
+        //One_iteration(m_iteration_fin);
+        //m_iteration_fin++;
+        m_iteration_fin = iteration;
+        One_iteration(iteration);
         //* Vérifier que des individus soient contaminés
         if (m_nombre_contamine == 0)
         {
             success = false;
             break;
         }
+        /*
         //* Coupe la simulation si 5% des individus quittent le compartiment Susceptible
         if (m_nombre_contamine + m_SIR_recovered > m_NOMBRE_INDIVIDUS / 10)
         {
             success = true;
             break;
         }
+        */
     }
 }
 

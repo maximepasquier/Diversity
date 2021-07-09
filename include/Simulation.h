@@ -81,24 +81,25 @@ private:
     std::default_random_engine m_generator;
 
     //* Variables issues du fichier config
-    int m_TAILLE_SYSTEME;              // largeur de la grille
-    int m_NOMBRE_INDIVIDUS;            // nombre de personnes initialement (densité)
-    int m_ITERATIONS;                  // nombre d'itérations de la simulation
-    unsigned int m_GENOME_INIT_I;      // unsigned char pour le génome humain initial
-    int m_GENOME_DIVERSITY_I;          // diversité des génomes humains
-    unsigned int m_GENOME_INIT_AP;     // unsigned char pour le génome AP initial
-    float m_VITESSE_MUTATIONS_AP;      // définit la vitesse à laquelle les pathogènes mutent
-    float m_CHARGE_VIRALE;             // charge virale (niveau de contagion)
-    unsigned int m_PARAMETRE_FONCTION; // puissance des termes dans la fonction de génome match
-    float m_CELLULE_AP;                // détermine la probabilité de contaminer une cellule
-    float m_SURVIE_AP;                 // probabilité que le pathogène contaminant une cellule reste en vie
-    int m_NOMBRE_MOUVEMENT;            // nombre de mouvements par itération
-    int m_TEMPS_AVANT_IMMUNITE;        // temps minimal pour considérer une immunité et non une résistance naturelle
-    bool m_IMMUNITE_MECANISME;         // activation ou non du mécanisme d'immunisation
-    bool m_RESISTANCE_MECANISME;       // activation ou non du mécanisme de résistance naturelle
-    bool m_PERFECT_MIX;                // mode de mouvement en mélange parfait ou en en nombre de mouvements fixés
-    int m_FAIL_SEUIL;                  // seuil au delà duquel on ne restart pas la simulation
-    int m_RERUN_LIMIT;                 // nombre maximum de restart de simulation en cas "d'échec"
+    int m_TAILLE_SYSTEME;                     // largeur de la grille
+    int m_NOMBRE_INDIVIDUS;                   // nombre de personnes initialement (densité)
+    int m_ITERATIONS;                         // nombre d'itérations de la simulation
+    unsigned int m_GENOME_INIT_I;             // unsigned char pour le génome humain initial
+    int m_GENOME_DIVERSITY_I;                 // diversité des génomes humains
+    unsigned int m_GENOME_INIT_AP;            // unsigned char pour le génome AP initial
+    float m_VITESSE_MUTATIONS_AP;             // définit la vitesse à laquelle les pathogènes mutent
+    float m_CHARGE_VIRALE;                    // charge virale (niveau de contagion)
+    unsigned int m_PARAMETRE_FONCTION;        // puissance des termes dans la fonction de génome match
+    unsigned int m_PARAMETRE_FONCTION_DOUBLE; // puissance des termes dans la fonction de double match
+    float m_CELLULE_AP;                       // détermine la probabilité de contaminer une cellule
+    float m_SURVIE_AP;                        // probabilité que le pathogène contaminant une cellule reste en vie
+    int m_NOMBRE_MOUVEMENT;                   // nombre de mouvements par itération
+    int m_TEMPS_AVANT_IMMUNITE;               // temps minimal pour considérer une immunité et non une résistance naturelle
+    bool m_IMMUNITE_MECANISME;                // activation ou non du mécanisme d'immunisation
+    bool m_RESISTANCE_MECANISME;              // activation ou non du mécanisme de résistance naturelle
+    bool m_PERFECT_MIX;                       // mode de mouvement en mélange parfait ou en en nombre de mouvements fixés
+    int m_FAIL_SEUIL;                         // seuil au delà duquel on ne restart pas la simulation
+    int m_RERUN_LIMIT;                        // nombre maximum de restart de simulation en cas "d'échec"
 
     //* Variables pour les mesures de la simulation
     int m_nombre_contamine; // compteur du nombre d'individus contaminés à chaque itération

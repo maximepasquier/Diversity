@@ -304,6 +304,7 @@ int main(int argc, char const *argv[])
     threads.push_back(std::thread(thread_function, "./Simulations/SIR/Mouvements/600mouvements"));
     threads.push_back(std::thread(thread_function, "./Simulations/SIR/Mouvements/800mouvements"));
     threads.push_back(std::thread(thread_function, "./Simulations/SIR/Mouvements/1000mouvements"));
+    */
 
     // Mutation
     threads.push_back(std::thread(thread_function, "./Simulations/SIR/Mutation/10mouvements/distanceHamming24/mutation3"));
@@ -311,13 +312,27 @@ int main(int argc, char const *argv[])
     threads.push_back(std::thread(thread_function, "./Simulations/SIR/Mutation/10mouvements/distanceHamming24/mutation5"));
     threads.push_back(std::thread(thread_function, "./Simulations/SIR/Mutation/10mouvements/distanceHamming24/mutation6"));
 
-    */
+    /*
+
+    
 
     // Référence au mélange parfait
-    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Diversite/1sur16/charge_virale1/perfect_mix/diversite4"));
-    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Diversite/1sur16/charge_virale1/perfect_mix/diversite8"));
-    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Diversite/1sur16/charge_virale1/perfect_mix/diversite16"));
-    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Diversite/1sur16/charge_virale1/perfect_mix/diversite32"));
+    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Diversite/PandemiePartielle/perfect_mix/charge_virale1/diversite4"));
+    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Diversite/PandemiePartielle/perfect_mix/charge_virale1/diversite8"));
+    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Diversite/PandemiePartielle/perfect_mix/charge_virale1/diversite16"));
+    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Diversite/PandemiePartielle/perfect_mix/charge_virale1/diversite32"));
+
+    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Diversite/PandemiePartielle/perfect_mix/charge_virale075/diversite4"));
+    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Diversite/PandemiePartielle/perfect_mix/charge_virale075/diversite8"));
+    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Diversite/PandemiePartielle/perfect_mix/charge_virale075/diversite16"));
+    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Diversite/PandemiePartielle/perfect_mix/charge_virale075/diversite32"));
+
+    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Diversite/PandemiePartielle/perfect_mix/charge_virale05/diversite4"));
+    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Diversite/PandemiePartielle/perfect_mix/charge_virale05/diversite8"));
+    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Diversite/PandemiePartielle/perfect_mix/charge_virale05/diversite16"));
+    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Diversite/PandemiePartielle/perfect_mix/charge_virale05/diversite32"));
+
+    */
 
     for (auto &t : threads)
     {

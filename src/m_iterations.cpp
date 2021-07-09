@@ -32,11 +32,7 @@ void Simulation::Iterations()
             Print_progression(iteration, m_ITERATIONS);
             cout << endl;
             break;
-        } 
-        if(m_nombre_contamine + SIR_recovered() == m_NOMBRE_INDIVIDUS)
-        {
-            break;
-        }       
+        }
     }
 }
 
@@ -396,10 +392,13 @@ bool Simulation::Is_immune(int index_I, unsigned int genome_AP)
      * Vérifie si l'individu d'index index_I est déjà 
      * immunié à pahtogène avec le génome genome_AP 
      */
+    uniform_real_distribution<float> rand_float(0.0, 1.0);
     vector<unsigned int> liste_immunite = m_Liste_I[index_I]->Getimmune();
     for (int j = 0; j < liste_immunite.size(); j++)
     {
-        if (liste_immunite[j] == genome_AP)
+        float rand_f = rand_float(m_generator);
+        float chance = Double_Match(hammingDistance(liste_immunite[j], genome_AP), sizeof(genome_AP), m_PARAMETRE_FONCTION_DOUBLE);
+        if (rand_f < chance)
         {
             return true;
         }
