@@ -307,14 +307,14 @@ int main(int argc, char const *argv[])
     */
 
     // Mutation
-    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Mutation/10mouvements/distanceHamming24/mutation3"));
-    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Mutation/10mouvements/distanceHamming24/mutation4"));
-    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Mutation/10mouvements/distanceHamming24/mutation5"));
-    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Mutation/10mouvements/distanceHamming24/mutation6"));
+    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Mutation/zero"));
+    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Mutation/moins1"));
+    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Mutation/moins2"));
+    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Mutation/moins3"));
+    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Mutation/moins4"));
+    threads.push_back(std::thread(thread_function, "./Simulations/SIR/Mutation/moins5"));
 
-    /*
-
-    
+    /*    
 
     // Référence au mélange parfait
     threads.push_back(std::thread(thread_function, "./Simulations/SIR/Diversite/PandemiePartielle/perfect_mix/charge_virale1/diversite4"));
