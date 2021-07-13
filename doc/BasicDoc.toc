@@ -65,9 +65,9 @@
 \contentsline {subsection}{\numberline {9.3.5}Comparaison 1000 mouvements}{54}{subsection.9.3.5}%
 \contentsline {chapter}{\numberline {10}Diversité}{56}{chapter.10}%
 \contentsline {section}{\numberline {10.1}Mesures et méthodologie}{56}{section.10.1}%
-\contentsline {section}{\numberline {10.2}Résultats}{57}{section.10.2}%
-\contentsline {subsection}{\numberline {10.2.1}Mélange parfait}{57}{subsection.10.2.1}%
-\contentsline {subsection}{\numberline {10.2.2}Mouvements variable}{59}{subsection.10.2.2}%
-\contentsline {subsection}{\numberline {10.2.3}Conclusion des résultats}{61}{subsection.10.2.3}%
-\contentsline {chapter}{\numberline {11}Mutations}{63}{chapter.11}%
-\contentsline {chapter}{\numberline {12}Conclusion}{64}{chapter.12}%
+\contentsline {section}{\numberline {10.2}Pandémies totales}{56}{section.10.2}%
+\contentsline {section}{\numberline {10.3}Taux de pandémies}{58}{section.10.3}%
+\contentsline {section}{\numberline {10.4}Pandémies partielles}{62}{section.10.4}%
+\contentsline {section}{\numberline {10.5}Conclusion des résultats}{62}{section.10.5}%
+\contentsline {chapter}{\numberline {11}Mutations}{65}{chapter.11}%
+\contentsline {chapter}{\numberline {12}Conclusion}{66}{chapter.12}%

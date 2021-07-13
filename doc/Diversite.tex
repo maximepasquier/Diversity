@@ -4,57 +4,14 @@
 
 L'objectif du travail est de quantifier l'impacte de la diversité sur la propagation de pandémies. Cette section est dédié à la prises de mesures avec des niveaux de diversité différents et d'en constater les résultats. Afin de ne pas trop complexifier le modèle au delà des simulations SIR, nous ne modifions que le paramètre de diversité, nombre de mouvements ainsi que la charge virale. D'autres paramètres du modèle pourraient être étudié mais ce chapitre ne les explore pas.\\
 
-Toutes les musures de diversité ont été effectuées sur des systèmes aux paramètres semblables. La taille des systèmes est définie à $1264\times 1264$ avec une population de $10^5$ individus, il s'agit de systèmes en densité $\frac{1}{16}$. Un exemple de fichier de configuration est donné ci-dessous.
+La recherche sur la diversité est découpée en trois parties. La première explore l'impacte de la diversité sur des simulations à propagation de pandémie rapide. Dans ce cas nous observons donc la réaction de la diversité sur l'immunisation des individus déjà contaminés. La seconde cherche à déterminer le taux de simulations qui développent une pandémie, c'est-à-dire le nombre de simulations qui réussissent ou échouent à développer une pandémie en fonction de la diversité de la population. La troisième tente d'observer des pandémies partielles qui ne parviennent pas à contaminer toute la population.\\
 
-\begin{minted}
-	[
-	frame=lines,
-	framesep=2mm,
-	baselinestretch=1.2,
-	bgcolor=LightGray,
-	fontsize=\footnotesize,
-	linenos
-	]
-	{c++}
-	TAILLE_SYSTEME = 1264
-	NOMBRE_INDIVIDUS = 100000
-	ITERATIONS = 5000
-	RERUN_LIMIT = 100
-	FAIL_SEUIL = 30
-	GENOME_INIT_I = 0
-	GENOME_DIVERSITY_I = 8
-	GENOME_INIT_AP = 0
-	VITESSE_MUTATIONS_AP = 0
-	CHARGE_VIRALE = 1
-	PARAMETRE_FONCTION = 4
-	CELLULE_AP = 0
-	SURVIE_AP = 0
-	NOMBRE_MOUVEMENT = 1
-	PERFECT_MIX = true
-	TEMPS_AVANT_IMMUNITE = 1
-	IMMUNITE_MECANISME = true
-	RESISTANCE_MECANISME = false
-\end{minted}
 
-L'exemple de fichier de configuration produit une simulation au mélange parfait avec une diversité de $8$. La configuration est similaire à celle d'une simulation SIR, la seule différence ici est l'ajout d'un paramètre de diversité non égal à $0$.\\
+\section{Pandémies totales}
 
-Toutes les simulations qui suivent se basent sur ce fichier de configuration mais avec quelques modifications.\\
+Le premier chapitre est une observation de l'impacte de la diversité sur des systèmes de densité $1/16$ au mélange parfait. L'analyse est purement qualitative et permet de visualiser le comportement du mécanisme d'immunisation en fonction du facteur de diversité.\\
 
-Premièrement, le niveau de diversité varie d'une simulation à une autre. Les valeurs de diversité choisie sont : $4,8,16,32$. Pour rappel, une diversité de $x$ signifie que $x$ bits des génomes des individus seront complémentés et ceci alétoirement. Sans diversité les génomes des individus sont tous identiques.\\
-
-Deuxièmement, le mode de mouvement ainsi que le nombre de mouvements varient. Seule la première simulation servant d'exemple utilise le mode de mouvement au mélange parfait, toutes les autres ont un nombre de mouvements défini. Les mouvements étudiés sont : $1,10,50$.\\
-
-Finalement nous faisons varier le paramètre de charge virale (ici défini à 1). L'idée principale est de ralentir la propagation de pandémies en diminuant la contagion des agents pathogènes. Les simulations sont effectuée sur $4$ niveaux de charge virale : $0.25,0.5,0.75,1$\\
-
-Un total de $64$ configurations de simulations sont étudiées et pour chacune de ces configuration nous effectuons $100$ simulations. L'exécution de $100$ simulations pour un ensemble de paramètres permet de calculer le taux d'événements pandémiques ainsi que de relever les caractéristiques des simulations qui ne font pas apparaitre de pandémie.
-
-\section{Résultats}
-
-Le premier résultat présenté est un exemple d'impacte de la diverstié sur une simulation qui déclanche une pandémie. La suite présente des statistiques sur les simulations incluant de la diversité qui n'ont pas développé de pandémie. En effet, nous nous intéressons tout particulièrement aux situations ou une pandémie est évitée. Les données relevées concernant ces simulations sont : le nombre maximum de contaminés simultanément, l'itération de ce maximum, l'itération de fin de simulations (lorsque plus aucun individu n'est contaminé) et finalement le taux de simulations qui ont développé une pandémie parmi les $100$ simulations pour chaque configuration.
-
-\subsection{Mélange parfait}
-
-Le document ne contient qu'une seule simulation à diversité non nulle et au mélange parfait. La raison pour laquelle cette voie n'est que peu explorée est parceque le mélange parfait est trop efficace pour la propagation de pandémies. Par conséquent les propagations sont beaucoup trop rapides comparé au ralentissement qu'offre la diversité.
+L'unique simulation étudié est de taille $1264 \times 1264$ avec une population de $10^5$. La charge virale est définie à $1$ et la diversité est de $4,8,16,32$. Les génomes de tous les individus sont initialement identiques. Dans cette configuration, les agents pathogènes ont la meilleure compatibilité possible et sont donc les plus virulents. La figure suivante montre des simulations qui intègrent de la diverstié sur les génomes des individus afin de réduire la virulence des pathogènes.
 
 \newpage
 
@@ -65,101 +22,323 @@ Le document ne contient qu'une seule simulation à diversité non nulle et au m�
 	\caption[Impacte de la diversité]{Impacte de la diversité d'une population sur une simulation au mélange parfait avec $10^5$ individus et une densité de $1/16$. La première figure montre le compartiment $I$, le second le compartiment $R$ et le dernier le compartiement $S$. Chaque couleur de courbe fait référence à une simulation avec une certaine valeur de diversité notée dans la légende.}
 \end{figure}
 
-Les résultats des simulations au mélange parfait sont très similaire aux simulations SIR et ceci est dû au fait que l'impacte de la diversité est trop faible sur ces simulations. Pour pouvoir étudier l'impact de la diversité il est nécessaire de construire des systèmes plus progressifs dans la propagation des agents pathogènes.\\
+L'objectif de ce chapitre est d'observer le comportement du système lorsque tous les individus sont contaminés. Un système de denstié $1/16$ avec le mélnage parfait et une charge virale de $1$ propage très rapidement une pandémie. Il s'agit ici de constater les comportements du système lors des immunisation.\\
 
-Deux choses sont à noter à propos de cette figure. La première est que la propagation est beaucoup trop rapide comme nous pouvons le voir sur le compartiement $Susceptible$ qui tombe rapidement à $0$. Tous les individus sont déjà passés dans le compartiment $Infected$ très tôt dans la simulation. Par conséquent dans ces configurations la propagation de la pandémie est maximale car elle atteint rapidement $100\%$ de la population.\\
+La première observation est que pour les $4$ simulations, tous les individus quittent rapidement le compartiement $S$ mais ceci légèrement moins rapidement pour les simualtions à forte diversité. Ceci est du au fait qu'une grande diversité produit des individus résistants qui freinent la propagation du pathogène mais l'impacte n'est que léger.\\
 
-Le deuxième élément se produit dans une deuxième phase et décrit l'immunisation des individus. Comme nous l'avons déjà dit, tout les individus finissent contaminés très vite. A partir de là, les individus s'immunisent mais leur immunisation dépend de la compatibilité qu'ils ont avec leur agent pathogène. Le compartiment $Recovered$ montre la différence de vitesse des acquisitions d'immunisation parmi la population et il est assez clair qu'un plus grand niveau de diversité implique une immunisation générale plus rapide. Ceci est uiquement vrai parce que le génome initial des individu les rend très vulnérable au pathogène. Par conséquent, dans cette situation la diversité permet une meilleure immunisation de la population.
+La seconde constatation se trouve dans le compartiement $R$. Les individus contaminés s'immunisent plus rapidement dans les systèmes à forte densité. Ce résultat suit l'intuition car les génomes initiaux avantagent l'agent pathogène et donc réduisent la probabilité pour les individus de s'immuniser. Par conséquent, une forte diverstié réduit la compatibilité entre les agent pathogènes et les individus et permettent une immuniations plus rapide.
 
-\subsection{Mouvements variable}
+\section{Taux de pandémies}
 
-\setlength{\tabcolsep}{4pt}
+Ce chapitre cherche à calculer des statistiques concernant des simulations qui ne développent pas de pandémies. L'objectif est que quantifier l'impacte de la diversité sur le taux de simulations qui donnent ou ne donnent pas de pandémie. Cette section nécessite des statistiques sur un grand nombre de simulations car nous mesurons des événements qui sont très sensibles aux variations.\\
+
+Toutes les configurations étudiées sont de taille $1264	\times 1264$ avec $10^5$ individus. Les simulations ont deux conditions d'arrêt. La première arrive lorsque plus aucun individus n'est contaminé et la seconde survient lorsque $10\%$ de la population a été touchées par la pandémie. Nous estimons qu'à partir de $10\%$, les simulations adopent un comportement purement déterministe.\\
+
+La suite présente des statistiques sur les simulations incluant de la diversité qui n'ont pas développé de pandémie. En effet, nous nous intéressons tout particulièrement aux situations ou une pandémie est évitée. Les données relevées concernant ces simulations sont : le nombre maximum de contaminés simultanément, l'itération de ce maximum, l'itération de fin de simulations (lorsque plus aucun individu n'est contaminé), l'ampleur de la pandémie (nombre de personnes sorties du compartiement $S$) et finalement le taux de simulations qui ont développé une pandémie parmi les $100$ simulations pour chaque configuration.\\
+
+Un total de $64$ configurations de simulations sont étudiées et pour chacune de ces configuration nous effectuons $100$ simulations. L'exécution de $100$ simulations pour un ensemble de paramètres permet de calculer le taux d'événements pandémiques ainsi que de relever les caractéristiques des simulations qui ne font pas apparaitre de pandémie.
 
 \begin{table}[H]
 	\centering
+	\renewcommand{\arraystretch}{0.6}
 	\captionsetup{justification=centering}
-	\caption[1]{2\label{tab:grid}}
-	\begin{tabular}{@{\extracolsep{\fill} } c|| c| c| c|| c| c| c|| c| c| c|| c| c| c|}
-		4    & \multicolumn{3}{|c||}{succès} & \multicolumn{3}{|c||}{max} & \multicolumn{3}{|c||}{it\_max} & \multicolumn{3}{|c|}{it\_fin}                                       \\
+	\caption[Taux de succès : diversité 4]{Résultats moyennées des 100 simulations sur un ensemble de $12$ configuration à diversité $4$. Nous mesurons le taux de succès des pandémies ainsi que la taille totale des pandémies qui échouent.\label{tab:grid}}
+	\begin{tabular}{@{\extracolsep{\fill} } |c| c| c| c| c|}
+		\toprule
+		Diversité & charge virale & Mouvements & Succès & Taille pandémie \\
 		\midrule
-		     & 1 & 10 & 50 & 1 & 10 & 50 & 1 & 10 & 50 & 1 & 10 & 50 \\
+		4         & 1             & 1          & 100\%  & nan             \\
 		\midrule
+		4         & 1             & 10         & 100\%  & nan             \\
 		\midrule
-		1    & 100\%  & 99\% & 99\% & nan & 1  & 1  & nan & 0  & 0  & nan & 1  & 1  \\
+		4         & 1             & 50         & 100\%  & nan             \\
 		\midrule
-		0.75 & 100\% & 99\% & 100\% & nan & 1  & nan  & nan & 0  & nan  & nan & 17  & nan  \\
+		4         & 0.75          & 1          & 99\%   & 1               \\
 		\midrule
-		0.5  & 100\% & 100\% & 100\% & nan & nan  & nan  & nan & nan  & nan  & nan & nan  & nan  \\
+		4         & 0.75          & 10         & 100\%  & nan             \\
 		\midrule
-		0.25 & 100\% & 100\% & 100\% & nan & nan  & nan  & nan & nan  & nan  & nan & nan  & nan  \\
+		4         & 0.75          & 50         & 100\%  & nan             \\
+		\midrule
+		4         & 0.5           & 1          & 99\%   & 1               \\
+		\midrule
+		4         & 0.5           & 10         & 100\%  & nan             \\
+		\midrule
+		4         & 0.5           & 50         & 100\%  & nan             \\
+		\midrule
+		4         & 0.25          & 1          & 100\%  & nan             \\
+		\midrule
+		4         & 0.25          & 10         & 98\%   & 1               \\
+		\midrule
+		4         & 0.25          & 50         & 100\%  & nan             \\
+		\bottomrule
+	\end{tabular}
+\end{table}
+
+Les taux de succès des simulations en diversité $4$ sont dû au fait que l'agent pathogène reste très virulent même avec une distance de hamming maxime de $4$ dans ces configurations. Par conséquent, presques toutes les simulations finissent sur une pandémie.
+
+\begin{table}[H]
+	\centering
+	\renewcommand{\arraystretch}{0.6}
+	\captionsetup{justification=centering}
+	\caption[Statistiques : diversité 4]{Résultats moyennées des 100 simulations sur un ensemble de $12$ configuration à diversité $4$. Nous mesurons le maximum d'individus contaminés simultanément, l'itération de ce maximum ainsi que l'itération de la fin de la simulations. A nouveau, nous ne mesurons que pour les simulations qui ne développend pas de pandémie.\label{tab:grid}}
+	\begin{tabular}{@{\extracolsep{\fill} } |c| c| c| c| c| c|}
+		\toprule
+		Diversité & Charge virale & Mouvements & Max & Iteration max & Iteration fin \\
+		\midrule
+		4         & 1             & 1          & nan & nan           & nan           \\
+		\midrule
+		4         & 1             & 10         & nan & nan           & nan           \\
+		\midrule
+		4         & 1             & 50         & nan & nan           & nan           \\
+		\midrule
+		4         & 0.75          & 1          & 1   & 0             & 24            \\
+		\midrule
+		4         & 0.75          & 10         & nan & nan           & nan           \\
+		\midrule
+		4         & 0.75          & 50         & nan & nan           & nan           \\
+		\midrule
+		4         & 0.5           & 1          & nan & nan           & nan           \\
+		\midrule
+		4         & 0.5           & 10         & nan & nan           & nan           \\
+		\midrule
+		4         & 0.5           & 50         & nan & nan           & nan           \\
+		\midrule
+		4         & 0.25          & 1          & nan & nan           & nan           \\
+		\midrule
+		4         & 0.25          & 10         & 1   & 0             & 4.5           \\
+		\midrule
+		4         & 0.25          & 50         & nan & nan           & nan           \\
+		\bottomrule
+	\end{tabular}
+\end{table}
+
+Toutes les configurations qui n'ont pas eu de pandémie déclarée n'ont pas relevé d'informations. Pour les rares simulations à avoir échoué, les échecs se produisent parceque le patient zéro n'est parvenu à contaminer personne.
+
+\begin{table}[H]
+	\centering
+	\renewcommand{\arraystretch}{0.6}
+	\captionsetup{justification=centering}
+	\caption[Taux de succès : diversité 8]{Résultats moyennées des 100 simulations sur un ensemble de $12$ configuration à diversité $8$. Nous mesurons le taux de succès des pandémies ainsi que la taille totale des pandémies qui échouent.\label{tab:grid}}
+	\begin{tabular}{@{\extracolsep{\fill} } |c| c| c| c| c|}
+		\toprule
+		Diversité & charge virale & Mouvements & Succès & Taille pandémie \\
+		\midrule
+		8         & 1             & 1          & 99\%   & 1               \\
+		\midrule
+		8         & 1             & 10         & 100\%  & nan             \\
+		\midrule
+		8         & 1             & 50         & 100\%  & nan             \\
+		\midrule
+		8         & 0.75          & 1          & 98\%   & 1               \\
+		\midrule
+		8         & 0.75          & 10         & 98\%   & 1.5             \\
+		\midrule
+		8         & 0.75          & 50         & 99\%   & 1               \\
+		\midrule
+		8         & 0.5           & 1          & 96\%   & 1               \\
+		\midrule
+		8         & 0.5           & 10         & 98\%   & 1               \\
+		\midrule
+		8         & 0.5           & 50         & 98\%   & 1               \\
+		\midrule
+		8         & 0.25          & 1          & 93\%   & 1               \\
+		\midrule
+		8         & 0.25          & 10         & 96\%   & 1               \\
+		\midrule
+		8         & 0.25          & 50         & 94\%   & 1               \\
+		\bottomrule
+	\end{tabular}
+\end{table}
+
+Mêmes observations pour les simulations en diversité $8$. Les taux de succès sont très élevés et les tailles de pandémies sont minimales sur les simulations échouant.
+
+\begin{table}[H]
+	\centering
+	\renewcommand{\arraystretch}{0.6}
+	\captionsetup{justification=centering}
+	\caption[Statistiques : diversité 8]{Résultats moyennées des 100 simulations sur un ensemble de $12$ configuration à diversité $8$. Nous mesurons le maximum d'individus contaminés simultanément, l'itération de ce maximum ainsi que l'itération de la fin de la simulations. A nouveau, nous ne mesurons que pour les simulations qui ne développend pas de pandémie.\label{tab:grid}}
+	\begin{tabular}{@{\extracolsep{\fill} } |c| c| c| c| c| c|}
+		\toprule
+		Diversité & Charge virale & Mouvements & Max & Iteration max & Iteration fin \\
+		\midrule
+		8         & 1             & 1          & 1   &               & 15            \\
+		\midrule
+		8         & 1             & 10         & nan & nan           & nan           \\
+		\midrule
+		8         & 1             & 50         & nan & nan           & nan           \\
+		\midrule
+		8         & 0.75          & 1          & 1   & 0             & 9.5           \\
+		\midrule
+		8         & 0.75          & 10         & 1.5 & 5.5           & 12            \\
+		\midrule
+		8         & 0.75          & 50         & 1   & 0             & 9             \\
+		\midrule
+		8         & 0.5           & 1          & 1   & 0             & 6.75          \\
+		\midrule
+		8         & 0.5           & 10         & 1   & 0             & 5             \\
+		\midrule
+		8         & 0.5           & 50         & 1   & 0             & 16            \\
+		\midrule
+		8         & 0.25          & 1          & 1   & 0             & 31.43         \\
+		\midrule
+		8         & 0.25          & 10         & 1   & 0             & 9.25          \\
+		\midrule
+		8         & 0.25          & 50         & 1   & 0             & 11.5          \\
+		\bottomrule
+	\end{tabular}
+\end{table}
+
+Toutes les simulations en diversité $8$ qui ne donnent pas de pandémies sont dû au fait que le patient zéro n'a contaminé personne et le pathogène meurt trop vite.
+
+\begin{table}[H]
+	\centering
+	\renewcommand{\arraystretch}{0.6}
+	\captionsetup{justification=centering}
+	\caption[Taux de succès : diversité 16]{Résultats moyennées des 100 simulations sur un ensemble de $12$ configuration à diversité $16$. Nous mesurons le taux de succès des pandémies ainsi que la taille totale des pandémies qui échouent.\label{tab:grid}}
+	\begin{tabular}{@{\extracolsep{\fill} } |c| c| c| c| c|}
+		\toprule
+		Diversité & charge virale & Mouvements & Succès & Taille pandémie \\
+		\midrule
+		16        & 1             & 1          & 81\%   & 1.32            \\
+		\midrule
+		16        & 1             & 10         & 90\%   & 1               \\
+		\midrule
+		16        & 1             & 50         & 100\%  & nan             \\
+		\midrule
+		16        & 0.75          & 1          & 75\%   & 3.04            \\
+		\midrule
+		16        & 0.75          & 10         & 87\%   & 1.15            \\
+		\midrule
+		16        & 0.75          & 50         & 90\%   & 1.1             \\
+		\midrule
+		16        & 0.5           & 1          & 59\%   & 4.88            \\
+		\midrule
+		16        & 0.5           & 10         & 86\%   & 1.36            \\
+		\midrule
+		16        & 0.5           & 50         & 88\%   & 1.17            \\
+		\midrule
+		16        & 0.25          & 1          & 1\%    & 816.92          \\
+		\midrule
+		16        & 0.25          & 10         & 67\%   & 1.76            \\
+		\midrule
+		16        & 0.25          & 50         & 72\%   & 1.32            \\
+		\bottomrule
+	\end{tabular}
+\end{table}
+
+
+
+\begin{table}[H]
+	\centering
+	\renewcommand{\arraystretch}{0.6}
+	\captionsetup{justification=centering}
+	\caption[Statistiques : diversité 16]{Résultats moyennées des 100 simulations sur un ensemble de $12$ configuration à diversité $16$. Nous mesurons le maximum d'individus contaminés simultanément, l'itération de ce maximum ainsi que l'itération de la fin de la simulations. A nouveau, nous ne mesurons que pour les simulations qui ne développend pas de pandémie.\label{tab:grid}}
+	\begin{tabular}{@{\extracolsep{\fill} } |c| c| c| c| c| c|}
+		\toprule
+		Diversité & Charge virale & Mouvements & Max   & Iteration max & Iteration fin \\
+		\midrule
+		16        & 1             & 1          & 1.21  & 1.37          & 12.37         \\
+		\midrule
+		16        & 1             & 10         & 1     & 0             & 5.3           \\
+		\midrule
+		16        & 1             & 50         & nan   & nan           & nan           \\
+		\midrule
+		16        & 0.75          & 1          & 2.32  & 8.32          & 31.52         \\
+		\midrule
+		16        & 0.75          & 10         & 1.15  & 0.46          & 7.23          \\
+		\midrule
+		16        & 0.75          & 50         & 1.1   & 0.2           & 5.4           \\
+		\midrule
+		16        & 0.5           & 1          & 2.17  & 16.90         & 51.34         \\
+		\midrule
+		16        & 0.5           & 10         & 1.36  & 0.71          & 7.21          \\
+		\midrule
+		16        & 0.5           & 50         & 1.17  & 0.17          & 14.5          \\
+		\midrule
+		16        & 0.25          & 1          & 28.05 & 989.47        & 2632.66       \\
+		\midrule
+		16        & 0.25          & 10         & 1.58  & 6.91          & 25.88         \\
+		\midrule
+		16        & 0.25          & 50         & 1.21  & 3.07          & 15.82         \\
 		\bottomrule
 	\end{tabular}
 \end{table}
 
 \begin{table}[H]
 	\centering
+	\renewcommand{\arraystretch}{0.6}
 	\captionsetup{justification=centering}
-	\caption[1]{2\label{tab:grid}}
-	\begin{tabular}{@{\extracolsep{\fill} } c|| c| c| c|| c| c| c|| c| c| c|| c| c| c|}
-		8    & \multicolumn{3}{|c||}{succès} & \multicolumn{3}{|c||}{max} & \multicolumn{3}{|c||}{it\_max} & \multicolumn{3}{|c|}{it\_fin}                                       \\
+	\caption[Taux de succès : diversité 32]{Résultats moyennées des 100 simulations sur un ensemble de $12$ configuration à diversité $32$. Nous mesurons le taux de succès des pandémies ainsi que la taille totale des pandémies qui échouent.\label{tab:grid}}
+	\begin{tabular}{@{\extracolsep{\fill} } |c| c| c| c| c|}
+		\toprule
+		Diversité & charge virale & Mouvements & Succès & Taille pandémie \\
 		\midrule
-		     & 1 & 10 & 50 & 1 & 10 & 50 & 1 & 10 & 50 & 1 & 10 & 50 \\
+		32        & 1             & 1          & 0\%    & 18.02           \\
 		\midrule
+		32        & 1             & 10         & 72\%   & 1.36            \\
 		\midrule
-		1    & 98\%  & 98\% & 99\% & 1 & 1  & 1  & 0 & 0  & 0  & 4.5 & 2  & 1  \\
+		32        & 1             & 50         & 100\%  & nan             \\
 		\midrule
-		0.75 & 96\% & 98\% & 97\% & 1.25 & 1  & 1  & 6.25 & 0  & 0  & 21.25 & 3.5  & 6.67  \\
+		32        & 0.75          & 1          & 0\%    & 13.46           \\
 		\midrule
-		0.5  & 95\% & 95\% & 98\% & 1.2 & 1  & 1  & 0.4 & 0  & 0  & 6.8 & 6.4  & 6.5  \\
+		32        & 0.75          & 10         & 67\%   & 1.97            \\
 		\midrule
-		0.25 & 95\% & 95\% & 97\% & 1 & 1  & 1.34  & 0 & 0  & 5.34  & 20.4 & 17.8  & 19.67  \\
+		32        & 0.75          & 50         & 76\%   & 1.63            \\
+		\midrule
+		32        & 0.5           & 1          & 0\%    & 10.98           \\
+		\midrule
+		32        & 0.5           & 10         & 49\%   & 2.31            \\
+		\midrule
+		32        & 0.5           & 50         & 43\%   & 1.58            \\
+		\midrule
+		32        & 0.25          & 1          & 0\%    & 4.56            \\
+		\midrule
+		32        & 0.25          & 10         & 0\%    & 180.12          \\
+		\midrule
+		32        & 0.25          & 50         & 19\%   & 3.23            \\
 		\bottomrule
 	\end{tabular}
 \end{table}
 
 \begin{table}[H]
 	\centering
+	\renewcommand{\arraystretch}{0.6}
 	\captionsetup{justification=centering}
-	\caption[1]{2\label{tab:grid}}
-	\begin{tabular}{@{\extracolsep{\fill} } c|| c| c| c|| c| c| c|| c| c| c|| c| c| c|}
-		16    & \multicolumn{3}{|c||}{succès} & \multicolumn{3}{|c||}{max} & \multicolumn{3}{|c||}{it\_max} & \multicolumn{3}{|c|}{it\_fin}                                       \\
+	\caption[Statistiques : diversité 32]{Résultats moyennées des 100 simulations sur un ensemble de $12$ configuration à diversité $32$. Nous mesurons le maximum d'individus contaminés simultanément, l'itération de ce maximum ainsi que l'itération de la fin de la simulations. A nouveau, nous ne mesurons que pour les simulations qui ne développend pas de pandémie.\label{tab:grid}}
+	\begin{tabular}{@{\extracolsep{\fill} } |c| c| c| c| c| c|}
+		\toprule
+		Diversité & Charge virale & Mouvements & Max  & Iteration max & Iteration fin \\
 		\midrule
-		     & 1 & 10 & 50 & 1 & 10 & 50 & 1 & 10 & 50 & 1 & 10 & 50 \\
+		32        & 1             & 1          & 5.1  & 40.09         & 104.05        \\
 		\midrule
+		32        & 1             & 10         & 1.25 & 0.68          & 6.32          \\
 		\midrule
-		1    & 73\%  & 92\% & 99\% & 1.81 & 1.25  & 1  & 6.89 & 1.38  & 0  & 27.44 & 5.75  & 1  \\
+		32        & 1             & 50         & nan  & nan           & nan           \\
 		\midrule
-		0.75 & 77\% & 84\% & 88\% & 1.26 & 1.06  & 1.08  & 1 & 1.06  & 1.17  & 13.96 & 8.31  & 6.08  \\
+		32        & 0.75          & 1          & 3.99 & 37.93         & 103.11        \\
 		\midrule
-		0.5  & 65\% & 79\% & 80\% & 2.86 & 1.19  & 1.25  & 30.14 & 1.43  & 1.2  & 155.51 & 11.28  & 12.6  \\
+		32        & 0.75          & 10         & 1.39 & 1.03          & 9.03          \\
 		\midrule
-		0.25 & 1\% & 68\% & 67\% & 24.92 & 1.53  & 1.09  & 728.27 & 5.38  & 2.12  & 633.56 & 22.63  & 10.88  \\
+		32        & 0.75          & 50         & 1.46 & 1.54          & 7.46          \\
+		\midrule
+		32        & 0.5           & 1          & 3    & 34.47         & 100.25        \\
+		\midrule
+		32        & 0.5           & 10         & 1.65 & 4.63          & 14.31         \\
+		\midrule
+		32        & 0.5           & 50         & 1.29 & 2.86          & 10.91         \\
+		\midrule
+		32        & 0.25          & 1          & 2.11 & 19.64         & 51.55         \\
+		\midrule
+		32        & 0.25          & 10         & 7.12 & 145.94        & 245.44        \\
+		\midrule
+		32        & 0.25          & 50         & 1.88 & 10.67         & 26.51         \\
 		\bottomrule
 	\end{tabular}
 \end{table}
 
-\begin{table}[H]
-	\centering
-	\captionsetup{justification=centering}
-	\caption[1]{2\label{tab:grid}}
-	\begin{tabular}{@{\extracolsep{\fill} } c|| c| c| c|| c| c| c|| c| c| c|| c| c| c|}
-		32    & \multicolumn{3}{|c||}{succès} & \multicolumn{3}{|c||}{max} & \multicolumn{3}{|c||}{it\_max} & \multicolumn{3}{|c|}{it\_fin}                                       \\
-		\midrule
-		     & 1 & 10 & 50 & 1 & 10 & 50 & 1 & 10 & 50 & 1 & 10 & 50 \\
-		\midrule
-		\midrule
-		1    & 0\%  & 74\% & 99\% & 5.02 & 1.38  & 1  & 46.71 & 3.46  & 0  & 125.91 & 8.08  & 1  \\
-		\midrule
-		0.75 & 0\% & 62\% & 65\% & 4.05 & 1.42  & 1.23  & 25.06 & 1.89  & 1.23  & 98.96 & 8.97  & 5.69  \\
-		\midrule
-		0.5  & 0\% & 48\% & 56\% & 2.63 & 1.92  & 1.27  & 16.89 & 4.98  & 1.27  & 55.72 & 16.63  & 7.5  \\
-		\midrule
-		0.25 & 0\% & 0\% & 18\% & 2.64 & 5.76  & 2.37  & 29.4 & 68.39  & 11.45  & 66.28 & 170.05  & 31.18  \\
-		\bottomrule
-	\end{tabular}
-\end{table}
+\section{Pandémies partielles}
 
-\subsection{Conclusion des résultats}
+\section{Conclusion des résultats}
 
 Les résultats permettent d'observer l'impacte de la diversité sur les systèmes. Apparemment il n'y a pas d'impacte sur la propagation de la pandémie mais uniquement sur la vitesse d'immunisation des individus. Nous cherchions à observer des pandémies qui évoluaient jusqu'à un certain point et dissparaissait ensuite mais ce comportement n'est pas présent dans les mesures.\\
 
