@@ -304,7 +304,7 @@ De toutes les simulations qui ont échouée, seule une persiste et parvient à c
 	\end{tabular}
 \end{table}
 
-Finalement les configurations en diverstié $32$ montrent les taux les plus faibles. Toutes les configurations à $1$ mouvement n'ont donné aucune pandémie et ceci contrairement aux mêmes configurations à diverstié inférieure. 
+Finalement les configurations en diverstié $32$ montrent les taux les plus faibles. Toutes les configurations à $1$ mouvement n'ont donné aucune pandémie et ceci contrairement aux mêmes configurations à diverstié inférieure.
 
 \begin{table}[H]
 	\centering
@@ -350,6 +350,8 @@ Les résultats permettent d'observer l'impacte de la diversité sur les système
 
 L'absence de ces événements est dû au fonctionnement du modèle et à la notion de diversité. Le problème est que dans le modèle, la diversité n'a aucun impacte sur le propagation de pandémie. Pour rappel, lorsqu'un individu sain est en contact avec un agent pathogène, l'individu devient contaminé et contagieux directement et ceci peu importe la diversité du système. Le seul effet de la diverstié est le fait que cet individu peut s'immuniser plus ou moins rapidement en fonction de cette diversité. Mais le problème est que la propagation se présente sous forme de vague, comme une onde. L'illustration ci-dessous illustre le phénomène.
 
+\newpage
+
 \begin{figure}[h]
 	\centering
 	\captionsetup{justification=centering}
@@ -372,3 +374,99 @@ Dans le modèle implémenté et d'après les mesures de diversité, une simulati
 L'immunité collective est le fait le niveau d'immunité général est siffisemment élevé afin de faire passer le taux $R_0$ en dessous de $1$ et que la pandémie disparaisse. Ce phénomène peut s'obtenir par trois façons. La première est la vaccination, la seconde est l'immunité croisée et la troisième est une forme de résistance naturelle. Si nous reprenions la figure ci-dessus, l'immunité collective dans le modèle pourraient être obtenue d'une seule façon. Il faudrait pouroivr modifier l'état de la troisième zone (les parties du système non contaminés). Si au fil du temps nous pouvions vacciner des individus ou les immuniser en amont de la pandémie alors nous pourrions influencer le $R_0$ de la simulation mais le modèle n'inclut pas ces mécanismes. Par conséquent le $R_0$ reste constant dû à l'homogénéité de la troisième zone.
 
 \section{Pandémies partielles}
+
+\begin{table}[H]
+	\centering
+	\renewcommand{\arraystretch}{0.6}
+	\captionsetup{justification=centering}
+	\caption[1]{1\label{tab:grid}}
+	\begin{tabular}{@{\extracolsep{\fill} } |c| c| c|}
+		\toprule
+		Charge virale & Diversité & Taille pandémie \\
+		\midrule
+		1             & 4         & 100000               \\
+		\midrule
+		1             & 8         & 100000              \\
+		\midrule
+		1             & 16        & 99922.68              \\
+		\midrule
+		1             & 20        & 98699.38              \\
+		\midrule
+		1             & 24        & 95390.15              \\
+		\midrule
+		1             & 28        & 91217.14              \\
+		\midrule
+		1             & 32        & 87863.19              \\
+		\midrule
+		1             & 36        & 85895.91              \\
+		\midrule
+		1             & 40        & 85180.41              \\
+		\midrule
+		1             & 1000      & 86335.36              \\
+		\bottomrule
+	\end{tabular}
+\end{table}
+
+\begin{table}[H]
+	\centering
+	\renewcommand{\arraystretch}{0.6}
+	\captionsetup{justification=centering}
+	\caption[1]{1\label{tab:grid}}
+	\begin{tabular}{@{\extracolsep{\fill} } |c| c| c|}
+		\toprule
+		Charge virale & Diversité & Taille pandémie \\
+		\midrule
+		0.75             & 4         & 100000               \\
+		\midrule
+		0.75             & 8         & 100000              \\
+		\midrule
+		0.75             & 16        & 99519.62              \\
+		\midrule
+		0.75             & 20        & 95731.53              \\
+		\midrule
+		0.75             & 24        & 88009.51              \\
+		\midrule
+		0.75             & 28        & 79550.08              \\
+		\midrule
+		0.75             & 32        & 73206.16              \\
+		\midrule
+		0.75             & 36        & 69406.5              \\
+		\midrule
+		0.75             & 40        & 68092.52              \\
+		\midrule
+		0.75             & 1000      & 70344.02              \\
+		\bottomrule
+	\end{tabular}
+\end{table}
+
+\begin{table}[H]
+	\centering
+	\renewcommand{\arraystretch}{0.6}
+	\captionsetup{justification=centering}
+	\caption[1]{1\label{tab:grid}}
+	\begin{tabular}{@{\extracolsep{\fill} } |c| c| c|}
+		\toprule
+		Charge virale & Diversité & Taille pandémie \\
+		\midrule
+		0.5             & 4         & 100000               \\
+		\midrule
+		0.5             & 8         & 100000              \\
+		\midrule
+		0.5             & 16        & 96823.41              \\
+		\midrule
+		0.5             & 20        & 84180.41              \\
+		\midrule
+		0.5             & 24        & 64485.21              \\
+		\midrule
+		0.5             & 28        & 43646.63              \\
+		\midrule
+		0.5             & 32        & 23020.03              \\
+		\midrule
+		0.5             & 36        & 11854.48              \\
+		\midrule
+		0.5             & 40        & 7983.12              \\
+		\midrule
+		0.5             & 1000      & 11401.21              \\
+		\bottomrule
+	\end{tabular}
+\end{table}
