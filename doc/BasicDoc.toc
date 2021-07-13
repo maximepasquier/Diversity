@@ -67,7 +67,7 @@
 \contentsline {section}{\numberline {10.1}Mesures et méthodologie}{56}{section.10.1}%
 \contentsline {section}{\numberline {10.2}Pandémies totales}{56}{section.10.2}%
 \contentsline {section}{\numberline {10.3}Taux de pandémies}{58}{section.10.3}%
-\contentsline {section}{\numberline {10.4}Pandémies partielles}{62}{section.10.4}%
-\contentsline {section}{\numberline {10.5}Conclusion des résultats}{62}{section.10.5}%
-\contentsline {chapter}{\numberline {11}Mutations}{65}{chapter.11}%
-\contentsline {chapter}{\numberline {12}Conclusion}{66}{chapter.12}%
+\contentsline {subsection}{\numberline {10.3.1}Conclusion des résultats}{63}{subsection.10.3.1}%
+\contentsline {section}{\numberline {10.4}Pandémies partielles}{65}{section.10.4}%
+\contentsline {chapter}{\numberline {11}Mutations}{66}{chapter.11}%
+\contentsline {chapter}{\numberline {12}Conclusion}{67}{chapter.12}%

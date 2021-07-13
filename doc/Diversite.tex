@@ -226,7 +226,9 @@ Toutes les simulations en diversité $8$ qui ne donnent pas de pandémies sont d
 	\end{tabular}
 \end{table}
 
+L'impace de la diversité apparait à partir d'une diversité de $16$. Naturellement, le nombre de mouvement impacte grandement la réussite d'une pandémie et ceci est perçu dans les taux de réussite. Les taux de réussite de la table au dessus sont nettement plus faibles que pour les mêmes simulations aux diversités inférieures mais la taille des pandémies reste très faible sauf pour une configuration. Généralement les simulations à cette diversité échouent sans se propager du tout mais la simulation de diverstié $16$, charge virale $0.25$ et le nombre de mouvement de $1$ montre des comportement étonnants.\\
 
+Presque toutes les simulations de cette configuration ont échoué et ceci avec une taille de pandémie moyenne de plus de $816$ individus. C'est pour l'instant la seule configuration à montrer des plus grandes pandémies mais qui finissent quand même par échouer.
 
 \begin{table}[H]
 	\centering
@@ -264,6 +266,8 @@ Toutes les simulations en diversité $8$ qui ne donnent pas de pandémies sont d
 	\end{tabular}
 \end{table}
 
+De toutes les simulations qui ont échouée, seule une persiste et parvient à contaminer un maximum de $28$ individus en moyenne et finit par s'achever à $2632$ itérations en moyenne.
+
 \begin{table}[H]
 	\centering
 	\renewcommand{\arraystretch}{0.6}
@@ -299,6 +303,8 @@ Toutes les simulations en diversité $8$ qui ne donnent pas de pandémies sont d
 		\bottomrule
 	\end{tabular}
 \end{table}
+
+Finalement les configurations en diverstié $32$ montrent les taux les plus faibles. Toutes les configurations à $1$ mouvement n'ont donné aucune pandémie et ceci contrairement aux mêmes configurations à diverstié inférieure. 
 
 \begin{table}[H]
 	\centering
@@ -336,9 +342,9 @@ Toutes les simulations en diversité $8$ qui ne donnent pas de pandémies sont d
 	\end{tabular}
 \end{table}
 
-\section{Pandémies partielles}
+A nouveau, une grande majorité des configuration à diverstié $32$ ne montre des pandémies qui ne naissent pas avec des maximums de contaminés de l'ordre d'une dixaine et une fin de simulations très rapide.
 
-\section{Conclusion des résultats}
+\subsection{Conclusion des résultats}
 
 Les résultats permettent d'observer l'impacte de la diversité sur les systèmes. Apparemment il n'y a pas d'impacte sur la propagation de la pandémie mais uniquement sur la vitesse d'immunisation des individus. Nous cherchions à observer des pandémies qui évoluaient jusqu'à un certain point et dissparaissait ensuite mais ce comportement n'est pas présent dans les mesures.\\
 
@@ -365,4 +371,4 @@ Dans le modèle implémenté et d'après les mesures de diversité, une simulati
 
 L'immunité collective est le fait le niveau d'immunité général est siffisemment élevé afin de faire passer le taux $R_0$ en dessous de $1$ et que la pandémie disparaisse. Ce phénomène peut s'obtenir par trois façons. La première est la vaccination, la seconde est l'immunité croisée et la troisième est une forme de résistance naturelle. Si nous reprenions la figure ci-dessus, l'immunité collective dans le modèle pourraient être obtenue d'une seule façon. Il faudrait pouroivr modifier l'état de la troisième zone (les parties du système non contaminés). Si au fil du temps nous pouvions vacciner des individus ou les immuniser en amont de la pandémie alors nous pourrions influencer le $R_0$ de la simulation mais le modèle n'inclut pas ces mécanismes. Par conséquent le $R_0$ reste constant dû à l'homogénéité de la troisième zone.
 
-
+\section{Pandémies partielles}
