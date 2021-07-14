@@ -69,5 +69,5 @@
 \contentsline {section}{\numberline {10.3}Taux de pandémies}{58}{section.10.3}%
 \contentsline {subsection}{\numberline {10.3.1}Conclusion des résultats}{63}{subsection.10.3.1}%
 \contentsline {section}{\numberline {10.4}Pandémies partielles}{65}{section.10.4}%
-\contentsline {chapter}{\numberline {11}Mutations}{67}{chapter.11}%
-\contentsline {chapter}{\numberline {12}Conclusion}{68}{chapter.12}%
+\contentsline {chapter}{\numberline {11}Mutations}{68}{chapter.11}%
+\contentsline {chapter}{\numberline {12}Conclusion}{69}{chapter.12}%

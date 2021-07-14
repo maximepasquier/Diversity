@@ -375,6 +375,14 @@ L'immunité collective est le fait le niveau d'immunité général est siffisemm
 
 \section{Pandémies partielles}
 
+Jusqu'à présent, le modèle n'a jamais montré de simulations qui donnaient des pandémies qui contaminent une portion non nulle de la populaiton sans pour autant contaminer tout le monde. Certaines configurations font apparaitre ce type d'événement mais certains paramètres favorisent la présence de pandémies partielles. Plus particulièrement, deux conditions favorisent la présence de ces phénomènes. Le premier est une densité faible ce qui ralenti la propagation de la pandémie et peut donc permettre sa disparition. La seconde est un nombre de mouvements élevé ou le mélange parfait.\\
+
+Une faible densité d'un système permet d'observer des pandémies avec peu de contaminés simultanément et qui évoluent lentement. Dû au peu de contaminés simultanés il est possible que tous les individus contaminés s'immunisent et ne parviennet pas à contaminer davantage d'individus. La méthode de mouvement joue aussi un rôle dans l'observation de ces phénomènes. Généralement, plus le mélange des individus est bon, plus on peut observe de pandémies partielles et ceci est dû au fait d'immunisation collective.\\
+
+Les simulations étudiées sont des configurations de taille $2000 \times 2000$ (densité $1/40$) au mélange parfait avec une charge virale variant de : $1, 0.75, 0.5$ et avec une diversité variant de : $4,8,16,20,24,28,32,36,40,1000$. Pour chacune des $30$ configuration, un total de $100$ exécutions ont été faites et les résultats moyennés. La seule mesure prise est la taille totale de la pandémie, c'est-à-dire le compte de tous le individus qui ont quitté le compartiement $S$.\\
+
+Les génomes sont codés sur $32$ bits et sont initialement indentiques pour tous les acteurs du système. La diversité permet de faire dévier les génomes des individus afin de réduire la compatibilité avec l'agent pathogène (ceci le rend moins virulent). La veleur de diversité d'une configuration détermine le nombre de complémentations aléatoire sur la séquence de génome et ce nombre n'est pas borné. Par conséquent, une diversité de $32$ sur des génomes de $32$ ne signifie pas que la diverstié des individus est maximale. Les résultats suivants montrent l'impacte de ces valeurs de diversité sur l'ampleur des pandémies.
+
 \begin{table}[H]
 	\centering
 	\renewcommand{\arraystretch}{0.6}
@@ -384,25 +392,25 @@ L'immunité collective est le fait le niveau d'immunité général est siffisemm
 		\toprule
 		Charge virale & Diversité & Taille pandémie \\
 		\midrule
-		1             & 4         & 100000               \\
+		1             & 4         & 100000          \\
 		\midrule
-		1             & 8         & 100000              \\
+		1             & 8         & 100000          \\
 		\midrule
-		1             & 16        & 99922.68              \\
+		1             & 16        & 99922.68        \\
 		\midrule
-		1             & 20        & 98699.38              \\
+		1             & 20        & 98699.38        \\
 		\midrule
-		1             & 24        & 95390.15              \\
+		1             & 24        & 95390.15        \\
 		\midrule
-		1             & 28        & 91217.14              \\
+		1             & 28        & 91217.14        \\
 		\midrule
-		1             & 32        & 87863.19              \\
+		1             & 32        & 87863.19        \\
 		\midrule
-		1             & 36        & 85895.91              \\
+		1             & 36        & 85895.91        \\
 		\midrule
-		1             & 40        & 85180.41              \\
+		1             & 40        & 85180.41        \\
 		\midrule
-		1             & 1000      & 86335.36              \\
+		1             & 1000      & 86335.36        \\
 		\bottomrule
 	\end{tabular}
 \end{table}
@@ -416,25 +424,25 @@ L'immunité collective est le fait le niveau d'immunité général est siffisemm
 		\toprule
 		Charge virale & Diversité & Taille pandémie \\
 		\midrule
-		0.75             & 4         & 100000               \\
+		0.75          & 4         & 100000          \\
 		\midrule
-		0.75             & 8         & 100000              \\
+		0.75          & 8         & 100000          \\
 		\midrule
-		0.75             & 16        & 99519.62              \\
+		0.75          & 16        & 99519.62        \\
 		\midrule
-		0.75             & 20        & 95731.53              \\
+		0.75          & 20        & 95731.53        \\
 		\midrule
-		0.75             & 24        & 88009.51              \\
+		0.75          & 24        & 88009.51        \\
 		\midrule
-		0.75             & 28        & 79550.08              \\
+		0.75          & 28        & 79550.08        \\
 		\midrule
-		0.75             & 32        & 73206.16              \\
+		0.75          & 32        & 73206.16        \\
 		\midrule
-		0.75             & 36        & 69406.5              \\
+		0.75          & 36        & 69406.5         \\
 		\midrule
-		0.75             & 40        & 68092.52              \\
+		0.75          & 40        & 68092.52        \\
 		\midrule
-		0.75             & 1000      & 70344.02              \\
+		0.75          & 1000      & 70344.02        \\
 		\bottomrule
 	\end{tabular}
 \end{table}
@@ -448,25 +456,25 @@ L'immunité collective est le fait le niveau d'immunité général est siffisemm
 		\toprule
 		Charge virale & Diversité & Taille pandémie \\
 		\midrule
-		0.5             & 4         & 100000               \\
+		0.5           & 4         & 100000          \\
 		\midrule
-		0.5             & 8         & 100000              \\
+		0.5           & 8         & 100000          \\
 		\midrule
-		0.5             & 16        & 96823.41              \\
+		0.5           & 16        & 96823.41        \\
 		\midrule
-		0.5             & 20        & 84180.41              \\
+		0.5           & 20        & 84180.41        \\
 		\midrule
-		0.5             & 24        & 64485.21              \\
+		0.5           & 24        & 64485.21        \\
 		\midrule
-		0.5             & 28        & 43646.63              \\
+		0.5           & 28        & 43646.63        \\
 		\midrule
-		0.5             & 32        & 23020.03              \\
+		0.5           & 32        & 23020.03        \\
 		\midrule
-		0.5             & 36        & 11854.48              \\
+		0.5           & 36        & 11854.48        \\
 		\midrule
-		0.5             & 40        & 7983.12              \\
+		0.5           & 40        & 7983.12         \\
 		\midrule
-		0.5             & 1000      & 11401.21              \\
+		0.5           & 1000      & 11401.21        \\
 		\bottomrule
 	\end{tabular}
 \end{table}

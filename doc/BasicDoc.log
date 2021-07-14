@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2021.6.17)  13 JUL 2021 16:47
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2021.6.17)  14 JUL 2021 17:47
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -3211,12 +3211,27 @@ Underfull \hbox (badness 10000) in paragraph at lines 372--373
 
  []
 
-[65]) [66]
+
+Underfull \hbox (badness 10000) in paragraph at lines 378--379
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 380--381
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 382--383
+
+ []
+
+[65]) [66] [67]
 \openout2 = `Mutations.aux'.
 
  (./Mutations.tex
 chapter 11.
-) [67
+) [68
 
 
 
@@ -3225,7 +3240,7 @@ chapter 11.
 
  (./Conclusion.tex
 chapter 12.
-) [68
+) [69
 
 
 
@@ -3251,9 +3266,9 @@ Package logreq Info: Writing requests to 'BasicDoc.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 54583 strings out of 481239
- 1208348 string characters out of 5920377
- 2145539 words of memory out of 5000000
+ 54584 strings out of 481239
+ 1208355 string characters out of 5920377
+ 2145540 words of memory out of 5000000
  68205 multiletter control sequences out of 15000+600000
  608523 words of font info for 334 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -3269,10 +3284,10 @@ r/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/share/texl
 ive/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/share/texlive/texmf-di
 st/fonts/type1/urw/palatino/uplr8a.pfb></usr/share/texlive/texmf-dist/fonts/typ
 e1/urw/palatino/uplri8a.pfb>
-Output written on BasicDoc.pdf (74 pages, 2131772 bytes).
+Output written on BasicDoc.pdf (75 pages, 2134209 bytes).
 PDF statistics:
- 3780 PDF objects out of 4296 (max. 8388607)
- 1839 compressed objects within 19 object streams
- 217 named destinations out of 1000 (max. 500000)
+ 3784 PDF objects out of 4296 (max. 8388607)
+ 1842 compressed objects within 19 object streams
+ 218 named destinations out of 1000 (max. 500000)
  41186 words of extra memory for PDF output out of 42996 (max. 10000000)
 
