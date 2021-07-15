@@ -387,7 +387,7 @@ Les génomes sont codés sur $32$ bits et sont initialement indentiques pour tou
 	\centering
 	\renewcommand{\arraystretch}{0.6}
 	\captionsetup{justification=centering}
-	\caption[1]{1\label{tab:grid}}
+	\caption[Taille pandémies, charge virale = 1]{Simulations mesurant la taille de la pandémies pour un ensembles de configurations à charge virale = 1. La taille de pandémie représente tous les individus qui ont quitté le compartiemnt $S$ lors de la simulations.\label{tab:grid}}
 	\begin{tabular}{@{\extracolsep{\fill} } |c| c| c|}
 		\toprule
 		Charge virale & Diversité & Taille pandémie \\
@@ -415,11 +415,13 @@ Les génomes sont codés sur $32$ bits et sont initialement indentiques pour tou
 	\end{tabular}
 \end{table}
 
+Les premier résultats montrent qu'une plus grande diversité réduit la taille des pandémies. Le minimum atteint sur ces configurations est à une diversité de $40$. Une diversité trop élevée est moins efficace car nous avons simplement des génomes aléatoires et non plus des génomes déviants de l'agent pathogène.
+
 \begin{table}[H]
 	\centering
 	\renewcommand{\arraystretch}{0.6}
 	\captionsetup{justification=centering}
-	\caption[1]{1\label{tab:grid}}
+	\caption[Taille pandémies, charge virale = 0.75]{Simulations mesurant la taille de la pandémies pour un ensembles de configurations à charge virale = 0.75. La taille de pandémie représente tous les individus qui ont quitté le compartiemnt $S$ lors de la simulations.\label{tab:grid}}
 	\begin{tabular}{@{\extracolsep{\fill} } |c| c| c|}
 		\toprule
 		Charge virale & Diversité & Taille pandémie \\
@@ -447,11 +449,13 @@ Les génomes sont codés sur $32$ bits et sont initialement indentiques pour tou
 	\end{tabular}
 \end{table}
 
+Réduire la charge virale diminue la taille des pandémies. La contagion de l'agent pathogène étant inférieure, la propagation disparait plu facielement. 
+
 \begin{table}[H]
 	\centering
 	\renewcommand{\arraystretch}{0.6}
 	\captionsetup{justification=centering}
-	\caption[1]{1\label{tab:grid}}
+	\caption[Taille pandémies, charge virale = 0.5]{Simulations mesurant la taille de la pandémies pour un ensembles de configurations à charge virale = 0.5. La taille de pandémie représente tous les individus qui ont quitté le compartiemnt $S$ lors de la simulations.\label{tab:grid}}
 	\begin{tabular}{@{\extracolsep{\fill} } |c| c| c|}
 		\toprule
 		Charge virale & Diversité & Taille pandémie \\
@@ -478,3 +482,5 @@ Les génomes sont codés sur $32$ bits et sont initialement indentiques pour tou
 		\bottomrule
 	\end{tabular}
 \end{table}
+
+Finalement les mesures en charge virale = 0.5 ont donnée des pandémies très petites avec un minimum à moins de $8000$ individus touchés. 
