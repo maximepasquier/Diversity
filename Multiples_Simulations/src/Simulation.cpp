@@ -55,14 +55,16 @@ void Simulation::Execution()
         {
             m_iteration_fin = -1;
             m_nombre_contamine_max = 0;
+            m_nombre_AP_diff_max = 0;
             cout << nb << endl;
             Init();
             Run();
-            End();
 
             //* Vérifier que le Run() ait abouti sur un événement
             if (m_iteration_fin > m_FAIL_SEUIL || m_iteration_fin == -1)
             {
+                Nombre_de_fois_contamine();
+
                 m_max_contamines_file << '\n'
                                       << m_nombre_contamine_max;
                 m_iteration_max_contamines_file << '\n'
@@ -71,6 +73,9 @@ void Simulation::Execution()
                                                 << m_iteration_fin;
                 m_taille_pandemie_file << '\n'
                                        << m_nombre_contamine + m_SIR_recovered;
+                m_nombre_AP_diff_file << '\n'
+                                      << m_nombre_AP_diff_max;
+                End();
                 break;
             }
 
@@ -89,6 +94,7 @@ void Simulation::Execution()
                                        << m_nombre_contamine + m_SIR_recovered;
             }
             */
+            End();
         }
     }
 

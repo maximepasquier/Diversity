@@ -24,6 +24,13 @@ int main(int argc, char const *argv[])
 
     std::vector<std::thread> threads;
 
+    threads.push_back(std::thread(thread_function, "./Simulations/Mutation/zero"));
+    threads.push_back(std::thread(thread_function, "./Simulations/Mutation/moins1"));
+    threads.push_back(std::thread(thread_function, "./Simulations/Mutation/moins2"));
+    threads.push_back(std::thread(thread_function, "./Simulations/Mutation/moins3"));
+    threads.push_back(std::thread(thread_function, "./Simulations/Mutation/moins4"));
+    threads.push_back(std::thread(thread_function, "./Simulations/Mutation/moins5"));
+
     /*
 
     threads.push_back(std::thread(thread_function, "./Simulations/Diversite/PandemiePartielle/perfect_mix/charge_virale1/diversite4"));
@@ -41,7 +48,6 @@ int main(int argc, char const *argv[])
     threads.push_back(std::thread(thread_function, "./Simulations/Diversite/PandemiePartielle/perfect_mix/charge_virale05/diversite16"));
     threads.push_back(std::thread(thread_function, "./Simulations/Diversite/PandemiePartielle/perfect_mix/charge_virale05/diversite32"));
     
-
     threads.push_back(std::thread(thread_function, "./Simulations/Diversite/PandemiePartielle/perfect_mix/charge_virale1/diversite20"));
     threads.push_back(std::thread(thread_function, "./Simulations/Diversite/PandemiePartielle/perfect_mix/charge_virale1/diversite24"));
     threads.push_back(std::thread(thread_function, "./Simulations/Diversite/PandemiePartielle/perfect_mix/charge_virale1/diversite28"));
@@ -54,31 +60,26 @@ int main(int argc, char const *argv[])
     threads.push_back(std::thread(thread_function, "./Simulations/Diversite/PandemiePartielle/perfect_mix/charge_virale05/diversite24"));
     threads.push_back(std::thread(thread_function, "./Simulations/Diversite/PandemiePartielle/perfect_mix/charge_virale05/diversite28"));
 
-    */
+    threads.push_back(std::thread(thread_function, "./Simulations/Diversite/PandemiePartielle/perfect_mix/charge_virale1/diversite20"));
+    threads.push_back(std::thread(thread_function, "./Simulations/Diversite/PandemiePartielle/perfect_mix/charge_virale1/diversite24"));
+    threads.push_back(std::thread(thread_function, "./Simulations/Diversite/PandemiePartielle/perfect_mix/charge_virale1/diversite28"));
+    threads.push_back(std::thread(thread_function, "./Simulations/Diversite/PandemiePartielle/perfect_mix/charge_virale1/diversite36"));
+    threads.push_back(std::thread(thread_function, "./Simulations/Diversite/PandemiePartielle/perfect_mix/charge_virale1/diversite40"));
+    threads.push_back(std::thread(thread_function, "./Simulations/Diversite/PandemiePartielle/perfect_mix/charge_virale1/diversite1000"));
 
-   threads.push_back(std::thread(thread_function, "./Simulations/Diversite/PandemiePartielle/perfect_mix/charge_virale1/diversite20"));
-   threads.push_back(std::thread(thread_function, "./Simulations/Diversite/PandemiePartielle/perfect_mix/charge_virale1/diversite24"));
-   threads.push_back(std::thread(thread_function, "./Simulations/Diversite/PandemiePartielle/perfect_mix/charge_virale1/diversite28"));
-   threads.push_back(std::thread(thread_function, "./Simulations/Diversite/PandemiePartielle/perfect_mix/charge_virale1/diversite36"));
-   threads.push_back(std::thread(thread_function, "./Simulations/Diversite/PandemiePartielle/perfect_mix/charge_virale1/diversite40"));
-   threads.push_back(std::thread(thread_function, "./Simulations/Diversite/PandemiePartielle/perfect_mix/charge_virale1/diversite1000"));
+    threads.push_back(std::thread(thread_function, "./Simulations/Diversite/PandemiePartielle/perfect_mix/charge_virale075/diversite20"));
+    threads.push_back(std::thread(thread_function, "./Simulations/Diversite/PandemiePartielle/perfect_mix/charge_virale075/diversite24"));
+    threads.push_back(std::thread(thread_function, "./Simulations/Diversite/PandemiePartielle/perfect_mix/charge_virale075/diversite28"));
+    threads.push_back(std::thread(thread_function, "./Simulations/Diversite/PandemiePartielle/perfect_mix/charge_virale075/diversite36"));
+    threads.push_back(std::thread(thread_function, "./Simulations/Diversite/PandemiePartielle/perfect_mix/charge_virale075/diversite40"));
+    threads.push_back(std::thread(thread_function, "./Simulations/Diversite/PandemiePartielle/perfect_mix/charge_virale075/diversite1000"));
 
-   threads.push_back(std::thread(thread_function, "./Simulations/Diversite/PandemiePartielle/perfect_mix/charge_virale075/diversite20"));
-   threads.push_back(std::thread(thread_function, "./Simulations/Diversite/PandemiePartielle/perfect_mix/charge_virale075/diversite24"));
-   threads.push_back(std::thread(thread_function, "./Simulations/Diversite/PandemiePartielle/perfect_mix/charge_virale075/diversite28"));
-   threads.push_back(std::thread(thread_function, "./Simulations/Diversite/PandemiePartielle/perfect_mix/charge_virale075/diversite36"));
-   threads.push_back(std::thread(thread_function, "./Simulations/Diversite/PandemiePartielle/perfect_mix/charge_virale075/diversite40"));
-   threads.push_back(std::thread(thread_function, "./Simulations/Diversite/PandemiePartielle/perfect_mix/charge_virale075/diversite1000"));
-
-   threads.push_back(std::thread(thread_function, "./Simulations/Diversite/PandemiePartielle/perfect_mix/charge_virale05/diversite20"));
-   threads.push_back(std::thread(thread_function, "./Simulations/Diversite/PandemiePartielle/perfect_mix/charge_virale05/diversite24"));
-   threads.push_back(std::thread(thread_function, "./Simulations/Diversite/PandemiePartielle/perfect_mix/charge_virale05/diversite28"));
-   threads.push_back(std::thread(thread_function, "./Simulations/Diversite/PandemiePartielle/perfect_mix/charge_virale05/diversite36"));
-   threads.push_back(std::thread(thread_function, "./Simulations/Diversite/PandemiePartielle/perfect_mix/charge_virale05/diversite40"));
-   threads.push_back(std::thread(thread_function, "./Simulations/Diversite/PandemiePartielle/perfect_mix/charge_virale05/diversite1000"));
-
-
-    /*  
+    threads.push_back(std::thread(thread_function, "./Simulations/Diversite/PandemiePartielle/perfect_mix/charge_virale05/diversite20"));
+    threads.push_back(std::thread(thread_function, "./Simulations/Diversite/PandemiePartielle/perfect_mix/charge_virale05/diversite24"));
+    threads.push_back(std::thread(thread_function, "./Simulations/Diversite/PandemiePartielle/perfect_mix/charge_virale05/diversite28"));
+    threads.push_back(std::thread(thread_function, "./Simulations/Diversite/PandemiePartielle/perfect_mix/charge_virale05/diversite36"));
+    threads.push_back(std::thread(thread_function, "./Simulations/Diversite/PandemiePartielle/perfect_mix/charge_virale05/diversite40"));
+    threads.push_back(std::thread(thread_function, "./Simulations/Diversite/PandemiePartielle/perfect_mix/charge_virale05/diversite1000"));
 
     // charge virale = 1
     threads.push_back(std::thread(thread_function, "./Simulations/Diversite/1sur16/charge_virale1/1mouvement/diversite4"));

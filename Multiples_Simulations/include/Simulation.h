@@ -40,6 +40,8 @@ public:
     void Pointer_array_to_NULL();
     //* Méthodes du fichier "m_mesures.cpp"
     int Update_infected_number();
+    void Nombre_de_fois_contamine();
+    int Update_nombre_AP_diff();
     //* Méthodes du fichier "m_file_functions.cpp"
     void File_init();
     void Read_Configuration_file();
@@ -105,6 +107,7 @@ private:
     int m_nombre_contamine_max;
     int m_iteration_max_contamine;
     int m_SIR_recovered;
+    int m_nombre_AP_diff_max;
 
     //* Path du fichier config
     std::string m_configuration_file_path;
@@ -124,7 +127,7 @@ private:
 
     //* Fichier csv pour la prise des données essentielles
     //std::ofstream m_nombre_contamine_file, m_nombre_de_fois_contamine_file, m_nombre_AP_diff_file, m_SIR_recovered_file, m_X_mouvements_time, m_IX, m_IY, m_times, m_rerun;
-    std::ofstream m_nombre_echec_file, m_iteration_fin_simulation_file, m_max_contamines_file, m_iteration_max_contamines_file, m_taille_pandemie_file;
+    std::ofstream m_nombre_echec_file, m_iteration_fin_simulation_file, m_max_contamines_file, m_iteration_max_contamines_file, m_taille_pandemie_file, m_nombre_de_fois_contamine_file, m_nombre_AP_diff_file;
 
     //* Variables pour calculer les temps d'exécution du programme
     unsigned long long int m_Init_time = 0;

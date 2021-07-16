@@ -48,6 +48,8 @@ void Simulation::Close_files()
     m_max_contamines_file.close();
     m_iteration_max_contamines_file.close();
     m_taille_pandemie_file.close();
+    m_nombre_AP_diff_file.close();
+    m_nombre_de_fois_contamine_file.close();
 }
 
 //* Initialise les fichiers csv
@@ -70,6 +72,8 @@ void Simulation::Open_append_mode_csv()
     m_max_contamines_file.open(path_copy + "/m_max_contamines_file.csv", std::ios::app);
     m_iteration_max_contamines_file.open(path_copy + "/m_iteration_max_contamines_file.csv", std::ios::app);
     m_taille_pandemie_file.open(path_copy + "/m_taille_pandemie_file.csv", std::ios::app);
+    m_nombre_AP_diff_file.open(path_copy + "/m_nombre_AP_diff_file.csv", std::ios::app);
+    m_nombre_de_fois_contamine_file.open(path_copy + "/m_nombre_de_fois_contamine_file.csv", std::ios::app);
 }
 
 //* Crée les fichiers csv et les initialise
@@ -90,6 +94,8 @@ void Simulation::Create_and_initialize_csv()
     m_max_contamines_file.open(path_copy + "/m_max_contamines_file.csv");
     m_iteration_max_contamines_file.open(path_copy + "/m_iteration_max_contamines_file.csv");
     m_taille_pandemie_file.open(path_copy + "/m_taille_pandemie_file.csv");
+    m_nombre_AP_diff_file.open(path_copy + "/m_nombre_AP_diff_file.csv");
+    m_nombre_de_fois_contamine_file.open(path_copy + "/m_nombre_de_fois_contamine_file.csv");
 
     //* Init colonne names
     m_nombre_echec_file << "Nombre_echec";
@@ -97,6 +103,8 @@ void Simulation::Create_and_initialize_csv()
     m_max_contamines_file << "Max_contamines";
     m_iteration_max_contamines_file << "Iteration_max_contamines";
     m_taille_pandemie_file << "Taille de la pandémie";
+    m_nombre_AP_diff_file << "Nombre AP";
+    m_nombre_de_fois_contamine_file << "Individus";
 
     //* Ferme les fichiers
     Close_files();

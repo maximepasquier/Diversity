@@ -1,1 +1,38 @@
 \chapter{Mutations} \label{ch:mutations}
+
+Une mutation est une complémentation aléatoire d'un bit de la séquence d'un génome. Dans le modèle, seuls les agents pathogènes peuvent muter. Le mécanisme de mutation est donc um moyen permettant aux agents pathogènes de mieux s'adapter à la population et accélérer le propagation d'une pandémie.
+
+\section{Mesures et méthodologie}
+
+Le chapitre se concentre sur la vitesse de propagation de pandémies en fonction du facteur de mutations des agents pathogènes. L'objectif est de mesurer l'impacte de la mutation sur la propagation d'une pandémie dans une population donnée. Les systèmes étudiés sont de taille $1264 \times 1264$ avec $10^5$ individus. Le nombre de mouvements des individus est défini à $5$ et les génomes des individus vallent tous $65535$ et le génomes de l'agent pathogène initial vaut $0$. Par conséquent la distance de hamming entre les individu et l'agent pathogène vaut $16$.\\
+
+L'unique différence entre toutes les configurations est la vitesse de mutation. Un ensemble de $6$ systèmes sont étudiés et les vitesses de mutations vallent : $0,10^{-1},10^{-2},10^{-3},10^{-4},10^{-5}$.\\
+
+Un total de $100$ simulations par configuration permet de faire des statistiques. Nous mesurons la taille des pandémies (dans le cas ou elles sont partielles), l'itération à laquelle tous les individus ont quitté le compartiement $S$, le nombre maximum d'agents pathogènes simultanément ainsi que le nombre de fois que les individus ont été contaminés. Toutes ces mesures sont moyennées sur un total de $100$ exécutions.
+
+\section{Vitesse de propagation}
+
+Les premières mesures cherchent à quantifier l'accélération de propagation dû à la mutation des agents pathogènes. Les $6$ configurations sont identiques à l'exception de la vitesse de mutation des agents pathogènes du système. Cette vitesse varie de $0,10^{-1},10^{-2},10^{-3},10^{-4},10^{-5}$, c'est-à-dire que chaque agent pathogène à cette probaiblité de muter à chque itération. Une mutation est la complémentation d'une seul bit de sa séquence.\\
+
+Les résultats sont présentés sous forme d'un tableau qui montre les moyennes des caractéristiques des simulations.
+
+\begin{table}[H]
+	\centering
+	\captionsetup{justification=centering}
+	\caption[Vitesses pandémies]{Mesures de la vitesse des pandémies, de la taille des pandémies, du nombre d'agents pathogène maximum simultanément ainsi que du nombre de fois que les individus ont été contaminés. Toutes les valeurs sont les moyennes sur $100$ exécutions.\label{tab:grid}}
+	\begin{tabular}{@{\extracolsep{\fill} } |m{8em}| c| c| c| c| c| c|}
+		\toprule
+		Configurations            & 1         & 2         & 3         & 4         & 5         & 0        \\
+		\midrule
+		Vitesse mutation          & $10^{-1}$ & $10^{-2}$ & $10^{-3}$ & $10^{-4}$ & $10^{-5}$ & 0        \\
+		\midrule
+		Taille pandémie           & 100\%     & 100\%     & 100\%     & 96055.8   & 79759.37  & 24115.77 \\
+		\midrule
+		Vitesse pandémie          & 1627.88   & 1642.91   & 1902.73   & 2408.01   & 3278.22   & 3640.12  \\
+		\midrule
+		Nombre AP                 & 83392.27  & 68712.32  & 11363.25  & 1575.91   & 34.77     & 1        \\
+		\midrule
+		Nombre de fois contaminés & 13.10     & 8.10      & 11.00     & 11.95     & 6.42      & 0.24     \\
+		\bottomrule
+	\end{tabular}
+\end{table}

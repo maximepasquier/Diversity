@@ -16,7 +16,7 @@ void Simulation::Iterations()
     //* Itère sur le nombre d'itération de la simulation
     //m_iteration_fin = 0;
     //while (1)
-    for (int iteration = 0; iteration < 2000; iteration++)
+    for (int iteration = 0; iteration < m_ITERATIONS; iteration++)
     {
         //One_iteration(m_iteration_fin);
         //m_iteration_fin++;
@@ -25,17 +25,16 @@ void Simulation::Iterations()
         //* Vérifier que des individus soient contaminés
         if (m_nombre_contamine == 0)
         {
-            success = false;
+            //success = false;
             break;
         }
-        /*
-        //* Coupe la simulation si 5% des individus quittent le compartiment Susceptible
-        if (m_nombre_contamine + m_SIR_recovered > m_NOMBRE_INDIVIDUS / 10)
+        
+        //* Coupe la simulation si 100% des individus quittent le compartiment Susceptible
+        if (m_nombre_contamine + m_SIR_recovered == m_NOMBRE_INDIVIDUS)
         {
-            success = true;
+            //success = true;
             break;
         }
-        */
     }
 }
 
@@ -45,6 +44,13 @@ void Simulation::One_iteration(int iteration)
     //* Compter le nombre de contaminés
     m_nombre_contamine = Update_infected_number();
     m_SIR_recovered = SIR_recovered();
+    m_nombre_AP_diff = Update_nombre_AP_diff();
+
+    //* Déterminer si c'est le max de AP
+    if(m_nombre_AP_diff > m_nombre_AP_diff_max)
+    {
+        m_nombre_AP_diff_max = m_nombre_AP_diff;
+    }
 
     //* Détermine si c'est le max de contaminés
     if (m_nombre_contamine > m_nombre_contamine_max)

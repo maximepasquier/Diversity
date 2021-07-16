@@ -70,4 +70,6 @@
 \contentsline {subsection}{\numberline {10.3.1}Conclusion des résultats}{63}{subsection.10.3.1}%
 \contentsline {section}{\numberline {10.4}Pandémies partielles}{65}{section.10.4}%
 \contentsline {chapter}{\numberline {11}Mutations}{68}{chapter.11}%
-\contentsline {chapter}{\numberline {12}Conclusion}{69}{chapter.12}%
+\contentsline {section}{\numberline {11.1}Mesures et méthodologie}{68}{section.11.1}%
+\contentsline {section}{\numberline {11.2}Vitesse de propagation}{68}{section.11.2}%
+\contentsline {chapter}{\numberline {12}Conclusion}{70}{chapter.12}%
