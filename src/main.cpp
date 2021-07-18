@@ -304,7 +304,7 @@ int main(int argc, char const *argv[])
     threads.push_back(std::thread(thread_function, "./Simulations/SIR/Mouvements/600mouvements"));
     threads.push_back(std::thread(thread_function, "./Simulations/SIR/Mouvements/800mouvements"));
     threads.push_back(std::thread(thread_function, "./Simulations/SIR/Mouvements/1000mouvements"));
-    */
+    
 
     // Mutation
     threads.push_back(std::thread(thread_function, "./Simulations/SIR/Mutation/zero"));
@@ -314,7 +314,7 @@ int main(int argc, char const *argv[])
     threads.push_back(std::thread(thread_function, "./Simulations/SIR/Mutation/moins4"));
     threads.push_back(std::thread(thread_function, "./Simulations/SIR/Mutation/moins5"));
 
-    /*    
+        
 
     // Référence au mélange parfait
     threads.push_back(std::thread(thread_function, "./Simulations/SIR/Diversite/PandemiePartielle/perfect_mix/charge_virale1/diversite4"));

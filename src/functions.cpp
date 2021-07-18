@@ -75,7 +75,7 @@ float Double_Match(int distance, int genome_size, unsigned int puissance)
      * de la distance de hamming, de la taille des génomes en bits ainsi
      * que d'un facteur puissance qui influence la sortie de la fonction. 
      */
-    return pow((distance-32), puissance) / pow(genome_size * 8, puissance);
+    return pow((distance - 32), puissance) / pow(genome_size * 8, puissance);
 }
 
 //* Génération de génomes pour les individus

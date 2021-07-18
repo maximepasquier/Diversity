@@ -2,7 +2,7 @@
 /**
  * Les fichiers "functions" contiennent toutes les fonctions
  * n'étant pas directement liée aux classes du programme.
- * Il y figure donc toutes les fonction à usage universel.
+ * Il y figure donc toutes les fonctions à usage universel.
  */
 
 float Genome_Match(int distance, int genome_size, unsigned int puissance);

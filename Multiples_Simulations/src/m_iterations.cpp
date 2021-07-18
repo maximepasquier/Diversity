@@ -28,7 +28,7 @@ void Simulation::Iterations()
             //success = false;
             break;
         }
-        
+
         //* Coupe la simulation si 100% des individus quittent le compartiment Susceptible
         if (m_nombre_contamine + m_SIR_recovered == m_NOMBRE_INDIVIDUS)
         {
@@ -47,7 +47,7 @@ void Simulation::One_iteration(int iteration)
     m_nombre_AP_diff = Update_nombre_AP_diff();
 
     //* Déterminer si c'est le max de AP
-    if(m_nombre_AP_diff > m_nombre_AP_diff_max)
+    if (m_nombre_AP_diff > m_nombre_AP_diff_max)
     {
         m_nombre_AP_diff_max = m_nombre_AP_diff;
     }

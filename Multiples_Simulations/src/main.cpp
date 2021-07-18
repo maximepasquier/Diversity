@@ -24,14 +24,16 @@ int main(int argc, char const *argv[])
 
     std::vector<std::thread> threads;
 
-    //threads.push_back(std::thread(thread_function, "./Simulations/Mutation/ImmunisationGroupe/zero"));
+    /*
+
+    threads.push_back(std::thread(thread_function, "./Simulations/Mutation/ImmunisationGroupe/zero"));
     threads.push_back(std::thread(thread_function, "./Simulations/Mutation/ImmunisationGroupe/moins1"));
     threads.push_back(std::thread(thread_function, "./Simulations/Mutation/ImmunisationGroupe/moins2"));
     threads.push_back(std::thread(thread_function, "./Simulations/Mutation/ImmunisationGroupe/moins3"));
     threads.push_back(std::thread(thread_function, "./Simulations/Mutation/ImmunisationGroupe/moins4"));
     threads.push_back(std::thread(thread_function, "./Simulations/Mutation/ImmunisationGroupe/moins5"));
 
-    /*
+    
 
     threads.push_back(std::thread(thread_function, "./Simulations/Diversite/PandemiePartielle/perfect_mix/charge_virale1/diversite4"));
     threads.push_back(std::thread(thread_function, "./Simulations/Diversite/PandemiePartielle/perfect_mix/charge_virale1/diversite8"));
