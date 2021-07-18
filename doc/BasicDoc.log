@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2021.6.17)  16 JUL 2021 11:57
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2021.6.17)  18 JUL 2021 10:41
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -3268,11 +3268,36 @@ Underfull \hbox (badness 3919) in paragraph at lines 35--35
 
 
 
-]) [69]
+]
+Underfull \hbox (badness 3919) in paragraph at lines 56--56
+[]|\T1/ppl/m/n/10.95 (+20) Nombre de fois
+ []
+
+
+Overfull \hbox (5.6564pt too wide) in paragraph at lines 44--59
+ [][] 
+ []
+
+) [69]
 \openout2 = `Conclusion.aux'.
 
  (./Conclusion.tex
 chapter 12.
+
+Underfull \hbox (badness 10000) in paragraph at lines 3--4
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 5--6
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 7--8
+
+ []
+
 ) [70
 
 
@@ -3299,8 +3324,8 @@ Package logreq Info: Writing requests to 'BasicDoc.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 54592 strings out of 481239
- 1208425 string characters out of 5920377
+ 54593 strings out of 481239
+ 1208441 string characters out of 5920377
  2145555 words of memory out of 5000000
  68207 multiletter control sequences out of 15000+600000
  609021 words of font info for 336 fonts, out of 8000000 for 9000
@@ -3317,10 +3342,10 @@ r/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/share/texl
 ive/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/share/texlive/texmf-di
 st/fonts/type1/urw/palatino/uplr8a.pfb></usr/share/texlive/texmf-dist/fonts/typ
 e1/urw/palatino/uplri8a.pfb>
-Output written on BasicDoc.pdf (76 pages, 2138700 bytes).
+Output written on BasicDoc.pdf (76 pages, 2141162 bytes).
 PDF statistics:
- 3800 PDF objects out of 4296 (max. 8388607)
- 1857 compressed objects within 19 object streams
- 222 named destinations out of 1000 (max. 500000)
+ 3802 PDF objects out of 4296 (max. 8388607)
+ 1859 compressed objects within 19 object streams
+ 223 named destinations out of 1000 (max. 500000)
  41202 words of extra memory for PDF output out of 42996 (max. 10000000)
 

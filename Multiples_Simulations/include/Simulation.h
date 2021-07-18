@@ -90,6 +90,7 @@ private:
     float m_VITESSE_MUTATIONS_AP;      // définit la vitesse à laquelle les pathogènes mutent
     float m_CHARGE_VIRALE;             // charge virale (niveau de contagion)
     unsigned int m_PARAMETRE_FONCTION; // puissance des termes dans la fonction de génome match
+    unsigned int m_PARAMETRE_FONCTION_DOUBLE;
     float m_CELLULE_AP;                // détermine la probabilité de contaminer une cellule
     float m_SURVIE_AP;                 // probabilité que le pathogène contaminant une cellule reste en vie
     int m_NOMBRE_MOUVEMENT;            // nombre de mouvements par itération

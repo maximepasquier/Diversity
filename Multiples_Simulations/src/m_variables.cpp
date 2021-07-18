@@ -48,6 +48,10 @@ void Simulation::Assign_variables()
         {
             m_PARAMETRE_FONCTION = stoul(value);
         }
+        else if (key == "PARAMETRE_FONCTION_DOUBLE")
+        {
+            m_PARAMETRE_FONCTION_DOUBLE = stoul(value);
+        }
         else if (key == "CELLULE_AP")
         {
             m_CELLULE_AP = stof(value);
