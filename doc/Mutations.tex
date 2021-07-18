@@ -40,6 +40,27 @@ Les résultats sont présentés sous forme d'un tableau qui montre les moyennes 
 \begin{table}[H]
 	\centering
 	\captionsetup{justification=centering}
+	\caption[Standard Deviation : Immunisation Simple]{Mesures de la déviation standard pour la vitesse des pandémies, la taille des pandémies, le nombre d'agents pathogène maximum simultanément ainsi que le nombre de fois que les individus ont été contaminés. Toutes les valeurs sont les déviations standards sur $100$ exécutions.\label{tab:grid}}
+	\begin{tabular}{@{\extracolsep{\fill} } |m{8em}| c| c| c| c| c| c|}
+		\toprule
+		Configurations            & 1         & 2         & 3         & 4         & 5         & 0        \\
+		\midrule
+		Vitesse mutation          & $10^{-1}$ & $10^{-2}$ & $10^{-3}$ & $10^{-4}$ & $10^{-5}$ & 0        \\
+		\midrule
+		Taille pandémie           & 0         & 0         & 0         & 19420.27  & 38589.04  & 15985.66 \\
+		\midrule
+		Vitesse pandémie          & 35.94     & 43.45     & 100.91    & 478.37    & 1289.93   & 1880.22  \\
+		\midrule
+		Nombre AP                 & 141.94    & 1037.33   & 570.83    & 339.05    & 18.62     & 0        \\
+		\midrule
+		Nombre de fois contaminés & 0.42      & 0.37      & 0.69      & 2.57      & 3.57      & 0.16     \\
+		\bottomrule
+	\end{tabular}
+\end{table}
+
+\begin{table}[H]
+	\centering
+	\captionsetup{justification=centering}
 	\caption[Vitesses pandémies : Immunisation Groupe]{Mesures de la vitesse des pandémies, de la taille des pandémies, du nombre d'agents pathogène maximum simultanément ainsi que du nombre de fois que les individus ont été contaminés. Toutes les valeurs sont les moyennes sur $100$ exécutions.\label{tab:grid}}
 	\begin{tabular}{@{\extracolsep{\fill} } |m{8em}| c| c| c| c| c| c|}
 		\toprule
@@ -54,6 +75,27 @@ Les résultats sont présentés sous forme d'un tableau qui montre les moyennes 
 		Nombre AP                 & 68848.85  & 62850.26  & 5557.62   & 304.65    & 3.04      & 1        \\
 		\midrule
 		Nombre de fois contaminés & 11.83     & 6.31      & 4.20      & 2.72      & 0.56      & 0.24     \\
+		\bottomrule
+	\end{tabular}
+\end{table}
+
+\begin{table}[H]
+	\centering
+	\captionsetup{justification=centering}
+	\caption[Standard Deviation : Immunisation Groupe]{Mesures de la déviation standard pour la vitesse des pandémies, la taille des pandémies, le nombre d'agents pathogène maximum simultanément ainsi que le nombre de fois que les individus ont été contaminés. Toutes les valeurs sont les déviations standards sur $100$ exécutions.\label{tab:grid}}
+	\begin{tabular}{@{\extracolsep{\fill} } |m{8em}| c| c| c| c| c| c|}
+		\toprule
+		Configurations            & 1         & 2         & 3         & 4         & 5         & 0        \\
+		\midrule
+		Vitesse mutation          & $10^{-1}$ & $10^{-2}$ & $10^{-3}$ & $10^{-4}$ & $10^{-5}$ & 0        \\
+		\midrule
+		Taille pandémie           & 0         & 0         & 23586.16  & 39205.49  & 29834.88  & 15985.66 \\
+		\midrule
+		Vitesse pandémie          & 40.65     & 71.86     & 482.80    & 2206.26   & 2278.21   & 1880.22  \\
+		\midrule
+		Nombre AP                 & 456.61    & 1133.30   & 1679.36   & 182.76    & 1.54      & 0        \\
+		\midrule
+		Nombre de fois contaminés & 0.32      & 0.27      & 1.11      & 1.44      & 0.43      & 0.16     \\
 		\bottomrule
 	\end{tabular}
 \end{table}
