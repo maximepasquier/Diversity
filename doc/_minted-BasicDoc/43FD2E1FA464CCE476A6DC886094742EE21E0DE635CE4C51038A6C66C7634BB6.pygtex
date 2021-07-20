@@ -10,6 +10,7 @@
 \PYG{n}{VITESSE\PYGZus{}MUTATIONS\PYGZus{}AP} \PYG{o}{=} \PYG{l+m+mi}{0}
 \PYG{n}{CHARGE\PYGZus{}VIRALE} \PYG{o}{=} \PYG{l+m+mi}{1}
 \PYG{n}{PARAMETRE\PYGZus{}FONCTION} \PYG{o}{=} \PYG{l+m+mi}{1}
+\PYG{n}{PARAMETRE\PYGZus{}FONCTION\PYGZus{}DOUBLE} \PYG{o}{=} \PYG{l+m+mi}{1}
 \PYG{n}{CELLULE\PYGZus{}AP} \PYG{o}{=} \PYG{l+m+mi}{0}
 \PYG{n}{SURVIE\PYGZus{}AP} \PYG{o}{=} \PYG{l+m+mi}{0}
 \PYG{n}{NOMBRE\PYGZus{}MOUVEMENT} \PYG{o}{=} \PYG{l+m+mi}{1}

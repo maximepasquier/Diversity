@@ -37,39 +37,39 @@
 \contentsline {subsubsection}{\nonumberline Permutation}{21}{section*.14}%
 \contentsline {subsubsection}{\nonumberline Agents pathogènes}{21}{section*.15}%
 \contentsline {subsubsection}{\nonumberline Individus}{21}{section*.16}%
-\contentsline {subsubsection}{\nonumberline Mesures}{23}{section*.19}%
-\contentsline {section}{\numberline {5.4}Fermeture}{24}{section.5.4}%
-\contentsline {chapter}{\numberline {6}Objectifs}{25}{chapter.6}%
-\contentsline {chapter}{\numberline {7}Modèles Compartimentaux}{27}{chapter.7}%
-\contentsline {section}{\numberline {7.1}Modèle SI}{28}{section.7.1}%
-\contentsline {section}{\numberline {7.2}Modèle SIR}{29}{section.7.2}%
-\contentsline {section}{\numberline {7.3}Simulations de références}{30}{section.7.3}%
-\contentsline {subsection}{\numberline {7.3.1}Simulations de SI}{31}{subsection.7.3.1}%
-\contentsline {subsection}{\numberline {7.3.2}Simulations de SIR}{32}{subsection.7.3.2}%
-\contentsline {chapter}{\numberline {8}Modèle SI}{34}{chapter.8}%
-\contentsline {section}{\numberline {8.1}Mesures et méthodologie SI}{34}{section.8.1}%
-\contentsline {section}{\numberline {8.2}Résultats}{35}{section.8.2}%
-\contentsline {section}{\numberline {8.3}Analyses}{38}{section.8.3}%
-\contentsline {subsection}{\numberline {8.3.1}Mean Absolute Error}{38}{subsection.8.3.1}%
-\contentsline {subsection}{\numberline {8.3.2}Moyenne de voisinage}{38}{subsection.8.3.2}%
-\contentsline {subsection}{\numberline {8.3.3}Variations aléatoires}{39}{subsection.8.3.3}%
-\contentsline {subsection}{\numberline {8.3.4}Positions des individus}{41}{subsection.8.3.4}%
-\contentsline {chapter}{\numberline {9}Modèle SIR}{43}{chapter.9}%
-\contentsline {section}{\numberline {9.1}Mesures et méthodologie SIR}{43}{section.9.1}%
-\contentsline {section}{\numberline {9.2}Résultats}{44}{section.9.2}%
-\contentsline {section}{\numberline {9.3}Analyses}{47}{section.9.3}%
-\contentsline {subsection}{\numberline {9.3.1}Mean Absolute Error}{47}{subsection.9.3.1}%
-\contentsline {subsection}{\numberline {9.3.2}Variations aléatoires}{49}{subsection.9.3.2}%
-\contentsline {subsection}{\numberline {9.3.3}Latence des simulations}{50}{subsection.9.3.3}%
-\contentsline {subsection}{\numberline {9.3.4}Mouvements variable}{53}{subsection.9.3.4}%
-\contentsline {subsection}{\numberline {9.3.5}Comparaison 1000 mouvements}{54}{subsection.9.3.5}%
-\contentsline {chapter}{\numberline {10}Diversité}{56}{chapter.10}%
-\contentsline {section}{\numberline {10.1}Mesures et méthodologie}{56}{section.10.1}%
-\contentsline {section}{\numberline {10.2}Pandémies totales}{56}{section.10.2}%
-\contentsline {section}{\numberline {10.3}Taux de pandémies}{58}{section.10.3}%
-\contentsline {subsection}{\numberline {10.3.1}Conclusion des résultats}{63}{subsection.10.3.1}%
-\contentsline {section}{\numberline {10.4}Pandémies partielles}{65}{section.10.4}%
-\contentsline {chapter}{\numberline {11}Mutations}{68}{chapter.11}%
-\contentsline {section}{\numberline {11.1}Mesures et méthodologie}{68}{section.11.1}%
-\contentsline {section}{\numberline {11.2}Vitesse de propagation}{68}{section.11.2}%
-\contentsline {chapter}{\numberline {12}Conclusion}{71}{chapter.12}%
+\contentsline {subsubsection}{\nonumberline Mesures}{24}{section*.20}%
+\contentsline {section}{\numberline {5.4}Fermeture}{25}{section.5.4}%
+\contentsline {chapter}{\numberline {6}Objectifs}{26}{chapter.6}%
+\contentsline {chapter}{\numberline {7}Modèles Compartimentaux}{28}{chapter.7}%
+\contentsline {section}{\numberline {7.1}Modèle SI}{29}{section.7.1}%
+\contentsline {section}{\numberline {7.2}Modèle SIR}{30}{section.7.2}%
+\contentsline {section}{\numberline {7.3}Simulations de références}{31}{section.7.3}%
+\contentsline {subsection}{\numberline {7.3.1}Simulations de SI}{32}{subsection.7.3.1}%
+\contentsline {subsection}{\numberline {7.3.2}Simulations de SIR}{33}{subsection.7.3.2}%
+\contentsline {chapter}{\numberline {8}Modèle SI}{35}{chapter.8}%
+\contentsline {section}{\numberline {8.1}Mesures et méthodologie SI}{35}{section.8.1}%
+\contentsline {section}{\numberline {8.2}Résultats}{36}{section.8.2}%
+\contentsline {section}{\numberline {8.3}Analyses}{39}{section.8.3}%
+\contentsline {subsection}{\numberline {8.3.1}Mean Absolute Error}{39}{subsection.8.3.1}%
+\contentsline {subsection}{\numberline {8.3.2}Moyenne de voisinage}{39}{subsection.8.3.2}%
+\contentsline {subsection}{\numberline {8.3.3}Variations aléatoires}{40}{subsection.8.3.3}%
+\contentsline {subsection}{\numberline {8.3.4}Positions des individus}{42}{subsection.8.3.4}%
+\contentsline {chapter}{\numberline {9}Modèle SIR}{44}{chapter.9}%
+\contentsline {section}{\numberline {9.1}Mesures et méthodologie SIR}{44}{section.9.1}%
+\contentsline {section}{\numberline {9.2}Résultats}{45}{section.9.2}%
+\contentsline {section}{\numberline {9.3}Analyses}{48}{section.9.3}%
+\contentsline {subsection}{\numberline {9.3.1}Mean Absolute Error}{48}{subsection.9.3.1}%
+\contentsline {subsection}{\numberline {9.3.2}Variations aléatoires}{50}{subsection.9.3.2}%
+\contentsline {subsection}{\numberline {9.3.3}Latence des simulations}{51}{subsection.9.3.3}%
+\contentsline {subsection}{\numberline {9.3.4}Mouvements variable}{54}{subsection.9.3.4}%
+\contentsline {subsection}{\numberline {9.3.5}Comparaison 1000 mouvements}{55}{subsection.9.3.5}%
+\contentsline {chapter}{\numberline {10}Diversité}{57}{chapter.10}%
+\contentsline {section}{\numberline {10.1}Mesures et méthodologie}{57}{section.10.1}%
+\contentsline {section}{\numberline {10.2}Pandémies totales}{57}{section.10.2}%
+\contentsline {section}{\numberline {10.3}Taux de pandémies}{59}{section.10.3}%
+\contentsline {subsection}{\numberline {10.3.1}Conclusion des résultats}{64}{subsection.10.3.1}%
+\contentsline {section}{\numberline {10.4}Pandémies partielles}{66}{section.10.4}%
+\contentsline {chapter}{\numberline {11}Mutations}{69}{chapter.11}%
+\contentsline {section}{\numberline {11.1}Mesures et méthodologie}{69}{section.11.1}%
+\contentsline {section}{\numberline {11.2}Vitesse de propagation}{69}{section.11.2}%
+\contentsline {chapter}{\numberline {12}Conclusion}{72}{chapter.12}%

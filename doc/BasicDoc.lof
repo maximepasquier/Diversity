@@ -16,30 +16,32 @@
 \contentsline {figure}{\numberline {5.3}{\ignorespaces Fonction de converstion en probabilité (facteur 2)}}{22}{figure.caption.17}%
 \contentsline {figure}{\numberline {5.4}{\ignorespaces Fonction de converstion en probabilité (facteur 4)}}{22}{figure.caption.18}%
 \contentsline {figure}{\numberline {5.5}{\ignorespaces Fonction de converstion en probabilité (facteur 8)}}{22}{figure.caption.18}%
+\contentsline {figure}{\numberline {5.6}{\ignorespaces Fonction (double) de converstion en probabilité (facteur 4)}}{24}{figure.caption.19}%
+\contentsline {figure}{\numberline {5.7}{\ignorespaces Fonction (double) de converstion en probabilité (facteur 8)}}{24}{figure.caption.19}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {7.1}{\ignorespaces Modèle mathématique SI}}{29}{figure.caption.20}%
-\contentsline {figure}{\numberline {7.2}{\ignorespaces Modèle mathématique SIR}}{30}{figure.caption.21}%
+\contentsline {figure}{\numberline {7.1}{\ignorespaces Modèle mathématique SI}}{30}{figure.caption.21}%
+\contentsline {figure}{\numberline {7.2}{\ignorespaces Modèle mathématique SIR}}{31}{figure.caption.22}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {8.1}{\ignorespaces Simulations de SI, densité 1/2}}{35}{figure.caption.22}%
-\contentsline {figure}{\numberline {8.2}{\ignorespaces Simulations de SI, densité 1/4}}{36}{figure.caption.23}%
-\contentsline {figure}{\numberline {8.3}{\ignorespaces Simulations de SI, densité 1/8}}{36}{figure.caption.24}%
-\contentsline {figure}{\numberline {8.4}{\ignorespaces Simulations de SI, densité 1/16}}{37}{figure.caption.25}%
-\contentsline {figure}{\numberline {8.5}{\ignorespaces Variations aléatoires : SI}}{40}{figure.caption.28}%
-\contentsline {figure}{\numberline {8.6}{\ignorespaces Positions des individus : mélange parfait}}{41}{figure.caption.30}%
-\contentsline {figure}{\numberline {8.7}{\ignorespaces Positions des individus : 1000 mouvements, densité variable}}{42}{figure.caption.31}%
+\contentsline {figure}{\numberline {8.1}{\ignorespaces Simulations de SI, densité 1/2}}{36}{figure.caption.23}%
+\contentsline {figure}{\numberline {8.2}{\ignorespaces Simulations de SI, densité 1/4}}{37}{figure.caption.24}%
+\contentsline {figure}{\numberline {8.3}{\ignorespaces Simulations de SI, densité 1/8}}{37}{figure.caption.25}%
+\contentsline {figure}{\numberline {8.4}{\ignorespaces Simulations de SI, densité 1/16}}{38}{figure.caption.26}%
+\contentsline {figure}{\numberline {8.5}{\ignorespaces Variations aléatoires : SI}}{41}{figure.caption.29}%
+\contentsline {figure}{\numberline {8.6}{\ignorespaces Positions des individus : mélange parfait}}{42}{figure.caption.31}%
+\contentsline {figure}{\numberline {8.7}{\ignorespaces Positions des individus : 1000 mouvements, densité variable}}{43}{figure.caption.32}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {9.1}{\ignorespaces Simulation SIR, densité $1/2$}}{44}{figure.caption.32}%
-\contentsline {figure}{\numberline {9.2}{\ignorespaces Simulation SIR, densité $1/4$}}{45}{figure.caption.33}%
-\contentsline {figure}{\numberline {9.3}{\ignorespaces Simulation SIR, densité $1/8$}}{46}{figure.caption.34}%
-\contentsline {figure}{\numberline {9.4}{\ignorespaces Simulation SIR, densité $1/16$}}{47}{figure.caption.35}%
-\contentsline {figure}{\numberline {9.5}{\ignorespaces Variations SIR}}{49}{figure.caption.37}%
-\contentsline {figure}{\numberline {9.6}{\ignorespaces Simulation SIR avec latence}}{51}{figure.caption.39}%
-\contentsline {figure}{\numberline {9.7}{\ignorespaces Mesures de latences SIR}}{52}{figure.caption.40}%
-\contentsline {figure}{\numberline {9.8}{\ignorespaces Mouvements variable : SIR}}{53}{figure.caption.41}%
-\contentsline {figure}{\numberline {9.9}{\ignorespaces Comparaison simulations SIR normalisées}}{54}{figure.caption.42}%
+\contentsline {figure}{\numberline {9.1}{\ignorespaces Simulation SIR, densité $1/2$}}{45}{figure.caption.33}%
+\contentsline {figure}{\numberline {9.2}{\ignorespaces Simulation SIR, densité $1/4$}}{46}{figure.caption.34}%
+\contentsline {figure}{\numberline {9.3}{\ignorespaces Simulation SIR, densité $1/8$}}{47}{figure.caption.35}%
+\contentsline {figure}{\numberline {9.4}{\ignorespaces Simulation SIR, densité $1/16$}}{48}{figure.caption.36}%
+\contentsline {figure}{\numberline {9.5}{\ignorespaces Variations SIR}}{50}{figure.caption.38}%
+\contentsline {figure}{\numberline {9.6}{\ignorespaces Simulation SIR avec latence}}{52}{figure.caption.40}%
+\contentsline {figure}{\numberline {9.7}{\ignorespaces Mesures de latences SIR}}{53}{figure.caption.41}%
+\contentsline {figure}{\numberline {9.8}{\ignorespaces Mouvements variable : SIR}}{54}{figure.caption.42}%
+\contentsline {figure}{\numberline {9.9}{\ignorespaces Comparaison simulations SIR normalisées}}{55}{figure.caption.43}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {10.1}{\ignorespaces Impacte de la diversité}}{57}{figure.caption.43}%
-\contentsline {figure}{\numberline {10.2}{\ignorespaces vague propagation\relax }}{64}{figure.caption.52}%
+\contentsline {figure}{\numberline {10.1}{\ignorespaces Impacte de la diversité}}{58}{figure.caption.44}%
+\contentsline {figure}{\numberline {10.2}{\ignorespaces vague propagation\relax }}{65}{figure.caption.53}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
