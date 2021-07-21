@@ -157,22 +157,24 @@ Le processus de mise à jour pour les individus non contaminés est bien différ
 Les deux types d'interactions suivent la même méthodologie en cas de contact. La première étape de toutes interactions est donnée par le paramètre {\small "CHARGE\_VIRALE"}. Ce paramètre borné entre $[0,1]$ détermine la probabilité qu'une interaction se produise entre deux acteurs en contact. La deuxième étape est la vérification des immunités et il y a deux méthodes pour cette vérification. La première méthode naïve vérifie si l'individu est déjà immunisé au pathogène le contaminant. Si c'est le cas alors rien ne se produit. Sans protection l'individu est inévitablement contaminé par le pathogène. La seconde méthode consiste à calculer la distance de Hamming entre le pathogène rencontré et chacune des immunités de l'individu. Chaque distance de Hamming ainsi produite est convertie en probabilité d'être immunisé. La fonction de conversion en probabilité est très similaire à celle qui détermine le rejet d'un agent pathogène. Le paramètre {\small "PARAMETRE\_FONCTION\_DOUBLE"} défini le degré de la courbe.  \\
 
 $$
-f(d) = \frac{(d-32)^{PARAMETRE\_FONCTION_DOUBLE}}{32^{PARAMETRE\_FONCTION_DOUBLE}} = (\frac{d-32}{32})^{PARAMETRE\_FONCTION_DOUBLE}
+f(d) = \frac{(d-32)^{PARAMETRE\_FONCTION\_DOUBLE}}{32^{PARAMETRE\_FONCTION\_DOUBLE}} = (\frac{d-32}{32})^{PARAMETRE\_FONCTION\_DOUBLE}
 $$
 
 Le paramètre $d$ est la distance de Hamming entre le génome du pathogène rencontré et les génomes enregistrés suite aux immunisations. Cette fonction traduit la distance de Hamming en une probabilité car $d$ ne peut varier qu'entre $[0,32]$.
+
+\newpage
 
 \begin{figure}[h]
   \centering
     \captionsetup{justification=centering}
   \begin{minipage}[b]{0.4\textwidth}
     \includegraphics[width=\textwidth]{Images/doubleHamming4.png}
-    \caption[Fonction (double) de converstion en probabilité (facteur 4)]{Fonction de conversion de la distance de Hamming en probabilité avec {\small PARAMETRE\_FONCTION\_DOUBLE} = $4$}
+    \caption[Fonction (double) de converstion en probabilité (facteur 4)]{Fonction de conversion de la distance de Hamming en probabilité avec {\tiny PARAMETRE\_FONCTION\_DOUBLE} = $4$}
   \end{minipage}
   \hfill
   \begin{minipage}[b]{0.4\textwidth}
     \includegraphics[width=\textwidth]{Images/doubleHamming8.png}
-    \caption[Fonction (double) de converstion en probabilité (facteur 8)]{Fonction de conversion de la distance de Hamming en probabilité avec {\small PARAMETRE\_FONCTION\_DOUBLE} = $8$}
+    \caption[Fonction (double) de converstion en probabilité (facteur 8)]{Fonction de conversion de la distance de Hamming en probabilité avec {\tiny PARAMETRE\_FONCTION\_DOUBLE} = $8$}
   \end{minipage}
 \end{figure}
 
