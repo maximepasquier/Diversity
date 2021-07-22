@@ -1,7 +1,7 @@
 \boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
 \babel@toc {french}{}
-\contentsline {chapter}{\nonumberline Liste des tableaux}{IV}{chapter*.3}%
-\contentsline {chapter}{\nonumberline Table des figures}{V}{chapter*.4}%
+\contentsline {chapter}{\nonumberline Liste des tableaux}{V}{chapter*.3}%
+\contentsline {chapter}{\nonumberline Table des figures}{VI}{chapter*.4}%
 \contentsline {chapter}{\numberline {1}Résumé}{1}{chapter.1}%
 \contentsline {chapter}{\numberline {2}Introduction}{2}{chapter.2}%
 \contentsline {chapter}{\numberline {3}Approche du problème, méthodes, outils utilisés}{3}{chapter.3}%
@@ -45,7 +45,7 @@
 \contentsline {section}{\numberline {7.2}Modèle SIR}{30}{section.7.2}%
 \contentsline {section}{\numberline {7.3}Simulations de références}{31}{section.7.3}%
 \contentsline {subsection}{\numberline {7.3.1}Simulations de SI}{32}{subsection.7.3.1}%
-\contentsline {subsection}{\numberline {7.3.2}Simulations de SIR}{33}{subsection.7.3.2}%
+\contentsline {subsection}{\numberline {7.3.2}Simulations de SIR}{34}{subsection.7.3.2}%
 \contentsline {chapter}{\numberline {8}Modèle SI}{35}{chapter.8}%
 \contentsline {section}{\numberline {8.1}Mesures et méthodologie SI}{35}{section.8.1}%
 \contentsline {section}{\numberline {8.2}Résultats}{36}{section.8.2}%
@@ -57,8 +57,8 @@
 \contentsline {chapter}{\numberline {9}Modèle SIR}{44}{chapter.9}%
 \contentsline {section}{\numberline {9.1}Mesures et méthodologie SIR}{44}{section.9.1}%
 \contentsline {section}{\numberline {9.2}Résultats}{45}{section.9.2}%
-\contentsline {section}{\numberline {9.3}Analyses}{48}{section.9.3}%
-\contentsline {subsection}{\numberline {9.3.1}Mean Absolute Error}{48}{subsection.9.3.1}%
+\contentsline {section}{\numberline {9.3}Analyses}{49}{section.9.3}%
+\contentsline {subsection}{\numberline {9.3.1}Mean Absolute Error}{49}{subsection.9.3.1}%
 \contentsline {subsection}{\numberline {9.3.2}Variations aléatoires}{50}{subsection.9.3.2}%
 \contentsline {subsection}{\numberline {9.3.3}Latence des simulations}{51}{subsection.9.3.3}%
 \contentsline {subsection}{\numberline {9.3.4}Mouvements variable}{54}{subsection.9.3.4}%
@@ -67,9 +67,11 @@
 \contentsline {section}{\numberline {10.1}Mesures et méthodologie}{57}{section.10.1}%
 \contentsline {section}{\numberline {10.2}Pandémies totales}{57}{section.10.2}%
 \contentsline {section}{\numberline {10.3}Taux de pandémies}{59}{section.10.3}%
-\contentsline {subsection}{\numberline {10.3.1}Conclusion des résultats}{64}{subsection.10.3.1}%
-\contentsline {section}{\numberline {10.4}Pandémies partielles}{66}{section.10.4}%
-\contentsline {chapter}{\numberline {11}Mutations}{69}{chapter.11}%
-\contentsline {section}{\numberline {11.1}Mesures et méthodologie}{69}{section.11.1}%
-\contentsline {section}{\numberline {11.2}Vitesse de propagation}{69}{section.11.2}%
+\contentsline {section}{\numberline {10.4}Pandémies partielles}{64}{section.10.4}%
+\contentsline {chapter}{\numberline {11}Mutations}{68}{chapter.11}%
+\contentsline {section}{\numberline {11.1}Mesures et méthodologie}{68}{section.11.1}%
+\contentsline {section}{\numberline {11.2}Vitesse de propagation}{68}{section.11.2}%
+\contentsline {subsection}{\numberline {11.2.1}Immunisation simple}{69}{subsection.11.2.1}%
+\contentsline {subsection}{\numberline {11.2.2}Immunisation groupe}{70}{subsection.11.2.2}%
+\contentsline {subsection}{\numberline {11.2.3}Conclusion des résultats}{71}{subsection.11.2.3}%
 \contentsline {chapter}{\numberline {12}Conclusion}{72}{chapter.12}%

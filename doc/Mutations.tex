@@ -1,25 +1,29 @@
 \chapter{Mutations} \label{ch:mutations}
 
-Une mutation est une complémentation aléatoire d'un bit de la séquence d'un génome. Dans le modèle, seuls les agents pathogènes peuvent muter. Le mécanisme de mutation est donc um moyen permettant aux agents pathogènes de mieux s'adapter à la population et accélérer le propagation d'une pandémie.
+Une mutation est une complémentation aléatoire d'un bit de la séquence d'un génome. Dans le modèle, seuls les agents pathogènes peuvent muter. Le mécanisme de mutation est donc un moyen permettant aux agents pathogènes de mieux s'adapter à la population et accélérer la propagation d'une pandémie.
 
 \section{Mesures et méthodologie}
 
-Le chapitre se concentre sur la vitesse de propagation de pandémies en fonction du facteur de mutations des agents pathogènes. L'objectif est de mesurer l'impacte de la mutation sur la propagation d'une pandémie dans une population donnée. Les systèmes étudiés sont de taille $1264 \times 1264$ avec $10^5$ individus. Le nombre de mouvements des individus est défini à $5$ et les génomes des individus vallent tous $65535$ et le génomes de l'agent pathogène initial vaut $0$. Par conséquent la distance de hamming entre les individu et l'agent pathogène vaut $16$.\\
+Le chapitre se concentre sur la vitesse de propagation de pandémies en fonction du facteur de mutations des agents pathogènes. L'objectif est de mesurer l'impact de la mutation sur la propagation d'une pandémie dans une population donnée. Les systèmes étudiés sont de taille $1264 \times 1264$ avec $10^5$ individus. Le nombre de mouvements des individus est défini à $5$ et les génomes des individus valent tous $65535$ et le génome de l'agent pathogène initial vaut $0$. Par conséquent la distance de Hamming entre les individu et l'agent pathogène vaut $16$.\\
 
-L'unique différence entre toutes les configurations est la vitesse de mutation. Un ensemble de $6$ systèmes sont étudiés et les vitesses de mutations vallent : $0,10^{-1},10^{-2},10^{-3},10^{-4},10^{-5}$.\\
+L'unique différence entre toutes les configurations est la vitesse de mutation. Un ensemble de $6$ systèmes sont étudiés et les vitesses de mutations valent : $0,10^{-1},10^{-2},10^{-3},10^{-4},10^{-5}$.\\
 
-Un total de $100$ simulations par configuration permet de faire des statistiques. Nous mesurons la taille des pandémies (dans le cas ou elles sont partielles), l'itération à laquelle tous les individus ont quitté le compartiement $S$, le nombre maximum d'agents pathogènes simultanément ainsi que le nombre de fois que les individus ont été contaminés. Toutes ces mesures sont moyennées sur un total de $100$ exécutions.
+Un total de $100$ simulations par configuration permet de faire des statistiques. Nous mesurons la taille des pandémies, l'itération à laquelle tous les individus ont quitté le compartiment $S$, le nombre maximum d'agents pathogènes simultanément ainsi que le nombre de fois que les individus ont été contaminés. Toutes ces mesures sont moyennées sur un total de $100$ exécutions.\\
+
+Deux modes d’immunisation sont utilisés et mesurés. La première série de mesures utilise la méthode d’immunisation simple, c’est-à-dire qu’une immunité acquise ne protège un individu que du même pathogène. La deuxième série de mesures utilise la méthode d’immunisation de groupe qui consiste à immuniser les individus aux pathogènes proches de ceux déjà immunisés.
 
 \section{Vitesse de propagation}
 
-Les premières mesures cherchent à quantifier l'accélération de propagation dû à la mutation des agents pathogènes. Les $6$ configurations sont identiques à l'exception de la vitesse de mutation des agents pathogènes du système. Cette vitesse varie de $0,10^{-1},10^{-2},10^{-3},10^{-4},10^{-5}$, c'est-à-dire que chaque agent pathogène à cette probaiblité de muter à chque itération. Une mutation est la complémentation d'une seul bit de sa séquence.\\
+Les premières mesures cherchent à quantifier l'accélération de propagation dû à la mutation des agents pathogènes. Les $6$ configurations sont identiques à l'exception de la vitesse de mutation des agents pathogènes du système. Cette vitesse varie de $0,10^{-1},10^{-2},10^{-3},10^{-4},10^{-5}$, c'est-à-dire que chaque agent pathogène à cette probabilité de muter à chaque itération. Une mutation est la complémentation d'un seul bit de sa séquence.\\
 
-Les résultats sont présentés sous forme d'un tableau qui montre les moyennes des caractéristiques des simulations.
+Les résultats sont présentés sous forme d'un tableau qui montre les moyennes des mesures des simulations.
+
+\subsection{Immunisation simple}
 
 \begin{table}[H]
 	\centering
 	\captionsetup{justification=centering}
-	\caption[Vitesses pandémies : Immunisation Simple]{Mesures de la vitesse des pandémies, de la taille des pandémies, du nombre d'agents pathogène maximum simultanément ainsi que du nombre de fois que les individus ont été contaminés. Toutes les valeurs sont les moyennes sur $100$ exécutions.\label{tab:grid}}
+	\caption[Vitesses pandémies : Immunisation Simple]{Mesures avec le mécanisme d'immunisation simple de la vitesse des pandémies, de la taille des pandémies, du nombre d'agents pathogène maximum simultanément ainsi que du nombre de fois que les individus ont été contaminés. Toutes les valeurs sont les moyennes sur $100$ exécutions.\label{tab:grid}}
 	\begin{tabular}{@{\extracolsep{\fill} } |m{8em}| c| c| c| c| c| c|}
 		\toprule
 		Configurations            & 1         & 2         & 3         & 4         & 5         & 0        \\
@@ -37,10 +41,16 @@ Les résultats sont présentés sous forme d'un tableau qui montre les moyennes 
 	\end{tabular}
 \end{table}
 
+La première série de mesures utilise la méthode d’immunisation simple sur $6$ configurations. Comme référence nous avons une configuration sans mutation qui produit en moyenne des pandémies de l’ordre de $24000$ individus touchés et une extinction aux alentours de l’itération $3600$. Nous avons évidemment un seul génome d’agent pathogène ainsi qu’une moyenne de nombre de fois contaminé de $0.24$.\\ 
+
+En partant de cette référence nous ajoutons la mutation et constatons des accélérations des pandémies. Contrairement à ce que les données montrent, les configurations avec mutations donnent presque exclusivement des pandémies totales. La configuration $4$ et $5$ montre des pandémies partielles car la moyenne est biaisée par des simulations échouant assez tôt.\\ 
+
+Les résultats montrent que plus le taux de mutation est élevé plus la pandémie devient totale rapidement.
+
 \begin{table}[H]
 	\centering
 	\captionsetup{justification=centering}
-	\caption[Standard Deviation : Immunisation Simple]{Mesures de la déviation standard pour la vitesse des pandémies, la taille des pandémies, le nombre d'agents pathogène maximum simultanément ainsi que le nombre de fois que les individus ont été contaminés. Toutes les valeurs sont les déviations standards sur $100$ exécutions.\label{tab:grid}}
+	\caption[Standard Deviation : Immunisation Simple]{Mesures avec le mécanisme d'immunisation simple de la déviation standard pour la vitesse des pandémies, la taille des pandémies, le nombre d'agents pathogène maximum simultanément ainsi que le nombre de fois que les individus ont été contaminés. Toutes les valeurs sont les déviations standards sur $100$ exécutions.\label{tab:grid}}
 	\begin{tabular}{@{\extracolsep{\fill} } |m{8em}| c| c| c| c| c| c|}
 		\toprule
 		Configurations            & 1         & 2         & 3         & 4         & 5         & 0        \\
@@ -58,10 +68,14 @@ Les résultats sont présentés sous forme d'un tableau qui montre les moyennes 
 	\end{tabular}
 \end{table}
 
+La mesure de la déviation standard permet de détecter des anomalies dans la distribution des valeurs dans l’échantillon. Ces mesures permettent de quantifier les variations notamment sur les configurations $4$, $5$ et $0$. Ces configurations montrent de très fortes déviations pour les tailles de pandémies et vitesses de pandémies. En analysant les données directement nous constatons que certaines simulations échouent rapidement et influencent les résultats.  
+
+\subsection{Immunisation groupe}
+
 \begin{table}[H]
 	\centering
 	\captionsetup{justification=centering}
-	\caption[Vitesses pandémies : Immunisation Groupe]{Mesures de la vitesse des pandémies, de la taille des pandémies, du nombre d'agents pathogène maximum simultanément ainsi que du nombre de fois que les individus ont été contaminés. Toutes les valeurs sont les moyennes sur $100$ exécutions.\label{tab:grid}}
+	\caption[Vitesses pandémies : Immunisation Groupe]{Mesures avec le mécanisme d'immunisation de groupe de la vitesse des pandémies, de la taille des pandémies, du nombre d'agents pathogène maximum simultanément ainsi que du nombre de fois que les individus ont été contaminés. Toutes les valeurs sont les moyennes sur $100$ exécutions.\label{tab:grid}}
 	\begin{tabular}{@{\extracolsep{\fill} } |m{8em}| c| c| c| c| c| c|}
 		\toprule
 		Configurations            & 1         & 2         & 3         & 4         & 5         & 0        \\
@@ -79,10 +93,12 @@ Les résultats sont présentés sous forme d'un tableau qui montre les moyennes 
 	\end{tabular}
 \end{table}
 
+Les simulations aux immunités de groupe donnent des résultats similaires aux immunités simples. Les différences principales sont que les pandémies sont ralenties et de moins grande taille avec un nombre réduit de pathogènes différents dans le système. Ce mécanisme d’immunisation est un frein à la propagation d’une pandémie car les individus ont des immunités à des “groupes” de pathogènes. 
+
 \begin{table}[H]
 	\centering
 	\captionsetup{justification=centering}
-	\caption[Standard Deviation : Immunisation Groupe]{Mesures de la déviation standard pour la vitesse des pandémies, la taille des pandémies, le nombre d'agents pathogène maximum simultanément ainsi que le nombre de fois que les individus ont été contaminés. Toutes les valeurs sont les déviations standards sur $100$ exécutions.\label{tab:grid}}
+	\caption[Standard Deviation : Immunisation Groupe]{Mesures avec le mécanisme d'immunisation de groupe de la déviation standard pour la vitesse des pandémies, la taille des pandémies, le nombre d'agents pathogène maximum simultanément ainsi que le nombre de fois que les individus ont été contaminés. Toutes les valeurs sont les déviations standards sur $100$ exécutions.\label{tab:grid}}
 	\begin{tabular}{@{\extracolsep{\fill} } |m{8em}| c| c| c| c| c| c|}
 		\toprule
 		Configurations            & 1         & 2         & 3         & 4         & 5         & 0        \\
@@ -99,3 +115,9 @@ Les résultats sont présentés sous forme d'un tableau qui montre les moyennes 
 		\bottomrule
 	\end{tabular}
 \end{table}
+
+Tout comme les premières mesures avec l’immunisation simple les déviations par rapport à la moyenne sont grandes pour les simulations au taux de mutation $10^{-4}$ et $10^{-5}$. Des simulations incluant la mutation, les configurations au taux de $10^{-5}$ sont les seules à montrer des pandémies partielles. Toutes les autres simulations du chapitre qui utilisent un taux de mutation non nul développent une pandémie totale dans la majorité des cas.  
+
+\subsection{Conclusion des résultats}
+
+Les mesures nous apprennent deux choses. Premièrement le mode d’immunisation de groupe est un frein à la propagation d’un pathogène comparé au mode d’immunisation simple. Deuxièmement, plus le taux de mutation est élevé, plus la pandémie se propage rapidement.
