@@ -2,16 +2,16 @@
 
 \section{Mesures et méthodologie}
 
-L'objectif du travail est de quantifier l'impacte de la diversité sur la propagation de pandémies. Cette section est dédié à la prises de mesures avec des niveaux de diversité différents et d'en constater les résultats. Afin de ne pas trop complexifier le modèle au delà des simulations SIR, nous ne modifions que le paramètre de diversité, nombre de mouvements ainsi que la charge virale. D'autres paramètres du modèle pourraient être étudié mais ce chapitre ne les explore pas.\\
+L'objectif du travail est de quantifier l'impact de la diversité sur la propagation de pandémies. Cette section est dédie à la prise de mesures avec des niveaux de diversité différents et d'en constater les résultats. Afin de ne pas trop complexifier le modèle au-delà des simulations SIR, nous ne modifions que le paramètre de diversité, nombre de mouvements ainsi que la charge virale. D'autres paramètres du modèle pourraient être étudié mais ce chapitre ne les explore pas.\\
 
-La recherche sur la diversité est découpée en trois parties. La première explore l'impacte de la diversité sur des simulations à propagation de pandémie rapide. Dans ce cas nous observons donc la réaction de la diversité sur l'immunisation des individus déjà contaminés. La seconde cherche à déterminer le taux de simulations qui développent une pandémie, c'est-à-dire le nombre de simulations qui réussissent ou échouent à développer une pandémie en fonction de la diversité de la population. La troisième tente d'observer des pandémies partielles qui ne parviennent pas à contaminer toute la population.\\
+La recherche sur la diversité est découpée en trois parties. La première explore l'impact de la diversité sur des simulations à propagation de pandémie rapide. Dans ce cas nous observons donc la réaction de la diversité sur l'immunisation des individus déjà contaminés. La seconde cherche à déterminer le taux de simulations qui développent une pandémie, c'est-à-dire le nombre de simulations qui réussissent ou échouent à développer une pandémie en fonction de la diversité de la population. La troisième tente d'observer des pandémies partielles qui ne parviennent pas à contaminer toute la population.\\
 
 
 \section{Pandémies totales}
 
-Le premier chapitre est une observation de l'impacte de la diversité sur des systèmes de densité $1/16$ au mélange parfait. L'analyse est purement qualitative et permet de visualiser le comportement du mécanisme d'immunisation en fonction du facteur de diversité.\\
+Le premier chapitre est une observation de l'impact de la diversité sur des systèmes de densité $1/16$ au mélange parfait. L'analyse est purement qualitative et permet de visualiser le comportement du mécanisme d'immunisation en fonction du facteur de diversité.\\
 
-L'unique simulation étudié est de taille $1264 \times 1264$ avec une population de $10^5$. La charge virale est définie à $1$ et la diversité est de $4,8,16,32$. Les génomes de tous les individus sont initialement identiques. Dans cette configuration, les agents pathogènes ont la meilleure compatibilité possible et sont donc les plus virulents. La figure suivante montre des simulations qui intègrent de la diverstié sur les génomes des individus afin de réduire la virulence des pathogènes.
+L'unique simulation étudié est de taille $1264 \times 1264$ avec une population de $10^5$ individus. La charge virale est définie à $1$ et la diversité est de $4,8,16,32$. Les génomes de tous les individus sont initialement identiques. Les simulations sont paramétrées afin que les agents pathogènes aient la meilleure compatibilité possible et sont donc les plus virulents. La figure suivante montre des simulations qui intègrent de la diversité sur les génomes des individus afin de réduire la virulence des pathogènes.
 
 \newpage
 
@@ -19,24 +19,24 @@ L'unique simulation étudié est de taille $1264 \times 1264$ avec une populatio
 	\centering
 	\captionsetup{justification=centering}
 	\includegraphics[width=.8\textwidth]{Images/SIR_diversite_mix.pdf}
-	\caption[Impacte de la diversité]{Impacte de la diversité d'une population sur une simulation au mélange parfait avec $10^5$ individus et une densité de $1/16$. La première figure montre le compartiment $I$, le second le compartiment $R$ et le dernier le compartiement $S$. Chaque couleur de courbe fait référence à une simulation avec une certaine valeur de diversité notée dans la légende.}
+	\caption[Impacte de la diversité]{Impacte de la diversité d'une population sur une simulation au mélange parfait avec $10^5$ individus et une densité de $1/16$. La première figure montre le compartiment $I$, le second le compartiment $R$ et le dernier le compartiment $S$. Chaque couleur de courbe fait référence à une simulation avec une certaine valeur de diversité notée dans la légende.}
 \end{figure}
 
-L'objectif de ce chapitre est d'observer le comportement du système lorsque tous les individus sont contaminés. Un système de denstié $1/16$ avec le mélnage parfait et une charge virale de $1$ propage très rapidement une pandémie. Il s'agit ici de constater les comportements du système lors des immunisation.\\
+L'objectif de ce chapitre est d'observer le comportement du système lorsque tous les individus sont contaminés. Un système de densité $1/16$ avec le mélange parfait et une charge virale de $1$ propage très rapidement une pandémie. Il s'agit ici de constater les comportements du système lors des immunisation.\\
 
-La première observation est que pour les $4$ simulations, tous les individus quittent rapidement le compartiement $S$ mais ceci légèrement moins rapidement pour les simualtions à forte diversité. Ceci est du au fait qu'une grande diversité produit des individus résistants qui freinent la propagation du pathogène mais l'impacte n'est que léger.\\
+La première observation est que pour les $4$ simulations, tous les individus quittent rapidement le compartiment $S$ mais ceci légèrement moins rapidement pour les simulations à forte diversité. Ceci est dû au fait qu'une grande diversité produit des individus résistants qui freinent la propagation du pathogène mais l'impact n'est que léger.\\
 
-La seconde constatation se trouve dans le compartiement $R$. Les individus contaminés s'immunisent plus rapidement dans les systèmes à forte densité. Ce résultat suit l'intuition car les génomes initiaux avantagent l'agent pathogène et donc réduisent la probabilité pour les individus de s'immuniser. Par conséquent, une forte diverstié réduit la compatibilité entre les agent pathogènes et les individus et permettent une immuniations plus rapide.
+La seconde constatation se trouve dans le compartiment $R$. Les individus contaminés s'immunisent plus rapidement dans les systèmes à forte diversité. Ce résultat suit l'intuition car les génomes initiaux avantagent l'agent pathogène et donc réduisent la probabilité pour les individus de s'immuniser. Par conséquent, une forte diversité réduit la compatibilité entre les agents pathogènes et les individus et permettent une immunisation plus rapide.
 
 \section{Taux de pandémies}
 
-Ce chapitre cherche à calculer des statistiques concernant des simulations qui ne développent pas de pandémies. L'objectif est que quantifier l'impacte de la diversité sur le taux de simulations qui donnent ou ne donnent pas de pandémie. Cette section nécessite des statistiques sur un grand nombre de simulations car nous mesurons des événements qui sont très sensibles aux variations.\\
+Ce chapitre cherche à établir des statistiques concernant des simulations qui ne développent pas de pandémies. L'objectif est que quantifier l'impact de la diversité sur le taux de simulations qui donnent ou ne donnent pas de pandémie. Cette section nécessite des statistiques sur un grand nombre de simulations car nous mesurons des événements qui sont très sensibles aux variations.\\
 
-Toutes les configurations étudiées sont de taille $1264	\times 1264$ avec $10^5$ individus. Les simulations ont deux conditions d'arrêt. La première arrive lorsque plus aucun individus n'est contaminé et la seconde survient lorsque $10\%$ de la population a été touchées par la pandémie. Nous estimons qu'à partir de $10\%$, les simulations adopent un comportement purement déterministe.\\
+Toutes les configurations étudiées sont de taille $1264 \times 1264$ avec $10^5$ individus. La charge virale et le nombre de mouvements varie d’une configuration à l’autre. Les valeurs de charge virale étudiée sont : $0.25,0.5,0.75,1$ et les valeurs pour les mouvements sont : $1,10,50$. Pour chacune de ces simulations $4$ niveaux de diversité sont explorés : $4,8,16,32$. Les simulations ont deux conditions d'arrêt. La première arrive lorsque plus aucun individu n'est contaminé et la seconde survient lorsque $10\%$ de la population a été touchées par la pandémie. Nous estimons qu'à partir de $10\%$, les simulations adoptent un comportement purement déterministe.\\ 
 
-La suite présente des statistiques sur les simulations incluant de la diversité qui n'ont pas développé de pandémie. En effet, nous nous intéressons tout particulièrement aux situations ou une pandémie est évitée. Les données relevées concernant ces simulations sont : le nombre maximum de contaminés simultanément, l'itération de ce maximum, l'itération de fin de simulations (lorsque plus aucun individu n'est contaminé), l'ampleur de la pandémie (nombre de personnes sorties du compartiement $S$) et finalement le taux de simulations qui ont développé une pandémie parmi les $100$ simulations pour chaque configuration.\\
+La suite présente des statistiques sur les simulations incluant de la diversité qui n'ont pas développé de pandémie. En effet, nous nous intéressons tout particulièrement aux situations ou une pandémie est évitée. Les données relevées concernant ces simulations sont : le nombre maximum de contaminés simultanément, l'itération de ce maximum, l'itération de fin de simulations (lorsque plus aucun individu n'est contaminé), l'ampleur de la pandémie (nombre de personnes sorties du compartiment $S$) et finalement le taux de simulations qui ont développé une pandémie parmi les $100$ simulations pour chaque configuration.\\
 
-Un total de $64$ configurations de simulations sont étudiées et pour chacune de ces configuration nous effectuons $100$ simulations. L'exécution de $100$ simulations pour un ensemble de paramètres permet de calculer le taux d'événements pandémiques ainsi que de relever les caractéristiques des simulations qui ne font pas apparaitre de pandémie.
+Un total de $64$ configurations de simulations sont étudiées et pour chacune de ces configurations nous effectuons $100$ simulations. L'exécution de $100$ simulations pour un ensemble de paramètres permet de calculer le taux d'événements pandémiques ainsi que de relever les caractéristiques des simulations qui ne font pas apparaitre de pandémie.
 
 \begin{table}[H]
 	\centering
@@ -74,16 +74,16 @@ Un total de $64$ configurations de simulations sont étudiées et pour chacune d
 	\end{tabular}
 \end{table}
 
-Les taux de succès des simulations en diversité $4$ sont dû au fait que l'agent pathogène reste très virulent même avec une distance de hamming maxime de $4$ dans ces configurations. Par conséquent, presques toutes les simulations finissent sur une pandémie.
+Les taux de succès des simulations en diversité $4$ sont dû au fait que l'agent pathogène reste très virulent même avec une distance de Hamming maximale de $4$ dans ces configurations. Par conséquent, presque toutes les simulations finissent sur une pandémie.
 
 \begin{table}[H]
 	\centering
 	\renewcommand{\arraystretch}{0.6}
 	\captionsetup{justification=centering}
-	\caption[Statistiques : diversité 4]{Résultats moyennées des 100 simulations sur un ensemble de $12$ configuration à diversité $4$. Nous mesurons le maximum d'individus contaminés simultanément, l'itération de ce maximum ainsi que l'itération de la fin de la simulations. A nouveau, nous ne mesurons que pour les simulations qui ne développend pas de pandémie.\label{tab:grid}}
+	\caption[Statistiques : diversité 4]{Résultats moyennées des 100 simulations sur un ensemble de $12$ configuration à diversité $4$. Nous mesurons le maximum d'individus contaminés simultanément, l'itération de ce maximum ainsi que l'itération de la fin de la simulation. A nouveau, nous ne mesurons que pour les simulations qui ne développent pas de pandémie.\label{tab:grid}}
 	\begin{tabular}{@{\extracolsep{\fill} } |c| c| c| c| c| c|}
 		\toprule
-		Diversité & Charge virale & Mouvements & Max & Iteration max & Iteration fin \\
+		Diversité & Charge virale & Mouvements & Max & Itération max & Itération fin \\
 		\midrule
 		4         & 1             & 1          & nan & nan           & nan           \\
 		\midrule
@@ -112,7 +112,7 @@ Les taux de succès des simulations en diversité $4$ sont dû au fait que l'age
 	\end{tabular}
 \end{table}
 
-Toutes les configurations qui n'ont pas eu de pandémie déclarée n'ont pas relevé d'informations. Pour les rares simulations à avoir échoué, les échecs se produisent parceque le patient zéro n'est parvenu à contaminer personne.
+Toutes les configurations qui n'ont pas de pandémie déclarée n'ont pas relevé d'informations. Pour les rares simulations à avoir échoué, les échecs se produisent parce que le patient zéro n'est parvenu à contaminer personne.
 
 \begin{table}[H]
 	\centering
@@ -156,10 +156,10 @@ Mêmes observations pour les simulations en diversité $8$. Les taux de succès 
 	\centering
 	\renewcommand{\arraystretch}{0.6}
 	\captionsetup{justification=centering}
-	\caption[Statistiques : diversité 8]{Résultats moyennées des 100 simulations sur un ensemble de $12$ configuration à diversité $8$. Nous mesurons le maximum d'individus contaminés simultanément, l'itération de ce maximum ainsi que l'itération de la fin de la simulations. A nouveau, nous ne mesurons que pour les simulations qui ne développend pas de pandémie.\label{tab:grid}}
+	\caption[Statistiques : diversité 8]{Résultats moyennées des 100 simulations sur un ensemble de $12$ configuration à diversité $8$. Nous mesurons le maximum d'individus contaminés simultanément, l'itération de ce maximum ainsi que l'itération de la fin de la simulation. A nouveau, nous ne mesurons que pour les simulations qui ne développent pas de pandémie.\label{tab:grid}}
 	\begin{tabular}{@{\extracolsep{\fill} } |c| c| c| c| c| c|}
 		\toprule
-		Diversité & Charge virale & Mouvements & Max & Iteration max & Iteration fin \\
+		Diversité & Charge virale & Mouvements & Max & Itération max & Itération fin \\
 		\midrule
 		8         & 1             & 1          & 1   &               & 15            \\
 		\midrule
@@ -226,7 +226,7 @@ Toutes les simulations en diversité $8$ qui ne donnent pas de pandémies sont d
 	\end{tabular}
 \end{table}
 
-L'impace de la diversité apparait à partir d'une diversité de $16$. Naturellement, le nombre de mouvement impacte grandement la réussite d'une pandémie et ceci est perçu dans les taux de réussite. Les taux de réussite de la table au dessus sont nettement plus faibles que pour les mêmes simulations aux diversités inférieures mais la taille des pandémies reste très faible sauf pour une configuration. Généralement les simulations à cette diversité échouent sans se propager du tout mais la simulation de diverstié $16$, charge virale $0.25$ et le nombre de mouvement de $1$ montre des comportement étonnants.\\
+L'impact de la diversité apparait à partir d'une diversité de $16$. Naturellement, le nombre de mouvement impacte grandement la réussite d'une pandémie et ceci est perçu dans les taux de réussite. Les taux de réussite de la table au-dessus sont nettement plus faibles que pour les mêmes simulations aux diversités inférieures mais la taille des pandémies reste très faible sauf pour une configuration. Généralement les simulations à cette diversité échouent sans se propager du tout mais la simulation de diversité $16$, charge virale $0.25$ et le nombre de mouvement de $1$ montre des comportement étonnants.\\
 
 Presque toutes les simulations de cette configuration ont échoué et ceci avec une taille de pandémie moyenne de plus de $816$ individus. C'est pour l'instant la seule configuration à montrer des plus grandes pandémies mais qui finissent quand même par échouer.
 
@@ -234,10 +234,10 @@ Presque toutes les simulations de cette configuration ont échoué et ceci avec 
 	\centering
 	\renewcommand{\arraystretch}{0.6}
 	\captionsetup{justification=centering}
-	\caption[Statistiques : diversité 16]{Résultats moyennées des 100 simulations sur un ensemble de $12$ configuration à diversité $16$. Nous mesurons le maximum d'individus contaminés simultanément, l'itération de ce maximum ainsi que l'itération de la fin de la simulations. A nouveau, nous ne mesurons que pour les simulations qui ne développend pas de pandémie.\label{tab:grid}}
+	\caption[Statistiques : diversité 16]{Résultats moyennées des 100 simulations sur un ensemble de $12$ configuration à diversité $16$. Nous mesurons le maximum d'individus contaminés simultanément, l'itération de ce maximum ainsi que l'itération de la fin de la simulation. A nouveau, nous ne mesurons que pour les simulations qui ne développent pas de pandémie.\label{tab:grid}}
 	\begin{tabular}{@{\extracolsep{\fill} } |c| c| c| c| c| c|}
 		\toprule
-		Diversité & Charge virale & Mouvements & Max   & Iteration max & Iteration fin \\
+		Diversité & Charge virale & Mouvements & Max   & Itération max & Itération fin \\
 		\midrule
 		16        & 1             & 1          & 1.21  & 1.37          & 12.37         \\
 		\midrule
@@ -266,7 +266,7 @@ Presque toutes les simulations de cette configuration ont échoué et ceci avec 
 	\end{tabular}
 \end{table}
 
-De toutes les simulations qui ont échouée, seule une persiste et parvient à contaminer un maximum de $28$ individus en moyenne et finit par s'achever à $2632$ itérations en moyenne.
+De toutes les simulations qui ont échouée, seule une persiste et parvient à contaminer un maximum de $28$ individus en moyenne et finit par s'achever à l'itération $2632$ en moyenne.
 
 \begin{table}[H]
 	\centering
@@ -304,16 +304,16 @@ De toutes les simulations qui ont échouée, seule une persiste et parvient à c
 	\end{tabular}
 \end{table}
 
-Finalement les configurations en diverstié $32$ montrent les taux les plus faibles. Toutes les configurations à $1$ mouvement n'ont donné aucune pandémie et ceci contrairement aux mêmes configurations à diverstié inférieure.
+Finalement les configurations en diversité $32$ montrent les taux les plus faibles. Toutes les configurations à $1$ mouvement n'ont donné aucune pandémie et ceci contrairement aux mêmes configurations à diversité inférieure.
 
 \begin{table}[H]
 	\centering
 	\renewcommand{\arraystretch}{0.6}
 	\captionsetup{justification=centering}
-	\caption[Statistiques : diversité 32]{Résultats moyennées des 100 simulations sur un ensemble de $12$ configuration à diversité $32$. Nous mesurons le maximum d'individus contaminés simultanément, l'itération de ce maximum ainsi que l'itération de la fin de la simulations. A nouveau, nous ne mesurons que pour les simulations qui ne développend pas de pandémie.\label{tab:grid}}
+	\caption[Statistiques : diversité 32]{Résultats moyennées des 100 simulations sur un ensemble de $12$ configuration à diversité $32$. Nous mesurons le maximum d'individus contaminés simultanément, l'itération de ce maximum ainsi que l'itération de la fin de la simulation. A nouveau, nous ne mesurons que pour les simulations qui ne développent pas de pandémie.\label{tab:grid}}
 	\begin{tabular}{@{\extracolsep{\fill} } |c| c| c| c| c| c|}
 		\toprule
-		Diversité & Charge virale & Mouvements & Max  & Iteration max & Iteration fin \\
+		Diversité & Charge virale & Mouvements & Max  & Itération max & Itération fin \\
 		\midrule
 		32        & 1             & 1          & 5.1  & 40.09         & 104.05        \\
 		\midrule
@@ -342,52 +342,38 @@ Finalement les configurations en diverstié $32$ montrent les taux les plus faib
 	\end{tabular}
 \end{table}
 
-A nouveau, une grande majorité des configuration à diverstié $32$ ne montre des pandémies qui ne naissent pas avec des maximums de contaminés de l'ordre d'une dixaine et une fin de simulations très rapide.
+A nouveau, une grande majorité des configurations à diversité $32$ ne montre des pandémies qui ne naissent pas avec des maximums de contaminés de l'ordre d'une dizaine d'individus et une fin de simulations très rapide.
 
-\subsection{Conclusion des résultats}
+\section{Pandémies partielles}
 
-Les résultats permettent d'observer l'impacte de la diversité sur les systèmes. Apparemment il n'y a pas d'impacte sur la propagation de la pandémie mais uniquement sur la vitesse d'immunisation des individus. Nous cherchions à observer des pandémies qui évoluaient jusqu'à un certain point et dissparaissait ensuite mais ce comportement n'est pas présent dans les mesures.\\
+Jusqu'à présent, le modèle n'a pas montré de simulations qui donnaient des pandémies qui contaminent une portion non nulle de la population sans pour autant contaminer tout le monde. Certaines configurations font apparaitre ce type d'événement avec certains paramètres qui favorisent la présence de pandémies partielles. Plus particulièrement, deux conditions favorisent la présence de ces phénomènes. Le premier est une densité faible ce qui ralenti la propagation de la pandémie et peut donc permettre sa disparition. La seconde est un nombre de mouvements élevé ou le mélange parfait.\\
 
-L'absence de ces événements est dû au fonctionnement du modèle et à la notion de diversité. Le problème est que dans le modèle, la diversité n'a aucun impacte sur le propagation de pandémie. Pour rappel, lorsqu'un individu sain est en contact avec un agent pathogène, l'individu devient contaminé et contagieux directement et ceci peu importe la diversité du système. Le seul effet de la diverstié est le fait que cet individu peut s'immuniser plus ou moins rapidement en fonction de cette diversité. Mais le problème est que la propagation se présente sous forme de vague, comme une onde. L'illustration ci-dessous illustre le phénomène.
+Une faible densité d'un système permet d'observer des pandémies avec peu de contaminés simultanément et qui évoluent lentement. Dû au peu de contaminés simultanés il est possible que tous les individus contaminés s'immunisent et ne parviennent pas à contaminer davantage d'individus. La méthode de mouvement joue aussi un rôle dans l'observation de ces phénomènes. Généralement, plus le mélange des individus est bon, plus on peut observer de pandémies partielles et ceci est dû au fait d'immunisation collective.\\
 
-\newpage
+Toutes les simulations effectuées durant la totalité du travail n’ont que rarement donné de pandémies partielles. L’apparition de ces phénomènes de manière partielle nécessite d’être proche d’une limite, c’est-à-dire dans une situation instable de propagation. D’après les essais effectués, une simulation aux mouvements multiple peine à donner de pandémies partielles. 
 
 \begin{figure}[h]
 	\centering
 	\captionsetup{justification=centering}
 	\includegraphics[width=.5\textwidth]{Images/vague_propagation.png}
-	\caption{vague propagation}
-\end{figure}
+	\caption[Vague de propagation]{Représentation du fonctionnement du modèle pour des simulations aux multiples mouvements. En bleu nous avons les individus immunisés, en rouge les individus contaminés et en vert les individus sains. Les cercles rouges représentent la "vague" de propagation de la pandémie.}
+\end{figure} 
 
-La figure montre la propagation d'une pandémie. En vert nous avons les individus sains, en bleu les individus immunisés et en rouge les individus contaminés. Les cercles représentent la propagation de la pandémie sous forme de vagues. Nous pourrion découper le processus en 3 zones distinctes et indépendantes. Le première est la zone centrale du cercle avec les individus immunisés. La seconde est la frontière entre les individus infectés et les sains donc la vague (cercle rouge) et finalement la troisième zone est le reste du système avec uniquement des individus sains.\\
+L’image ci-dessus montre une situation de propagation de pandémie dans une configuration aux multiples mouvements. Si le nombre de mouvements défini est trop faible, le système peut être représenté sous cette forme avec $3$ zones distinctes. La première zone est les individus en bleu qui se sont immunisé au pathogène, la seconde est la “vague” avec les individus contaminés qui en contaminent d’autres et finalement la troisième est le reste du système uniformément rempli d’individus sains.\\ 
 
-D'après les résultats des simulations, la diversité n'impacte pas la propagation de la pandémie. En effet, la diversité permet l'immunisation plus rapide de la population donc l'apparition davantages de cercles bleus sur l'image. Le problème est que cette première zone est indépendante de la deuxième qui est la vague car cette dernière est beaucoup plus rapide que l'immunisation. Un individu fraichement contaminé propagera la pandémie bien avant qu'il ne s'immunise. Par conséquent, l'ampleur des immunisation n'impacte pas la propagation de la pandémie.\\
+Le problème de ce mode de fonctionnement est que la propagation se propage telle une vague ou une onde. Cette propagation se produit dans la troisième zone qui est un milieu uniforme. Par conséquent les simulations finissent généralement de deux manières différentes. La première est que la vague ne parvient pas à se propager et le pathogène meurt très tôt dans la simulation. La deuxième est que la vague parvienne à se propager. Si l'événement de déclare et dû à l’uniformité de la zone $3$, la pandémie sera totale.\\ 
 
-Donc la première zone n'affecte pas la vague mais qu'en est-il de la troisième zone ? En réalité la troisième zone est purement uniforme. Si une vague parvient à un moment donné à se propager dans la troisième zone alors elle le pourra jusqu'à contaminer tous les individus.\\
+Pour contourner ce problème et observer des pandémies partielles nous utilisons le mélange parfait. La différence est que la zone $3$ n’est plus uniformément remplie d’individus sains mais se mélange avec des individus immunisés. Par conséquent, ces individus immunisés bloquent la propagation et permettent de faire apparaitre des pandémies partielles. C’est un principe d’immunité collective.\\ 
 
-La rélexion mène donc à expliquer que une pandémie se propage soit complètement soit pas du tout.\\
+Les simulations étudiées sont des configurations de taille $2000 \times 2000$ (densité $1/40$) au mélange parfait avec une charge virale variant de : $1, 0.75, 0.5$ et avec une diversité variant de : $4,8,16,20,24,28,32,36,40,1000$. Pour chacune des $30$ configuration, un total de $100$ exécutions ont été effectuées et les résultats moyennés. La seule mesure prise est la taille totale de la pandémie, c'est-à-dire le compte de tous les individus qui ont quitté le compartiment $S$.\\
 
-En épidémiologie, le nombre de reproduction de base $R_0$ représente le nombre moyen de contaminations par un individu contaminé. Si ce taux est au dessous de $1$, cela signifie que la pandémie est mourante par contre si le taux est au dessus de $1$, la pandémie se propage.\\
-
-Dans le modèle implémenté et d'après les mesures de diversité, une simulations ne peut pas avoir un $R_0$ qui varie. Cette valeur est fixe du début à la fin. Par conséquent, toutes les simulations au $R_0 < 1$ ne montrent aucune pandémie et au contraire toutes les simulations au $R_0 > 1$ finissent par contaminer tout le monde. Dans une situation réelle, des mesures sanitaires permettent de faire varier ce taux au cours de la propagation de la pendémie. Dans le modèle ce fonctionnement est non présent. Une autre chose n'est pas présente et donc impossible dans le modèle est l'effet d'immunité collective.\\
-
-L'immunité collective est le fait le niveau d'immunité général est siffisemment élevé afin de faire passer le taux $R_0$ en dessous de $1$ et que la pandémie disparaisse. Ce phénomène peut s'obtenir par trois façons. La première est la vaccination, la seconde est l'immunité croisée et la troisième est une forme de résistance naturelle. Si nous reprenions la figure ci-dessus, l'immunité collective dans le modèle pourraient être obtenue d'une seule façon. Il faudrait pouroivr modifier l'état de la troisième zone (les parties du système non contaminés). Si au fil du temps nous pouvions vacciner des individus ou les immuniser en amont de la pandémie alors nous pourrions influencer le $R_0$ de la simulation mais le modèle n'inclut pas ces mécanismes. Par conséquent le $R_0$ reste constant dû à l'homogénéité de la troisième zone.
-
-\section{Pandémies partielles}
-
-Jusqu'à présent, le modèle n'a jamais montré de simulations qui donnaient des pandémies qui contaminent une portion non nulle de la populaiton sans pour autant contaminer tout le monde. Certaines configurations font apparaitre ce type d'événement mais certains paramètres favorisent la présence de pandémies partielles. Plus particulièrement, deux conditions favorisent la présence de ces phénomènes. Le premier est une densité faible ce qui ralenti la propagation de la pandémie et peut donc permettre sa disparition. La seconde est un nombre de mouvements élevé ou le mélange parfait.\\
-
-Une faible densité d'un système permet d'observer des pandémies avec peu de contaminés simultanément et qui évoluent lentement. Dû au peu de contaminés simultanés il est possible que tous les individus contaminés s'immunisent et ne parviennet pas à contaminer davantage d'individus. La méthode de mouvement joue aussi un rôle dans l'observation de ces phénomènes. Généralement, plus le mélange des individus est bon, plus on peut observe de pandémies partielles et ceci est dû au fait d'immunisation collective.\\
-
-Les simulations étudiées sont des configurations de taille $2000 \times 2000$ (densité $1/40$) au mélange parfait avec une charge virale variant de : $1, 0.75, 0.5$ et avec une diversité variant de : $4,8,16,20,24,28,32,36,40,1000$. Pour chacune des $30$ configuration, un total de $100$ exécutions ont été faites et les résultats moyennés. La seule mesure prise est la taille totale de la pandémie, c'est-à-dire le compte de tous le individus qui ont quitté le compartiement $S$.\\
-
-Les génomes sont codés sur $32$ bits et sont initialement indentiques pour tous les acteurs du système. La diversité permet de faire dévier les génomes des individus afin de réduire la compatibilité avec l'agent pathogène (ceci le rend moins virulent). La veleur de diversité d'une configuration détermine le nombre de complémentations aléatoire sur la séquence de génome et ce nombre n'est pas borné. Par conséquent, une diversité de $32$ sur des génomes de $32$ ne signifie pas que la diverstié des individus est maximale. Les résultats suivants montrent l'impacte de ces valeurs de diversité sur l'ampleur des pandémies.
+Les génomes sont codés sur $32$ bits et sont initialement identiques pour tous les acteurs du système. La diversité permet de faire dévier les génomes des individus afin de réduire la compatibilité avec l'agent pathogène (ceci le rend moins virulent). La valeur de diversité d'une configuration détermine le nombre de complémentations aléatoire sur la séquence de génome et ce nombre n'est pas borné. Par conséquent, une diversité de $32$ sur des génomes de $32$ ne signifie pas que la diversité des individus est maximale. Les résultats suivants montrent l'impact de ces valeurs de diversité sur l'ampleur des pandémies.
 
 \begin{table}[H]
 	\centering
 	\renewcommand{\arraystretch}{0.6}
 	\captionsetup{justification=centering}
-	\caption[Taille pandémies, charge virale = 1]{Simulations mesurant la taille de la pandémies pour un ensembles de configurations à charge virale = 1. La taille de pandémie représente tous les individus qui ont quitté le compartiemnt $S$ lors de la simulations.\label{tab:grid}}
+	\caption[Taille pandémies, charge virale = 1]{Simulations mesurant la taille de la pandémie pour un ensembles de configurations à charge virale = 1. La taille de pandémie représente tous les individus qui ont quitté le compartiment $S$ lors de la simulation.\label{tab:grid}}
 	\begin{tabular}{@{\extracolsep{\fill} } |c| c| c|}
 		\toprule
 		Charge virale & Diversité & Taille pandémie \\
@@ -415,13 +401,13 @@ Les génomes sont codés sur $32$ bits et sont initialement indentiques pour tou
 	\end{tabular}
 \end{table}
 
-Les premier résultats montrent qu'une plus grande diversité réduit la taille des pandémies. Le minimum atteint sur ces configurations est à une diversité de $40$. Une diversité trop élevée est moins efficace car nous avons simplement des génomes aléatoires et non plus des génomes déviants de l'agent pathogène.
+Les premiers résultats montrent qu'une plus grande diversité réduit la taille des pandémies. Le minimum atteint sur ces configurations est à une diversité de $40$. Une diversité trop élevée est moins efficace car nous avons simplement des génomes aléatoires et non plus des génomes déviants de l'agent pathogène.
 
 \begin{table}[H]
 	\centering
 	\renewcommand{\arraystretch}{0.6}
 	\captionsetup{justification=centering}
-	\caption[Taille pandémies, charge virale = 0.75]{Simulations mesurant la taille de la pandémies pour un ensembles de configurations à charge virale = 0.75. La taille de pandémie représente tous les individus qui ont quitté le compartiemnt $S$ lors de la simulations.\label{tab:grid}}
+	\caption[Taille pandémies, charge virale = 0.75]{Simulations mesurant la taille de la pandémie pour un ensembles de configurations à charge virale = 0.75. La taille de pandémie représente tous les individus qui ont quitté le compartiment $S$ lors de la simulation.\label{tab:grid}}
 	\begin{tabular}{@{\extracolsep{\fill} } |c| c| c|}
 		\toprule
 		Charge virale & Diversité & Taille pandémie \\
@@ -449,13 +435,13 @@ Les premier résultats montrent qu'une plus grande diversité réduit la taille 
 	\end{tabular}
 \end{table}
 
-Réduire la charge virale diminue la taille des pandémies. La contagion de l'agent pathogène étant inférieure, la propagation disparait plu facielement. 
+Réduire la charge virale diminue la taille des pandémies. La contagion de l'agent pathogène étant inférieure, la propagation disparait plus facilement. 
 
 \begin{table}[H]
 	\centering
 	\renewcommand{\arraystretch}{0.6}
 	\captionsetup{justification=centering}
-	\caption[Taille pandémies, charge virale = 0.5]{Simulations mesurant la taille de la pandémies pour un ensembles de configurations à charge virale = 0.5. La taille de pandémie représente tous les individus qui ont quitté le compartiemnt $S$ lors de la simulations.\label{tab:grid}}
+	\caption[Taille pandémies, charge virale = 0.5]{Simulations mesurant la taille de la pandémie pour un ensembles de configurations à charge virale = 0.5. La taille de pandémie représente tous les individus qui ont quitté le compartiment $S$ lors de la simulation.\label{tab:grid}}
 	\begin{tabular}{@{\extracolsep{\fill} } |c| c| c|}
 		\toprule
 		Charge virale & Diversité & Taille pandémie \\
