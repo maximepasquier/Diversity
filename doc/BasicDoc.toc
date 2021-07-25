@@ -70,7 +70,7 @@
 \contentsline {section}{\numberline {10.4}Pandémies partielles}{64}{section.10.4}%
 \contentsline {chapter}{\numberline {11}Mutations}{68}{chapter.11}%
 \contentsline {section}{\numberline {11.1}Mesures et méthodologie}{68}{section.11.1}%
-\contentsline {section}{\numberline {11.2}Vitesse de propagation}{68}{section.11.2}%
+\contentsline {section}{\numberline {11.2}Vitesse de propagation}{69}{section.11.2}%
 \contentsline {subsection}{\numberline {11.2.1}Immunisation simple}{69}{subsection.11.2.1}%
 \contentsline {subsection}{\numberline {11.2.2}Immunisation groupe}{70}{subsection.11.2.2}%
 \contentsline {subsection}{\numberline {11.2.3}Conclusion des résultats}{71}{subsection.11.2.3}%
