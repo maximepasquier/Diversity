@@ -3,74 +3,74 @@
 \contentsline {chapter}{\nonumberline Liste des tableaux}{IV}{chapter*.3}%
 \contentsline {chapter}{\nonumberline Table des figures}{V}{chapter*.4}%
 \contentsline {chapter}{\numberline {1}Résumé}{1}{chapter.1}%
-\contentsline {chapter}{\numberline {2}Introduction}{3}{chapter.2}%
-\contentsline {chapter}{\numberline {3}Approche du problème, méthodes, outils utilisés}{4}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Approche du problème}{4}{section.3.1}%
-\contentsline {section}{\numberline {3.2}Méthodes}{4}{section.3.2}%
-\contentsline {section}{\numberline {3.3}Outils}{4}{section.3.3}%
-\contentsline {chapter}{\numberline {4}Modèle}{5}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Acteurs}{5}{section.4.1}%
-\contentsline {subsection}{\numberline {4.1.1}Individus}{6}{subsection.4.1.1}%
-\contentsline {subsection}{\numberline {4.1.2}Agents pathogènes}{6}{subsection.4.1.2}%
-\contentsline {section}{\numberline {4.2}Espace physique}{6}{section.4.2}%
-\contentsline {subsection}{\numberline {4.2.1}Cellule}{7}{subsection.4.2.1}%
-\contentsline {subsection}{\numberline {4.2.2}Grille régulière}{8}{subsection.4.2.2}%
-\contentsline {subsection}{\numberline {4.2.3}Voisinage}{9}{subsection.4.2.3}%
-\contentsline {section}{\numberline {4.3}Simulation}{9}{section.4.3}%
-\contentsline {subsection}{\numberline {4.3.1}Itérations}{10}{subsection.4.3.1}%
-\contentsline {subsection}{\numberline {4.3.2}Mouvements des acteurs}{11}{subsection.4.3.2}%
-\contentsline {subsection}{\numberline {4.3.3}Mise à jour des acteurs}{12}{subsection.4.3.3}%
-\contentsline {subsubsection}{\nonumberline Actualisation des agents pathogènes}{12}{section*.10}%
-\contentsline {subsubsection}{\nonumberline Actualisation des individus}{12}{section*.11}%
-\contentsline {section}{\numberline {4.4}Interactions}{13}{section.4.4}%
-\contentsline {subsection}{\numberline {4.4.1}Interactions sur la même cellule}{13}{subsection.4.4.1}%
-\contentsline {subsection}{\numberline {4.4.2}Interactions sur cellules voisines}{13}{subsection.4.4.2}%
-\contentsline {subsection}{\numberline {4.4.3}Contamination de cellule}{14}{subsection.4.4.3}%
-\contentsline {section}{\numberline {4.5}Diversité génétique}{14}{section.4.5}%
-\contentsline {subsection}{\numberline {4.5.1}Distance de Hamming}{16}{subsection.4.5.1}%
-\contentsline {section}{\numberline {4.6}Immunisation et résistance naturelle}{17}{section.4.6}%
-\contentsline {section}{\numberline {4.7}Mutations}{18}{section.4.7}%
-\contentsline {chapter}{\numberline {5}Implémentation}{19}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Main \& Initialisation}{19}{section.5.1}%
-\contentsline {section}{\numberline {5.2}Exécution de la simulation}{21}{section.5.2}%
-\contentsline {subsubsection}{\nonumberline Permutation}{22}{section*.14}%
-\contentsline {subsubsection}{\nonumberline Agents pathogènes}{22}{section*.15}%
-\contentsline {subsubsection}{\nonumberline Individus}{22}{section*.16}%
-\contentsline {subsubsection}{\nonumberline Mesures}{25}{section*.19}%
-\contentsline {section}{\numberline {5.3}Fermeture}{26}{section.5.3}%
-\contentsline {chapter}{\numberline {6}Objectifs}{27}{chapter.6}%
-\contentsline {chapter}{\numberline {7}Modèles Compartimentaux}{29}{chapter.7}%
-\contentsline {section}{\numberline {7.1}Modèle SI}{30}{section.7.1}%
-\contentsline {section}{\numberline {7.2}Modèle SIR}{31}{section.7.2}%
-\contentsline {section}{\numberline {7.3}Simulations de référence}{32}{section.7.3}%
-\contentsline {subsection}{\numberline {7.3.1}Simulations de SI}{33}{subsection.7.3.1}%
-\contentsline {subsection}{\numberline {7.3.2}Simulations de SIR}{35}{subsection.7.3.2}%
-\contentsline {chapter}{\numberline {8}Modèle SI}{36}{chapter.8}%
-\contentsline {section}{\numberline {8.1}Mesures et méthodologie SI}{36}{section.8.1}%
-\contentsline {section}{\numberline {8.2}Résultats}{37}{section.8.2}%
-\contentsline {section}{\numberline {8.3}Analyses}{40}{section.8.3}%
-\contentsline {subsection}{\numberline {8.3.1}Mean Absolute Error}{40}{subsection.8.3.1}%
-\contentsline {subsection}{\numberline {8.3.2}Moyenne de voisinage}{40}{subsection.8.3.2}%
-\contentsline {subsection}{\numberline {8.3.3}Variations aléatoires}{41}{subsection.8.3.3}%
-\contentsline {subsection}{\numberline {8.3.4}Positions des individus}{43}{subsection.8.3.4}%
-\contentsline {chapter}{\numberline {9}Modèle SIR}{45}{chapter.9}%
-\contentsline {section}{\numberline {9.1}Mesures et méthodologie SIR}{45}{section.9.1}%
-\contentsline {section}{\numberline {9.2}Résultats}{45}{section.9.2}%
-\contentsline {section}{\numberline {9.3}Analyses}{49}{section.9.3}%
-\contentsline {subsection}{\numberline {9.3.1}Mean Absolute Error}{49}{subsection.9.3.1}%
-\contentsline {subsection}{\numberline {9.3.2}Variations aléatoires}{50}{subsection.9.3.2}%
-\contentsline {subsection}{\numberline {9.3.3}Latence des simulations}{51}{subsection.9.3.3}%
-\contentsline {subsection}{\numberline {9.3.4}Mouvements variable}{54}{subsection.9.3.4}%
-\contentsline {subsection}{\numberline {9.3.5}Comparaison 1000 mouvements}{55}{subsection.9.3.5}%
-\contentsline {chapter}{\numberline {10}Diversité}{57}{chapter.10}%
-\contentsline {section}{\numberline {10.1}Mesures et méthodologie}{57}{section.10.1}%
-\contentsline {section}{\numberline {10.2}Pandémies totales}{57}{section.10.2}%
-\contentsline {section}{\numberline {10.3}Taux de pandémies}{59}{section.10.3}%
-\contentsline {section}{\numberline {10.4}Pandémies partielles}{64}{section.10.4}%
-\contentsline {chapter}{\numberline {11}Mutations}{68}{chapter.11}%
-\contentsline {section}{\numberline {11.1}Mesures et méthodologie}{68}{section.11.1}%
-\contentsline {section}{\numberline {11.2}Vitesse de propagation}{69}{section.11.2}%
-\contentsline {subsection}{\numberline {11.2.1}Immunisation simple}{69}{subsection.11.2.1}%
-\contentsline {subsection}{\numberline {11.2.2}Immunisation groupe}{70}{subsection.11.2.2}%
-\contentsline {subsection}{\numberline {11.2.3}Conclusion des résultats}{71}{subsection.11.2.3}%
-\contentsline {chapter}{\numberline {12}Conclusion}{72}{chapter.12}%
+\contentsline {chapter}{\numberline {2}Introduction}{2}{chapter.2}%
+\contentsline {chapter}{\numberline {3}Approche du problème, méthodes, outils utilisés}{3}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Approche du problème}{3}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Méthodes}{3}{section.3.2}%
+\contentsline {section}{\numberline {3.3}Outils}{3}{section.3.3}%
+\contentsline {chapter}{\numberline {4}Modèle}{4}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Acteurs}{4}{section.4.1}%
+\contentsline {subsection}{\numberline {4.1.1}Individus}{5}{subsection.4.1.1}%
+\contentsline {subsection}{\numberline {4.1.2}Agents pathogènes}{5}{subsection.4.1.2}%
+\contentsline {section}{\numberline {4.2}Espace physique}{5}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Cellule}{6}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.2.2}Grille régulière}{7}{subsection.4.2.2}%
+\contentsline {subsection}{\numberline {4.2.3}Voisinage}{8}{subsection.4.2.3}%
+\contentsline {section}{\numberline {4.3}Simulation}{8}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}Itérations}{9}{subsection.4.3.1}%
+\contentsline {subsection}{\numberline {4.3.2}Mouvements des acteurs}{10}{subsection.4.3.2}%
+\contentsline {subsection}{\numberline {4.3.3}Mise à jour des acteurs}{11}{subsection.4.3.3}%
+\contentsline {subsubsection}{\nonumberline Actualisation des agents pathogènes}{11}{section*.10}%
+\contentsline {subsubsection}{\nonumberline Actualisation des individus}{11}{section*.11}%
+\contentsline {section}{\numberline {4.4}Interactions}{12}{section.4.4}%
+\contentsline {subsection}{\numberline {4.4.1}Interactions sur la même cellule}{12}{subsection.4.4.1}%
+\contentsline {subsection}{\numberline {4.4.2}Interactions sur cellules voisines}{12}{subsection.4.4.2}%
+\contentsline {subsection}{\numberline {4.4.3}Contamination de cellule}{13}{subsection.4.4.3}%
+\contentsline {section}{\numberline {4.5}Diversité génétique}{13}{section.4.5}%
+\contentsline {subsection}{\numberline {4.5.1}Distance de Hamming}{15}{subsection.4.5.1}%
+\contentsline {section}{\numberline {4.6}Immunisation et résistance naturelle}{16}{section.4.6}%
+\contentsline {section}{\numberline {4.7}Mutations}{17}{section.4.7}%
+\contentsline {chapter}{\numberline {5}Implémentation}{18}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Main \& Initialisation}{18}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Exécution de la simulation}{20}{section.5.2}%
+\contentsline {subsubsection}{\nonumberline Permutation}{21}{section*.14}%
+\contentsline {subsubsection}{\nonumberline Agents pathogènes}{21}{section*.15}%
+\contentsline {subsubsection}{\nonumberline Individus}{21}{section*.16}%
+\contentsline {subsubsection}{\nonumberline Mesures}{24}{section*.19}%
+\contentsline {section}{\numberline {5.3}Fermeture}{25}{section.5.3}%
+\contentsline {chapter}{\numberline {6}Objectifs}{26}{chapter.6}%
+\contentsline {chapter}{\numberline {7}Modèles Compartimentaux}{28}{chapter.7}%
+\contentsline {section}{\numberline {7.1}Modèle SI}{29}{section.7.1}%
+\contentsline {section}{\numberline {7.2}Modèle SIR}{30}{section.7.2}%
+\contentsline {section}{\numberline {7.3}Simulations de référence}{31}{section.7.3}%
+\contentsline {subsection}{\numberline {7.3.1}Simulations de SI}{32}{subsection.7.3.1}%
+\contentsline {subsection}{\numberline {7.3.2}Simulations de SIR}{34}{subsection.7.3.2}%
+\contentsline {chapter}{\numberline {8}Modèle SI}{35}{chapter.8}%
+\contentsline {section}{\numberline {8.1}Mesures et méthodologie SI}{35}{section.8.1}%
+\contentsline {section}{\numberline {8.2}Résultats}{36}{section.8.2}%
+\contentsline {section}{\numberline {8.3}Analyses}{39}{section.8.3}%
+\contentsline {subsection}{\numberline {8.3.1}Mean Absolute Error}{39}{subsection.8.3.1}%
+\contentsline {subsection}{\numberline {8.3.2}Moyenne de voisinage}{39}{subsection.8.3.2}%
+\contentsline {subsection}{\numberline {8.3.3}Variations aléatoires}{40}{subsection.8.3.3}%
+\contentsline {subsection}{\numberline {8.3.4}Positions des individus}{42}{subsection.8.3.4}%
+\contentsline {chapter}{\numberline {9}Modèle SIR}{44}{chapter.9}%
+\contentsline {section}{\numberline {9.1}Mesures et méthodologie SIR}{44}{section.9.1}%
+\contentsline {section}{\numberline {9.2}Résultats}{44}{section.9.2}%
+\contentsline {section}{\numberline {9.3}Analyses}{48}{section.9.3}%
+\contentsline {subsection}{\numberline {9.3.1}Mean Absolute Error}{48}{subsection.9.3.1}%
+\contentsline {subsection}{\numberline {9.3.2}Variations aléatoires}{49}{subsection.9.3.2}%
+\contentsline {subsection}{\numberline {9.3.3}Latence des simulations}{50}{subsection.9.3.3}%
+\contentsline {subsection}{\numberline {9.3.4}Mouvements variable}{53}{subsection.9.3.4}%
+\contentsline {subsection}{\numberline {9.3.5}Comparaison 1000 mouvements}{54}{subsection.9.3.5}%
+\contentsline {chapter}{\numberline {10}Diversité}{56}{chapter.10}%
+\contentsline {section}{\numberline {10.1}Mesures et méthodologie}{56}{section.10.1}%
+\contentsline {section}{\numberline {10.2}Pandémies totales}{56}{section.10.2}%
+\contentsline {section}{\numberline {10.3}Taux de pandémies}{58}{section.10.3}%
+\contentsline {section}{\numberline {10.4}Pandémies partielles}{63}{section.10.4}%
+\contentsline {chapter}{\numberline {11}Mutations}{67}{chapter.11}%
+\contentsline {section}{\numberline {11.1}Mesures et méthodologie}{67}{section.11.1}%
+\contentsline {section}{\numberline {11.2}Vitesse de propagation}{68}{section.11.2}%
+\contentsline {subsection}{\numberline {11.2.1}Immunisation simple}{68}{subsection.11.2.1}%
+\contentsline {subsection}{\numberline {11.2.2}Immunisation de groupe}{69}{subsection.11.2.2}%
+\contentsline {subsection}{\numberline {11.2.3}Conclusion des résultats}{70}{subsection.11.2.3}%
+\contentsline {chapter}{\numberline {12}Conclusion}{71}{chapter.12}%

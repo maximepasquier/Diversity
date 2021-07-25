@@ -2,7 +2,7 @@
 
 \section{Mesures et méthodologie SI}
 
-L'objectif de ces résultats est de valider et explorer le modèle implémenté. Toute une série de mesures ont été prise pour différentes densités de population et pour différentes tailles de système. Quatre niveaux de densité de population ont été mesurés ainsi que quatre tailles de population. Les densités choisies pour analyses sont : $1/2$, $1/4$, $1/8$, $1/16$ et les tailles de populations sont $5000,20000,50000,100000$ individus. Sur les figures nous trouvons $3$ courbes. En bleu nous avons la courbe du modèle mathématique SI, en orange nous avons la simulation avec le mode de mouvement défini à 1000 mouvements par individu par itération et finalement en vert nous avons la simulation avec le mélange parfait.
+L'objectif de ces résultats est de valider et explorer le modèle implémenté. Toute une série de mesures ont été prises pour différentes densités de population et pour différentes tailles de système. Quatre niveaux de densité de population ont été mesurés ainsi que quatre tailles de population. Les densités choisies pour analyses sont : $1/2$, $1/4$, $1/8$, $1/16$ et les tailles de populations sont $5000,20000,50000,100000$ individus. Sur les figures nous trouvons $3$ courbes. En bleu nous avons la courbe du modèle mathématique SI, en orange nous avons la simulation avec le mode de mouvement défini à 1000 mouvements par individu par itération, et finalement en vert nous avons la simulation avec le mélange parfait.
 
 \newpage
 
@@ -22,7 +22,7 @@ Le modèle est très précis pour des systèmes très denses. Les similitudes en
 
 Le premier est dû au fait que le système est très dense. En densité $\frac{1}{2}$, la moitié des cellules du systèmes sont occupées par un individu. Par conséquent ces derniers ont de la peine à se déplacer car ils se gênent les uns les autres dans leurs déplacements. Nous observons donc du retard comparé au modèle SI pour les simulations aux $1000$ mouvements. \\
 
-Le deuxième phénomène qui explique le retard croissant est que pour toutes les simulations, le nombre de déplacements reste constant. Par conséquent les grands systèmes se mélangent moins relativement à leur taille que les plus petits. C'est la raison pour laquelle les courbes orange s'aplatissent de plus en plus sur des systèmes de plus en plus grands.\\
+Le deuxième phénomène qui explique le retard croissant est que pour toutes les simulations, le nombre de déplacements reste constant. Par conséquent les grands systèmes se mélangent moins relativement à leur taille que les plus petits. C'est la raison pour laquelle les courbes oranges s'aplatissent de plus en plus sur des systèmes de plus en plus grands.\\
 
 \newpage
 
@@ -30,7 +30,7 @@ Le deuxième phénomène qui explique le retard croissant est que pour toutes le
 	\centering
 	\captionsetup{justification=centering}
 	\includegraphics[width=1\textwidth]{Images/SI_ref_4_5k.pdf}
-	\caption[Simulations de SI, densité 1/4]{Simulations du modèle SI sur des systèmes en densité $1/4$ avec $5000$ individus. La courbe bleue provient du modèle mathématique, la verte de la simulation au mélange parfait et la orange de la simulation aux $1000$ mouvements.}
+	\caption[Simulations de SI, densité 1/4]{Simulations du modèle SI sur des systèmes en densité $1/4$ avec $5000$ individus. La courbe bleue provient du modèle mathématique, la verte de la simulation au mélange parfait et l'orange de la simulation aux $1000$ mouvements.}
 \end{figure}
 
 Une densité de population de $\frac{1}{4}$ permet davantage de déplacement pour les individus, par conséquent le mélange pour la méthode à $1000$ mouvements est de meilleure qualité. Les courbes orange tendent donc davantage vers les courbes mathématiques.
@@ -39,7 +39,7 @@ Une densité de population de $\frac{1}{4}$ permet davantage de déplacement pou
 	\centering
 	\captionsetup{justification=centering}
 	\includegraphics[width=1\textwidth]{Images/SI_ref_8_20k.pdf}
-	\caption[Simulations de SI, densité 1/8]{Simulations du modèle SI sur des systèmes en densité $1/8$ avec $5000$ individus. La courbe bleue provient du modèle mathématique, la verte de la simulation au mélange parfait et la orange de la simulation aux $1000$ mouvements.}
+	\caption[Simulations de SI, densité 1/8]{Simulations du modèle SI sur des systèmes en densité $1/8$ avec $5000$ individus. La courbe bleue provient du modèle mathématique, la verte de la simulation au mélange parfait et l'orange de la simulation aux $1000$ mouvements.}
 \end{figure}
 
 Les mêmes comportements sont observés pour les simulations en densité $\frac{1}{8}$. Par contre un nouveau phénomène apparait sur la simulation à $20000$ individus. La courbe des $1000$ mouvements semble être décalée vers la droite sans pour autant qu'elle soit plus plate que le modèle SI. Ce comportement est dû aux variations aléatoires sur les simulations. Lorsque la densité est faible le facteur chance augmente ce qui a pour conséquence de déclencher des pandémies à des instants bien différents d'une simulation à l'autre.
@@ -48,7 +48,7 @@ Les mêmes comportements sont observés pour les simulations en densité $\frac{
 	\centering
 	\captionsetup{justification=centering}
 	\includegraphics[width=1\textwidth]{Images/SI_ref_16_50k.pdf}
-	\caption[Simulations de SI, densité 1/16]{Simulations du modèle SI sur des systèmes en densité $1/16$ avec $5000$ individus. La courbe bleue provient du modèle mathématique, la verte de la simulation au mélange parfait et la orange de la simulation aux $1000$ mouvements.}
+	\caption[Simulations de SI, densité 1/16]{Simulations du modèle SI sur des systèmes en densité $1/16$ avec $5000$ individus. La courbe bleue provient du modèle mathématique, la verte de la simulation au mélange parfait et l'orange de la simulation aux $1000$ mouvements.}
 \end{figure}
 
 Finalement les simulations en densité $\frac{1}{16}$ donnent aussi de bons résultats. Les mêmes comportements sont observés sur ces simulations mais la simulation à $50000$ individus montre un nouveau comportement pas encore observé sur les autres simulations. L'effet ici est assez faible mais on peut distinguer que la courbe du mélange parfait croît plus rapidement que le modèle mathématique SI. Nous avons donc une simulation qui évolue plus rapidement que le modèle SI. Cet effet n'est pas dû au fait que le modèle implémenté est plus rapide mais uniquement au temps qu'il a fallu à la pandémie pour se déclarer. En effet le modèle SI n'a aucun temps de latence et commence à l'itération $0$. Les mesures prisent sur SI souffrent peu de ce phénomène contrairement à certaines simulations par la suite. \\
@@ -82,7 +82,7 @@ Les mesures qui suivent comparent le modèle mathématique SI avec les simulatio
 	\end{tabular}
 \end{table}
 
-Les résultats suivent les observations du chapitre précédent. Tout d'abord nous remarquons que l'erreur est constante pour une densité fixée, c'est-à-dire que l'erreur ne croit pas avec la taille du système. Pour ces analyses, la magnitude des erreurs ne sont pas révélatrices, ce qui nous intéresse est de comparer les valeurs les unes avec les autres. \\
+Les résultats suivent les observations du chapitre précédent. Tout d'abord nous remarquons que l'erreur est constante pour une densité fixée, c'est-à-dire que l'erreur ne croit pas avec la taille du système. Pour ces analyses, la magnitude des erreurs n'est pas révélatrice, ce qui nous intéresse est de comparer les valeurs les unes avec les autres. \\
 
 Le deuxième résultat intéressant est que l'erreur augmente lorsque nous diminuons la densité du système. Ce comportement suit les observations des figures au chapitre précédent. L'erreur est due au temps de latence dont souffrent les systèmes moins denses. Une section ultérieure est dédiée aux latences des systèmes.
 
@@ -91,7 +91,7 @@ Le deuxième résultat intéressant est que l'erreur augmente lorsque nous dimin
 
 Les courbes des simulations ont montré des comportements peu intuitifs, surtout pour les systèmes peu denses. Cette section analyse le nombre de voisins moyens par individu pour ces simulations afin de déterminer si les résultats sont influencés par des mécaniques cachées derrière les mouvements des individus. Il s'agit ici de comparer la densité du voisinage de simulations au mélange parfait avec des simulations aux $1000$ mouvements. L'hypothèse derrière cette recherche est de déterminer si le déplacement des individus implique d'avantages de contacts que la méthode du mélange parfait.\\
 
-Nous nous intéressons aux simulations de faible densité car ce sont sur ces simulations que les comportements non intuitifs apparaissent. Les mesures sont prises sur des systèmes de densité $\frac{1}{8}$ ainsi que $\frac{1}{16}$ avec $5000$ individus. Les simulations les plus petites ont été choisie pour des questions de temps de calcul mais aussi du fait que les micros mécaniques que nous essayons de détecter ne sont pas influencées par la taille du système car c'est une analyse locale à chaque individu.\\
+Nous nous intéressons aux simulations de faible densité car ce sont sur ces simulations que les comportements non intuitifs apparaissent. Les mesures sont prises sur des systèmes de densité $\frac{1}{8}$ ainsi que $\frac{1}{16}$ avec $5000$ individus. Les simulations les plus petites ont été choisies pour des questions de temps de calcul mais aussi du fait que les micros mécaniques que nous essayons de détecter ne sont pas influencées par la taille du système car il s'agit d'une analyse locale à chaque individu.\\
 
 Les mesures pour le système en densité $\frac{1}{8}$ ont été effectué sur $65$ itérations puis moyenné. Les mesures pour le système de densité $\frac{1}{16}$ ont été effectué sur $110$ itérations puis moyenné.
 
@@ -116,7 +116,7 @@ Les résultats montrent que le mode de mouvements n'influence pas la densité du
 
 Une autre hypothèse qui pourrait expliquer les comportements observés est que les simulations ne soient pas déterministes, c'est-à-dire qu'un facteur aléatoire détermine à quel instant la pandémie se déclare. Cela signifie que deux simulations aux paramètres identiques peuvent produire deux résultats différents.\\
 
-L'objectif de cette section est de mesures cette variation sur des simulations à faible densité. Les densités étudiées sont $\frac{1}{8}$ et $\frac{1}{16}$ avec une population de $20000$ individus. Pour chaque densité, les deux modes de déplacements sont étudiés et ceci sur un total de $20$ simulations. Nous représentons donc $20$ simulations avec des paramètres identiques et observons les différences.
+L'objectif de cette section est de mesurer cette variation sur des simulations à faible densité. Les densités étudiées sont $\frac{1}{8}$ et $\frac{1}{16}$ avec une population de $20000$ individus. Pour chaque densité, les deux modes de déplacements sont étudiés et ceci sur un total de $20$ simulations. Nous représentons donc $20$ simulations avec des paramètres identiques et observons les différences.
 
 \newpage
 

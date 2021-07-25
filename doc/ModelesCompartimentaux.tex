@@ -2,11 +2,11 @@
 
 Les modèles compartimentaux sont une catégorie de modèles mathématiques permettant de représenter l'évolution de maladies infectieuses au sein d'une population. Ces modèles épidémiologiques se basent sur la notion de classes épidémiologiques et de transitions entre ces différentes classes. Nous appelons ces classes des "compartiments" et les transitions entre les classes des "règles". Un compartiment est un état possible dans lequel les acteurs du système peuvent se trouver. Chaque acteur se trouve à tout moment dans un compartiment et ce dernier définit son état. Une règle est une fonction de transition entre les compartiments. Lorsque les acteurs changent de compartiment, leur état change. Nous pouvons donc définir des règles permettant de changer de compartiment.\\
 
-Il existe $7$ type de compartiments différents. Le premier est $S$ et représente tous les individus sains du système. Le second est $I$ et désigne tous les acteurs contaminés. Le troisième est $E$ un compartiment de transition entre $S$ et $I$ et représente une période de latence. En effet, suivant les maladies il se peut qu'un acteur sain ne devienne pas directement contaminé après un contact positif. Le quatrième compartiment est $D$ et symbolise les individus décédés. Le cinquième est $R$ pour "recovered" et inclut tous les individus qui ont développé une immunité suite à une période étant infecté. Le sixième compartiment est le compartiment $M$ et reflète ce que nous avons appelé "résistance naturelle" dans le modèle. C'est-à-dire le groupe d'individus naturellement insensible au pathogène. Finalement le dernier compartiment est $C$ et illustre les individus asymptomatiques, c'est-à-dire les individus contaminés qui ne présentent aucun symptôme et semblent sains.\\
+Il existe $7$ types de compartiments différents. Le premier est $S$ et représente tous les individus sains du système. Le second est $I$ et désigne tous les acteurs contaminés. Le troisième est $E$ un compartiment de transition entre $S$ et $I$ qui représente une période de latence. En effet, suivant les maladies il se peut qu'un acteur sain ne devienne pas directement contaminé après un contact positif. Le quatrième compartiment est $D$ et symbolise les individus décédés. Le cinquième est $R$ pour "recovered" et inclut tous les individus qui ont développé une immunité suite à une infection. Le sixième compartiment est le compartiment $M$ et reflète ce que nous avons appelé "résistance naturelle" dans le modèle. C'est-à-dire le groupe d'individus naturellement insensibles au pathogène. Finalement le dernier compartiment est $C$ et illustre les individus asymptomatiques, c'est-à-dire les individus contaminés qui ne présentent aucun symptôme et semblent sains.\\
 
 Le modèle actuel n'implémente pas tous les compartiments mais uniquement trois d'entre eux. Nous n'étudierons que les compartiments $S$, $I$ et $R$. Les règles dépendent du modèle et sont développées dans la description de ce dernier.\\
 
-L'objectif de ce chapitre est de valider notre modèle sur les bases des modèles compartimentaux. Il s'agit donc de déterminer les paramètres du modèle afin d'observer des résultats imitant ces modèles. Les modèles compartimentaux sont des modèles mathématiques représentant l'évolution de pandémies qui ont été validée par le passé. Pour tester notre implémentation il est essentiel de le comparer à des résultats déjà prouvés. Dans ce chapitre, nous allons essayer de reproduire les résultats fournis par ces modèles bien connus et allons appliquer des variations sur les paramètres pour en constater l'impact.\\
+L'objectif de ce chapitre est de valider notre modèle sur les bases des modèles compartimentaux. Il s'agit donc de déterminer les paramètres du modèle afin d'observer des résultats imitant ces modèles. Les modèles compartimentaux sont des modèles mathématiques représentant l'évolution de pandémies qui ont été validés par le passé. Pour tester notre implémentation il est essentiel de le comparer à des résultats déjà prouvés. Dans ce chapitre, nous allons essayer de reproduire les résultats fournis par ces modèles bien connus et allons appliquer des variations sur les paramètres pour en constater l'impact.\\
 
 En plus de valider le modèle nous explorons les différents comportements observés. Les modèles mathématiques servent de référence et nous permettent de détecter des phénomènes de notre implémentation. Une multitude de comportements du modèle sont analysés dans cette section.
 
@@ -23,7 +23,7 @@ Le modèle SI est décrit mathématiques par les équations différentielles ord
 \end{align}
 La variable $N$ comptabilise toute la population d'individus de tous les compartiments confondus, par conséquent $N=S+I$. Le facteur $\beta$ est une valeur positive déterminant le taux d'infection du modèle.\\
 
-Les équations différentielles s'implémentent dans python de la manière suivante :
+Les équations différentielles s'implémentent dans Python de la manière suivante :
 
 \begin{minted}
 [
@@ -64,7 +64,7 @@ Le modèle ayant trois compartiments, il est décrit par trois équations diffé
 
 Le modèle mathématique est très similaire au précédent. La différence vient du fait que certains individus du compartiment $I$ migrent vers $R$ à un certain rythme.\\
 
-Comme pour le point précédent, python implémente les trois équations différentielles de la manière suivante :
+Comme pour le point précédent, Python implémente les trois équations différentielles de la manière suivante :
 
 \begin{minted}
 [
@@ -94,7 +94,7 @@ Une représentation graphique sur $100$ itérations avec les paramètres : $N = 
 
 Les modèles SI et SIR ont été prouvés par le passé et ont par conséquent une certaine validité. L'objectif ici est de valider notre modèle en le comparant aux résultats des modèles SI et SIR. Il s'agit donc de paramétrer notre modèle afin de le faire correspondre aux courbes des modèles valides déjà existant.\\
 
-Notre modèle paramétré et validé par SI et SIR peut servir de référentiel pour des analyses. Ces simulations de base nous permettent de quantifier les différences dans les résultats avec d'autres simulations paramétrées différemment. En effet une simulation crée son propre monde par conséquent un résultat seul ne révèle aucune information. Pour déduire des résultats de simulations il faut les comparer entre eux. C'est la raison pour laquelle nous établissons des simulations de références.\\
+Notre modèle paramétré et validé par SI et SIR peut servir de référentiel pour des analyses. Ces simulations de base nous permettent de quantifier les différences dans les résultats avec d'autres simulations paramétrées différemment. En effet une simulation crée son propre monde, par conséquent un résultat seul ne révèle aucune information. Pour déduire des résultats de simulations il faut les comparer entre eux. C'est la raison pour laquelle nous établissons des simulations de références.\\
 
 Afin d'établir une référence nous paramétrons les variables des modèles SI et SIR ainsi que les paramètres de notre modèle. Une multitude de tailles de systèmes ainsi que de taille de population sont testées.\\
 
