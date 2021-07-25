@@ -4,25 +4,21 @@
 
 Les mesures ainsi que la méthodologie est la même que pour le modèle SI, c'est-à-dire que les densités $1/2$, $1/4$, $1/8$, $1/16$ et les tailles de populations $5000$, $20000$, $50000$, $100000$ sont étudiées.
 
-\newpage
-
 \section{Résultats}
 
 \begin{figure}[h]
 	\centering
 	\captionsetup{justification=centering}
-	\includegraphics[width=0.9\textwidth]{Images/SIR_ref_2_100.pdf}
+	\includegraphics[width=0.8\textwidth]{Images/SIR_ref_2_100.pdf}
 	\caption[Simulation SIR, densité $1/2$]{Simulations de SIR en densité $1/2$ avec une population de $100000$ individus. Chaque figure représente un compartiment avec en premier le compartiment $I$, puis $R$ et finalement $S$. Les courbes bleues représentent le modèle mathématique SIR, les vertes les simulations au mélange parfait et les oranges les simulations aux $1000$ mouvements.}
 \end{figure}
 
 Pour les systèmes de forte densité, les simulations aux $1000$ mouvements peinent à se mélanger. Par conséquent, les événements sont plus tardifs. Nous pouvons observer les mêmes comportements que pour les simulations SI.
 
-\newpage
-
 \begin{figure}[h]
 	\centering
 	\captionsetup{justification=centering}
-	\includegraphics[width=.9\textwidth]{Images/SIR_ref_4_100.pdf}
+	\includegraphics[width=.8\textwidth]{Images/SIR_ref_4_100.pdf}
 	\caption[Simulation SIR, densité $1/4$]{Simulations de SIR en densité $1/4$ avec une population de $100000$ individus. Chaque figure représente un compartiment avec en premier le compartiment $I$, puis $R$ et finalement $S$. Les courbes bleues représentent le modèle mathématique SIR, les vertes les simulations au mélange parfait et les oranges les simulations aux $1000$ mouvements.}
 \end{figure}
 
@@ -33,7 +29,7 @@ En densité $\frac{1}{4}$ les simulations des $1000$ mouvements tendent davantag
 \begin{figure}[h]
 	\centering
 	\captionsetup{justification=centering}
-	\includegraphics[width=.9\textwidth]{Images/SIR_ref_8_100.pdf}
+	\includegraphics[width=.8\textwidth]{Images/SIR_ref_8_100.pdf}
 	\caption[Simulation SIR, densité $1/8$]{Simulations de SIR en densité $1/8$ avec une population de $100000$ individus. Chaque figure représente un compartiment avec en premier le compartiment $I$, puis $R$ et finalement $S$. Les courbes bleues représentent le modèle mathématique SIR, les vertes les simulations au mélange parfait et les oranges les simulations aux $1000$ mouvements.}
 \end{figure}
 
@@ -46,11 +42,13 @@ Par conséquent, pour joindre le modèle SIR aux simulations il faut prendre en 
 \begin{figure}[h]
 	\centering
 	\captionsetup{justification=centering}
-	\includegraphics[width=.9\textwidth]{Images/SIR_ref_16_100.pdf}
+	\includegraphics[width=.8\textwidth]{Images/SIR_ref_16_100.pdf}
 	\caption[Simulation SIR, densité $1/16$]{Simulations de SIR en densité $1/16$ avec une population de $100000$ individus. Chaque figure représente un compartiment avec en premier le compartiment $I$, puis $R$ et finalement $S$. Les courbes bleues représentent le modèle mathématique SIR, les vertes les simulations au mélange parfait et les oranges les simulations aux $1000$ mouvements.}
 \end{figure}
 
 En addition des observations déjà analysées, nous remarquons des oscillations sur la simulation à $5000$ individus. Ce phénomène n'était pas présent sur les simulations SI et ceci à cause de l'absence du compartiment $Recovered$. Deux raisons expliquent ce comportement, le premier est que le mécanisme d'immunisation transfert des individus du compartiment $I$ au $R$ et donc abaisse la courbe du compartiment $I$. Le second est dû à la densité du système qui est très faible, par conséquent il y a peu de contactes qui s'effectuent ce qui crée des oscillations. Ces oscillations sont aussi présentes sur des systèmes plus denses mais pas perceptibles car moyennée par un grand nombre d'événements.
+
+\newpage
 
 \section{Analyses}
 

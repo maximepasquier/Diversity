@@ -2,7 +2,7 @@
 
 Le modèle se construit sur différents niveaux d’abstractions. L'exécution d'une simulation s'effectue en plusieurs étapes, du plus général au plus détaillé.
 
-\section{Main}
+\section{Main \& Initialisation}
 
 Le "main" est la structure du plus haut niveau du modèle; il sert d'interface pour l'utilisateur. A ce niveau, il est possible d'instancier plusieurs simulations avec des paramètres choisis. L'instanciation d'une simulation se fait de la manière suivante :
 
@@ -75,9 +75,7 @@ IMMUNITE_MECANISME = false
 RESISTANCE_MECANISME = false
 \end{minted}
 
-Voici la structure d'un fichier de configuration. Chaque ligne est composée d'un paramètre avec une valeur associée. 
-
-\section{Initialisation}
+Voici la structure d'un fichier de configuration. Chaque ligne est composée d'un paramètre avec une valeur associée.\\
 
 La phase d'initialisation prépare le système pour une simulation. La première étape est de lire le fichier de configuration et d'assigner les valeurs lues aux variables de la simulation. Ensuite il faut allouer de la mémoire pour tous les objets du système. La simulation ainsi que les individus et les agents pathogènes sont des objets. Le nombre d'individus du système est déterminé par le paramètre {\small "NOMBRE\_INDIVIDUS"} et chaque individu est pointé par un pointeur appartenant à une liste. Cette liste est de taille fixe et contient tous les individus du système. Contrairement aux individus, les objets agents pathogènes ne sont pas contenus dans une liste fixe à cause de leur nombre pouvant changer. En effet, un agent pathogène est un objet à part entière, si et seulement s'il contamine une cellule. Nous utilisons donc une liste doublement chaînée pour stocker ces objets. Cette structure permet de supprimer un élément au milieu de la liste sans créer de trou.\\ 
 
@@ -121,31 +119,16 @@ $$
 Le paramètre $d$ est la distance de Hamming entre les deux génomes des acteurs. Cette fonction traduit la distance de Hamming en une probabilité car $d$ ne peut varier qu'entre $[0,32]$.
 
 \begin{figure}[h]
-  \centering
-    \captionsetup{justification=centering}
-  \begin{minipage}[b]{0.4\textwidth}
-    \includegraphics[width=\textwidth]{Images/fonction_1.png}
-    \caption[Fonction de converstion en probabilité (facteur 1)]{Fonction de conversion de la distance de Hamming en probabilité avec {\small PARAMETRE\_FONCTION} = $1$}
-  \end{minipage}
-  \hfill
-  \begin{minipage}[b]{0.4\textwidth}
-    \includegraphics[width=\textwidth]{Images/fonction_2.png}
-    \caption[Fonction de converstion en probabilité (facteur 2)]{Fonction de conversion de la distance de Hamming en probabilité avec {\small PARAMETRE\_FONCTION} = $2$}
-  \end{minipage}
-\end{figure}
-
-\begin{figure}[h]
-  \centering
-    \captionsetup{justification=centering}
-  \begin{minipage}[b]{0.4\textwidth}
-    \includegraphics[width=\textwidth]{Images/fonction_4.png}
-    \caption[Fonction de converstion en probabilité (facteur 4)]{Fonction de conversion de la distance de Hamming en probabilité avec {\small PARAMETRE\_FONCTION} = $4$}
-  \end{minipage}
-  \hfill
-  \begin{minipage}[b]{0.4\textwidth}
-    \includegraphics[width=\textwidth]{Images/fonction_8.png}
-    \caption[Fonction de converstion en probabilité (facteur 8)]{Fonction de conversion de la distance de Hamming en probabilité avec {\small PARAMETRE\_FONCTION} = $8$}
-  \end{minipage}
+	\centering
+	\captionsetup{justification=centering}
+	\includegraphics[width=.4\textwidth]{Images/fonction_1.png}
+  \vspace{1cm}
+  \hspace{1cm}
+	\includegraphics[width=.4\textwidth]{Images/fonction_2.png}
+	\includegraphics[width=.4\textwidth]{Images/fonction_4.png}
+  \hspace{1cm}
+	\includegraphics[width=.4\textwidth]{Images/fonction_8.png}
+	\caption[Fonction de converstion en probabilité]{Fonction de conversion de la distance de Hamming en probabilité avec {\small PARAMETRE\_FONCTION} = $1$  (haut à gauche), = $2$ (haut à droite), = $4$ (bas à gauche), = $8$ (bas à droite)}
 \end{figure}
 
 Les $4$ fonctions sont bornées entre $[0,1]$. L'image d'une abscisse représente la probabilité de rejeter l'agent pathogène en fonction de la distance de Hamming. Le paramètre de fonction permet de modifier l'allure de la courbe sans modifier les bornes. Une petite valeur de {\small "PARAMETRE\_FONCTION"} traduit de grandes probabilités d'éliminer l'agent pathogène et inversement une grande valeur du paramètre traduit de faibles probabilités d'éliminer le pathogène.\\
@@ -164,18 +147,15 @@ Le paramètre $d$ est la distance de Hamming entre le génome du pathogène renc
 
 \newpage
 
+
+
 \begin{figure}[h]
-  \centering
-    \captionsetup{justification=centering}
-  \begin{minipage}[b]{0.4\textwidth}
-    \includegraphics[width=\textwidth]{Images/doubleHamming4.png}
-    \caption[Fonction (double) de converstion en probabilité (facteur 4)]{Fonction de conversion de la distance de Hamming en probabilité avec {\tiny PARAMETRE\_FONCTION\_DOUBLE} = $4$}
-  \end{minipage}
-  \hfill
-  \begin{minipage}[b]{0.4\textwidth}
-    \includegraphics[width=\textwidth]{Images/doubleHamming8.png}
-    \caption[Fonction (double) de converstion en probabilité (facteur 8)]{Fonction de conversion de la distance de Hamming en probabilité avec {\tiny PARAMETRE\_FONCTION\_DOUBLE} = $8$}
-  \end{minipage}
+	\centering
+	\captionsetup{justification=centering}
+	\includegraphics[width=.4\textwidth]{Images/doubleHamming2.png}
+  \hspace{1cm}
+	\includegraphics[width=.4\textwidth]{Images/doubleHamming8.png}
+	\caption[Fonction (double) de converstion en probabilité]{Fonction de conversion de la distance de Hamming en probabilité avec {\small PARAMETRE\_FONCTION\_DOUBLE} = $2$ (gauche), = $8$ (droite)}
 \end{figure}
 
 Par conséquent, un individu a de fortes chances d'être immunisé à un pathogène si le génome de ce dernier est proche d'un pathogène déjà rencontré. Plus la distance de Hamming entre les deux génomes d'agents pathogène augmente, moins l'individu n'a de chance d'être immunisé.\\

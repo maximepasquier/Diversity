@@ -104,6 +104,8 @@ Dans ce chapitre nous essayons d'imiter des comportements décrits par le modèl
 
 Les modèles compartimentaux n'ont pas de notion d'espace, c'est-à-dire que les individus du système n'ont pas de position géographique. Ces modèles considèrent tous les individus en contact les uns avec les autres et ceci modulé par le facteur $\beta$. Étant donné que notre modèle implémenté possède une notion d'espace, il a fallu l'adapter afin qu'il satisfasse les conditions des modèles compartimentaux. Deux solutions ont été trouvées pour palier à ce problème. La première est de désactiver la fonction de mouvement chez les individus et de la remplacer par une redistribution complète et aléatoire de toute la population. De ce fait nous redistribuons tous les individus et obtenons un mélange parfait à chaque itération. Cette méthode est appelée "perfect\_mix". La seconde méthode est de permettre aux individus du système de se déplacer davantage. Nous pouvons simuler un mélange parfait en déplaçant un grand nombre de fois les individus à chaque itération. Initialement le modèle était conçu pour permettre à tous les individus de se déplacer d'une cellule à chaque itération. Mais un paramètre permet de déterminer le nombre de mouvements effectué par un individu par itération. Pour simuler le modèle SI le plus précisément possible il faut un grand nombre de déplacements. Ce nombre est fixé à $1000$ ce qui signifie qu'un individu a le potentiel de se déplacer de $1000$ cellules en une seule itération.\\
 
+\newpage
+
 Le modèle doit être paramétré spécifiquement pour adopter les mêmes comportements qu'un modèle SI. Un exemple de fichier de configuration est donné ci-dessous : 
 
 \begin{minted}

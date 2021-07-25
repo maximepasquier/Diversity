@@ -1,7 +1,7 @@
 \boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
 \babel@toc {french}{}
-\contentsline {chapter}{\nonumberline Liste des tableaux}{V}{chapter*.3}%
-\contentsline {chapter}{\nonumberline Table des figures}{VI}{chapter*.4}%
+\contentsline {chapter}{\nonumberline Liste des tableaux}{IV}{chapter*.3}%
+\contentsline {chapter}{\nonumberline Table des figures}{V}{chapter*.4}%
 \contentsline {chapter}{\numberline {1}Résumé}{1}{chapter.1}%
 \contentsline {chapter}{\numberline {2}Introduction}{3}{chapter.2}%
 \contentsline {chapter}{\numberline {3}Approche du problème, méthodes, outils utilisés}{4}{chapter.3}%
@@ -10,10 +10,10 @@
 \contentsline {section}{\numberline {3.3}Outils}{4}{section.3.3}%
 \contentsline {chapter}{\numberline {4}Modèle}{5}{chapter.4}%
 \contentsline {section}{\numberline {4.1}Acteurs}{5}{section.4.1}%
-\contentsline {subsection}{\numberline {4.1.1}Individus}{5}{subsection.4.1.1}%
+\contentsline {subsection}{\numberline {4.1.1}Individus}{6}{subsection.4.1.1}%
 \contentsline {subsection}{\numberline {4.1.2}Agents pathogènes}{6}{subsection.4.1.2}%
 \contentsline {section}{\numberline {4.2}Espace physique}{6}{section.4.2}%
-\contentsline {subsection}{\numberline {4.2.1}Cellule}{6}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.2.1}Cellule}{7}{subsection.4.2.1}%
 \contentsline {subsection}{\numberline {4.2.2}Grille régulière}{8}{subsection.4.2.2}%
 \contentsline {subsection}{\numberline {4.2.3}Voisinage}{9}{subsection.4.2.3}%
 \contentsline {section}{\numberline {4.3}Simulation}{9}{section.4.3}%
@@ -31,14 +31,13 @@
 \contentsline {section}{\numberline {4.6}Immunisation et résistance naturelle}{17}{section.4.6}%
 \contentsline {section}{\numberline {4.7}Mutations}{18}{section.4.7}%
 \contentsline {chapter}{\numberline {5}Implémentation}{19}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Main}{19}{section.5.1}%
-\contentsline {section}{\numberline {5.2}Initialisation}{20}{section.5.2}%
-\contentsline {section}{\numberline {5.3}Exécution de la simulation}{21}{section.5.3}%
+\contentsline {section}{\numberline {5.1}Main \& Initialisation}{19}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Exécution de la simulation}{21}{section.5.2}%
 \contentsline {subsubsection}{\nonumberline Permutation}{22}{section*.14}%
 \contentsline {subsubsection}{\nonumberline Agents pathogènes}{22}{section*.15}%
 \contentsline {subsubsection}{\nonumberline Individus}{22}{section*.16}%
-\contentsline {subsubsection}{\nonumberline Mesures}{25}{section*.20}%
-\contentsline {section}{\numberline {5.4}Fermeture}{26}{section.5.4}%
+\contentsline {subsubsection}{\nonumberline Mesures}{25}{section*.19}%
+\contentsline {section}{\numberline {5.3}Fermeture}{26}{section.5.3}%
 \contentsline {chapter}{\numberline {6}Objectifs}{27}{chapter.6}%
 \contentsline {chapter}{\numberline {7}Modèles Compartimentaux}{29}{chapter.7}%
 \contentsline {section}{\numberline {7.1}Modèle SI}{30}{section.7.1}%
@@ -56,22 +55,22 @@
 \contentsline {subsection}{\numberline {8.3.4}Positions des individus}{43}{subsection.8.3.4}%
 \contentsline {chapter}{\numberline {9}Modèle SIR}{45}{chapter.9}%
 \contentsline {section}{\numberline {9.1}Mesures et méthodologie SIR}{45}{section.9.1}%
-\contentsline {section}{\numberline {9.2}Résultats}{46}{section.9.2}%
-\contentsline {section}{\numberline {9.3}Analyses}{50}{section.9.3}%
-\contentsline {subsection}{\numberline {9.3.1}Mean Absolute Error}{50}{subsection.9.3.1}%
-\contentsline {subsection}{\numberline {9.3.2}Variations aléatoires}{51}{subsection.9.3.2}%
-\contentsline {subsection}{\numberline {9.3.3}Latence des simulations}{52}{subsection.9.3.3}%
-\contentsline {subsection}{\numberline {9.3.4}Mouvements variable}{55}{subsection.9.3.4}%
-\contentsline {subsection}{\numberline {9.3.5}Comparaison 1000 mouvements}{56}{subsection.9.3.5}%
-\contentsline {chapter}{\numberline {10}Diversité}{58}{chapter.10}%
-\contentsline {section}{\numberline {10.1}Mesures et méthodologie}{58}{section.10.1}%
-\contentsline {section}{\numberline {10.2}Pandémies totales}{58}{section.10.2}%
-\contentsline {section}{\numberline {10.3}Taux de pandémies}{60}{section.10.3}%
-\contentsline {section}{\numberline {10.4}Pandémies partielles}{65}{section.10.4}%
-\contentsline {chapter}{\numberline {11}Mutations}{69}{chapter.11}%
-\contentsline {section}{\numberline {11.1}Mesures et méthodologie}{69}{section.11.1}%
-\contentsline {section}{\numberline {11.2}Vitesse de propagation}{70}{section.11.2}%
-\contentsline {subsection}{\numberline {11.2.1}Immunisation simple}{70}{subsection.11.2.1}%
-\contentsline {subsection}{\numberline {11.2.2}Immunisation groupe}{71}{subsection.11.2.2}%
-\contentsline {subsection}{\numberline {11.2.3}Conclusion des résultats}{72}{subsection.11.2.3}%
-\contentsline {chapter}{\numberline {12}Conclusion}{73}{chapter.12}%
+\contentsline {section}{\numberline {9.2}Résultats}{45}{section.9.2}%
+\contentsline {section}{\numberline {9.3}Analyses}{49}{section.9.3}%
+\contentsline {subsection}{\numberline {9.3.1}Mean Absolute Error}{49}{subsection.9.3.1}%
+\contentsline {subsection}{\numberline {9.3.2}Variations aléatoires}{50}{subsection.9.3.2}%
+\contentsline {subsection}{\numberline {9.3.3}Latence des simulations}{51}{subsection.9.3.3}%
+\contentsline {subsection}{\numberline {9.3.4}Mouvements variable}{54}{subsection.9.3.4}%
+\contentsline {subsection}{\numberline {9.3.5}Comparaison 1000 mouvements}{55}{subsection.9.3.5}%
+\contentsline {chapter}{\numberline {10}Diversité}{57}{chapter.10}%
+\contentsline {section}{\numberline {10.1}Mesures et méthodologie}{57}{section.10.1}%
+\contentsline {section}{\numberline {10.2}Pandémies totales}{57}{section.10.2}%
+\contentsline {section}{\numberline {10.3}Taux de pandémies}{59}{section.10.3}%
+\contentsline {section}{\numberline {10.4}Pandémies partielles}{64}{section.10.4}%
+\contentsline {chapter}{\numberline {11}Mutations}{68}{chapter.11}%
+\contentsline {section}{\numberline {11.1}Mesures et méthodologie}{68}{section.11.1}%
+\contentsline {section}{\numberline {11.2}Vitesse de propagation}{69}{section.11.2}%
+\contentsline {subsection}{\numberline {11.2.1}Immunisation simple}{69}{subsection.11.2.1}%
+\contentsline {subsection}{\numberline {11.2.2}Immunisation groupe}{70}{subsection.11.2.2}%
+\contentsline {subsection}{\numberline {11.2.3}Conclusion des résultats}{71}{subsection.11.2.3}%
+\contentsline {chapter}{\numberline {12}Conclusion}{72}{chapter.12}%

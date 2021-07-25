@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2021.6.17)  25 JUL 2021 17:42
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2021.6.17)  25 JUL 2021 19:01
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -2122,7 +2122,7 @@ File: ts1ppl.fd 2001/06/04 font definitions for TS1/ppl.
 \tf@toc=\write8
 \openout8 = `BasicDoc.toc'.
 
- [3] [4]
+ [3]
 Package tocbasic Info: character protrusion at lot deactivated on input line 28
 .
 
@@ -2130,7 +2130,7 @@ Package tocbasic Info: character protrusion at lot deactivated on input line 28
 \tf@lot=\write9
 \openout9 = `BasicDoc.lot'.
 
- [5
+ [4
 
 ]
 Package tocbasic Info: character protrusion at lof deactivated on input line 31
@@ -2139,9 +2139,9 @@ Package tocbasic Info: character protrusion at lof deactivated on input line 31
 \tf@lof=\write10
 \openout10 = `BasicDoc.lof'.
 
- [6
+ [5
 
-] [7]
+]
 \openout2 = `Resume.aux'.
 
  (./Resume.tex
@@ -2247,107 +2247,102 @@ Underfull \hbox (badness 10000) in paragraph at lines 16--17
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 22--23
-
- []
-
 [5
 
 
 
-] [6]
-<Images/cell_states.pdf, id=322, 439.25415pt x 90.99788pt>
+]
+Underfull \hbox (badness 10000) in paragraph at lines 24--25
+
+ []
+
+[6]
+<Images/cell_states.pdf, id=306, 439.25415pt x 90.99788pt>
 File: Images/cell_states.pdf Graphic file (type pdf)
 <use Images/cell_states.pdf>
-Package pdftex.def Info: Images/cell_states.pdf  used on input line 60.
+Package pdftex.def Info: Images/cell_states.pdf  used on input line 62.
 (pdftex.def)             Requested size: 307.4758pt x 63.69807pt.
  [7 <./Images/cell_states.pdf>]
-Underfull \hbox (badness 10000) in paragraph at lines 68--69
+Underfull \hbox (badness 10000) in paragraph at lines 70--71
 
  []
 
-<Images/grid.png, id=2115, 501.072pt x 501.072pt>
+<Images/grid.png, id=2099, 501.072pt x 501.072pt>
 File: Images/grid.png Graphic file (type png)
 <use Images/grid.png>
-Package pdftex.def Info: Images/grid.png  used on input line 75.
+Package pdftex.def Info: Images/grid.png  used on input line 77.
 (pdftex.def)             Requested size: 250.53539pt x 250.53539pt.
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 10.42007pt on input line 76.
+(Font)              scaled to size 10.42007pt on input line 78.
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 7.91925pt on input line 76.
+(Font)              scaled to size 7.91925pt on input line 78.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 10.42007pt on input line 76.
+(Font)              scaled to size 10.42007pt on input line 78.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 7.91925pt on input line 76.
+(Font)              scaled to size 7.91925pt on input line 78.
 [8 <./Images/grid.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 85--86
+Underfull \hbox (badness 10000) in paragraph at lines 87--88
 
  []
 
-<Images/voisinage.png, id=2122, 408.3255pt x 399.1713pt>
+<Images/voisinage.png, id=2106, 408.3255pt x 399.1713pt>
 File: Images/voisinage.png Graphic file (type png)
 <use Images/voisinage.png>
-Package pdftex.def Info: Images/voisinage.png  used on input line 90.
+Package pdftex.def Info: Images/voisinage.png  used on input line 92.
 (pdftex.def)             Requested size: 204.16225pt x 199.58516pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 98--99
+Underfull \hbox (badness 10000) in paragraph at lines 100--101
 
  []
 
-<Images/configuration_initiale.png, id=2123, 501.072pt x 501.072pt>
+<Images/configuration_initiale.png, id=2107, 501.072pt x 501.072pt>
 File: Images/configuration_initiale.png Graphic file (type png)
 <use Images/configuration_initiale.png>
 Package pdftex.def Info: Images/configuration_initiale.png  used on input line 
-103.
+105.
 (pdftex.def)             Requested size: 250.53539pt x 250.53539pt.
 [9 <./Images/voisinage.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 111--112
-
- []
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 113--114
 
  []
 
-[10 <./Images/configuration_initiale.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 119--120
+
+Underfull \hbox (badness 10000) in paragraph at lines 115--116
 
  []
 
-<Images/move_available.png, id=2134, 408.3255pt x 498.1812pt>
+[10 <./Images/configuration_initiale.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 121--122
+
+ []
+
+<Images/move_available.png, id=2119, 408.3255pt x 498.1812pt>
 File: Images/move_available.png Graphic file (type png)
 <use Images/move_available.png>
-Package pdftex.def Info: Images/move_available.png  used on input line 124.
+Package pdftex.def Info: Images/move_available.png  used on input line 126.
 (pdftex.def)             Requested size: 204.16225pt x 249.08998pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 128--129
+Underfull \hbox (badness 10000) in paragraph at lines 130--131
 
  []
 
 [11 <./Images/move_available.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 150--151
+Underfull \hbox (badness 10000) in paragraph at lines 152--153
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 156--157
+Underfull \hbox (badness 10000) in paragraph at lines 158--159
 
  []
 
 [12] [13]
-Underfull \hbox (badness 10000) in paragraph at lines 179--180
-
- []
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 181--182
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 187--188
+Underfull \hbox (badness 10000) in paragraph at lines 183--184
 
  []
 
@@ -2356,12 +2351,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 189--190
 
  []
 
-[14]
+
 Underfull \hbox (badness 10000) in paragraph at lines 191--192
 
  []
 
-
+[14]
 Underfull \hbox (badness 10000) in paragraph at lines 193--194
 
  []
@@ -2376,17 +2371,17 @@ Underfull \hbox (badness 10000) in paragraph at lines 197--198
 
  []
 
-[15]
-<Images/hamming.png, id=2169, 161.6439pt x 71.5473pt>
-File: Images/hamming.png Graphic file (type png)
-<use Images/hamming.png>
-Package pdftex.def Info: Images/hamming.png  used on input line 206.
-(pdftex.def)             Requested size: 161.64351pt x 71.5471pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 210--211
+Underfull \hbox (badness 10000) in paragraph at lines 199--200
 
  []
 
+[15]
+<Images/hamming.png, id=2154, 161.6439pt x 71.5473pt>
+File: Images/hamming.png Graphic file (type png)
+<use Images/hamming.png>
+Package pdftex.def Info: Images/hamming.png  used on input line 208.
+(pdftex.def)             Requested size: 161.64351pt x 71.5471pt.
 
 Underfull \hbox (badness 10000) in paragraph at lines 212--213
 
@@ -2398,7 +2393,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 214--215
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 223--224
+Underfull \hbox (badness 10000) in paragraph at lines 216--217
 
  []
 
@@ -2407,12 +2402,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 225--226
 
  []
 
-[16 <./Images/hamming.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 231--232
+
+Underfull \hbox (badness 10000) in paragraph at lines 227--228
 
  []
 
-
+[16 <./Images/hamming.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 233--234
 
  []
@@ -2427,13 +2422,18 @@ Underfull \hbox (badness 10000) in paragraph at lines 237--238
 
  []
 
+
+Underfull \hbox (badness 10000) in paragraph at lines 239--240
+
+ []
+
 [17]
-Underfull \hbox (badness 10000) in paragraph at lines 243--244
+Underfull \hbox (badness 10000) in paragraph at lines 245--246
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 245--246
+Underfull \hbox (badness 10000) in paragraph at lines 247--248
 
  []
 
@@ -2494,27 +2494,37 @@ Underfull \hbox (badness 10000) in paragraph at lines 43--44
 
 (./_minted-BasicDoc/43FD2E1FA464CCE476A6DC886094742EE21E0DE635CE4C51038A6C66C76
 34BB6.pygtex)
+Underfull \hbox (badness 10000) in paragraph at lines 78--79
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 80--81
+
+ []
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 82--83
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 84--85
-
- []
-
 [20]
-<Images/MatricesPointeurs.png, id=2195, 859.21pt x 502.87875pt>
+<Images/MatricesPointeurs.png, id=2180, 859.21pt x 502.87875pt>
 File: Images/MatricesPointeurs.png Graphic file (type png)
 <use Images/MatricesPointeurs.png>
-Package pdftex.def Info: Images/MatricesPointeurs.png  used on input line 89.
+Package pdftex.def Info: Images/MatricesPointeurs.png  used on input line 87.
 (pdftex.def)             Requested size: 343.67792pt x 201.14793pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 93--94
+Underfull \hbox (badness 10000) in paragraph at lines 91--92
 
  []
 
 [21 <./Images/MatricesPointeurs.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 109--110
+
+ []
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 111--112
 
  []
@@ -2529,86 +2539,81 @@ Underfull \hbox (badness 10000) in paragraph at lines 115--116
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 117--118
-
- []
-
 [22]
-<Images/fonction_1.png, id=2208, 803.0pt x 803.0pt>
+<Images/fonction_1.png, id=2193, 803.0pt x 803.0pt>
 File: Images/fonction_1.png Graphic file (type png)
 <use Images/fonction_1.png>
-Package pdftex.def Info: Images/fonction_1.png  used on input line 127.
+Package pdftex.def Info: Images/fonction_1.png  used on input line 124.
 (pdftex.def)             Requested size: 167.29967pt x 167.29942pt.
-<Images/fonction_2.png, id=2209, 803.0pt x 803.0pt>
+<Images/fonction_2.png, id=2194, 803.0pt x 803.0pt>
 File: Images/fonction_2.png Graphic file (type png)
 <use Images/fonction_2.png>
-Package pdftex.def Info: Images/fonction_2.png  used on input line 132.
+Package pdftex.def Info: Images/fonction_2.png  used on input line 127.
 (pdftex.def)             Requested size: 167.29967pt x 167.29942pt.
-<Images/fonction_4.png, id=2210, 803.0pt x 803.0pt>
+<Images/fonction_4.png, id=2195, 803.0pt x 803.0pt>
 File: Images/fonction_4.png Graphic file (type png)
 <use Images/fonction_4.png>
-Package pdftex.def Info: Images/fonction_4.png  used on input line 141.
+Package pdftex.def Info: Images/fonction_4.png  used on input line 128.
 (pdftex.def)             Requested size: 167.29967pt x 167.29942pt.
-<Images/fonction_8.png, id=2211, 803.0pt x 803.0pt>
+<Images/fonction_8.png, id=2196, 803.0pt x 803.0pt>
 File: Images/fonction_8.png Graphic file (type png)
 <use Images/fonction_8.png>
-Package pdftex.def Info: Images/fonction_8.png  used on input line 146.
+Package pdftex.def Info: Images/fonction_8.png  used on input line 130.
 (pdftex.def)             Requested size: 167.29967pt x 167.29942pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 151--152
+Underfull \hbox (badness 10000) in paragraph at lines 134--135
 
  []
 
 [23 <./Images/fonction_1.png> <./Images/fonction_2.png> <./Images/fonction_4.pn
 g> <./Images/fonction_8.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 153--154
+Underfull \hbox (badness 10000) in paragraph at lines 136--137
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 155--156
+Underfull \hbox (badness 10000) in paragraph at lines 138--139
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 157--158
+Underfull \hbox (badness 10000) in paragraph at lines 140--141
 
  []
 
 
-Overfull \hbox (0.1894pt too wide) detected at line 161
+Overfull \hbox (0.1894pt too wide) detected at line 144
 \OML/zplm/m/it/10.95 f\OT1/zplm/m/n/10.95 (\OML/zplm/m/it/10.95 d\OT1/zplm/m/n/
 10.95 ) = [] = ([])[]
  []
 
 [24]
-<Images/doubleHamming4.png, id=2226, 803.0pt x 803.0pt>
-File: Images/doubleHamming4.png Graphic file (type png)
-<use Images/doubleHamming4.png>
-Package pdftex.def Info: Images/doubleHamming4.png  used on input line 171.
+<Images/doubleHamming2.png, id=2210, 803.0pt x 803.0pt>
+File: Images/doubleHamming2.png Graphic file (type png)
+<use Images/doubleHamming2.png>
+Package pdftex.def Info: Images/doubleHamming2.png  used on input line 155.
 (pdftex.def)             Requested size: 167.29967pt x 167.29942pt.
-<Images/doubleHamming8.png, id=2227, 803.0pt x 803.0pt>
+<Images/doubleHamming8.png, id=2211, 803.0pt x 803.0pt>
 File: Images/doubleHamming8.png Graphic file (type png)
 <use Images/doubleHamming8.png>
-Package pdftex.def Info: Images/doubleHamming8.png  used on input line 176.
+Package pdftex.def Info: Images/doubleHamming8.png  used on input line 157.
 (pdftex.def)             Requested size: 167.29967pt x 167.29942pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 181--182
+Underfull \hbox (badness 10000) in paragraph at lines 161--162
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 183--184
+Underfull \hbox (badness 10000) in paragraph at lines 163--164
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 189--190
+Underfull \hbox (badness 10000) in paragraph at lines 169--170
 
  []
 
-) [25 <./Images/doubleHamming4.png> <./Images/doubleHamming8.png>] [26]
+) [25 <./Images/doubleHamming2.png> <./Images/doubleHamming8.png>] [26]
 \openout2 = `Objectifs.aux'.
 
 
@@ -2697,7 +2702,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 41--42
  []
 
 [30]
-<Images/SI_exemple.pdf, id=2260, 1445.4pt x 722.7pt>
+<Images/SI_exemple.pdf, id=2244, 1445.4pt x 722.7pt>
 File: Images/SI_exemple.pdf Graphic file (type pdf)
 <use Images/SI_exemple.pdf>
 Package pdftex.def Info: Images/SI_exemple.pdf  used on input line 50.
@@ -2722,7 +2727,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 82--83
 
  []
 
-<Images/SIR_exemple.pdf, id=2304, 1445.4pt x 722.7pt>
+<Images/SIR_exemple.pdf, id=2289, 1445.4pt x 722.7pt>
 File: Images/SIR_exemple.pdf Graphic file (type pdf)
 <use Images/SIR_exemple.pdf>
 Package pdftex.def Info: Images/SIR_exemple.pdf  used on input line 89.
@@ -2752,11 +2757,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 105--106
 
  []
 
+[33]
 \openout3 = `BasicDoc.pyg'.
 
 
 (./_minted-BasicDoc/F4BB579AE7521E34CCAA0B0FC2E783EC0EE38139A3E3C51A234AB14B79F
-83C7B.pygtex) [33]
+83C7B.pygtex)
 \openout3 = `BasicDoc.pyg'.
 
 
@@ -2791,22 +2797,22 @@ chapter 8.
 
 
 ]
-<Images/SI_ref_2_5k.pdf, id=2362, 1445.4pt x 722.7pt>
+<Images/SI_ref_2_5k.pdf, id=2346, 1445.4pt x 722.7pt>
 File: Images/SI_ref_2_5k.pdf Graphic file (type pdf)
 <use Images/SI_ref_2_5k.pdf>
 Package pdftex.def Info: Images/SI_ref_2_5k.pdf  used on input line 14.
 (pdftex.def)             Requested size: 209.12778pt x 104.56274pt.
-<Images/SI_ref_2_20k.pdf, id=2363, 1445.4pt x 722.7pt>
+<Images/SI_ref_2_20k.pdf, id=2347, 1445.4pt x 722.7pt>
 File: Images/SI_ref_2_20k.pdf Graphic file (type pdf)
 <use Images/SI_ref_2_20k.pdf>
 Package pdftex.def Info: Images/SI_ref_2_20k.pdf  used on input line 15.
 (pdftex.def)             Requested size: 209.12778pt x 104.56274pt.
-<Images/SI_ref_2_50k.pdf, id=2364, 1445.4pt x 722.7pt>
+<Images/SI_ref_2_50k.pdf, id=2348, 1445.4pt x 722.7pt>
 File: Images/SI_ref_2_50k.pdf Graphic file (type pdf)
 <use Images/SI_ref_2_50k.pdf>
 Package pdftex.def Info: Images/SI_ref_2_50k.pdf  used on input line 16.
 (pdftex.def)             Requested size: 209.12778pt x 104.56274pt.
-<Images/SI_ref_2_100k.pdf, id=2365, 1445.4pt x 722.7pt>
+<Images/SI_ref_2_100k.pdf, id=2349, 1445.4pt x 722.7pt>
 File: Images/SI_ref_2_100k.pdf Graphic file (type pdf)
 <use Images/SI_ref_2_100k.pdf>
 Package pdftex.def Info: Images/SI_ref_2_100k.pdf  used on input line 17.
@@ -2920,17 +2926,17 @@ ple pdfs with page group included in a single page
 pdfTeX warning: pdflatex (file ./Images/SI_ref_2_100k.pdf): PDF inclusion: mult
 iple pdfs with page group included in a single page
 >]
-<Images/SI_ref_4_5k.pdf, id=2519, 1445.4pt x 722.7pt>
+<Images/SI_ref_4_5k.pdf, id=2504, 1445.4pt x 722.7pt>
 File: Images/SI_ref_4_5k.pdf Graphic file (type pdf)
 <use Images/SI_ref_4_5k.pdf>
 Package pdftex.def Info: Images/SI_ref_4_5k.pdf  used on input line 32.
 (pdftex.def)             Requested size: 418.25555pt x 209.1255pt.
-<Images/SI_ref_8_20k.pdf, id=2520, 1445.4pt x 722.7pt>
+<Images/SI_ref_8_20k.pdf, id=2505, 1445.4pt x 722.7pt>
 File: Images/SI_ref_8_20k.pdf Graphic file (type pdf)
 <use Images/SI_ref_8_20k.pdf>
 Package pdftex.def Info: Images/SI_ref_8_20k.pdf  used on input line 41.
 (pdftex.def)             Requested size: 418.25555pt x 209.1255pt.
-<Images/SI_ref_16_50k.pdf, id=2521, 1445.4pt x 722.7pt>
+<Images/SI_ref_16_50k.pdf, id=2506, 1445.4pt x 722.7pt>
 File: Images/SI_ref_16_50k.pdf Graphic file (type pdf)
 <use Images/SI_ref_16_50k.pdf>
 Package pdftex.def Info: Images/SI_ref_16_50k.pdf  used on input line 50.
@@ -2970,13 +2976,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 117--118
  []
 
 [41]
-<Images/SI_divergence_8_1000.pdf, id=2653, 1445.4pt x 722.7pt>
+<Images/SI_divergence_8_1000.pdf, id=2637, 1445.4pt x 722.7pt>
 File: Images/SI_divergence_8_1000.pdf Graphic file (type pdf)
 <use Images/SI_divergence_8_1000.pdf>
 Package pdftex.def Info: Images/SI_divergence_8_1000.pdf  used on input line 12
 6.
 (pdftex.def)             Requested size: 209.12778pt x 104.56274pt.
-<Images/SI_divergence_8_mix.pdf, id=2654, 1445.4pt x 722.7pt>
+<Images/SI_divergence_8_mix.pdf, id=2638, 1445.4pt x 722.7pt>
 File: Images/SI_divergence_8_mix.pdf Graphic file (type pdf)
 <use Images/SI_divergence_8_mix.pdf>
 Package pdftex.def Info: Images/SI_divergence_8_mix.pdf  used on input line 127
@@ -3001,29 +3007,29 @@ Underfull \hbox (badness 10000) in paragraph at lines 162--163
 
  []
 
-<Images/SI_positions_14k_mix.pdf, id=2735, 1084.05pt x 1084.05pt>
+<Images/SI_positions_14k_mix.pdf, id=2719, 1084.05pt x 1084.05pt>
 File: Images/SI_positions_14k_mix.pdf Graphic file (type pdf)
 <use Images/SI_positions_14k_mix.pdf>
 Package pdftex.def Info: Images/SI_positions_14k_mix.pdf  used on input line 16
 9.
 (pdftex.def)             Requested size: 292.7776pt x 292.78012pt.
 [43 <./Images/SI_positions_14k_mix.pdf>]
-<Images/SI_positions_10k.pdf, id=2776, 1084.05pt x 1084.05pt>
+<Images/SI_positions_10k.pdf, id=2761, 1084.05pt x 1084.05pt>
 File: Images/SI_positions_10k.pdf Graphic file (type pdf)
 <use Images/SI_positions_10k.pdf>
 Package pdftex.def Info: Images/SI_positions_10k.pdf  used on input line 180.
 (pdftex.def)             Requested size: 167.29967pt x 167.2982pt.
-<Images/SI_positions_14k.pdf, id=2777, 1084.05pt x 1084.05pt>
+<Images/SI_positions_14k.pdf, id=2762, 1084.05pt x 1084.05pt>
 File: Images/SI_positions_14k.pdf Graphic file (type pdf)
 <use Images/SI_positions_14k.pdf>
 Package pdftex.def Info: Images/SI_positions_14k.pdf  used on input line 181.
 (pdftex.def)             Requested size: 167.29967pt x 167.2982pt.
-<Images/SI_positions_17k.pdf, id=2778, 1084.05pt x 1084.05pt>
+<Images/SI_positions_17k.pdf, id=2763, 1084.05pt x 1084.05pt>
 File: Images/SI_positions_17k.pdf Graphic file (type pdf)
 <use Images/SI_positions_17k.pdf>
 Package pdftex.def Info: Images/SI_positions_17k.pdf  used on input line 182.
 (pdftex.def)             Requested size: 167.29967pt x 167.2982pt.
-<Images/SI_positions_20k.pdf, id=2779, 1084.05pt x 1084.05pt>
+<Images/SI_positions_20k.pdf, id=2764, 1084.05pt x 1084.05pt>
 File: Images/SI_positions_20k.pdf Graphic file (type pdf)
 <use Images/SI_positions_20k.pdf>
 Package pdftex.def Info: Images/SI_positions_20k.pdf  used on input line 183.
@@ -3050,129 +3056,127 @@ ultiple pdfs with page group included in a single page
 
  (./SIR.tex
 chapter 9.
+<Images/SIR_ref_2_100.pdf, id=2887, 1084.05pt x 1084.05pt>
+File: Images/SIR_ref_2_100.pdf Graphic file (type pdf)
+<use Images/SIR_ref_2_100.pdf>
+Package pdftex.def Info: Images/SIR_ref_2_100.pdf  used on input line 12.
+(pdftex.def)             Requested size: 334.60571pt x 334.5964pt.
+<Images/SIR_ref_4_100.pdf, id=2888, 1084.05pt x 1084.05pt>
+File: Images/SIR_ref_4_100.pdf Graphic file (type pdf)
+<use Images/SIR_ref_4_100.pdf>
+Package pdftex.def Info: Images/SIR_ref_4_100.pdf  used on input line 21.
+(pdftex.def)             Requested size: 334.60571pt x 334.5964pt.
 [45
 
 
 
-]
-<Images/SIR_ref_2_100.pdf, id=2906, 1084.05pt x 1084.05pt>
-File: Images/SIR_ref_2_100.pdf Graphic file (type pdf)
-<use Images/SIR_ref_2_100.pdf>
-Package pdftex.def Info: Images/SIR_ref_2_100.pdf  used on input line 14.
-(pdftex.def)             Requested size: 376.42744pt x 376.42921pt.
- [46 <./Images/SIR_ref_2_100.pdf>]
-<Images/SIR_ref_4_100.pdf, id=2956, 1084.05pt x 1084.05pt>
-File: Images/SIR_ref_4_100.pdf Graphic file (type pdf)
-<use Images/SIR_ref_4_100.pdf>
-Package pdftex.def Info: Images/SIR_ref_4_100.pdf  used on input line 25.
-(pdftex.def)             Requested size: 376.42744pt x 376.42921pt.
- [47 <./Images/SIR_ref_4_100.pdf>]
-<Images/SIR_ref_8_100.pdf, id=3008, 1084.05pt x 1084.05pt>
+ <./Images/SIR_ref_2_100.pdf>] [46 <./Images/SIR_ref_4_100.pdf>]
+<Images/SIR_ref_8_100.pdf, id=2987, 1084.05pt x 1084.05pt>
 File: Images/SIR_ref_8_100.pdf Graphic file (type pdf)
 <use Images/SIR_ref_8_100.pdf>
-Package pdftex.def Info: Images/SIR_ref_8_100.pdf  used on input line 36.
-(pdftex.def)             Requested size: 376.42744pt x 376.42921pt.
+Package pdftex.def Info: Images/SIR_ref_8_100.pdf  used on input line 32.
+(pdftex.def)             Requested size: 334.60571pt x 334.5964pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 40--41
+Underfull \hbox (badness 10000) in paragraph at lines 36--37
 
  []
 
-[48 <./Images/SIR_ref_8_100.pdf>]
-<Images/SIR_ref_16_100.pdf, id=3058, 1084.05pt x 1084.05pt>
+[47 <./Images/SIR_ref_8_100.pdf>]
+<Images/SIR_ref_16_100.pdf, id=3037, 1084.05pt x 1084.05pt>
 File: Images/SIR_ref_16_100.pdf Graphic file (type pdf)
 <use Images/SIR_ref_16_100.pdf>
-Package pdftex.def Info: Images/SIR_ref_16_100.pdf  used on input line 49.
-(pdftex.def)             Requested size: 376.42744pt x 376.42921pt.
- [49 <./Images/SIR_ref_16_100.pdf>]
-Underfull \hbox (badness 10000) in paragraph at lines 80--81
+Package pdftex.def Info: Images/SIR_ref_16_100.pdf  used on input line 45.
+(pdftex.def)             Requested size: 334.60571pt x 334.5964pt.
+ [48 <./Images/SIR_ref_16_100.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 78--79
 
  []
 
-[50]
-<Images/SIR_divergence_8_1000.pdf, id=3112, 1084.05pt x 1589.94pt>
+[49]
+<Images/SIR_divergence_8_1000.pdf, id=3093, 1084.05pt x 1589.94pt>
 File: Images/SIR_divergence_8_1000.pdf Graphic file (type pdf)
 <use Images/SIR_divergence_8_1000.pdf>
 Package pdftex.def Info: Images/SIR_divergence_8_1000.pdf  used on input line 9
-3.
+1.
 (pdftex.def)             Requested size: 204.94751pt x 300.58759pt.
-<Images/SIR_divergence_8_mix.pdf, id=3113, 1084.05pt x 1589.94pt>
+<Images/SIR_divergence_8_mix.pdf, id=3094, 1084.05pt x 1589.94pt>
 File: Images/SIR_divergence_8_mix.pdf Graphic file (type pdf)
 <use Images/SIR_divergence_8_mix.pdf>
-Package pdftex.def Info: Images/SIR_divergence_8_mix.pdf  used on input line 94
+Package pdftex.def Info: Images/SIR_divergence_8_mix.pdf  used on input line 92
 .
 (pdftex.def)             Requested size: 204.94751pt x 300.58759pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 98--99
+Underfull \hbox (badness 10000) in paragraph at lines 96--97
 
  []
 
-[51 <./Images/SIR_divergence_8_1000.pdf> <./Images/SIR_divergence_8_mix.pdf
+[50 <./Images/SIR_divergence_8_1000.pdf> <./Images/SIR_divergence_8_mix.pdf
 
 pdfTeX warning: pdflatex (file ./Images/SIR_divergence_8_mix.pdf): PDF inclusio
 n: multiple pdfs with page group included in a single page
 >]
+Underfull \hbox (badness 10000) in paragraph at lines 125--126
+
+ []
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 127--128
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 129--130
-
- []
-
-[52]
-<Images/SIR_ref_8_5.pdf, id=3200, 1084.05pt x 1084.05pt>
+[51]
+<Images/SIR_ref_8_5.pdf, id=3181, 1084.05pt x 1084.05pt>
 File: Images/SIR_ref_8_5.pdf Graphic file (type pdf)
 <use Images/SIR_ref_8_5.pdf>
-Package pdftex.def Info: Images/SIR_ref_8_5.pdf  used on input line 138.
+Package pdftex.def Info: Images/SIR_ref_8_5.pdf  used on input line 136.
 (pdftex.def)             Requested size: 250.95587pt x 250.9473pt.
- [53 <./Images/SIR_ref_8_5.pdf>]
-<Images/SIR_latence_8_5.pdf, id=3250, 639.41386pt x 617.1651pt>
+ [52 <./Images/SIR_ref_8_5.pdf>]
+<Images/SIR_latence_8_5.pdf, id=3230, 639.41386pt x 617.1651pt>
 File: Images/SIR_latence_8_5.pdf Graphic file (type pdf)
 <use Images/SIR_latence_8_5.pdf>
-Package pdftex.def Info: Images/SIR_latence_8_5.pdf  used on input line 149.
+Package pdftex.def Info: Images/SIR_latence_8_5.pdf  used on input line 147.
 (pdftex.def)             Requested size: 292.7776pt x 282.5904pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 153--154
+Underfull \hbox (badness 10000) in paragraph at lines 151--152
 
  []
 
-[54 <./Images/SIR_latence_8_5.pdf>]
-Underfull \hbox (badness 10000) in paragraph at lines 161--162
+[53 <./Images/SIR_latence_8_5.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 159--160
 
  []
 
-<Images/SIR_mouvements_variables.pdf, id=3288, 1171.74016pt x 992.35115pt>
+<Images/SIR_mouvements_variables.pdf, id=3268, 1171.74016pt x 992.35115pt>
 File: Images/SIR_mouvements_variables.pdf Graphic file (type pdf)
 <use Images/SIR_mouvements_variables.pdf>
 Package pdftex.def Info: Images/SIR_mouvements_variables.pdf  used on input lin
-e 168.
+e 166.
 (pdftex.def)             Requested size: 334.60571pt x 283.38327pt.
-[55 <./Images/SIR_mouvements_variables.pdf>]
-Underfull \hbox (badness 10000) in paragraph at lines 178--179
+[54 <./Images/SIR_mouvements_variables.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 176--177
 
  []
 
-<Images/SIR_1000_2.pdf, id=3336, 1084.05pt x 1445.4pt>
+<Images/SIR_1000_2.pdf, id=3316, 1084.05pt x 1445.4pt>
 File: Images/SIR_1000_2.pdf Graphic file (type pdf)
 <use Images/SIR_1000_2.pdf>
-Package pdftex.def Info: Images/SIR_1000_2.pdf  used on input line 185.
+Package pdftex.def Info: Images/SIR_1000_2.pdf  used on input line 183.
 (pdftex.def)             Requested size: 204.94751pt x 273.26144pt.
-<Images/SIR_1000_16.pdf, id=3337, 1084.05pt x 1445.4pt>
+<Images/SIR_1000_16.pdf, id=3317, 1084.05pt x 1445.4pt>
 File: Images/SIR_1000_16.pdf Graphic file (type pdf)
 <use Images/SIR_1000_16.pdf>
-Package pdftex.def Info: Images/SIR_1000_16.pdf  used on input line 186.
+Package pdftex.def Info: Images/SIR_1000_16.pdf  used on input line 184.
 (pdftex.def)             Requested size: 204.94751pt x 273.26144pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 190--191
+Underfull \hbox (badness 10000) in paragraph at lines 188--189
 
  []
 
-[56 <./Images/SIR_1000_2.pdf> <./Images/SIR_1000_16.pdf
+[55 <./Images/SIR_1000_2.pdf> <./Images/SIR_1000_16.pdf
 
 pdfTeX warning: pdflatex (file ./Images/SIR_1000_16.pdf): PDF inclusion: multip
 le pdfs with page group included in a single page
->]) [57]
+>]) [56]
 \openout2 = `Diversite.aux'.
 
  (./Diversite.tex
@@ -3192,12 +3196,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 12--13
 
  []
 
-[58
+[57
 
 
 
 ]
-<Images/SIR_diversite_mix.pdf, id=3433, 1084.05pt x 1084.05pt>
+<Images/SIR_diversite_mix.pdf, id=3413, 1084.05pt x 1084.05pt>
 File: Images/SIR_diversite_mix.pdf Graphic file (type pdf)
 <use Images/SIR_diversite_mix.pdf>
 Package pdftex.def Info: Images/SIR_diversite_mix.pdf  used on input line 21.
@@ -3217,7 +3221,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 33--34
 
  []
 
-[59 <./Images/SIR_diversite_mix.pdf>]
+[58 <./Images/SIR_diversite_mix.pdf>]
 Underfull \hbox (badness 10000) in paragraph at lines 35--36
 
  []
@@ -3232,12 +3236,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 39--40
 
  []
 
-[60] [61] [62]
+[59] [60] [61]
 Underfull \hbox (badness 10000) in paragraph at lines 231--232
 
  []
 
-[63] [64]
+[62] [63]
 Underfull \hbox (badness 10000) in paragraph at lines 351--352
 
  []
@@ -3247,8 +3251,8 @@ Underfull \hbox (badness 10000) in paragraph at lines 353--354
 
  []
 
-[65]
-<Images/vague_propagation.png, id=3510, 325.02777pt x 297.69249pt>
+[64]
+<Images/vague_propagation.png, id=3490, 325.02777pt x 297.69249pt>
 File: Images/vague_propagation.png Graphic file (type png)
 <use Images/vague_propagation.png>
 Package pdftex.def Info: Images/vague_propagation.png  used on input line 360.
@@ -3273,7 +3277,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 370--371
 
  []
 
-[66 <./Images/vague_propagation.png>] [67]) [68]
+[65 <./Images/vague_propagation.png>] [66]) [67]
 \openout2 = `Mutations.aux'.
 
  (./Mutations.tex
@@ -3298,7 +3302,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 17--18
 
  []
 
-[69
+[68
 
 
 
@@ -3322,7 +3326,7 @@ Underfull \hbox (badness 3919) in paragraph at lines 66--66
 []|\T1/ppl/m/n/10.95 (+20) Nombre de fois
  []
 
-[70]
+[69]
 Underfull \hbox (badness 3919) in paragraph at lines 91--91
 []|\T1/ppl/m/n/10.95 (+20) Nombre de fois
  []
@@ -3337,7 +3341,7 @@ Underfull \hbox (badness 3919) in paragraph at lines 114--114
 []|\T1/ppl/m/n/10.95 (+20) Nombre de fois
  []
 
-[71]) [72]
+[70]) [71]
 \openout2 = `Conclusion.aux'.
 
  (./Conclusion.tex
@@ -3357,7 +3361,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 7--8
 
  []
 
-) [73
+) [72
 
 
 
@@ -3384,10 +3388,10 @@ Package logreq Info: Writing requests to 'BasicDoc.run.xml'.
  ) 
 Here is how much of TeX's memory you used:
  54623 strings out of 481239
- 1208965 string characters out of 5920377
- 2145578 words of memory out of 5000000
- 68221 multiletter control sequences out of 15000+600000
- 609102 words of font info for 337 fonts, out of 8000000 for 9000
+ 1208963 string characters out of 5920377
+ 2145577 words of memory out of 5000000
+ 68220 multiletter control sequences out of 15000+600000
+ 609410 words of font info for 341 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  76i,12n,105p,10124b,3703s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-ec.enc}{/usr/share/texlive/texmf-dist
@@ -3400,10 +3404,10 @@ b></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/shar
 e/texlive/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/share/texlive/te
 xmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/share/texlive/texmf-dist/fon
 ts/type1/urw/palatino/uplri8a.pfb>
-Output written on BasicDoc.pdf (81 pages, 2225046 bytes).
+Output written on BasicDoc.pdf (78 pages, 2223055 bytes).
 PDF statistics:
- 3845 PDF objects out of 4296 (max. 8388607)
- 1894 compressed objects within 19 object streams
- 235 named destinations out of 1000 (max. 500000)
- 41228 words of extra memory for PDF output out of 42996 (max. 10000000)
+ 3821 PDF objects out of 4296 (max. 8388607)
+ 1873 compressed objects within 19 object streams
+ 230 named destinations out of 1000 (max. 500000)
+ 41220 words of extra memory for PDF output out of 42996 (max. 10000000)
 
