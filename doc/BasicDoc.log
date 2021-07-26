@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2021.6.17)  25 JUL 2021 20:18
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2021.6.17)  26 JUL 2021 11:10
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -2956,22 +2956,22 @@ Underfull \hbox (badness 10000) in paragraph at lines 62--63
  []
 
 [38 <./Images/SI_ref_16_50k.pdf>]
-Underfull \hbox (badness 10000) in paragraph at lines 85--86
+Underfull \hbox (badness 10000) in paragraph at lines 86--87
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 92--93
+Underfull \hbox (badness 10000) in paragraph at lines 93--94
 
  []
 
 [39]
-Underfull \hbox (badness 10000) in paragraph at lines 94--95
+Underfull \hbox (badness 10000) in paragraph at lines 95--96
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 117--118
+Underfull \hbox (badness 10000) in paragraph at lines 118--119
 
  []
 
@@ -2980,21 +2980,21 @@ Underfull \hbox (badness 10000) in paragraph at lines 117--118
 File: Images/SI_divergence_8_1000.pdf Graphic file (type pdf)
 <use Images/SI_divergence_8_1000.pdf>
 Package pdftex.def Info: Images/SI_divergence_8_1000.pdf  used on input line 12
-6.
+7.
 (pdftex.def)             Requested size: 209.12778pt x 104.56274pt.
 <Images/SI_divergence_8_mix.pdf, id=2634, 1445.4pt x 722.7pt>
 File: Images/SI_divergence_8_mix.pdf Graphic file (type pdf)
 <use Images/SI_divergence_8_mix.pdf>
-Package pdftex.def Info: Images/SI_divergence_8_mix.pdf  used on input line 127
+Package pdftex.def Info: Images/SI_divergence_8_mix.pdf  used on input line 128
 .
 (pdftex.def)             Requested size: 209.12778pt x 104.56274pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 131--132
+Underfull \hbox (badness 10000) in paragraph at lines 132--133
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 156--157
+Underfull \hbox (badness 10000) in paragraph at lines 158--159
 
  []
 
@@ -3003,39 +3003,39 @@ Underfull \hbox (badness 10000) in paragraph at lines 156--157
 pdfTeX warning: pdflatex (file ./Images/SI_divergence_8_mix.pdf): PDF inclusion
 : multiple pdfs with page group included in a single page
 >]
-Underfull \hbox (badness 10000) in paragraph at lines 162--163
+Underfull \hbox (badness 10000) in paragraph at lines 164--165
 
  []
 
 <Images/SI_positions_14k_mix.pdf, id=2715, 1084.05pt x 1084.05pt>
 File: Images/SI_positions_14k_mix.pdf Graphic file (type pdf)
 <use Images/SI_positions_14k_mix.pdf>
-Package pdftex.def Info: Images/SI_positions_14k_mix.pdf  used on input line 16
-9.
+Package pdftex.def Info: Images/SI_positions_14k_mix.pdf  used on input line 17
+1.
 (pdftex.def)             Requested size: 292.7776pt x 292.78012pt.
 [42 <./Images/SI_positions_14k_mix.pdf>]
 <Images/SI_positions_10k.pdf, id=2756, 1084.05pt x 1084.05pt>
 File: Images/SI_positions_10k.pdf Graphic file (type pdf)
 <use Images/SI_positions_10k.pdf>
-Package pdftex.def Info: Images/SI_positions_10k.pdf  used on input line 180.
+Package pdftex.def Info: Images/SI_positions_10k.pdf  used on input line 182.
 (pdftex.def)             Requested size: 167.29967pt x 167.2982pt.
 <Images/SI_positions_14k.pdf, id=2757, 1084.05pt x 1084.05pt>
 File: Images/SI_positions_14k.pdf Graphic file (type pdf)
 <use Images/SI_positions_14k.pdf>
-Package pdftex.def Info: Images/SI_positions_14k.pdf  used on input line 181.
+Package pdftex.def Info: Images/SI_positions_14k.pdf  used on input line 183.
 (pdftex.def)             Requested size: 167.29967pt x 167.2982pt.
 <Images/SI_positions_17k.pdf, id=2758, 1084.05pt x 1084.05pt>
 File: Images/SI_positions_17k.pdf Graphic file (type pdf)
 <use Images/SI_positions_17k.pdf>
-Package pdftex.def Info: Images/SI_positions_17k.pdf  used on input line 182.
+Package pdftex.def Info: Images/SI_positions_17k.pdf  used on input line 184.
 (pdftex.def)             Requested size: 167.29967pt x 167.2982pt.
 <Images/SI_positions_20k.pdf, id=2759, 1084.05pt x 1084.05pt>
 File: Images/SI_positions_20k.pdf Graphic file (type pdf)
 <use Images/SI_positions_20k.pdf>
-Package pdftex.def Info: Images/SI_positions_20k.pdf  used on input line 183.
+Package pdftex.def Info: Images/SI_positions_20k.pdf  used on input line 185.
 (pdftex.def)             Requested size: 167.29967pt x 167.2982pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 187--188
+Underfull \hbox (badness 10000) in paragraph at lines 189--190
 
  []
 
@@ -3088,7 +3088,7 @@ File: Images/SIR_ref_16_100.pdf Graphic file (type pdf)
 Package pdftex.def Info: Images/SIR_ref_16_100.pdf  used on input line 45.
 (pdftex.def)             Requested size: 334.60571pt x 334.5964pt.
  [47 <./Images/SIR_ref_16_100.pdf>]
-Underfull \hbox (badness 10000) in paragraph at lines 78--79
+Underfull \hbox (badness 10000) in paragraph at lines 79--80
 
  []
 
@@ -3097,16 +3097,16 @@ Underfull \hbox (badness 10000) in paragraph at lines 78--79
 File: Images/SIR_divergence_8_1000.pdf Graphic file (type pdf)
 <use Images/SIR_divergence_8_1000.pdf>
 Package pdftex.def Info: Images/SIR_divergence_8_1000.pdf  used on input line 9
-1.
+2.
 (pdftex.def)             Requested size: 204.94751pt x 300.58759pt.
 <Images/SIR_divergence_8_mix.pdf, id=3089, 1084.05pt x 1589.94pt>
 File: Images/SIR_divergence_8_mix.pdf Graphic file (type pdf)
 <use Images/SIR_divergence_8_mix.pdf>
-Package pdftex.def Info: Images/SIR_divergence_8_mix.pdf  used on input line 92
+Package pdftex.def Info: Images/SIR_divergence_8_mix.pdf  used on input line 93
 .
 (pdftex.def)             Requested size: 204.94751pt x 300.58759pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 96--97
+Underfull \hbox (badness 10000) in paragraph at lines 97--98
 
  []
 
@@ -3115,12 +3115,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 96--97
 pdfTeX warning: pdflatex (file ./Images/SIR_divergence_8_mix.pdf): PDF inclusio
 n: multiple pdfs with page group included in a single page
 >]
-Underfull \hbox (badness 10000) in paragraph at lines 125--126
+Underfull \hbox (badness 10000) in paragraph at lines 127--128
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 127--128
+Underfull \hbox (badness 10000) in paragraph at lines 129--130
 
  []
 
@@ -3128,21 +3128,21 @@ Underfull \hbox (badness 10000) in paragraph at lines 127--128
 <Images/SIR_ref_8_5.pdf, id=3177, 1084.05pt x 1084.05pt>
 File: Images/SIR_ref_8_5.pdf Graphic file (type pdf)
 <use Images/SIR_ref_8_5.pdf>
-Package pdftex.def Info: Images/SIR_ref_8_5.pdf  used on input line 136.
+Package pdftex.def Info: Images/SIR_ref_8_5.pdf  used on input line 138.
 (pdftex.def)             Requested size: 250.95587pt x 250.9473pt.
  [51 <./Images/SIR_ref_8_5.pdf>]
 <Images/SIR_latence_8_5.pdf, id=3226, 639.41386pt x 617.1651pt>
 File: Images/SIR_latence_8_5.pdf Graphic file (type pdf)
 <use Images/SIR_latence_8_5.pdf>
-Package pdftex.def Info: Images/SIR_latence_8_5.pdf  used on input line 147.
+Package pdftex.def Info: Images/SIR_latence_8_5.pdf  used on input line 149.
 (pdftex.def)             Requested size: 292.7776pt x 282.5904pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 151--152
+Underfull \hbox (badness 10000) in paragraph at lines 153--154
 
  []
 
 [52 <./Images/SIR_latence_8_5.pdf>]
-Underfull \hbox (badness 10000) in paragraph at lines 159--160
+Underfull \hbox (badness 10000) in paragraph at lines 161--162
 
  []
 
@@ -3150,25 +3150,25 @@ Underfull \hbox (badness 10000) in paragraph at lines 159--160
 File: Images/SIR_mouvements_variables.pdf Graphic file (type pdf)
 <use Images/SIR_mouvements_variables.pdf>
 Package pdftex.def Info: Images/SIR_mouvements_variables.pdf  used on input lin
-e 166.
+e 168.
 (pdftex.def)             Requested size: 334.60571pt x 283.38327pt.
 [53 <./Images/SIR_mouvements_variables.pdf>]
-Underfull \hbox (badness 10000) in paragraph at lines 176--177
+Underfull \hbox (badness 10000) in paragraph at lines 178--179
 
  []
 
 <Images/SIR_1000_2.pdf, id=3312, 1084.05pt x 1445.4pt>
 File: Images/SIR_1000_2.pdf Graphic file (type pdf)
 <use Images/SIR_1000_2.pdf>
-Package pdftex.def Info: Images/SIR_1000_2.pdf  used on input line 183.
+Package pdftex.def Info: Images/SIR_1000_2.pdf  used on input line 185.
 (pdftex.def)             Requested size: 204.94751pt x 273.26144pt.
 <Images/SIR_1000_16.pdf, id=3313, 1084.05pt x 1445.4pt>
 File: Images/SIR_1000_16.pdf Graphic file (type pdf)
 <use Images/SIR_1000_16.pdf>
-Package pdftex.def Info: Images/SIR_1000_16.pdf  used on input line 184.
+Package pdftex.def Info: Images/SIR_1000_16.pdf  used on input line 186.
 (pdftex.def)             Requested size: 204.94751pt x 273.26144pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 188--189
+Underfull \hbox (badness 10000) in paragraph at lines 190--191
 
  []
 
@@ -3237,43 +3237,42 @@ Underfull \hbox (badness 10000) in paragraph at lines 39--40
  []
 
 [58] [59] [60]
-Underfull \hbox (badness 10000) in paragraph at lines 231--232
+Underfull \hbox (badness 10000) in paragraph at lines 236--237
 
  []
 
 [61] [62]
-Underfull \hbox (badness 10000) in paragraph at lines 351--352
+Underfull \hbox (badness 10000) in paragraph at lines 359--360
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 353--354
+Underfull \hbox (badness 10000) in paragraph at lines 361--362
 
  []
 
-[63]
-<Images/vague_propagation.png, id=3486, 325.02777pt x 297.69249pt>
+<Images/vague_propagation.png, id=3482, 325.02777pt x 297.69249pt>
 File: Images/vague_propagation.png Graphic file (type png)
 <use Images/vague_propagation.png>
-Package pdftex.def Info: Images/vague_propagation.png  used on input line 360.
+Package pdftex.def Info: Images/vague_propagation.png  used on input line 368.
 (pdftex.def)             Requested size: 209.12778pt x 191.54459pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 364--365
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 366--367
+[63]
+Underfull \hbox (badness 10000) in paragraph at lines 372--373
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 368--369
+Underfull \hbox (badness 10000) in paragraph at lines 374--375
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 370--371
+Underfull \hbox (badness 10000) in paragraph at lines 376--377
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 378--379
 
  []
 
@@ -3307,37 +3306,37 @@ Underfull \hbox (badness 10000) in paragraph at lines 17--18
 
 
 ]
-Underfull \hbox (badness 3919) in paragraph at lines 39--39
+Underfull \hbox (badness 3919) in paragraph at lines 40--40
 []|\T1/ppl/m/n/10.95 (+20) Nombre de fois
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 44--45
+Underfull \hbox (badness 10000) in paragraph at lines 45--46
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 46--47
+Underfull \hbox (badness 10000) in paragraph at lines 47--48
 
  []
 
 
-Underfull \hbox (badness 3919) in paragraph at lines 66--66
+Underfull \hbox (badness 3919) in paragraph at lines 68--68
 []|\T1/ppl/m/n/10.95 (+20) Nombre de fois
  []
 
 [68]
-Underfull \hbox (badness 3919) in paragraph at lines 91--91
+Underfull \hbox (badness 3919) in paragraph at lines 94--94
 []|\T1/ppl/m/n/10.95 (+20) Nombre de fois
  []
 
 
-Overfull \hbox (5.6564pt too wide) in paragraph at lines 79--94
+Overfull \hbox (5.6564pt too wide) in paragraph at lines 82--97
  [][] 
  []
 
 
-Underfull \hbox (badness 3919) in paragraph at lines 114--114
+Underfull \hbox (badness 3919) in paragraph at lines 118--118
 []|\T1/ppl/m/n/10.95 (+20) Nombre de fois
  []
 
@@ -3404,7 +3403,7 @@ b></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/shar
 e/texlive/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/share/texlive/te
 xmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/share/texlive/texmf-dist/fon
 ts/type1/urw/palatino/uplri8a.pfb>
-Output written on BasicDoc.pdf (77 pages, 2222475 bytes).
+Output written on BasicDoc.pdf (77 pages, 2222943 bytes).
 PDF statistics:
  3817 PDF objects out of 4296 (max. 8388607)
  1870 compressed objects within 19 object streams
